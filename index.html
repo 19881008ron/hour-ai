@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Hour AI helps beginners learn AI video editing, test their skills, and apply for task-based remote AI editing orders."
+    />
+    <title>Hour AI | Learn AI Editing and Apply for Orders</title>
+    <link rel="preconnect" href="https://wa.me" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Hour AI home">
+        <span class="brand-mark">AI</span>
+        <span>Hour AI</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#orders" data-i18n="nav.orders">Orders</a>
+        <a href="#courses" data-i18n="nav.courses">Courses</a>
+        <a href="#support" data-i18n="nav.support">Support</a>
+        <a href="#profile" data-i18n="nav.profile">Profile</a>
+      </nav>
+      <div class="header-actions">
+        <select id="languageSelect" class="language-select" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="pt">Português</option>
+          <option value="ar">العربية</option>
+          <option value="id">Indonesia</option>
+        </select>
+        <button class="button button-light" type="button" data-open-profile data-i18n="nav.register">Register</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero-section">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">AI editing training + order access</p>
+          <h1 data-i18n="hero.title">Learn AI video editing, pass the test, and apply for real task orders.</h1>
+          <p class="hero-lede" data-i18n="hero.lede">
+            Hour AI trains beginners through a practical 7-day path, then helps qualified editors apply for C, B, and A level AI video editing tasks.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" id="heroWhatsapp" href="#" target="_blank" rel="noreferrer" data-i18n="hero.ctaPrimary">Talk to an advisor</a>
+            <a class="button button-secondary" href="#orders" data-i18n="hero.ctaSecondary">View orders</a>
+          </div>
+          <p class="fine-print" data-i18n="hero.disclaimer">
+            Earnings are not guaranteed. Order access depends on training progress, testing, skill level, quality, and available demand.
+          </p>
+        </div>
+
+        <div class="hero-visual" aria-label="Hour AI platform preview">
+          <img src="assets/hour-ai-workflow.svg" alt="Hour AI workflow dashboard preview" />
+        </div>
+      </section>
+
+      <section class="promo-band" aria-label="Hour AI highlights">
+        <div class="promo-carousel" id="promoCarousel">
+          <article class="promo-slide is-active">
+            <span data-i18n="slides.0.kicker">Beginner path</span>
+            <strong data-i18n="slides.0.title">Start from C-Level AI editing tasks.</strong>
+            <p data-i18n="slides.0.text">Learn template-based editing workflows and apply for simple tasks after passing the skill test.</p>
+          </article>
+          <article class="promo-slide">
+            <span data-i18n="slides.1.kicker">Skill upgrade</span>
+            <strong data-i18n="slides.1.title">Move from C to B to A as your work improves.</strong>
+            <p data-i18n="slides.1.text">Higher levels unlock more complex projects, stronger review standards, and higher task ranges.</p>
+          </article>
+          <article class="promo-slide">
+            <span data-i18n="slides.2.kicker">Remote workflow</span>
+            <strong data-i18n="slides.2.title">Study online and submit task work remotely.</strong>
+            <p data-i18n="slides.2.text">The platform is designed for learners who want a practical AI skill they can practice from anywhere.</p>
+          </article>
+        </div>
+        <div class="carousel-controls" aria-label="Carousel controls">
+          <button class="dot is-active" type="button" data-slide="0" aria-label="Slide 1"></button>
+          <button class="dot" type="button" data-slide="1" aria-label="Slide 2"></button>
+          <button class="dot" type="button" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+      </section>
+
+      <section class="section" id="orders">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="orders.eyebrow">Order marketplace preview</p>
+          <h2 data-i18n="orders.title">C, B, and A level AI editor orders</h2>
+          <p data-i18n="orders.text">Click an order to review the task content, pay range, estimated time, and delivery requirements.</p>
+        </div>
+        <div class="orders-grid" id="ordersGrid"></div>
+      </section>
+
+      <section class="section reviews-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="reviews.eyebrow">Learner feedback</p>
+          <h2 data-i18n="reviews.title">Reviews by AI editor level</h2>
+          <p data-i18n="reviews.text">Placeholder reviews are included for layout. Replace them with verified learner feedback before full launch.</p>
+        </div>
+        <div class="reviews-grid" id="reviewsGrid"></div>
+      </section>
+
+      <section class="section split-section" id="support">
+        <div>
+          <p class="eyebrow" data-i18n="support.eyebrow">Customer support</p>
+          <h2 data-i18n="support.title">Talk to Hour AI before you enroll.</h2>
+          <p data-i18n="support.text">
+            Ask about course levels, task examples, testing rules, available languages, and whether this path fits your goals.
+          </p>
+        </div>
+        <div class="support-panel">
+          <a class="button button-primary full-width" id="supportWhatsapp" href="#" target="_blank" rel="noreferrer" data-i18n="support.whatsapp">Chat on WhatsApp</a>
+          <button class="button button-secondary full-width" type="button" id="liveChatButton" data-i18n="support.live">Open online consultation</button>
+          <p class="fine-print" data-i18n="support.note">Online consultation is currently routed to WhatsApp while live chat is being connected.</p>
+        </div>
+      </section>
+
+      <section class="section" id="profile">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="profile.eyebrow">AI editor profile</p>
+          <h2 data-i18n="profile.title">Register, track your level, and prepare for testing.</h2>
+          <p data-i18n="profile.text">The MVP stores sample profile details in your browser. A secure database can be connected in phase two.</p>
+        </div>
+        <div class="profile-layout">
+          <div class="profile-card">
+            <div class="level-badge level-c">C</div>
+            <h3 data-i18n="profile.cTitle">C-Level AI Editor</h3>
+            <p data-i18n="profile.cText">Beginner-friendly workflow, template edits, simple delivery checklists.</p>
+          </div>
+          <div class="profile-card featured-profile">
+            <div class="level-badge level-b">B</div>
+            <h3 data-i18n="profile.bTitle">B-Level AI Editor</h3>
+            <p data-i18n="profile.bText">Commercial short videos, better pacing, stronger revisions and review standards.</p>
+          </div>
+          <div class="profile-card">
+            <div class="level-badge level-a">A</div>
+            <h3 data-i18n="profile.aTitle">A-Level AI Editor</h3>
+            <p data-i18n="profile.aText">Advanced projects, team review, project management and agent eligibility.</p>
+          </div>
+        </div>
+        <div class="center-actions">
+          <button class="button button-primary" type="button" data-open-profile data-i18n="profile.open">Create sample profile</button>
+        </div>
+      </section>
+
+      <section class="section" id="courses">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="courses.eyebrow">Course levels</p>
+          <h2 data-i18n="courses.title">Choose your AI editor training level</h2>
+          <p data-i18n="courses.text">Payments are not active in this MVP. Course buttons send users to consultation first.</p>
+        </div>
+        <div class="pricing-grid" id="pricingGrid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Hour AI</strong>
+        <p data-i18n="footer.text">AI video editing training, skill testing, and task marketplace access.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#support" data-i18n="footer.support">Support</a>
+        <button type="button" class="text-button" id="legalButton" data-i18n="footer.legal">Earnings disclaimer</button>
+      </div>
+    </footer>
+
+    <div class="modal" id="orderModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel">
+        <button class="icon-button" type="button" data-close-modal aria-label="Close">×</button>
+        <span class="order-level-pill" id="modalLevel"></span>
+        <h2 id="orderModalTitle"></h2>
+        <dl class="detail-list">
+          <div>
+            <dt data-i18n="modal.content">Content</dt>
+            <dd id="modalContent"></dd>
+          </div>
+          <div>
+            <dt data-i18n="modal.pay">Pay range</dt>
+            <dd id="modalPay"></dd>
+          </div>
+          <div>
+            <dt data-i18n="modal.time">Estimated time</dt>
+            <dd id="modalTime"></dd>
+          </div>
+          <div>
+            <dt data-i18n="modal.requirements">Requirements</dt>
+            <dd id="modalRequirements"></dd>
+          </div>
+        </dl>
+        <a class="button button-primary full-width" id="modalWhatsapp" href="#" target="_blank" rel="noreferrer" data-i18n="modal.ask">Ask about this order</a>
+      </div>
+    </div>
+
+    <div class="modal" id="profileModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle">
+      <div class="modal-backdrop" data-close-profile></div>
+      <div class="modal-panel">
+        <button class="icon-button" type="button" data-close-profile aria-label="Close">×</button>
+        <h2 id="profileModalTitle" data-i18n="profileModal.title">Create your Hour AI profile</h2>
+        <form class="profile-form" id="profileForm">
+          <label>
+            <span data-i18n="profileModal.name">Name</span>
+            <input name="name" type="text" placeholder="Alex Chen" required />
+          </label>
+          <label>
+            <span data-i18n="profileModal.email">Email</span>
+            <input name="email" type="email" placeholder="alex@example.com" required />
+          </label>
+          <label>
+            <span data-i18n="profileModal.level">Target level</span>
+            <select name="level">
+              <option value="C">C-Level</option>
+              <option value="B">B-Level</option>
+              <option value="A">A-Level</option>
+            </select>
+          </label>
+          <button class="button button-primary full-width" type="submit" data-i18n="profileModal.save">Save sample profile</button>
+        </form>
+        <div class="saved-profile" id="savedProfile" hidden>
+          <div class="level-badge" id="savedBadge">C</div>
+          <div>
+            <strong id="savedName"></strong>
+            <p id="savedMeta"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
