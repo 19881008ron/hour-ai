@@ -288,39 +288,121 @@
 
     <div class="modal" id="profileModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle">
       <div class="modal-backdrop" data-close-profile></div>
-      <div class="modal-panel" tabindex="-1">
+      <div class="modal-panel account-panel" tabindex="-1">
         <button class="icon-button" type="button" data-close-profile aria-label="Close">&times;</button>
-        <p class="eyebrow" data-i18n="profileModal.eyebrow">Profile preview</p>
-        <h2 id="profileModalTitle" data-i18n="profileModal.title">Create your Hour AI profile</h2>
-        <form class="profile-form" id="profileForm">
-          <label>
-            <span data-i18n="profileModal.name">Name</span>
-            <input name="name" type="text" placeholder="Alex Chen" autocomplete="name" required />
-          </label>
-          <label>
-            <span data-i18n="profileModal.email">Email</span>
-            <input name="email" type="email" placeholder="alex@example.com" autocomplete="email" required />
-          </label>
-          <label>
-            <span data-i18n="profileModal.level">Target level</span>
-            <select name="level">
-              <option value="C">C-Level</option>
-              <option value="B">B-Level</option>
-              <option value="A">A-Level</option>
-            </select>
-          </label>
-          <button class="button button-primary full-width" type="submit">
-            <span data-i18n="profileModal.save">Save sample profile</span>
-            <span aria-hidden="true">→</span>
-          </button>
-        </form>
-        <div class="saved-profile" id="savedProfile" hidden>
-          <div class="level-badge" id="savedBadge">C</div>
-          <div>
-            <span class="saved-label" data-i18n="profileModal.savedLabel">Profile saved locally</span>
-            <strong id="savedName"></strong>
-            <p id="savedMeta"></p>
+        <p class="eyebrow">Hour AI account</p>
+        <h2 id="profileModalTitle">Create or access your account</h2>
+
+        <div id="accountGuest">
+          <div class="account-tabs" role="tablist" aria-label="Account access">
+            <button class="account-tab is-active" type="button" role="tab" aria-selected="true" data-account-tab="register">Register</button>
+            <button class="account-tab" type="button" role="tab" aria-selected="false" data-account-tab="login">Sign in</button>
           </div>
+
+          <form class="profile-form account-form is-active" id="registerForm" data-account-panel="register">
+            <div class="form-grid">
+              <label>
+                <span>Username</span>
+                <input name="username" type="text" minlength="3" maxlength="30" autocomplete="username" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+              <label class="form-span-2">
+                <span>Password</span>
+                <input name="password" type="password" minlength="8" autocomplete="new-password" required />
+                <small>At least 8 characters. Passwords are encrypted by the authentication provider.</small>
+              </label>
+              <label>
+                <span>Nationality</span>
+                <input name="nationality" type="text" maxlength="80" autocomplete="country-name" required />
+              </label>
+              <label>
+                <span>Occupation</span>
+                <input name="occupation" type="text" maxlength="100" autocomplete="organization-title" required />
+              </label>
+              <label>
+                <span>Age</span>
+                <input name="age" type="number" min="18" max="100" inputmode="numeric" required />
+              </label>
+              <label>
+                <span>Gender</span>
+                <select name="gender" required>
+                  <option value="">Select</option>
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="nonbinary">Non-binary</option>
+                  <option value="prefer_not_to_say">Prefer not to say</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="captcha-row">
+              <label>
+                <span>Verification code</span>
+                <input name="captchaAnswer" type="text" minlength="5" maxlength="5" autocomplete="off" autocapitalize="characters" required />
+              </label>
+              <div class="captcha-visual" id="captchaImage" aria-label="Verification image">Loading...</div>
+              <button class="captcha-refresh" id="refreshCaptcha" type="button" aria-label="Refresh verification code" title="Refresh verification code">&#8635;</button>
+            </div>
+            <input name="captchaToken" id="captchaToken" type="hidden" />
+
+            <label class="consent-row">
+              <input name="consent" type="checkbox" required />
+              <span>I agree that Hour AI may securely store my registration and qualification records.</span>
+            </label>
+
+            <div class="form-status" id="registerStatus" role="status" aria-live="polite"></div>
+            <button class="button button-primary full-width" type="submit">Create account</button>
+            <p class="account-note">New accounts start without an A, B, or C level. Hour AI assigns a level only after the relevant examination is approved.</p>
+          </form>
+
+          <form class="profile-form account-form" id="loginForm" data-account-panel="login">
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              <span>Password</span>
+              <input name="password" type="password" autocomplete="current-password" required />
+            </label>
+            <div class="form-status" id="loginStatus" role="status" aria-live="polite"></div>
+            <button class="button button-primary full-width" type="submit">Sign in</button>
+          </form>
+        </div>
+
+        <div class="account-dashboard" id="accountDashboard" hidden>
+          <div class="saved-profile">
+            <div class="level-badge level-unverified" id="savedBadge">?</div>
+            <div>
+              <span class="saved-label" id="savedLevelLabel">Qualification pending</span>
+              <strong id="savedName"></strong>
+              <p id="savedMeta"></p>
+            </div>
+          </div>
+          <dl class="account-details" id="accountDetails"></dl>
+
+          <section class="admin-panel" id="adminPanel" hidden>
+            <div class="admin-heading">
+              <div>
+                <span class="saved-label">Administrator</span>
+                <h3>Customer qualification management</h3>
+              </div>
+              <button class="button button-outline" id="exportCustomers" type="button">Export CSV backup</button>
+            </div>
+            <div class="customer-table-wrap">
+              <table class="customer-table">
+                <thead>
+                  <tr><th>Customer</th><th>Country / occupation</th><th>Current level</th><th>Upgrade</th></tr>
+                </thead>
+                <tbody id="customerTableBody"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <div class="form-status" id="accountStatus" role="status" aria-live="polite"></div>
+          <button class="button button-outline full-width" id="logoutButton" type="button">Sign out</button>
         </div>
       </div>
     </div>

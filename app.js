@@ -63,7 +63,7 @@ const translations = {
       bText: "Commercial short videos, better pacing, revisions, and stronger quality standards.",
       aTitle: "A-Level AI Editor",
       aText: "Advanced projects, team review, project management, and agent eligibility.",
-      open: "Create sample profile"
+      open: "Open my account"
     },
     courses: {
       eyebrow: "Training programs",
@@ -453,6 +453,7 @@ let lastFocusedElement = null;
 let toastTimer = null;
 let activeCarouselIndex = 0;
 let carouselTimer = null;
+let captchaToken = null;
 
 function deepMerge(target, source) {
   Object.keys(source || {}).forEach((key) => {
@@ -502,8 +503,6 @@ function applyTranslations() {
   renderPricing();
   updateCarousel(activeCarouselIndex, false);
 
-  const saved = readSavedProfile();
-  if (saved) showSavedProfile(saved);
 }
 
 function renderOrders() {
@@ -608,40 +607,243 @@ function closeModal(id) {
   lastFocusedElement?.focus?.();
 }
 
-function readSavedProfile() {
+async function apiRequest(path, options = {}) {
+  const response = await fetch(path, {
+    credentials: "same-origin",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...(options.headers || {})
+    }
+  });
+  const contentType = response.headers.get("content-type") || "";
+  const data = contentType.includes("application/json") ? await response.json() : null;
+  if (!response.ok) {
+    const error = new Error(data?.error || "The account service could not complete this request.");
+    error.status = response.status;
+    throw error;
+  }
+  return data;
+}
+
+function setFormStatus(id, message = "", type = "") {
+  const status = document.getElementById(id);
+  status.textContent = message;
+  status.className = `form-status${type ? ` is-${type}` : ""}`;
+}
+
+function setFormBusy(form, busy) {
+  form.querySelectorAll("button, input, select").forEach((control) => {
+    control.disabled = busy;
+  });
+}
+
+function switchAccountTab(name) {
+  document.querySelectorAll("[data-account-tab]").forEach((button) => {
+    const active = button.dataset.accountTab === name;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-selected", String(active));
+  });
+  document.querySelectorAll("[data-account-panel]").forEach((panel) => {
+    panel.classList.toggle("is-active", panel.dataset.accountPanel === name);
+  });
+  if (name === "register" && !captchaToken) loadCaptcha();
+}
+
+async function loadCaptcha() {
+  const visual = document.getElementById("captchaImage");
+  visual.textContent = "Loading...";
+  captchaToken = null;
+  document.getElementById("captchaToken").value = "";
   try {
-    return JSON.parse(localStorage.getItem("hourAiProfile") || "null");
-  } catch {
-    localStorage.removeItem("hourAiProfile");
-    return null;
+    const data = await apiRequest("/api/captcha", { method: "GET", headers: {} });
+    visual.innerHTML = `<img src="${data.image}" alt="Five-character verification code" width="190" height="58" />`;
+    captchaToken = data.token;
+    document.getElementById("captchaToken").value = JSON.stringify(data.token);
+  } catch (error) {
+    visual.textContent = "Service unavailable";
+    setFormStatus("registerStatus", error.message, "error");
+  }
+}
+
+function profileDetail(label, value) {
+  const wrapper = document.createElement("div");
+  const term = document.createElement("dt");
+  const description = document.createElement("dd");
+  term.textContent = label;
+  description.textContent = value || "-";
+  wrapper.append(term, description);
+  return wrapper;
+}
+
+function showAccount(profile) {
+  document.getElementById("accountGuest").hidden = true;
+  document.getElementById("accountDashboard").hidden = false;
+
+  const badge = document.getElementById("savedBadge");
+  const hasLevel = ["A", "B", "C"].includes(profile.level);
+  badge.textContent = hasLevel ? profile.level : "?";
+  badge.className = `level-badge ${hasLevel ? `level-${profile.level.toLowerCase()}` : "level-unverified"}`;
+  document.getElementById("savedLevelLabel").textContent = hasLevel ? `${profile.level}-Level AI Editor` : "Qualification pending";
+  document.getElementById("savedName").textContent = profile.username;
+  document.getElementById("savedMeta").textContent = profile.email;
+
+  const details = document.getElementById("accountDetails");
+  details.replaceChildren(
+    profileDetail("Nationality", profile.nationality),
+    profileDetail("Occupation", profile.occupation),
+    profileDetail("Age", String(profile.age)),
+    profileDetail("Gender", String(profile.gender).replaceAll("_", " "))
+  );
+
+  const adminPanel = document.getElementById("adminPanel");
+  adminPanel.hidden = profile.role !== "admin";
+  if (profile.role === "admin") loadAdminUsers();
+}
+
+function showGuestAccount() {
+  document.getElementById("accountGuest").hidden = false;
+  document.getElementById("accountDashboard").hidden = true;
+  switchAccountTab("register");
+}
+
+async function loadAccount() {
+  try {
+    const data = await apiRequest("/api/me", { method: "GET", headers: {} });
+    showAccount(data.profile);
+  } catch (error) {
+    showGuestAccount();
+    if (error.status === 503) setFormStatus("registerStatus", error.message, "error");
+  }
+}
+
+function renderAdminUsers(users) {
+  const body = document.getElementById("customerTableBody");
+  body.replaceChildren();
+  users.forEach((user) => {
+    const row = document.createElement("tr");
+
+    const customer = document.createElement("td");
+    const name = document.createElement("strong");
+    const email = document.createElement("span");
+    name.textContent = user.username;
+    email.textContent = user.email;
+    customer.append(name, email);
+
+    const context = document.createElement("td");
+    context.textContent = `${user.nationality} / ${user.occupation}`;
+
+    const current = document.createElement("td");
+    const chip = document.createElement("span");
+    chip.className = user.level ? `level-chip chip-${user.level.toLowerCase()}` : "level-chip chip-pending";
+    chip.textContent = user.level ? `${user.level}-Level` : "Pending";
+    current.append(chip);
+
+    const action = document.createElement("td");
+    const select = document.createElement("select");
+    select.setAttribute("aria-label", `Change level for ${user.username}`);
+    [
+      ["", "Pending"],
+      ["C", "C-Level"],
+      ["B", "B-Level"],
+      ["A", "A-Level"]
+    ].forEach(([value, label]) => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = label;
+      option.selected = (user.level || "") === value;
+      select.append(option);
+    });
+    select.addEventListener("change", () => updateCustomerLevel(user.user_id, select.value, select));
+    action.append(select);
+    row.append(customer, context, current, action);
+    body.append(row);
+  });
+}
+
+async function loadAdminUsers() {
+  setFormStatus("accountStatus", "Loading customer records...");
+  try {
+    const data = await apiRequest("/api/admin/users", { method: "GET", headers: {} });
+    renderAdminUsers(data.users);
+    setFormStatus("accountStatus");
+  } catch (error) {
+    setFormStatus("accountStatus", error.message, "error");
+  }
+}
+
+async function updateCustomerLevel(userId, level, select) {
+  select.disabled = true;
+  try {
+    await apiRequest("/api/admin/level", {
+      method: "PATCH",
+      body: JSON.stringify({ userId, level })
+    });
+    showToast(level ? `Customer upgraded to ${level}-Level.` : "Customer level returned to pending.");
+    await loadAdminUsers();
+  } catch (error) {
+    setFormStatus("accountStatus", error.message, "error");
+    await loadAdminUsers();
+  } finally {
+    select.disabled = false;
   }
 }
 
 function setupProfile() {
-  const saved = readSavedProfile();
-  if (saved) showSavedProfile(saved);
-
-  document.getElementById("profileForm").addEventListener("submit", (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const profile = {
-      name: String(formData.get("name") || "").trim(),
-      email: String(formData.get("email") || "").trim(),
-      level: String(formData.get("level") || "C")
-    };
-    localStorage.setItem("hourAiProfile", JSON.stringify(profile));
-    showSavedProfile(profile);
-    showToast(t("profileModal.toast"));
+  document.querySelectorAll("[data-account-tab]").forEach((button) => {
+    button.addEventListener("click", () => switchAccountTab(button.dataset.accountTab));
   });
-}
 
-function showSavedProfile(profile) {
-  const badge = document.getElementById("savedBadge");
-  badge.textContent = profile.level;
-  badge.className = `level-badge level-${profile.level.toLowerCase()}`;
-  document.getElementById("savedName").textContent = profile.name;
-  document.getElementById("savedMeta").textContent = `${t("saved").replace("{level}", `${profile.level}-Level`)} ${profile.email}`;
-  document.getElementById("savedProfile").hidden = false;
+  document.getElementById("refreshCaptcha").addEventListener("click", loadCaptcha);
+  document.getElementById("registerForm").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const values = Object.fromEntries(new FormData(form));
+    values.consent = form.elements.consent.checked;
+    values.captchaToken = captchaToken;
+    setFormStatus("registerStatus", "Creating your secure account...");
+    setFormBusy(form, true);
+    try {
+      await apiRequest("/api/register", { method: "POST", body: JSON.stringify(values) });
+      form.reset();
+      captchaToken = null;
+      showToast("Account created. Your qualification is pending.");
+      await loadAccount();
+    } catch (error) {
+      setFormStatus("registerStatus", error.message, "error");
+      await loadCaptcha();
+    } finally {
+      setFormBusy(form, false);
+    }
+  });
+
+  document.getElementById("loginForm").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const values = Object.fromEntries(new FormData(form));
+    setFormStatus("loginStatus", "Signing in...");
+    setFormBusy(form, true);
+    try {
+      await apiRequest("/api/login", { method: "POST", body: JSON.stringify(values) });
+      form.reset();
+      setFormStatus("loginStatus");
+      await loadAccount();
+    } catch (error) {
+      setFormStatus("loginStatus", error.message, "error");
+    } finally {
+      setFormBusy(form, false);
+    }
+  });
+
+  document.getElementById("logoutButton").addEventListener("click", async () => {
+    await apiRequest("/api/logout", { method: "POST", body: "{}" }).catch(() => {});
+    showGuestAccount();
+    loadCaptcha();
+  });
+  document.getElementById("exportCustomers").addEventListener("click", () => {
+    window.location.href = "/api/admin/export";
+  });
+  loadAccount();
 }
 
 function showToast(message) {
