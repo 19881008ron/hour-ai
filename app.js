@@ -21,7 +21,12 @@ const translations = {
       statTime: "typical task estimate",
       disclaimer: "Earnings are not guaranteed. Access depends on training progress, testing, quality, and available demand.",
       visualLabel: "LEARN → TEST → APPLY",
-      visualTitle: "One clear path from beginner skills to qualified order access."
+      visualTitle: "One clear path from beginner skills to qualified order access.",
+      carousel: [
+        { label: "01 / LEARN", title: "Build a practical editing workflow from the ground up.", alt: "Beginner learning AI video editing at a home workstation" },
+        { label: "02 / TEST", title: "Review your work against a clear quality standard.", alt: "Learner reviewing an AI video editing skills assessment" },
+        { label: "03 / APPLY", title: "Collaborate, deliver, and grow into more advanced tasks.", alt: "Remote creative team reviewing an AI video project together" }
+      ]
     },
     signals: [
       { title: "Learn the workflow", text: "Follow structured lessons and practical editing exercises." },
@@ -114,7 +119,12 @@ const translations = {
       statTime: "典型任务预计时长",
       disclaimer: "收入不作保证。申请资格取决于学习进度、测试结果、交付质量和实际订单需求。",
       visualLabel: "学习 → 测试 → 申请",
-      visualTitle: "从新手技能到合格订单申请，一条清晰的成长路径。"
+      visualTitle: "从新手技能到合格订单申请，一条清晰的成长路径。",
+      carousel: [
+        { label: "01 / 学习", title: "从零建立一套可实践的 AI 剪辑工作流。", alt: "新手在家庭工作区学习 AI 视频剪辑" },
+        { label: "02 / 测试", title: "按照清晰的质量标准检查和证明作品。", alt: "学员正在完成 AI 视频剪辑技能测试" },
+        { label: "03 / 申请", title: "参与协作、完成交付，并逐步申请高级任务。", alt: "远程创作团队共同审核 AI 视频项目" }
+      ]
     },
     signals: [
       { title: "学习工作流程", text: "按照结构化课程完成实际剪辑练习。" },
@@ -420,9 +430,29 @@ const localizedContent = {
   }
 };
 
+const carouselSlides = [
+  { src: "assets/carousel-learn.webp" },
+  { src: "assets/carousel-test.webp" },
+  { src: "assets/carousel-apply.webp" }
+];
+
+const levelImages = {
+  C: "assets/order-level-c.webp",
+  B: "assets/order-level-b.webp",
+  A: "assets/order-level-a.webp"
+};
+
+const reviewAvatars = {
+  C: "assets/avatar-maya.webp",
+  B: "assets/avatar-daniel.webp",
+  A: "assets/avatar-aisha.webp"
+};
+
 let currentLanguage = "en";
 let lastFocusedElement = null;
 let toastTimer = null;
+let activeCarouselIndex = 0;
+let carouselTimer = null;
 
 function deepMerge(target, source) {
   Object.keys(source || {}).forEach((key) => {
@@ -448,16 +478,6 @@ function whatsappLink(message) {
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
-function safeInitials(name) {
-  return name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0])
-    .join("")
-    .toUpperCase();
-}
-
 function localizedOrder(order) {
   return { ...order, ...(localizedContent[currentLanguage]?.orders?.[order.id] || {}) };
 }
@@ -480,6 +500,7 @@ function applyTranslations() {
   renderOrders();
   renderReviews();
   renderPricing();
+  updateCarousel(activeCarouselIndex, false);
 
   const saved = readSavedProfile();
   if (saved) showSavedProfile(saved);
@@ -492,6 +513,7 @@ function renderOrders() {
       const order = localizedOrder(baseOrder);
       return `
         <article class="order-card">
+          <img class="order-image" src="${levelImages[order.level]}" alt="" width="1000" height="750" loading="lazy" />
           <div class="order-card-header">
             <span class="level-chip chip-${order.level.toLowerCase()}">${order.level}-Level</span>
             <span class="order-code">TASK-${String(index + 1).padStart(3, "0")}</span>
@@ -521,7 +543,7 @@ function renderReviews() {
           <span class="level-chip chip-${review.level.toLowerCase()}">${review.level}-Level</span>
           <blockquote>${review.quote}</blockquote>
           <div class="review-author">
-            <span class="review-avatar" aria-hidden="true">${safeInitials(review.name)}</span>
+            <img class="review-avatar" src="${reviewAvatars[review.level]}" alt="" width="400" height="400" loading="lazy" />
             <div><strong>${review.name}</strong><span>${review.role}</span></div>
           </div>
         </article>
@@ -630,6 +652,70 @@ function showToast(message) {
   toastTimer = window.setTimeout(() => toast.classList.remove("is-visible"), 3000);
 }
 
+function updateCarousel(index, animate = true) {
+  activeCarouselIndex = (index + carouselSlides.length) % carouselSlides.length;
+  const image = document.getElementById("carouselImage");
+  const slideText = t(`hero.carousel.${activeCarouselIndex}`);
+  const applySlide = () => {
+    image.src = carouselSlides[activeCarouselIndex].src;
+    image.alt = slideText.alt;
+    document.getElementById("carouselLabel").textContent = slideText.label;
+    document.getElementById("carouselTitle").textContent = slideText.title;
+    document.querySelectorAll(".carousel-dot").forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === activeCarouselIndex);
+      dot.setAttribute("aria-current", dotIndex === activeCarouselIndex ? "true" : "false");
+    });
+    image.classList.remove("is-changing");
+  };
+  if (animate) {
+    image.classList.add("is-changing");
+    window.setTimeout(applySlide, 120);
+  } else {
+    applySlide();
+  }
+}
+
+function resetCarouselTimer() {
+  window.clearInterval(carouselTimer);
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  carouselTimer = window.setInterval(() => updateCarousel(activeCarouselIndex + 1), 5500);
+}
+
+function setupCarousel() {
+  carouselSlides.slice(1).forEach((slide) => {
+    const image = new Image();
+    image.src = slide.src;
+  });
+
+  const dots = document.getElementById("carouselDots");
+  dots.innerHTML = carouselSlides
+    .map(
+      (_, index) =>
+        `<button class="carousel-dot${index === 0 ? " is-active" : ""}" type="button" data-carousel-index="${index}" aria-label="Show image ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>`
+    )
+    .join("");
+
+  document.getElementById("carouselPrev").addEventListener("click", () => {
+    updateCarousel(activeCarouselIndex - 1);
+    resetCarouselTimer();
+  });
+  document.getElementById("carouselNext").addEventListener("click", () => {
+    updateCarousel(activeCarouselIndex + 1);
+    resetCarouselTimer();
+  });
+  dots.addEventListener("click", (event) => {
+    const dot = event.target.closest("[data-carousel-index]");
+    if (!dot) return;
+    updateCarousel(Number(dot.dataset.carouselIndex));
+    resetCarouselTimer();
+  });
+
+  const carousel = document.querySelector(".hero-carousel");
+  carousel.addEventListener("mouseenter", () => window.clearInterval(carouselTimer));
+  carousel.addEventListener("mouseleave", resetCarouselTimer);
+  resetCarouselTimer();
+}
+
 function setupEvents() {
   document.getElementById("languageSelect").addEventListener("change", (event) => {
     currentLanguage = event.target.value;
@@ -683,6 +769,7 @@ function initLanguage() {
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 initLanguage();
 setupEvents();
+setupCarousel();
 setupProfile();
 initLinks();
 applyTranslations();

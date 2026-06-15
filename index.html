@@ -102,10 +102,25 @@
               <span>hour-ai.com / workspace</span>
               <span class="toolbar-live"><i></i> Live</span>
             </div>
-            <img src="assets/hour-ai-workflow.svg" alt="Hour AI editor levels, learning path, and order dashboard" />
+            <div class="hero-carousel">
+              <img
+                id="carouselImage"
+                src="assets/carousel-learn.webp"
+                alt="Beginner learning AI video editing at a home workstation"
+                width="1600"
+                height="900"
+              />
+              <div class="carousel-arrows">
+                <button class="carousel-arrow" id="carouselPrev" type="button" aria-label="Previous image">←</button>
+                <button class="carousel-arrow" id="carouselNext" type="button" aria-label="Next image">→</button>
+              </div>
+            </div>
             <div class="visual-caption">
-              <span data-i18n="hero.visualLabel">LEARN → TEST → APPLY</span>
-              <strong data-i18n="hero.visualTitle">One clear path from beginner skills to qualified order access.</strong>
+              <div>
+                <span id="carouselLabel">01 / LEARN</span>
+                <strong id="carouselTitle">Build a practical editing workflow from the ground up.</strong>
+              </div>
+              <div class="carousel-dots" id="carouselDots" aria-label="Carousel navigation"></div>
             </div>
           </div>
         </div>
