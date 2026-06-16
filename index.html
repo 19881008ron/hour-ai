@@ -91,11 +91,11 @@
               </div>
               <div>
                 <strong>$20-$100</strong>
-                <span data-i18n="hero.statLevels">Order demand</span>
+                <span data-i18n="hero.statLevels">Order commission</span>
               </div>
               <div>
                 <strong>1-2 Hours</strong>
-                <span data-i18n="hero.statTime">Commission window</span>
+                <span data-i18n="hero.statTime">Fast orders</span>
               </div>
             </div>
           </div>
@@ -393,6 +393,24 @@
           </div>
           <dl class="account-details" id="accountDetails"></dl>
 
+          <section class="payment-panel" id="paymentPanel">
+            <div class="payment-heading">
+              <div>
+                <span class="saved-label">Payment records</span>
+                <h3>Course payment history</h3>
+              </div>
+              <button class="button button-outline" id="paymentSupportButton" type="button">Confirm payment</button>
+            </div>
+            <div class="payment-table-wrap">
+              <table class="payment-table" aria-label="Course payment history">
+                <thead>
+                  <tr><th>Course</th><th>Amount</th><th>Status</th><th>Date</th><th>Reference</th></tr>
+                </thead>
+                <tbody id="paymentTableBody"></tbody>
+              </table>
+            </div>
+          </section>
+
           <section class="admin-panel" id="adminPanel" hidden>
             <div class="admin-heading">
               <div>
@@ -439,6 +457,51 @@
         <textarea id="supportMessage" rows="5" maxlength="800" placeholder="Write your question here..."></textarea>
         <button class="button button-primary full-width" id="startConsultation" type="button">Start consultation</button>
         <p class="support-privacy">Do not include passwords, verification codes, payment card details, or other sensitive information.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="paymentModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle">
+      <div class="modal-backdrop" data-close-payment></div>
+      <div class="modal-panel payment-modal-panel" tabindex="-1">
+        <button class="icon-button" type="button" data-close-payment aria-label="Close">&times;</button>
+        <p class="eyebrow">Secure course payment</p>
+        <h2 id="paymentModalTitle">Choose your payment method</h2>
+        <div class="payment-summary">
+          <div>
+            <span>Selected course</span>
+            <strong id="paymentCourseName">Hour AI course</strong>
+          </div>
+          <div>
+            <span>Course price</span>
+            <strong id="paymentCoursePrice">$0</strong>
+          </div>
+        </div>
+
+        <div class="payment-method-grid">
+          <article class="payment-method-card paypal-card">
+            <div class="payment-method-top">
+              <div class="payment-logo paypal-logo" aria-hidden="true">PayPal</div>
+              <span class="fee-pill">5% fee</span>
+            </div>
+            <h3>PayPal</h3>
+            <p>Use PayPal for card or wallet payment. A 5% processing fee applies.</p>
+            <button class="button button-primary full-width" id="paypalPaymentButton" type="button">Request PayPal link</button>
+          </article>
+
+          <article class="payment-method-card crypto-card">
+            <div class="payment-method-top">
+              <div class="payment-logo crypto-logo" aria-hidden="true">Crypto</div>
+              <span class="fee-pill fee-free">0 fee</span>
+            </div>
+            <h3>Cryptocurrency</h3>
+            <p>Pay with supported crypto networks. Send only through the matching network shown below.</p>
+            <div class="crypto-list" id="cryptoPaymentList"></div>
+          </article>
+        </div>
+
+        <p class="payment-disclaimer">
+          Payment records are confirmed manually before course access is activated. Always verify the network and address before sending crypto.
+        </p>
       </div>
     </div>
 

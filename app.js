@@ -17,8 +17,8 @@ const translations = {
       ctaPrimary: "Talk to an advisor",
       ctaSecondary: "Explore orders",
       statDays: "Fast learning",
-      statLevels: "Order demand",
-      statTime: "Commission window",
+      statLevels: "Order commission",
+      statTime: "Fast orders",
       disclaimer: "",
       visualLabel: "LEARN → TEST → APPLY",
       visualTitle: "One clear path from beginner skills to qualified order access.",
@@ -69,7 +69,8 @@ const translations = {
       eyebrow: "Training programs",
       title: "Choose the level that matches your goal.",
       text: "Compare the training levels, qualification goals, and expected task standards before choosing your path.",
-      consult: "Consult before enrolling",
+      consult: "Consult",
+      payment: "Payment",
       recommended: "Most selected",
       oneTime: "one-time course"
     },
@@ -269,56 +270,56 @@ const orders = [
   {
     id: "c1",
     level: "C",
-    title: "Template short video edit",
-    content: "Create a 25-35 second AI-assisted vertical video from provided clips, captions, and a simple hook.",
+    title: "Image AI creation",
+    content: "Create a polished AI image set from a simple brief, including subject direction, style matching, and export-ready visuals.",
     pay: "$20-$30",
     time: "1-2 hours",
-    requirements: "Use the provided template, add clean subtitles, keep pacing tight, and export a 1080x1920 MP4."
+    requirements: "Generate 3-5 image options, refine the selected visual, keep the style consistent, and deliver high-resolution files."
   },
   {
     id: "c2",
     level: "C",
-    title: "Product demo subtitle cut",
-    content: "Turn a product screen recording into a short tutorial with captions and basic transitions.",
+    title: "Static AI editing",
+    content: "Edit static AI creative assets for a product, profile, or social post using clean composition and simple copy placement.",
     pay: "$20-$30",
     time: "1-2 hours",
-    requirements: "Follow the checklist, remove pauses, add three text callouts, and submit source and final files."
+    requirements: "Adjust layout, crop and polish visuals, add required text elements, and submit both source and final image files."
   },
   {
     id: "b1",
     level: "B",
-    title: "Commercial Reels package",
-    content: "Produce a conversion-focused short video using AI voiceover, stock visuals, captions, and a brand CTA.",
+    title: "Video AI creation",
+    content: "Produce a short AI-assisted video from a script, visual direction, voiceover, captions, and branded pacing.",
     pay: "$60-$70",
     time: "1-2 hours",
-    requirements: "Create a stronger hook, align visuals with the script, and deliver two thumbnail options plus the editable project."
+    requirements: "Build a strong opening, align scenes with the script, add captions, and deliver the final video plus editable project file."
   },
   {
     id: "b2",
     level: "B",
-    title: "UGC style AI ad edit",
-    content: "Build a 40-second UGC-style ad from a script, avatar clip, B-roll, and product screenshots.",
+    title: "Advertising AI editing",
+    content: "Edit an AI-assisted ad using a product angle, customer pain point, visual proof, captions, and a clear call to action.",
     pay: "$60-$70",
     time: "1-2 hours",
-    requirements: "Match the brand tone, add animated captions, include a clear CTA, and pass quality review."
+    requirements: "Improve the hook, tighten pacing, match the brand tone, add motion captions, and prepare a conversion-focused final cut."
   },
   {
     id: "a1",
     level: "A",
-    title: "Multi-scene launch video",
-    content: "Create a polished launch video with structured scenes, AI narration, advanced pacing, and revision notes.",
+    title: "Film AI production",
+    content: "Create a cinematic AI video with scene planning, visual continuity, narration rhythm, advanced pacing, and final delivery notes.",
     pay: "$80-$100",
     time: "1-2 hours",
-    requirements: "Plan the scenes, manage assets, and deliver the final video, project file, and quality checklist."
+    requirements: "Plan the sequence, manage visual assets, refine transitions, balance audio, and deliver the final video with project files."
   },
   {
     id: "a2",
     level: "A",
-    title: "Team lead review task",
-    content: "Review junior edits, improve one final version, and prepare clear feedback for the editor group.",
+    title: "Team AI management",
+    content: "Review AI editing work from a small team, improve the final delivery, and prepare clear production feedback.",
     pay: "$80-$100",
     time: "1-2 hours",
-    requirements: "Provide timestamped feedback, correct pacing, validate subtitles, and prepare the final delivery."
+    requirements: "Check quality standards, provide timestamped feedback, assign revision priorities, and prepare the approved delivery version."
   }
 ];
 
@@ -348,20 +349,35 @@ const pricing = [
     level: "C",
     name: "C-Level AI Editor",
     price: "$199",
-    items: ["7-day beginner workflow", "Template editing lessons", "C-Level skill standards", "$20-$30 task range after qualification"]
+    items: [
+      "7-day beginner workflow",
+      "Image and static AI editing standards",
+      "$20-$30 commission per order after qualification",
+      "Estimated 1-2 hours to complete each order"
+    ]
   },
   {
     level: "B",
     name: "B-Level AI Editor",
     price: "$599",
     recommended: true,
-    items: ["Commercial short video workflow", "AI voiceover and pacing", "Quality review training", "$60-$70 task range after qualification"]
+    items: [
+      "Video AI creation workflow",
+      "Advertising AI editing standards",
+      "$60-$70 commission per order after qualification",
+      "Estimated 1-2 hours to complete each order"
+    ]
   },
   {
     level: "A",
     name: "A-Level AI Editor",
     price: "$999",
-    items: ["Advanced project workflow", "Team review methods", "Agent eligibility preparation", "$80-$100 task range after qualification"]
+    items: [
+      "Film AI production workflow",
+      "Team AI management standards",
+      "$80-$100 commission per order after qualification",
+      "Estimated 1-2 hours to complete each order"
+    ]
   }
 ];
 
@@ -448,12 +464,20 @@ const reviewAvatars = {
   A: "assets/avatar-aisha.webp"
 };
 
+const cryptoPaymentOptions = [
+  { id: "usdt-trc", asset: "USDT", network: "TRC20", label: "USDT-TRC", address: "" },
+  { id: "usdt-erc", asset: "USDT", network: "ERC20", label: "USDT-ERC", address: "" },
+  { id: "btc", asset: "BTC", network: "Bitcoin", label: "Bitcoin", address: "" },
+  { id: "eth", asset: "ETH", network: "Ethereum", label: "Ethereum", address: "" }
+];
+
 let currentLanguage = "en";
 let lastFocusedElement = null;
 let toastTimer = null;
 let activeCarouselIndex = 0;
 let carouselTimer = null;
 let captchaToken = null;
+let selectedPaymentPlan = null;
 
 function deepMerge(target, source) {
   Object.keys(source || {}).forEach((key) => {
@@ -515,7 +539,7 @@ function renderOrders() {
           <img class="order-image" src="${levelImages[order.level]}" alt="" width="1000" height="750" loading="lazy" />
           <div class="order-card-header">
             <span class="level-chip chip-${order.level.toLowerCase()}">${order.level}-Level</span>
-            <span class="order-code">TASK-${String(index + 1).padStart(3, "0")}</span>
+            <span class="order-code">ORDER NO. ${371011 + index}</span>
           </div>
           <h3>${order.title}</h3>
           <p>${order.content}</p>
@@ -563,13 +587,50 @@ function renderPricing() {
           <h3>${plan.name}</h3>
           <div class="price-row"><span class="price">${plan.price}</span><span class="price-note">${t("courses.oneTime")}</span></div>
           <ul>${plan.items.map((item) => `<li>${item}</li>`).join("")}</ul>
-          <a class="button button-primary full-width" href="${whatsappLink(`I want to consult about the ${plan.name} course.`)}" target="_blank" rel="noreferrer">
-            <span>${t("courses.consult")}</span>
-          </a>
+          <div class="price-actions">
+            <a class="button button-outline full-width" href="${whatsappLink(`I want to consult about the ${plan.name} course.`)}" target="_blank" rel="noreferrer">
+              <span>${t("courses.consult")}</span>
+            </a>
+            <button class="button button-primary full-width" type="button" data-payment-level="${plan.level}">
+              <span>${t("courses.payment")}</span>
+            </button>
+          </div>
         </article>
       `;
     })
     .join("");
+}
+
+function renderCryptoPaymentList() {
+  const list = document.getElementById("cryptoPaymentList");
+  list.innerHTML = cryptoPaymentOptions
+    .map((option) => {
+      const hasAddress = Boolean(option.address);
+      return `
+        <div class="crypto-row">
+          <div class="coin-mark coin-${option.id}" aria-hidden="true">${option.asset.charAt(0)}</div>
+          <div class="crypto-info">
+            <strong>${option.label}</strong>
+            <span>${option.network} network</span>
+            <code>${hasAddress ? option.address : "Address will be added soon"}</code>
+          </div>
+          <button class="copy-address-button" type="button" data-copy-address="${option.id}" ${hasAddress ? "" : "disabled"} aria-label="Copy ${option.label} address">
+            Copy
+          </button>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+function openPayment(level) {
+  const basePlan = pricing.find((plan) => plan.level === level);
+  if (!basePlan) return;
+  selectedPaymentPlan = localizedPlan(basePlan);
+  document.getElementById("paymentCourseName").textContent = selectedPaymentPlan.name;
+  document.getElementById("paymentCoursePrice").textContent = selectedPaymentPlan.price;
+  renderCryptoPaymentList();
+  openModal("paymentModal");
 }
 
 function openOrder(orderId) {
@@ -676,6 +737,32 @@ function profileDetail(label, value) {
   return wrapper;
 }
 
+function renderPaymentRecords(records = []) {
+  const body = document.getElementById("paymentTableBody");
+  body.replaceChildren();
+
+  if (!records.length) {
+    const row = document.createElement("tr");
+    const cell = document.createElement("td");
+    cell.colSpan = 5;
+    cell.className = "payment-empty";
+    cell.textContent = "No payment records yet. Confirmed course payments will appear here for customer and advisor review.";
+    row.append(cell);
+    body.append(row);
+    return;
+  }
+
+  records.forEach((record) => {
+    const row = document.createElement("tr");
+    ["course", "amount", "status", "date", "reference"].forEach((key) => {
+      const cell = document.createElement("td");
+      cell.textContent = record[key] || "-";
+      row.append(cell);
+    });
+    body.append(row);
+  });
+}
+
 function showAccount(profile) {
   document.getElementById("accountGuest").hidden = true;
   document.getElementById("accountDashboard").hidden = false;
@@ -703,6 +790,8 @@ function showAccount(profile) {
     profileDetail("Age", String(profile.age)),
     profileDetail("Gender", String(profile.gender).replaceAll("_", " "))
   );
+
+  renderPaymentRecords(profile.payment_records || profile.paymentRecords || []);
 
   const adminPanel = document.getElementById("adminPanel");
   adminPanel.hidden = profile.role !== "admin";
@@ -851,6 +940,9 @@ function setupProfile() {
     showGuestAccount();
     loadCaptcha();
   });
+  document.getElementById("paymentSupportButton").addEventListener("click", () => {
+    window.open(whatsappLink("Hi Hour AI, I would like to confirm my course payment record."), "_blank", "noopener");
+  });
   document.getElementById("exportCustomers").addEventListener("click", () => {
     window.location.href = "/api/admin/export";
   });
@@ -939,6 +1031,19 @@ function setupEvents() {
   document.body.addEventListener("click", (event) => {
     const orderButton = event.target.closest("[data-order-id]");
     if (orderButton) openOrder(orderButton.dataset.orderId);
+
+    const paymentButton = event.target.closest("[data-payment-level]");
+    if (paymentButton) openPayment(paymentButton.dataset.paymentLevel);
+
+    const copyButton = event.target.closest("[data-copy-address]");
+    if (copyButton) {
+      const option = cryptoPaymentOptions.find((item) => item.id === copyButton.dataset.copyAddress);
+      if (!option?.address) return;
+      navigator.clipboard.writeText(option.address).then(
+        () => showToast(`${option.label} address copied.`),
+        () => showToast("Copy failed. Please copy the address manually.")
+      );
+    }
   });
 
   document.querySelectorAll("[data-close-modal]").forEach((item) => {
@@ -970,6 +1075,13 @@ function setupEvents() {
   document.querySelectorAll("[data-close-support]").forEach((item) => {
     item.addEventListener("click", () => closeModal("supportModal"));
   });
+  document.querySelectorAll("[data-close-payment]").forEach((item) => {
+    item.addEventListener("click", () => closeModal("paymentModal"));
+  });
+  document.getElementById("paypalPaymentButton").addEventListener("click", () => {
+    const plan = selectedPaymentPlan || localizedPlan(pricing[0]);
+    window.open(whatsappLink(`I want to pay for the ${plan.name} course by PayPal. Please send the PayPal payment link including the 5% processing fee.`), "_blank", "noopener");
+  });
   document.querySelectorAll("[data-support-topic]").forEach((button) => {
     button.addEventListener("click", () => {
       document.querySelectorAll("[data-support-topic]").forEach((item) => item.classList.remove("is-active"));
@@ -992,6 +1104,7 @@ function setupEvents() {
       closeModal("orderModal");
       closeModal("profileModal");
       closeModal("supportModal");
+      closeModal("paymentModal");
     }
   });
 }
