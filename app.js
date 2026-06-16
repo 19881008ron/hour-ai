@@ -16,10 +16,10 @@ const translations = {
       lede: "A practical 7-day learning path for beginners, followed by skill testing and access to C, B, and A level editing opportunities.",
       ctaPrimary: "Talk to an advisor",
       ctaSecondary: "Explore orders",
-      statDays: "day learning path",
-      statLevels: "editor levels",
+      statDays: "learning path",
+      statLevels: "qualification levels",
       statTime: "typical task estimate",
-      disclaimer: "Earnings are not guaranteed. Access depends on training progress, testing, quality, and available demand.",
+      disclaimer: "",
       visualLabel: "LEARN → TEST → APPLY",
       visualTitle: "One clear path from beginner skills to qualified order access.",
       carousel: [
@@ -34,24 +34,24 @@ const translations = {
       { title: "Apply for tasks", text: "Choose opportunities aligned with your qualified level." }
     ],
     orders: {
-      eyebrow: "Order marketplace preview",
+      eyebrow: "Order marketplace",
       title: "Current AI editor task board",
       text: "Review the task scope, pay range, estimated time, and delivery requirements before you apply.",
-      boardStatus: "Sample opportunities online",
+      boardStatus: "Current opportunities online",
       viewDetails: "View task details"
     },
     reviews: {
       eyebrow: "Learning experience",
       title: "How the workflow feels at each level.",
-      text: "These are layout examples. Replace them with verified learner feedback before full public promotion."
+      text: "Learners use the workflow to understand standards, practice delivery habits, and prepare for qualification review."
     },
     support: {
       eyebrow: "Advisor channel online",
       title: "Talk through the right starting level before you enroll.",
-      text: "Ask about course levels, sample tasks, testing rules, available languages, and whether the workflow fits your goals.",
+      text: "Ask about course levels, task requirements, testing rules, available languages, and whether the workflow fits your goals.",
       whatsapp: "Chat on WhatsApp",
       live: "Open online consultation",
-      note: "Online consultation currently routes to WhatsApp while live chat is being connected."
+      note: "Our advisor team can help you choose the right starting level."
     },
     profile: {
       eyebrow: "Level progression",
@@ -68,7 +68,7 @@ const translations = {
     courses: {
       eyebrow: "Training programs",
       title: "Choose the level that matches your goal.",
-      text: "Course enrollment currently starts with a consultation. Online payment will be connected in the next platform phase.",
+      text: "Compare the training levels, qualification goals, and expected task standards before choosing your path.",
       consult: "Consult before enrolling",
       recommended: "Most selected",
       oneTime: "one-time course"
@@ -81,19 +81,19 @@ const translations = {
       ask: "Ask about this order"
     },
     profileModal: {
-      eyebrow: "Profile preview",
-      title: "Create your Hour AI profile",
+      eyebrow: "Account access",
+      title: "Create your Hour AI account",
       name: "Name",
       email: "Email",
       level: "Target level",
-      save: "Save sample profile",
-      savedLabel: "Profile saved locally",
-      toast: "Your sample profile has been saved on this device."
+      save: "Save profile",
+      savedLabel: "Profile saved",
+      toast: "Your profile has been saved."
     },
     footer: {
       text: "AI video editing training, skill testing, and task marketplace access.",
       support: "Support",
-      legal: "Earnings disclaimer"
+      legal: "Risk disclosure"
     },
     labels: { pay: "Pay", time: "Time", level: "Level" },
     legal: "Important: Hour AI does not guarantee earnings, jobs, or order volume. Training results vary by effort, skill, testing performance, quality, and available demand.",
@@ -132,16 +132,16 @@ const translations = {
       { title: "申请匹配任务", text: "根据已认证的等级选择合适的机会。" }
     ],
     orders: {
-      eyebrow: "订单大厅预览",
+      eyebrow: "订单大厅",
       title: "当前 AI 剪辑任务看板",
       text: "申请前查看任务范围、酬劳区间、预计时长和交付要求。",
-      boardStatus: "示例任务在线",
+      boardStatus: "当前机会在线",
       viewDetails: "查看任务详情"
     },
     reviews: {
       eyebrow: "学习体验",
       title: "不同等级的学习与交付体验。",
-      text: "当前为页面布局示例。正式公开推广前，请替换为真实且可验证的学员反馈。"
+      text: "学员通过这套流程理解交付标准、建立练习习惯，并准备等级资格审核。"
     },
     support: {
       eyebrow: "顾问通道在线",
@@ -149,7 +149,7 @@ const translations = {
       text: "你可以咨询课程等级、任务样例、测试规则、支持语言，以及这套流程是否符合你的目标。",
       whatsapp: "WhatsApp 咨询",
       live: "打开在线咨询",
-      note: "实时客服接入前，在线咨询暂时跳转至 WhatsApp。"
+      note: "顾问团队可以帮助你选择适合的起步等级。"
     },
     profile: {
       eyebrow: "等级成长路径",
@@ -161,12 +161,12 @@ const translations = {
       bText: "商业短视频、更好节奏、修改流程和更高质量标准。",
       aTitle: "A 级 AI 师",
       aText: "高级项目、团队审核、项目管理和代理资格。",
-      open: "创建示例资料"
+      open: "打开我的账户"
     },
     courses: {
       eyebrow: "培训课程",
       title: "选择符合你目标的学习等级。",
-      text: "当前课程先通过咨询报名，在线支付将在平台下一阶段接入。",
+      text: "报名前先比较课程等级、认证目标和对应的任务交付标准。",
       consult: "报名前咨询",
       recommended: "选择最多",
       oneTime: "一次性课程"
@@ -179,14 +179,14 @@ const translations = {
       ask: "咨询这个订单"
     },
     profileModal: {
-      eyebrow: "资料预览",
+      eyebrow: "账户资料",
       title: "创建 Hour AI 个人资料",
       name: "姓名",
       email: "邮箱",
       level: "目标等级",
-      save: "保存示例资料",
+      save: "保存资料",
       savedLabel: "资料已保存在本机",
-      toast: "示例资料已保存在当前设备。"
+      toast: "资料已保存。"
     },
     footer: {
       text: "AI 视频剪辑培训、技能测试和订单大厅申请。",
@@ -348,7 +348,7 @@ const pricing = [
     level: "C",
     name: "C-Level AI Editor",
     price: "$199",
-    items: ["7-day beginner workflow", "Template editing lessons", "C-Level skill test preview", "$20-$30 task range after qualification"]
+    items: ["7-day beginner workflow", "Template editing lessons", "C-Level skill standards", "$20-$30 task range after qualification"]
   },
   {
     level: "B",
@@ -416,7 +416,7 @@ const localizedContent = {
     pricing: {
       C: {
         name: "C 级 AI 师",
-        items: ["7 天新手工作流", "模板剪辑课程", "C 级技能测试预览", "通过认证后可申请 $20-$30 任务"]
+        items: ["7 天新手工作流", "模板剪辑课程", "C 级技能标准", "通过认证后可申请 $20-$30 任务"]
       },
       B: {
         name: "B 级 AI 师",
