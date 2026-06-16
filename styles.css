@@ -241,6 +241,7 @@ input:focus-visible {
 }
 
 .header-account[hidden],
+.header-login[hidden],
 .header-register[hidden] {
   display: none;
 }
@@ -290,19 +291,9 @@ input:focus-visible {
   position: relative;
 }
 
-.language-control::after {
-  position: absolute;
-  top: 50%;
-  right: 11px;
-  color: #9da7b5;
-  content: "⌄";
-  pointer-events: none;
-  transform: translateY(-58%);
-}
-
 .language-select {
   min-height: 40px;
-  padding: 0 32px 0 12px;
+  padding: 0 12px;
   color: #e5e9ef;
   background: #161b23;
   border: 1px solid #343b46;
@@ -1949,6 +1940,7 @@ input:focus-visible {
 
   .language-control,
   .language-select,
+  .header-login,
   .header-register {
     width: 100%;
   }

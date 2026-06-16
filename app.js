@@ -8,7 +8,7 @@ const translations = {
       path: "Learning path",
       courses: "Courses",
       support: "Support",
-      register: "Register"
+      register: "Sign up"
     },
     hero: {
       eyebrow: "AI editing training + order access",
@@ -690,6 +690,7 @@ function showAccount(profile) {
   document.getElementById("savedMeta").textContent = profile.email;
 
   document.getElementById("headerRegister").hidden = true;
+  document.getElementById("headerLogin").hidden = true;
   document.getElementById("headerAccount").hidden = false;
   document.getElementById("headerAvatar").textContent = (profile.username || "U").charAt(0).toUpperCase();
   document.getElementById("headerUsername").textContent = profile.username;
@@ -712,6 +713,7 @@ function showGuestAccount() {
   document.getElementById("accountGuest").hidden = false;
   document.getElementById("accountDashboard").hidden = true;
   document.getElementById("headerRegister").hidden = false;
+  document.getElementById("headerLogin").hidden = false;
   document.getElementById("headerAccount").hidden = true;
   switchAccountTab("register");
 }
@@ -944,6 +946,12 @@ function setupEvents() {
   });
   document.querySelectorAll("[data-open-profile]").forEach((item) => {
     item.addEventListener("click", () => openModal("profileModal"));
+  });
+  document.querySelectorAll("[data-open-login]").forEach((item) => {
+    item.addEventListener("click", () => {
+      switchAccountTab("login");
+      openModal("profileModal");
+    });
   });
   document.querySelectorAll("[data-close-profile]").forEach((item) => {
     item.addEventListener("click", () => closeModal("profileModal"));
