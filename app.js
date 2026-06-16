@@ -1164,7 +1164,40 @@ function initLanguage() {
   document.getElementById("languageSelect").value = currentLanguage;
 }
 
+function initWelcomeAnimation() {
+  const overlay = document.getElementById("welcomeOverlay");
+  const countdown = document.getElementById("welcomeCountdown");
+  const closeButton = document.getElementById("welcomeClose");
+  if (!overlay || !countdown || !closeButton) return;
+
+  const welcomeSeconds = 8;
+  let remainingSeconds = welcomeSeconds;
+  let countdownTimer = null;
+  let dismissTimer = null;
+
+  const dismissWelcome = () => {
+    window.clearInterval(countdownTimer);
+    window.clearTimeout(dismissTimer);
+    overlay.classList.add("is-dismissing");
+    document.body.classList.remove("welcome-open");
+    window.setTimeout(() => overlay.remove(), 700);
+  };
+
+  document.body.classList.add("welcome-open");
+  countdown.textContent = String(remainingSeconds);
+
+  countdownTimer = window.setInterval(() => {
+    remainingSeconds -= 1;
+    countdown.textContent = String(Math.max(remainingSeconds, 1));
+    if (remainingSeconds <= 1) window.clearInterval(countdownTimer);
+  }, 1000);
+
+  dismissTimer = window.setTimeout(dismissWelcome, welcomeSeconds * 1000);
+  closeButton.addEventListener("click", dismissWelcome);
+}
+
 document.getElementById("currentYear").textContent = new Date().getFullYear();
+initWelcomeAnimation();
 initLanguage();
 setupEvents();
 setupCarousel();

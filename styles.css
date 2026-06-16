@@ -86,6 +86,495 @@ input:focus-visible {
   border: 0;
 }
 
+.welcome-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: grid;
+  place-items: center;
+  min-width: 320px;
+  padding: 28px;
+  overflow: hidden;
+  color: #fff;
+  background:
+    linear-gradient(115deg, transparent 0 18%, rgba(0, 184, 212, 0.08) 18.4%, transparent 19.2% 68%, rgba(43, 213, 118, 0.09) 68.4%, transparent 69.4%),
+    radial-gradient(circle at 50% 42%, rgba(0, 184, 212, 0.18), transparent 32%),
+    linear-gradient(135deg, rgba(3, 7, 13, 0.7), rgba(5, 12, 22, 0.7));
+  backdrop-filter: blur(14px) saturate(130%);
+  opacity: 1;
+  transition:
+    opacity 650ms ease,
+    visibility 650ms ease;
+}
+
+.welcome-overlay::before,
+.welcome-overlay::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+}
+
+.welcome-overlay::before {
+  background:
+    linear-gradient(90deg, transparent, rgba(0, 184, 212, 0.18), transparent) 50% 28% / 82% 1px no-repeat,
+    linear-gradient(90deg, transparent, rgba(43, 213, 118, 0.16), transparent) 50% 74% / 70% 1px no-repeat,
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 8px);
+  opacity: 0.65;
+}
+
+.welcome-overlay::after {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(43, 213, 118, 0.18), transparent 18%),
+    radial-gradient(circle at 82% 78%, rgba(0, 184, 212, 0.16), transparent 20%);
+  filter: blur(10px);
+}
+
+.welcome-beam {
+  position: absolute;
+  z-index: 1;
+  width: 30vw;
+  height: 140vh;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(0, 184, 212, 0.2), rgba(43, 213, 118, 0.16), transparent);
+  filter: blur(2px);
+  opacity: 0.62;
+  transform: rotate(18deg);
+  animation: welcomeBeam 8s ease-in-out both;
+}
+
+.welcome-beam-left {
+  top: -18vh;
+  left: 10vw;
+}
+
+.welcome-beam-right {
+  right: 9vw;
+  bottom: -22vh;
+  transform: rotate(18deg) scaleX(-1);
+  animation-name: welcomeBeamRight;
+  animation-delay: 700ms;
+}
+
+body.welcome-open {
+  overflow: hidden;
+}
+
+.welcome-overlay.is-dismissing {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.welcome-grid {
+  position: absolute;
+  inset: -20%;
+  background-image:
+    linear-gradient(rgba(0, 184, 212, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(43, 213, 118, 0.1) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: radial-gradient(circle at center, #000 0 34%, transparent 70%);
+  opacity: 0.46;
+  transform: perspective(720px) rotateX(58deg) translateY(16%);
+  animation: welcomeGrid 5s linear both;
+}
+
+.welcome-content {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  width: min(920px, 100%);
+  padding: clamp(30px, 6vw, 70px);
+  text-align: center;
+}
+
+.welcome-sequence {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: #8feaff;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  opacity: 0;
+  text-transform: uppercase;
+  animation: welcomeSequence 900ms 140ms ease-out both;
+}
+
+.welcome-sequence span {
+  position: relative;
+  padding: 5px 7px;
+}
+
+.welcome-sequence span::after {
+  position: absolute;
+  right: -10px;
+  color: rgba(43, 213, 118, 0.64);
+  content: "/";
+}
+
+.welcome-sequence span:last-child::after {
+  content: "";
+}
+
+.welcome-content::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, #2bd576 0 84px, transparent 84px calc(100% - 84px), #00b8d4 calc(100% - 84px)) top / 100% 2px no-repeat,
+    linear-gradient(90deg, #00b8d4 0 84px, transparent 84px calc(100% - 84px), #2bd576 calc(100% - 84px)) bottom / 100% 2px no-repeat,
+    linear-gradient(#2bd576 0 72px, transparent 72px calc(100% - 72px), #00b8d4 calc(100% - 72px)) left / 2px 100% no-repeat,
+    linear-gradient(#00b8d4 0 72px, transparent 72px calc(100% - 72px), #2bd576 calc(100% - 72px)) right / 2px 100% no-repeat;
+  opacity: 0.42;
+  content: "";
+}
+
+.welcome-content::after {
+  position: absolute;
+  inset: 12%;
+  z-index: -2;
+  background: radial-gradient(circle, rgba(43, 213, 118, 0.18), transparent 62%);
+  filter: blur(22px);
+  content: "";
+}
+
+.welcome-logo-wrap {
+  position: relative;
+  display: grid;
+  width: 176px;
+  height: 176px;
+  place-items: center;
+  margin-bottom: 24px;
+}
+
+.welcome-logo {
+  position: relative;
+  z-index: 2;
+  width: 116px;
+  height: 116px;
+  border-radius: 30px;
+  filter:
+    drop-shadow(0 0 26px rgba(43, 213, 118, 0.72))
+    drop-shadow(0 0 62px rgba(0, 184, 212, 0.44));
+  animation: welcomeLogo 760ms ease-out both, welcomePulse 2.4s 760ms ease-in-out infinite;
+}
+
+.welcome-orbit {
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(0, 184, 212, 0.48);
+  border-radius: 42%;
+  box-shadow: 0 0 34px rgba(0, 184, 212, 0.16);
+  animation: welcomeOrbit 5s linear infinite;
+}
+
+.welcome-orbit-two {
+  inset: 22px;
+  border-color: rgba(43, 213, 118, 0.48);
+  transform: rotate(68deg);
+  animation-duration: 3.6s;
+  animation-direction: reverse;
+}
+
+.welcome-kicker {
+  margin: 0 0 14px;
+  color: #35f28c;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 0 0 16px rgba(43, 213, 118, 0.42);
+}
+
+.welcome-content h2 {
+  max-width: 860px;
+  margin: 0;
+  color: #f9fffd;
+  font-size: clamp(34px, 5.6vw, 64px);
+  font-weight: 950;
+  line-height: 0.96;
+  text-wrap: balance;
+  text-shadow:
+    0 0 18px rgba(43, 213, 118, 0.18),
+    0 0 38px rgba(0, 184, 212, 0.24),
+    0 18px 54px rgba(0, 0, 0, 0.5);
+  animation: welcomeTitle 560ms 40ms ease-out both;
+}
+
+.welcome-line {
+  max-width: 680px;
+  margin: 22px 0 0;
+  color: #c8d5e5;
+  font-size: clamp(17px, 2vw, 23px);
+  line-height: 1.55;
+  text-wrap: balance;
+  animation: welcomeTitle 620ms 120ms ease-out both;
+}
+
+.welcome-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+  animation: welcomeTitle 620ms 180ms ease-out both;
+}
+
+.welcome-chips span {
+  padding: 8px 11px;
+  color: #d8f7ff;
+  background: rgba(8, 13, 20, 0.58);
+  border: 1px solid rgba(0, 184, 212, 0.34);
+  border-radius: 999px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.welcome-flow {
+  display: grid;
+  grid-template-columns: auto 38px auto 38px auto 38px auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 22px;
+  color: #dbe8f4;
+  animation: welcomeTitle 620ms 260ms ease-out both;
+}
+
+.welcome-flow span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 11px;
+  background: rgba(3, 7, 13, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.welcome-flow b {
+  color: #35f28c;
+  font-size: 11px;
+}
+
+.welcome-flow i {
+  display: block;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(43, 213, 118, 0.1), rgba(0, 184, 212, 0.9), rgba(43, 213, 118, 0.1));
+  border-radius: 999px;
+  animation: welcomeFlowLine 1.8s ease-in-out infinite;
+}
+
+.welcome-scan {
+  position: relative;
+  width: min(560px, 82vw);
+  height: 3px;
+  margin-top: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+}
+
+.welcome-scan span {
+  position: absolute;
+  inset: 0;
+  width: 36%;
+  background: linear-gradient(90deg, transparent, #2bd576, #00b8d4, transparent);
+  border-radius: inherit;
+  animation: welcomeScan 1.4s ease-in-out infinite;
+}
+
+.welcome-countdown {
+  position: absolute;
+  top: 28px;
+  right: 92px;
+  z-index: 2;
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 950;
+  background: rgba(8, 13, 20, 0.72);
+  border: 1px solid rgba(0, 184, 212, 0.38);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 0 5px rgba(0, 184, 212, 0.08),
+    0 0 34px rgba(0, 184, 212, 0.2);
+}
+
+.welcome-countdown::after {
+  position: absolute;
+  bottom: -19px;
+  left: 50%;
+  color: #8ea2b8;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  transform: translateX(-50%);
+  content: "SEC";
+}
+
+.welcome-countdown::before {
+  position: absolute;
+  inset: -4px;
+  border: 2px solid rgba(43, 213, 118, 0.46);
+  border-right-color: transparent;
+  border-radius: 50%;
+  content: "";
+  animation: welcomeCountdownSpin 1s linear infinite;
+}
+
+.welcome-close {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  z-index: 2;
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  color: #fff;
+  background: rgba(8, 13, 20, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.welcome-close:hover {
+  border-color: rgba(43, 213, 118, 0.72);
+  background: rgba(43, 213, 118, 0.16);
+}
+
+@keyframes welcomeGrid {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 174px;
+  }
+}
+
+@keyframes welcomeBeam {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px) rotate(18deg);
+  }
+
+  22%,
+  78% {
+    opacity: 0.62;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(34px) rotate(18deg);
+  }
+}
+
+@keyframes welcomeBeamRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px) rotate(18deg) scaleX(-1);
+  }
+
+  22%,
+  78% {
+    opacity: 0.62;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-34px) rotate(18deg) scaleX(-1);
+  }
+}
+
+@keyframes welcomeLogo {
+  from {
+    opacity: 0;
+    transform: scale(0.76) rotate(-8deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes welcomePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.035);
+  }
+}
+
+@keyframes welcomeOrbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes welcomeTitle {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes welcomeSequence {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes welcomeScan {
+  from {
+    transform: translateX(-110%);
+  }
+
+  to {
+    transform: translateX(300%);
+  }
+}
+
+@keyframes welcomeFlowLine {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes welcomeCountdownSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .skip-link {
   position: fixed;
   top: 10px;
@@ -2398,6 +2887,16 @@ input:focus-visible {
 }
 
 @media (max-width: 1120px) {
+  .welcome-content {
+    width: min(840px, 100%);
+    padding: clamp(28px, 5vw, 58px);
+  }
+
+  .welcome-content h2 {
+    max-width: 780px;
+    font-size: clamp(40px, 6.4vw, 58px);
+  }
+
   .header-inner {
     grid-template-columns: auto 1fr;
   }
@@ -2443,6 +2942,36 @@ input:focus-visible {
 }
 
 @media (max-width: 900px) {
+  .welcome-logo-wrap {
+    width: 142px;
+    height: 142px;
+    margin-bottom: 20px;
+  }
+
+  .welcome-logo {
+    width: 92px;
+    height: 92px;
+    border-radius: 22px;
+  }
+
+  .welcome-content h2 {
+    max-width: 720px;
+    font-size: clamp(36px, 7vw, 50px);
+  }
+
+  .welcome-line {
+    max-width: 620px;
+  }
+
+  .welcome-flow {
+    grid-template-columns: auto 24px auto 24px auto 24px auto;
+  }
+
+  .welcome-flow span {
+    padding: 8px 9px;
+    font-size: 11px;
+  }
+
   .heading-row,
   .support-section {
     grid-template-columns: 1fr;
@@ -2475,6 +3004,105 @@ input:focus-visible {
 }
 
 @media (max-width: 680px) {
+  .welcome-overlay {
+    padding: 18px;
+  }
+
+  .welcome-content {
+    padding: 26px 10px;
+  }
+
+  .welcome-logo-wrap {
+    width: 124px;
+    height: 124px;
+    margin-bottom: 18px;
+  }
+
+  .welcome-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+  }
+
+  .welcome-content::before {
+    background:
+      linear-gradient(90deg, #2bd576 0 42px, transparent 42px calc(100% - 42px), #00b8d4 calc(100% - 42px)) top / 100% 2px no-repeat,
+      linear-gradient(90deg, #00b8d4 0 42px, transparent 42px calc(100% - 42px), #2bd576 calc(100% - 42px)) bottom / 100% 2px no-repeat,
+      linear-gradient(#2bd576 0 44px, transparent 44px calc(100% - 44px), #00b8d4 calc(100% - 44px)) left / 2px 100% no-repeat,
+      linear-gradient(#00b8d4 0 44px, transparent 44px calc(100% - 44px), #2bd576 calc(100% - 44px)) right / 2px 100% no-repeat;
+  }
+
+  .welcome-kicker {
+    font-size: 11px;
+  }
+
+  .welcome-content h2 {
+    max-width: 350px;
+    font-size: clamp(32px, 10vw, 42px);
+    line-height: 1.02;
+  }
+
+  .welcome-line {
+    max-width: 330px;
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .welcome-chips {
+    gap: 7px;
+    margin-top: 18px;
+  }
+
+  .welcome-chips span {
+    padding: 7px 9px;
+    font-size: 10px;
+  }
+
+  .welcome-flow {
+    grid-template-columns: 1fr 1fr;
+    width: min(330px, 100%);
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .welcome-flow i {
+    display: none;
+  }
+
+  .welcome-flow span {
+    justify-content: center;
+    padding: 9px 8px;
+    font-size: 11px;
+  }
+
+  .welcome-sequence {
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    max-width: 310px;
+    margin-bottom: 14px;
+    font-size: 9px;
+  }
+
+  .welcome-scan {
+    margin-top: 26px;
+  }
+
+  .welcome-countdown {
+    top: 18px;
+    right: 74px;
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+  }
+
+  .welcome-close {
+    top: 18px;
+    right: 18px;
+    width: 42px;
+    height: 42px;
+  }
+
   html {
     scroll-padding-top: 150px;
   }
@@ -2740,6 +3368,35 @@ input:focus-visible {
 }
 
 @media (max-width: 380px) {
+  .welcome-content h2 {
+    max-width: 300px;
+    font-size: 29px;
+  }
+
+  .welcome-line {
+    max-width: 292px;
+    font-size: 15px;
+  }
+
+  .welcome-chips {
+    max-width: 260px;
+  }
+
+  .welcome-flow {
+    width: min(300px, 100%);
+  }
+
+  .welcome-countdown {
+    right: 68px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .welcome-close {
+    width: 40px;
+    height: 40px;
+  }
+
   .hero-copy h1 {
     font-size: 38px;
   }
@@ -2759,6 +3416,88 @@ input:focus-visible {
   }
 }
 
+@media (max-height: 760px) and (min-width: 681px) {
+  .welcome-content {
+    padding: 22px;
+  }
+
+  .welcome-logo-wrap {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 14px;
+  }
+
+  .welcome-logo {
+    width: 78px;
+    height: 78px;
+    border-radius: 18px;
+  }
+
+  .welcome-content h2 {
+    font-size: clamp(34px, 5vw, 52px);
+  }
+
+  .welcome-line {
+    margin-top: 16px;
+    font-size: 17px;
+  }
+
+  .welcome-chips {
+    margin-top: 18px;
+  }
+
+  .welcome-flow {
+    margin-top: 16px;
+  }
+
+  .welcome-scan {
+    margin-top: 22px;
+  }
+}
+
+@media (max-height: 850px) and (min-width: 1121px) {
+  .welcome-content {
+    padding: 22px 42px;
+  }
+
+  .welcome-sequence {
+    margin-bottom: 12px;
+  }
+
+  .welcome-logo-wrap {
+    width: 142px;
+    height: 142px;
+    margin-bottom: 16px;
+  }
+
+  .welcome-logo {
+    width: 92px;
+    height: 92px;
+    border-radius: 24px;
+  }
+
+  .welcome-content h2 {
+    font-size: clamp(42px, 5vw, 58px);
+  }
+
+  .welcome-line {
+    margin-top: 16px;
+    font-size: 19px;
+  }
+
+  .welcome-chips {
+    margin-top: 18px;
+  }
+
+  .welcome-flow {
+    margin-top: 16px;
+  }
+
+  .welcome-scan {
+    margin-top: 20px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -2771,5 +3510,9 @@ input:focus-visible {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .welcome-overlay {
+    transition-duration: 160ms !important;
   }
 }

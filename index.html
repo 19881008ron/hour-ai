@@ -18,6 +18,47 @@
   <body>
     <a class="skip-link" href="#mainContent">Skip to content</a>
 
+    <div class="welcome-overlay" id="welcomeOverlay" aria-live="polite">
+      <span class="welcome-beam welcome-beam-left" aria-hidden="true"></span>
+      <span class="welcome-beam welcome-beam-right" aria-hidden="true"></span>
+      <div class="welcome-grid" aria-hidden="true"></div>
+      <div class="welcome-countdown" aria-label="Welcome animation countdown">
+        <span id="welcomeCountdown">8</span>
+      </div>
+      <button class="welcome-close" id="welcomeClose" type="button" aria-label="Skip welcome animation">&times;</button>
+      <div class="welcome-content">
+        <div class="welcome-sequence" aria-hidden="true">
+          <span>BOOT</span>
+          <span>LEARN</span>
+          <span>QUALIFY</span>
+          <span>DELIVER</span>
+        </div>
+        <div class="welcome-logo-wrap">
+          <img class="welcome-logo" src="assets/hour-ai-logo.svg" alt="Hour AI" width="96" height="96" />
+          <span class="welcome-orbit welcome-orbit-one" aria-hidden="true"></span>
+          <span class="welcome-orbit welcome-orbit-two" aria-hidden="true"></span>
+        </div>
+        <p class="welcome-kicker">Hour AI delivery system online</p>
+        <h2>AI Learning + Continuous Commission.</h2>
+        <p class="welcome-line">A delivery system for AI work that you have never seen before.</p>
+        <div class="welcome-chips" aria-hidden="true">
+          <span>AI LEARNING</span>
+          <span>ORDER ACCESS</span>
+          <span>COMMISSION FLOW</span>
+        </div>
+        <div class="welcome-flow" aria-hidden="true">
+          <span><b>01</b> Train</span>
+          <i></i>
+          <span><b>02</b> Test</span>
+          <i></i>
+          <span><b>03</b> Orders</span>
+          <i></i>
+          <span><b>04</b> Commission</span>
+        </div>
+        <div class="welcome-scan" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="#top" aria-label="Hour AI home">
