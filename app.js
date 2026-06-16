@@ -63,6 +63,7 @@ const translations = {
       bText: "Commercial short videos, better pacing, revisions, and stronger quality standards.",
       aTitle: "A-Level AI Editor",
       aText: "Advanced projects, team review, project management, and agent eligibility.",
+      commissionLabel: "Per-order commission",
       open: "Open my account"
     },
     courses: {
