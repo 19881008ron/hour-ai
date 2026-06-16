@@ -511,11 +511,28 @@ input:focus-visible {
   border-color: rgba(255, 138, 50, 0.5);
 }
 
+.hero-proof div {
+  display: grid;
+  min-height: 126px;
+  place-items: center;
+  align-content: center;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.hero-proof div::before {
+  right: 50%;
+  width: 78%;
+  max-width: 154px;
+  transform: translateX(50%);
+}
+
 .hero-proof strong {
   color: #fff;
   font-size: clamp(23px, 2vw, 31px);
   line-height: 1;
   letter-spacing: 0;
+  text-align: center;
   white-space: nowrap;
 }
 
@@ -525,6 +542,7 @@ input:focus-visible {
   font-size: 12px;
   font-weight: 800;
   line-height: 1.35;
+  text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -1937,6 +1955,9 @@ input:focus-visible {
 
 .payment-modal-panel {
   width: min(960px, 100%);
+  background:
+    linear-gradient(180deg, rgba(0, 184, 212, 0.04), transparent 180px),
+    #fff;
 }
 
 .payment-summary {
@@ -1947,10 +1968,10 @@ input:focus-visible {
 }
 
 .payment-summary > div {
-  padding: 14px;
-  background: #f6f8fb;
+  padding: 16px 18px;
+  background: linear-gradient(145deg, #f8fbff 0%, #f2f5f9 100%);
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .payment-summary span {
@@ -1965,7 +1986,7 @@ input:focus-visible {
   display: block;
   margin-top: 6px;
   color: var(--ink);
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .payment-method-grid {
@@ -1979,10 +2000,10 @@ input:focus-visible {
   gap: 14px;
   align-content: start;
   min-height: 100%;
-  padding: 18px;
+  padding: 20px;
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .payment-method-top {
@@ -1996,25 +2017,26 @@ input:focus-visible {
   display: inline-grid;
   min-height: 34px;
   place-items: center;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 900;
   letter-spacing: 0;
 }
 
 .paypal-logo {
-  min-width: 98px;
+  min-width: 104px;
   color: #003087;
-  background: #edf5ff;
-  border: 1px solid #b8d9ff;
+  background: linear-gradient(135deg, #f5fbff 0%, #ddebff 100%);
+  border: 1px solid #abcfff;
   font-size: 16px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
 }
 
 .crypto-logo {
-  min-width: 112px;
+  min-width: 104px;
   color: #e7ff6a;
   background: #05070a;
   border: 1px solid #26311d;
-  font-size: 12px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
@@ -2040,7 +2062,8 @@ input:focus-visible {
 
 .payment-method-card h3 {
   margin: 0;
-  font-size: 22px;
+  font-size: 24px;
+  line-height: 1.15;
 }
 
 .payment-method-card p {
@@ -2050,12 +2073,74 @@ input:focus-visible {
   line-height: 1.55;
 }
 
+.paypal-card {
+  grid-template-rows: auto auto auto auto 1fr auto;
+  background:
+    linear-gradient(145deg, rgba(0, 48, 135, 0.06), transparent 45%),
+    #fff;
+}
+
+.paypal-fee-box {
+  padding: 14px;
+  background: #f6f9ff;
+  border: 1px solid #c9dcff;
+  border-radius: 8px;
+}
+
+.paypal-fee-box span {
+  display: block;
+  color: var(--muted-light);
+  font-size: 10px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.paypal-fee-box strong {
+  display: block;
+  margin-top: 6px;
+  color: #003087;
+  font-size: 17px;
+}
+
+.payment-mini-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.payment-mini-list li {
+  position: relative;
+  padding-left: 20px;
+  color: #425066;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.payment-mini-list li::before {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  content: "";
+}
+
+.paypal-card .button {
+  align-self: end;
+}
+
 .crypto-card {
   color: #eef5ff;
   background:
-    linear-gradient(135deg, rgba(43, 213, 118, 0.1), transparent 38%),
+    radial-gradient(circle at 18% 0%, rgba(231, 255, 106, 0.12), transparent 34%),
+    linear-gradient(135deg, rgba(43, 213, 118, 0.09), transparent 42%),
     #080b10;
   border-color: #202a35;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .crypto-card h3,
@@ -2069,7 +2154,7 @@ input:focus-visible {
 
 .crypto-list {
   display: grid;
-  gap: 9px;
+  gap: 10px;
 }
 
 .crypto-row {
@@ -2077,10 +2162,16 @@ input:focus-visible {
   grid-template-columns: auto minmax(0, 1fr) auto;
   gap: 12px;
   align-items: center;
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.045);
+  padding: 13px;
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.crypto-row:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(231, 255, 106, 0.22);
 }
 
 .coin-mark {
@@ -2155,6 +2246,7 @@ input:focus-visible {
   cursor: not-allowed;
   color: #687384;
   background: #232a33;
+  opacity: 0.88;
 }
 
 .payment-disclaimer {
