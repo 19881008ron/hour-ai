@@ -1078,9 +1078,22 @@ function setupEvents() {
   document.querySelectorAll("[data-close-payment]").forEach((item) => {
     item.addEventListener("click", () => closeModal("paymentModal"));
   });
-  document.getElementById("paypalPaymentButton").addEventListener("click", () => {
+  document.getElementById("paypalPaymentButton").addEventListener("click", async () => {
     const plan = selectedPaymentPlan || localizedPlan(pricing[0]);
-    window.open(whatsappLink(`I want to pay for the ${plan.name} course by PayPal. Please send the PayPal payment link including the 5% processing fee.`), "_blank", "noopener");
+    const button = document.getElementById("paypalPaymentButton");
+    button.disabled = true;
+    button.textContent = "Opening PayPal checkout...";
+    try {
+      const data = await apiRequest("/api/paypal/create-order", {
+        method: "POST",
+        body: JSON.stringify({ level: plan.level })
+      });
+      window.location.href = data.approvalUrl;
+    } catch (error) {
+      showToast(error.message || "PayPal checkout is not available yet.");
+      button.disabled = false;
+      button.textContent = "Continue to PayPal Checkout";
+    }
   });
   document.querySelectorAll("[data-support-topic]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -1115,6 +1128,35 @@ function initLinks() {
   document.getElementById("supportWhatsapp").href = whatsappLink(message);
 }
 
+async function handlePayPalReturn() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("payment") === "cancelled") {
+    showToast("PayPal checkout was cancelled.");
+    window.history.replaceState({}, "", window.location.pathname);
+    return;
+  }
+
+  if (params.get("payment") !== "paypal-return") return;
+  const orderId = params.get("token");
+  if (!orderId) {
+    showToast("PayPal returned without an order ID.");
+    window.history.replaceState({}, "", window.location.pathname);
+    return;
+  }
+
+  try {
+    const data = await apiRequest("/api/paypal/capture-order", {
+      method: "POST",
+      body: JSON.stringify({ orderId })
+    });
+    showToast(data.status === "COMPLETED" ? "PayPal payment confirmed." : `PayPal status: ${data.status}`);
+  } catch (error) {
+    showToast(error.message || "PayPal payment confirmation failed.");
+  } finally {
+    window.history.replaceState({}, "", window.location.pathname);
+  }
+}
+
 function initLanguage() {
   const savedLanguage = localStorage.getItem("hourAiLanguage");
   if (savedLanguage && translations[savedLanguage]) currentLanguage = savedLanguage;
@@ -1128,3 +1170,4 @@ setupCarousel();
 setupProfile();
 initLinks();
 applyTranslations();
+handlePayPalReturn();

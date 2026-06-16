@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Hour AI logo</title>
+  <desc id="desc">A fast AI mark combining a speed arrow, circuit nodes, and Hour AI initials.</desc>
+  <defs>
+    <linearGradient id="bg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f1724"/>
+      <stop offset="1" stop-color="#05080d"/>
+    </linearGradient>
+    <linearGradient id="speed" x1="26" y1="80" x2="100" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2bd576"/>
+      <stop offset="1" stop-color="#00d4ff"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3.4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <rect x="10" y="10" width="108" height="108" rx="23" fill="none" stroke="#203044" stroke-width="2"/>
+  <path d="M28 77h31L47 102l53-54H69l13-23L28 77Z" fill="url(#speed)" filter="url(#glow)"/>
+  <path d="M35 37h17c12 0 20 8 20 19v36h-13V58c0-6-4-10-10-10H35V37Z" fill="#f6fbff"/>
+  <path d="M84 37h12v55H84V37Z" fill="#f6fbff"/>
+  <circle cx="90" cy="25" r="5" fill="#2bd576"/>
+  <circle cx="106" cy="42" r="4" fill="#00d4ff"/>
+  <circle cx="104" cy="84" r="4" fill="#2bd576"/>
+  <path d="M94 28l9 10M97 57h12M97 82h7" fill="none" stroke="#6fffd2" stroke-width="3" stroke-linecap="round"/>
+</svg>
