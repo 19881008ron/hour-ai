@@ -16,9 +16,9 @@ const translations = {
       lede: "A practical 7-day learning path for beginners, followed by skill testing and access to C, B, and A level editing opportunities.",
       ctaPrimary: "Talk to an advisor",
       ctaSecondary: "Explore orders",
-      statDays: "learning path",
-      statLevels: "qualification levels",
-      statTime: "typical task estimate",
+      statDays: "Fast learning",
+      statLevels: "Order demand",
+      statTime: "Commission window",
       disclaimer: "",
       visualLabel: "LEARN → TEST → APPLY",
       visualTitle: "One clear path from beginner skills to qualified order access.",
@@ -35,9 +35,9 @@ const translations = {
     ],
     orders: {
       eyebrow: "Order marketplace",
-      title: "Current AI editor task board",
-      text: "Review the task scope, pay range, estimated time, and delivery requirements before you apply.",
-      boardStatus: "Current opportunities online",
+      title: "Active orders waiting for qualified AI editors",
+      text: "C, B, and A-Level editors can review task scope, commission range, estimated time, and delivery requirements before applying.",
+      boardStatus: "Commission orders open for qualified editors",
       viewDetails: "View task details"
     },
     reviews: {
@@ -75,7 +75,7 @@ const translations = {
     },
     modal: {
       content: "Task scope",
-      pay: "Pay range",
+      pay: "Commission range",
       time: "Estimated time",
       requirements: "Delivery requirements",
       ask: "Ask about this order"
@@ -95,7 +95,7 @@ const translations = {
       support: "Support",
       legal: "Risk disclosure"
     },
-    labels: { pay: "Pay", time: "Time", level: "Level" },
+    labels: { pay: "Commission", time: "Time", level: "Level" },
     legal: "Important: Hour AI does not guarantee earnings, jobs, or order volume. Training results vary by effort, skill, testing performance, quality, and available demand.",
     saved: "Target level: {level}. Saved on this device."
   },
@@ -114,9 +114,9 @@ const translations = {
       lede: "为新手设计的 7 天实操学习路径，完成学习和技能测试后，可申请 C、B、A 级剪辑机会。",
       ctaPrimary: "咨询顾问",
       ctaSecondary: "浏览订单",
-      statDays: "天学习路径",
-      statLevels: "个 AI 师等级",
-      statTime: "典型任务预计时长",
+      statDays: "快速学习",
+      statLevels: "订单需求",
+      statTime: "佣金窗口",
       disclaimer: "收入不作保证。申请资格取决于学习进度、测试结果、交付质量和实际订单需求。",
       visualLabel: "学习 → 测试 → 申请",
       visualTitle: "从新手技能到合格订单申请，一条清晰的成长路径。",
@@ -133,9 +133,9 @@ const translations = {
     ],
     orders: {
       eyebrow: "订单大厅",
-      title: "当前 AI 剪辑任务看板",
-      text: "申请前查看任务范围、酬劳区间、预计时长和交付要求。",
-      boardStatus: "当前机会在线",
+      title: "等待合格 AI 剪辑师完成的活跃订单",
+      text: "C、B、A 级剪辑师可在申请前查看任务范围、佣金区间、预计时长和交付要求。",
+      boardStatus: "合格剪辑师可申请的佣金订单",
       viewDetails: "查看任务详情"
     },
     reviews: {
@@ -173,7 +173,7 @@ const translations = {
     },
     modal: {
       content: "任务范围",
-      pay: "酬劳区间",
+      pay: "佣金区间",
       time: "预计时长",
       requirements: "交付要求",
       ask: "咨询这个订单"
@@ -193,7 +193,7 @@ const translations = {
       support: "客服",
       legal: "收入免责声明"
     },
-    labels: { pay: "酬劳", time: "时长", level: "等级" },
+    labels: { pay: "佣金", time: "时长", level: "等级" },
     legal: "重要提示：Hour AI 不保证收入、工作机会或订单数量。学习结果取决于个人投入、技能、测试表现、交付质量和实际订单需求。",
     saved: "目标等级：{level}。资料保存在当前设备。"
   },
