@@ -524,7 +524,7 @@ function renderOrders() {
             <span><strong>${t("labels.time")}</strong><b>${order.time}</b></span>
           </div>
           <button class="button button-outline full-width" type="button" data-order-id="${order.id}">
-            <span>${t("orders.viewDetails")}</span><span aria-hidden="true">→</span>
+            <span>${t("orders.viewDetails")}</span>
           </button>
         </article>
       `;
@@ -564,7 +564,7 @@ function renderPricing() {
           <div class="price-row"><span class="price">${plan.price}</span><span class="price-note">${t("courses.oneTime")}</span></div>
           <ul>${plan.items.map((item) => `<li>${item}</li>`).join("")}</ul>
           <a class="button button-primary full-width" href="${whatsappLink(`I want to consult about the ${plan.name} course.`)}" target="_blank" rel="noreferrer">
-            <span>${t("courses.consult")}</span><span aria-hidden="true">↗</span>
+            <span>${t("courses.consult")}</span>
           </a>
         </article>
       `;
@@ -680,13 +680,20 @@ function showAccount(profile) {
   document.getElementById("accountGuest").hidden = true;
   document.getElementById("accountDashboard").hidden = false;
 
-  const badge = document.getElementById("savedBadge");
   const hasLevel = ["A", "B", "C"].includes(profile.level);
+  const levelLabel = hasLevel ? `${profile.level}-Level AI Editor` : "Qualification pending";
+  const badge = document.getElementById("savedBadge");
   badge.textContent = hasLevel ? profile.level : "?";
   badge.className = `level-badge ${hasLevel ? `level-${profile.level.toLowerCase()}` : "level-unverified"}`;
-  document.getElementById("savedLevelLabel").textContent = hasLevel ? `${profile.level}-Level AI Editor` : "Qualification pending";
+  document.getElementById("savedLevelLabel").textContent = levelLabel;
   document.getElementById("savedName").textContent = profile.username;
   document.getElementById("savedMeta").textContent = profile.email;
+
+  document.getElementById("headerRegister").hidden = true;
+  document.getElementById("headerAccount").hidden = false;
+  document.getElementById("headerAvatar").textContent = (profile.username || "U").charAt(0).toUpperCase();
+  document.getElementById("headerUsername").textContent = profile.username;
+  document.getElementById("headerLevel").textContent = levelLabel;
 
   const details = document.getElementById("accountDetails");
   details.replaceChildren(
@@ -704,6 +711,8 @@ function showAccount(profile) {
 function showGuestAccount() {
   document.getElementById("accountGuest").hidden = false;
   document.getElementById("accountDashboard").hidden = true;
+  document.getElementById("headerRegister").hidden = false;
+  document.getElementById("headerAccount").hidden = true;
   switchAccountTab("register");
 }
 
@@ -940,18 +949,41 @@ function setupEvents() {
     item.addEventListener("click", () => closeModal("profileModal"));
   });
 
-  document.getElementById("liveChatButton").addEventListener("click", () => {
-    window.open(whatsappLink("I want to start an online consultation with Hour AI."), "_blank", "noopener");
+  document.querySelectorAll("[data-open-support]").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      openModal("supportModal");
+    });
   });
 
-  document.getElementById("legalButton").addEventListener("click", () => {
-    window.alert(t("legal"));
+  document.getElementById("liveChatButton").addEventListener("click", () => {
+    openModal("supportModal");
+  });
+  document.querySelectorAll("[data-close-support]").forEach((item) => {
+    item.addEventListener("click", () => closeModal("supportModal"));
+  });
+  document.querySelectorAll("[data-support-topic]").forEach((button) => {
+    button.addEventListener("click", () => {
+      document.querySelectorAll("[data-support-topic]").forEach((item) => item.classList.remove("is-active"));
+      button.classList.add("is-active");
+    });
+  });
+  document.getElementById("startConsultation").addEventListener("click", () => {
+    const topic = document.querySelector("[data-support-topic].is-active")?.dataset.supportTopic || "General consultation";
+    const question = document.getElementById("supportMessage").value.trim();
+    const message = [
+      "Hi Hour AI, I would like an online consultation.",
+      `Topic: ${topic}`,
+      question ? `Question: ${question}` : "Please tell me more about this topic."
+    ].join("\n");
+    window.open(whatsappLink(message), "_blank", "noopener");
   });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       closeModal("orderModal");
       closeModal("profileModal");
+      closeModal("supportModal");
     }
   });
 }

@@ -31,7 +31,7 @@
           <a href="#orders" data-i18n="nav.orders">Orders</a>
           <a href="#path" data-i18n="nav.path">Learning path</a>
           <a href="#courses" data-i18n="nav.courses">Courses</a>
-          <a href="#support" data-i18n="nav.support">Support</a>
+          <a href="#support" data-open-support data-i18n="nav.support">Support</a>
         </nav>
 
         <div class="header-actions">
@@ -47,9 +47,15 @@
               <option value="id">Indonesia</option>
             </select>
           </label>
-          <button class="button button-quiet header-register" type="button" data-open-profile>
+          <button class="header-account" id="headerAccount" type="button" data-open-profile hidden aria-label="Open account">
+            <span class="header-avatar" id="headerAvatar" aria-hidden="true">U</span>
+            <span class="header-account-copy">
+              <strong id="headerUsername">Account</strong>
+              <small id="headerLevel">Qualification pending</small>
+            </span>
+          </button>
+          <button class="button button-quiet header-register" id="headerRegister" type="button" data-open-profile>
             <span data-i18n="nav.register">Register</span>
-            <span aria-hidden="true">↗</span>
           </button>
         </div>
       </div>
@@ -70,11 +76,9 @@
             <div class="hero-actions">
               <a class="button button-primary" id="heroWhatsapp" href="#" target="_blank" rel="noreferrer">
                 <span data-i18n="hero.ctaPrimary">Talk to an advisor</span>
-                <span aria-hidden="true">↗</span>
               </a>
               <a class="button button-outline" href="#orders">
                 <span data-i18n="hero.ctaSecondary">Explore orders</span>
-                <span aria-hidden="true">↓</span>
               </a>
             </div>
             <div class="hero-proof" aria-label="Platform highlights">
@@ -179,7 +183,6 @@
           <p data-i18n="profile.text">Each level builds on the previous one with clearer standards, stronger reviews, and access to more advanced task categories.</p>
           <button class="button button-primary" type="button" data-open-profile>
             <span data-i18n="profile.open">Create sample profile</span>
-            <span aria-hidden="true">↗</span>
           </button>
         </div>
         <div class="profile-layout">
@@ -241,13 +244,11 @@
         <div class="support-actions">
           <a class="button button-primary full-width" id="supportWhatsapp" href="#" target="_blank" rel="noreferrer">
             <span data-i18n="support.whatsapp">Chat on WhatsApp</span>
-            <span aria-hidden="true">↗</span>
           </a>
           <button class="button button-outline full-width" type="button" id="liveChatButton">
             <span data-i18n="support.live">Open online consultation</span>
-            <span aria-hidden="true">→</span>
           </button>
-          <p class="fine-print" data-i18n="support.note">Online consultation currently routes to WhatsApp while live chat is being connected.</p>
+          <p class="fine-print">Choose a topic and prepare your message in the consultation window. A support advisor will continue the conversation on WhatsApp.</p>
         </div>
       </section>
     </main>
@@ -262,8 +263,18 @@
       </div>
       <div class="footer-meta">
         <span>© <span id="currentYear"></span> Hour AI</span>
-        <a href="#support" data-i18n="footer.support">Support</a>
-        <button type="button" class="text-button" id="legalButton" data-i18n="footer.legal">Earnings disclaimer</button>
+        <a href="#support" data-open-support data-i18n="footer.support">Support</a>
+        <a href="#riskDisclosure">Risk disclosure</a>
+      </div>
+      <div class="risk-disclosure" id="riskDisclosure">
+        <strong>Risk disclosure</strong>
+        <p>
+          Hour AI provides training, skills assessment, and access to information about potential project opportunities. Course completion,
+          qualification, order availability, approval, compensation, and future income are not guaranteed. Results vary according to each
+          participant's effort, ability, assessment performance, work quality, client requirements, market demand, location, and other factors.
+          Examples of tasks, time estimates, pay ranges, reviews, and earnings are illustrative and must not be treated as promises of employment,
+          investment returns, or recurring income. Customers should assess course suitability and their own financial circumstances before purchase.
+        </p>
       </div>
     </footer>
 
@@ -281,7 +292,6 @@
         </dl>
         <a class="button button-primary full-width" id="modalWhatsapp" href="#" target="_blank" rel="noreferrer">
           <span data-i18n="modal.ask">Ask about this order</span>
-          <span aria-hidden="true">↗</span>
         </a>
       </div>
     </div>
@@ -404,6 +414,31 @@
           <div class="form-status" id="accountStatus" role="status" aria-live="polite"></div>
           <button class="button button-outline full-width" id="logoutButton" type="button">Sign out</button>
         </div>
+      </div>
+    </div>
+
+    <button class="support-fab" id="supportFab" type="button" data-open-support aria-label="Open online consultation">
+      <span class="support-fab-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>Support</span>
+    </button>
+
+    <div class="modal" id="supportModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="supportModalTitle">
+      <div class="modal-backdrop" data-close-support></div>
+      <div class="modal-panel support-modal-panel" tabindex="-1">
+        <button class="icon-button" type="button" data-close-support aria-label="Close">&times;</button>
+        <div class="support-modal-status"><span class="status-dot" aria-hidden="true"></span> Advisor channel online</div>
+        <h2 id="supportModalTitle">How can we help?</h2>
+        <p class="support-modal-intro">Select a topic and tell us what you would like to know. Your message will be prepared for our WhatsApp support team.</p>
+        <div class="support-topics" role="group" aria-label="Consultation topic">
+          <button type="button" class="support-topic is-active" data-support-topic="Course selection">Course selection</button>
+          <button type="button" class="support-topic" data-support-topic="Skill test and qualification">Skill test</button>
+          <button type="button" class="support-topic" data-support-topic="Task orders and requirements">Task orders</button>
+          <button type="button" class="support-topic" data-support-topic="Account support">Account support</button>
+        </div>
+        <label class="support-message-label" for="supportMessage">Your question</label>
+        <textarea id="supportMessage" rows="5" maxlength="800" placeholder="Write your question here..."></textarea>
+        <button class="button button-primary full-width" id="startConsultation" type="button">Start consultation</button>
+        <p class="support-privacy">Do not include passwords, verification codes, payment card details, or other sensitive information.</p>
       </div>
     </div>
 
