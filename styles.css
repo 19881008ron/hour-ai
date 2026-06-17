@@ -3392,17 +3392,42 @@ body.welcome-open {
 
   .hero-proof {
     grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 22px;
   }
 
   .hero-proof div,
   .hero-proof div:first-child {
-    min-height: 86px;
-    padding: 16px;
+    grid-template-columns: 112px minmax(0, 1fr);
+    justify-items: start;
+    min-height: 64px;
+    padding: 12px 15px;
     border: 1px solid #2e3743;
   }
 
   .hero-proof div:last-child {
     border: 1px solid #2e3743;
+  }
+
+  .hero-proof div::before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    height: auto;
+    transform: none;
+  }
+
+  .hero-proof strong {
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .hero-proof span {
+    margin-top: 0;
+    align-self: center;
+    font-size: 11px;
+    text-align: left;
   }
 
   .visual-toolbar {

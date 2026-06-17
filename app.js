@@ -5,7 +5,7 @@ const translations = {
     nav: {
       live: "Live platform",
       orders: "Orders",
-      path: "Learning path",
+      path: "Learning",
       courses: "Courses",
       support: "Support",
       register: "Sign up"
