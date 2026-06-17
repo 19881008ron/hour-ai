@@ -480,6 +480,47 @@ Object.assign(translations, {
   }
 });
 
+Object.assign(translations.en.footer, {
+  riskText:
+    "Hour AI provides training, skills assessment, and access to information about potential project opportunities. Course completion, qualification, order availability, approval, compensation, and future income are not guaranteed. Results vary according to each participant's effort, ability, assessment performance, work quality, client requirements, market demand, location, and other factors. Examples of tasks, time estimates, commission ranges, reviews, and earnings are illustrative and must not be treated as promises of employment, investment returns, or recurring income. Customers should assess course suitability and their own financial circumstances before purchase."
+});
+
+Object.assign(translations.zh.footer, {
+  legal: "风险揭示",
+  riskText:
+    "Hour AI 提供培训、技能评估以及潜在项目机会信息。完成课程、通过认证、订单可用性、订单批准、佣金金额和未来收入均不作保证。实际结果会受到个人投入、能力、测试表现、作品质量、客户要求、市场需求、所在地和其他因素影响。页面中的任务示例、预计时间、佣金范围、评价和收入说明仅用于展示，不应被理解为就业承诺、投资回报或持续收入保证。客户在购买前应自行评估课程适配度和个人财务情况。"
+});
+
+Object.assign(translations.es.footer, {
+  legal: "Aviso de riesgo",
+  riskText:
+    "Hour AI ofrece formación, evaluación de habilidades e información sobre posibles oportunidades de proyectos. La finalización del curso, la certificación, la disponibilidad de pedidos, la aprobación, la compensación y los ingresos futuros no están garantizados. Los resultados dependen del esfuerzo, la capacidad, el desempeño en pruebas, la calidad del trabajo, los requisitos del cliente, la demanda del mercado, la ubicación y otros factores. Los ejemplos de tareas, tiempos, comisiones, reseñas e ingresos son ilustrativos y no constituyen promesas de empleo, retorno de inversión o ingresos recurrentes."
+});
+
+Object.assign(translations.fr.footer, {
+  legal: "Avertissement",
+  riskText:
+    "Hour AI fournit une formation, une évaluation des compétences et des informations sur des opportunités de projets potentielles. La fin du cours, la certification, la disponibilité des commandes, l'approbation, la rémunération et les revenus futurs ne sont pas garantis. Les résultats dépendent de l'effort, des compétences, des tests, de la qualité du travail, des exigences client, de la demande du marché, du lieu et d'autres facteurs. Les exemples de tâches, durées, commissions, avis et revenus sont uniquement illustratifs et ne constituent pas une promesse d'emploi, de rendement ou de revenu récurrent."
+});
+
+Object.assign(translations.pt.footer, {
+  legal: "Aviso de risco",
+  riskText:
+    "A Hour AI oferece treinamento, avaliação de habilidades e informações sobre possíveis oportunidades de projeto. A conclusão do curso, qualificação, disponibilidade de pedidos, aprovação, remuneração e renda futura não são garantidas. Os resultados dependem do esforço, habilidade, desempenho em testes, qualidade do trabalho, requisitos do cliente, demanda de mercado, localização e outros fatores. Exemplos de tarefas, prazos, comissões, avaliações e ganhos são apenas ilustrativos e não devem ser tratados como promessa de emprego, retorno financeiro ou renda recorrente."
+});
+
+Object.assign(translations.ar.footer, {
+  legal: "إفصاح المخاطر",
+  riskText:
+    "توفر Hour AI التدريب وتقييم المهارات ومعلومات عن فرص مشاريع محتملة. لا يتم ضمان إكمال الدورة أو التأهيل أو توفر الطلبات أو الموافقة أو التعويض أو الدخل المستقبلي. تختلف النتائج حسب الجهد والمهارة وأداء الاختبار وجودة العمل ومتطلبات العميل وطلب السوق والموقع وعوامل أخرى. أمثلة المهام والوقت والعمولات والمراجعات والدخل هي أمثلة توضيحية فقط ولا تعد وعدا بالتوظيف أو بعائد استثماري أو بدخل متكرر."
+});
+
+Object.assign(translations.id.footer, {
+  legal: "Peringatan risiko",
+  riskText:
+    "Hour AI menyediakan pelatihan, penilaian keterampilan, dan informasi tentang peluang proyek potensial. Penyelesaian kursus, kualifikasi, ketersediaan order, persetujuan, kompensasi, dan pendapatan masa depan tidak dijamin. Hasil bergantung pada usaha, kemampuan, performa tes, kualitas pekerjaan, kebutuhan klien, permintaan pasar, lokasi, dan faktor lain. Contoh tugas, estimasi waktu, komisi, ulasan, dan pendapatan hanya bersifat ilustratif dan bukan janji pekerjaan, imbal hasil, atau pendapatan berulang."
+});
+
 const orders = [
   {
     id: "c1",
