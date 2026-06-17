@@ -538,11 +538,23 @@
               <strong>Course price + 4%</strong>
             </div>
             <ul class="payment-mini-list">
-              <li>PayPal checkout opens automatically.</li>
+              <li>PayPal checkout opens in a secure PayPal page.</li>
               <li>Pay with PayPal, Visa, or Mastercard inside the same checkout.</li>
               <li>Course access opens after payment confirmation.</li>
             </ul>
-            <button class="button button-primary full-width" id="paypalPaymentButton" type="button">Continue to PayPal Checkout</button>
+            <form
+              class="paypal-hosted-form"
+              action="https://www.paypal.com/ncp/payment/DM44254V49TWE"
+              method="post"
+              target="_blank"
+            >
+              <input class="paypal-hosted-button" type="submit" value="Pay Now" />
+              <img class="paypal-card-icons" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="PayPal, Visa, Mastercard, and more" />
+              <span class="paypal-powered">
+                Powered by:
+                <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" />
+              </span>
+            </form>
           </article>
 
           <article class="payment-method-card crypto-card">

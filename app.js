@@ -1079,23 +1079,6 @@ function setupEvents() {
   document.querySelectorAll("[data-close-payment]").forEach((item) => {
     item.addEventListener("click", () => closeModal("paymentModal"));
   });
-  document.getElementById("paypalPaymentButton").addEventListener("click", async () => {
-    const plan = selectedPaymentPlan || localizedPlan(pricing[0]);
-    const button = document.getElementById("paypalPaymentButton");
-    button.disabled = true;
-    button.textContent = "Opening PayPal checkout...";
-    try {
-      const data = await apiRequest("/api/paypal/create-order", {
-        method: "POST",
-        body: JSON.stringify({ level: plan.level })
-      });
-      window.location.href = data.approvalUrl;
-    } catch (error) {
-      showToast(error.message || "PayPal checkout is not available yet.");
-      button.disabled = false;
-      button.textContent = "Continue to PayPal Checkout";
-    }
-  });
   document.querySelectorAll("[data-support-topic]").forEach((button) => {
     button.addEventListener("click", () => {
       document.querySelectorAll("[data-support-topic]").forEach((item) => item.classList.remove("is-active"));

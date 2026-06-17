@@ -2801,6 +2801,53 @@ body.welcome-open {
   border-color: #dce9ff;
 }
 
+.paypal-hosted-form {
+  display: grid;
+  justify-items: center;
+  gap: 9px;
+  margin-top: auto;
+}
+
+.paypal-hosted-button {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 2rem;
+  color: #071014;
+  background: #ffd140;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 850;
+  line-height: 1.25rem;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.paypal-hosted-button:hover {
+  background: #ffe06a;
+  box-shadow: 0 14px 32px rgba(255, 209, 64, 0.24);
+  transform: translateY(-1px);
+}
+
+.paypal-card-icons {
+  max-width: 190px;
+  height: auto;
+}
+
+.paypal-powered {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #c9d8ea;
+  font-size: 0.75rem;
+  font-weight: 750;
+}
+
+.paypal-powered img {
+  height: 0.875rem;
+}
+
 .crypto-card {
   color: #eef5ff;
   background:
