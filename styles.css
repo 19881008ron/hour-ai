@@ -288,7 +288,7 @@ body.welcome-open {
 
 .welcome-headline {
   display: grid;
-  gap: 5px;
+  gap: 8px;
   max-width: 900px;
   margin: 0;
   color: #f9fffd;
@@ -305,12 +305,14 @@ body.welcome-open {
 .welcome-headline span {
   position: relative;
   display: block;
-  overflow: hidden;
-  background: linear-gradient(90deg, #f8fffd, #d7fff0 42%, #8feaff 68%, #fff);
+  padding: 0 0 0.08em;
+  overflow: visible;
+  background: linear-gradient(100deg, #f8fffd 0%, #d7fff0 28%, #8feaff 52%, #f8fffd 74%, #d7fff0 100%);
+  background-size: 220% 100%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  animation: welcomeTextReveal 760ms ease-out both;
+  animation: welcomeTextReveal 760ms ease-out both, welcomeTextFlow 4.2s 900ms ease-in-out infinite;
 }
 
 .welcome-headline span:nth-child(2) {
@@ -329,15 +331,6 @@ body.welcome-open {
 .welcome-headline span:nth-child(4) {
   font-size: 42px;
   animation-delay: 360ms;
-}
-
-.welcome-headline span::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.92), transparent);
-  transform: translateX(-120%);
-  content: "";
-  animation: welcomeTextSweep 2.2s 780ms ease-in-out infinite;
 }
 
 .welcome-line {
@@ -487,8 +480,21 @@ body.welcome-open {
     0 0 0 4px rgba(43, 213, 118, 0.09),
     0 0 22px rgba(43, 213, 118, 0.18);
   cursor: pointer;
-  font-size: 22px;
+  font-size: 0;
   font-weight: 700;
+  line-height: 1;
+  padding: 0;
+}
+
+.welcome-close::before {
+  display: block;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  transform: translateY(-1px);
+  content: "\00d7";
 }
 
 .welcome-close:hover {
@@ -610,15 +616,14 @@ body.welcome-open {
   }
 }
 
-@keyframes welcomeTextSweep {
+@keyframes welcomeTextFlow {
   0%,
-  32% {
-    transform: translateX(-120%);
+  100% {
+    background-position: 0% 50%;
   }
 
-  58%,
-  100% {
-    transform: translateX(120%);
+  50% {
+    background-position: 100% 50%;
   }
 }
 
