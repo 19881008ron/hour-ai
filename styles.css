@@ -2839,13 +2839,14 @@ body.welcome-open {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #c9d8ea;
+  color: #f7fbff;
   font-size: 0.75rem;
-  font-weight: 750;
+  font-weight: 850;
 }
 
 .paypal-powered img {
   height: 0.875rem;
+  filter: brightness(0) invert(1);
 }
 
 .crypto-card {
@@ -3154,10 +3155,30 @@ body.welcome-open {
 @media (max-width: 680px) {
   .welcome-overlay {
     padding: 18px;
+    background:
+      linear-gradient(115deg, transparent 0 18%, rgba(0, 184, 212, 0.11) 18.4%, transparent 19.2% 68%, rgba(43, 213, 118, 0.12) 68.4%, transparent 69.4%),
+      radial-gradient(circle at 50% 36%, rgba(0, 184, 212, 0.2), transparent 34%),
+      linear-gradient(135deg, rgba(3, 7, 13, 0.92), rgba(4, 10, 18, 0.94));
+    backdrop-filter: blur(18px) saturate(135%);
+  }
+
+  .welcome-overlay::before {
+    background:
+      linear-gradient(90deg, transparent, rgba(0, 184, 212, 0.16), transparent) 50% 18% / 82% 1px no-repeat,
+      linear-gradient(90deg, transparent, rgba(43, 213, 118, 0.16), transparent) 50% 82% / 70% 1px no-repeat,
+      linear-gradient(rgba(3, 7, 13, 0.52), rgba(3, 7, 13, 0.52)),
+      repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.026) 0 1px, transparent 1px 8px);
+    opacity: 0.92;
+  }
+
+  .welcome-grid {
+    opacity: 0.3;
   }
 
   .welcome-content {
     padding: 26px 10px;
+    background: rgba(3, 7, 13, 0.18);
+    border-radius: 14px;
   }
 
   .welcome-logo-wrap {
