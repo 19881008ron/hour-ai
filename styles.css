@@ -28,13 +28,15 @@
 }
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 92px;
 }
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 280px;
+  overflow-x: hidden;
   color: var(--ink);
   background: var(--canvas);
   font-family: Inter, "Segoe UI", Arial, sans-serif;
@@ -92,7 +94,7 @@ input:focus-visible {
   z-index: 5000;
   display: grid;
   place-items: center;
-  min-width: 320px;
+  min-width: 0;
   padding: 28px;
   overflow: hidden;
   color: #fff;

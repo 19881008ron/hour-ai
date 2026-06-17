@@ -267,6 +267,219 @@ const translations = {
   }
 };
 
+Object.assign(translations, {
+  en: {
+    ...translations.en,
+    hero: {
+      ...translations.en.hero,
+      visualLabel: "LEARN -> TEST -> APPLY"
+    }
+  },
+  zh: {
+    nav: { live: "在线平台", orders: "订单", path: "学习", courses: "课程", support: "客服", register: "注册" },
+    hero: {
+      eyebrow: "AI 剪辑培训 + 订单申请",
+      title: "学习 AI 视频剪辑，完成认证，申请真实订单。",
+      lede: "为新手设计的 7 天实操学习路径，通过技能测试后，可申请 C、B、A 等级的 AI 剪辑订单。",
+      ctaPrimary: "咨询顾问",
+      ctaSecondary: "浏览订单",
+      statDays: "快速学习",
+      statLevels: "订单佣金",
+      statTime: "快速订单",
+      disclaimer: "",
+      visualLabel: "学习 -> 测试 -> 申请",
+      visualTitle: "从新手技能到合格订单申请，一条清晰的成长路径。",
+      carousel: [
+        { label: "01 / 学习", title: "从零建立可执行的 AI 剪辑工作流。", alt: "新手在家庭工作区学习 AI 视频剪辑" },
+        { label: "02 / 测试", title: "按照清晰标准检查作品并完成技能认证。", alt: "学员正在进行 AI 视频剪辑技能测试" },
+        { label: "03 / 申请", title: "参与交付并逐步进入更高等级订单。", alt: "远程团队正在审核 AI 视频项目" }
+      ]
+    },
+    signals: [
+      { title: "学习流程", text: "跟随结构化课程完成实操练习。" },
+      { title: "通过测试", text: "在申请订单前证明交付质量。" },
+      { title: "申请任务", text: "根据认证等级选择匹配订单。" }
+    ],
+    orders: {
+      eyebrow: "订单大厅",
+      title: "等待合格 AI 剪辑师完成的活跃订单",
+      text: "C、B、A 级剪辑师可以在申请前查看任务范围、佣金区间、预计时长和交付要求。",
+      boardStatus: "合格剪辑师可申请的佣金订单",
+      viewDetails: "查看订单详情"
+    },
+    reviews: {
+      eyebrow: "学习体验",
+      title: "每个等级的学习与交付体验。",
+      text: "学员通过流程理解交付标准，建立练习习惯，并准备等级认证审核。"
+    },
+    support: {
+      eyebrow: "顾问通道在线",
+      title: "报名前先确认适合你的起始等级。",
+      text: "你可以咨询课程等级、任务要求、测试规则、支持语言，以及这套流程是否符合你的目标。",
+      whatsapp: "WhatsApp 咨询",
+      live: "打开在线咨询",
+      note: "顾问团队可以帮助你选择适合的起始等级。"
+    },
+    profile: {
+      eyebrow: "等级成长路径",
+      title: "从第一个工作流到高级交付，成长过程清晰可见。",
+      text: "每个等级都建立在前一等级基础上，对质量、审核和可申请任务类型提出更高要求。",
+      cTitle: "C 级 AI 剪辑师",
+      cText: "新手工作流、静态 AI 剪辑、字幕制作和交付清单。",
+      bTitle: "B 级 AI 剪辑师",
+      bText: "视频 AI 创作、广告 AI 剪辑、更强节奏和更高质量标准。",
+      aTitle: "A 级 AI 制作师",
+      aText: "电影 AI 制作、团队 AI 管理、项目审核和代理资格。",
+      commissionLabel: "每单佣金",
+      open: "打开我的账户"
+    },
+    courses: {
+      eyebrow: "培训课程",
+      title: "选择符合你目标的学习等级。",
+      text: "报名前先比较课程等级、认证目标和对应的订单交付标准。",
+      consult: "咨询",
+      payment: "支付",
+      recommended: "最多选择",
+      oneTime: "一次性课程"
+    },
+    modal: { content: "任务范围", pay: "佣金区间", time: "预计时长", requirements: "交付要求", ask: "咨询这个订单" },
+    profileModal: {
+      eyebrow: "账户资料",
+      title: "创建 Hour AI 账户",
+      name: "姓名",
+      email: "邮箱",
+      level: "目标等级",
+      save: "保存资料",
+      savedLabel: "资料已保存",
+      toast: "你的资料已保存。"
+    },
+    footer: { text: "AI 视频剪辑培训、技能测试和订单大厅申请。", support: "客服", legal: "风险揭示" },
+    labels: { pay: "佣金", time: "时间", level: "等级" },
+    legal: "重要提示：Hour AI 不保证收入、工作机会或订单数量。学习结果取决于个人投入、技能、测试表现、交付质量和实际订单需求。",
+    saved: "目标等级：{level}。资料已保存到当前设备。"
+  },
+  es: {
+    nav: { live: "Plataforma activa", orders: "Pedidos", path: "Aprender", courses: "Cursos", support: "Soporte", register: "Registro" },
+    hero: {
+      eyebrow: "Formación de edición AI + acceso a pedidos",
+      title: "Aprende edición de video con AI. Certifícate. Solicita pedidos reales.",
+      lede: "Una ruta práctica de 7 días para principiantes, con prueba de habilidades y acceso a oportunidades de edición C, B y A.",
+      ctaPrimary: "Hablar con un asesor",
+      ctaSecondary: "Explorar pedidos",
+      statDays: "Aprendizaje rápido",
+      statLevels: "Comisión por pedido",
+      statTime: "Pedidos rápidos",
+      visualLabel: "APRENDER -> PRUEBA -> SOLICITAR",
+      visualTitle: "Un camino claro desde habilidades iniciales hasta acceso a pedidos calificados.",
+      carousel: translations.en.hero.carousel
+    },
+    orders: { eyebrow: "Mercado de pedidos", title: "Pedidos activos para editores AI calificados", text: "Los editores C, B y A pueden revisar alcance, comisión, tiempo estimado y requisitos antes de solicitar.", boardStatus: "Pedidos con comisión disponibles para editores calificados", viewDetails: "Ver detalles" },
+    support: { eyebrow: "Canal de asesoría activo", title: "Consulta el nivel adecuado antes de inscribirte.", text: "Pregunta por niveles, requisitos, pruebas, idiomas y si el flujo se adapta a tus metas.", whatsapp: "Chat en WhatsApp", live: "Abrir consulta online", note: "Nuestro equipo puede ayudarte a elegir el nivel inicial." },
+    profile: { ...translations.en.profile, commissionLabel: "Comisión por pedido", open: "Abrir mi cuenta" },
+    courses: { eyebrow: "Programas de formación", title: "Elige el nivel que coincide con tu meta.", text: "Compara niveles, objetivos y estándares de entrega antes de elegir.", consult: "Consulta", payment: "Pago", recommended: "Más elegido", oneTime: "curso de pago único" },
+    modal: { content: "Alcance", pay: "Comisión", time: "Tiempo estimado", requirements: "Requisitos", ask: "Consultar este pedido" },
+    labels: { pay: "Comisión", time: "Tiempo", level: "Nivel" },
+    footer: { text: "Formación en edición AI, prueba de habilidades y acceso a pedidos.", support: "Soporte", legal: "Aviso de riesgo" },
+    legal: "Hour AI no garantiza ingresos, empleos ni volumen de pedidos."
+  },
+  fr: {
+    nav: { live: "Plateforme active", orders: "Commandes", path: "Parcours", courses: "Cours", support: "Support", register: "Inscription" },
+    hero: {
+      eyebrow: "Formation montage AI + accès aux commandes",
+      title: "Apprenez le montage vidéo AI. Validez vos compétences. Postulez à des commandes réelles.",
+      lede: "Un parcours pratique de 7 jours pour débutants, suivi d'un test de compétences et d'un accès aux niveaux C, B et A.",
+      ctaPrimary: "Parler à un conseiller",
+      ctaSecondary: "Voir les commandes",
+      statDays: "Apprentissage rapide",
+      statLevels: "Commission par commande",
+      statTime: "Commandes rapides",
+      visualLabel: "APPRENDRE -> TEST -> POSTULER",
+      visualTitle: "Un parcours clair des bases jusqu'à l'accès aux commandes qualifiées.",
+      carousel: translations.en.hero.carousel
+    },
+    orders: { eyebrow: "Marché des commandes", title: "Commandes actives pour éditeurs AI qualifiés", text: "Les éditeurs C, B et A peuvent consulter le périmètre, la commission, le temps estimé et les exigences.", boardStatus: "Commandes à commission ouvertes aux éditeurs qualifiés", viewDetails: "Voir les détails" },
+    support: { eyebrow: "Canal conseiller en ligne", title: "Choisissez le bon niveau avant l'inscription.", text: "Posez vos questions sur les niveaux, tests, langues et exigences.", whatsapp: "Discuter sur WhatsApp", live: "Ouvrir la consultation", note: "Notre équipe peut vous aider à choisir le bon niveau." },
+    profile: { ...translations.en.profile, commissionLabel: "Commission par commande", open: "Ouvrir mon compte" },
+    courses: { eyebrow: "Programmes de formation", title: "Choisissez le niveau adapté à votre objectif.", text: "Comparez les niveaux, objectifs et standards avant de choisir.", consult: "Consulter", payment: "Paiement", recommended: "Le plus choisi", oneTime: "cours en paiement unique" },
+    modal: { content: "Périmètre", pay: "Commission", time: "Temps estimé", requirements: "Exigences", ask: "Demander cette commande" },
+    labels: { pay: "Commission", time: "Temps", level: "Niveau" },
+    footer: { text: "Formation montage AI, test de compétences et accès aux commandes.", support: "Support", legal: "Avertissement" },
+    legal: "Hour AI ne garantit pas les revenus, les emplois ou le volume de commandes."
+  },
+  pt: {
+    nav: { live: "Plataforma ativa", orders: "Pedidos", path: "Aprender", courses: "Cursos", support: "Suporte", register: "Cadastro" },
+    hero: {
+      eyebrow: "Treinamento de edição AI + acesso a pedidos",
+      title: "Aprenda edição de vídeo com AI. Certifique-se. Candidate-se a pedidos reais.",
+      lede: "Uma trilha prática de 7 dias para iniciantes, com teste de habilidades e acesso a oportunidades C, B e A.",
+      ctaPrimary: "Falar com consultor",
+      ctaSecondary: "Ver pedidos",
+      statDays: "Aprendizado rápido",
+      statLevels: "Comissão por pedido",
+      statTime: "Pedidos rápidos",
+      visualLabel: "APRENDER -> TESTAR -> CANDIDATAR",
+      visualTitle: "Um caminho claro das habilidades iniciais ao acesso a pedidos qualificados.",
+      carousel: translations.en.hero.carousel
+    },
+    orders: { eyebrow: "Mercado de pedidos", title: "Pedidos ativos aguardando editores AI qualificados", text: "Editores C, B e A podem revisar escopo, comissão, tempo estimado e requisitos antes de se candidatar.", boardStatus: "Pedidos com comissão abertos para editores qualificados", viewDetails: "Ver detalhes" },
+    support: { eyebrow: "Canal de consultoria online", title: "Confirme o nível inicial antes da inscrição.", text: "Pergunte sobre níveis, requisitos, testes, idiomas e adequação ao seu objetivo.", whatsapp: "Conversar no WhatsApp", live: "Abrir consulta online", note: "Nossa equipe ajuda você a escolher o nível inicial." },
+    profile: { ...translations.en.profile, commissionLabel: "Comissão por pedido", open: "Abrir minha conta" },
+    courses: { eyebrow: "Programas de treinamento", title: "Escolha o nível que combina com seu objetivo.", text: "Compare níveis, metas e padrões antes de escolher.", consult: "Consultar", payment: "Pagamento", recommended: "Mais escolhido", oneTime: "curso de pagamento único" },
+    modal: { content: "Escopo", pay: "Comissão", time: "Tempo estimado", requirements: "Requisitos", ask: "Consultar este pedido" },
+    labels: { pay: "Comissão", time: "Tempo", level: "Nível" },
+    footer: { text: "Treinamento de edição AI, teste de habilidades e acesso a pedidos.", support: "Suporte", legal: "Aviso de risco" },
+    legal: "A Hour AI não garante renda, empregos ou volume de pedidos."
+  },
+  ar: {
+    nav: { live: "منصة مباشرة", orders: "طلبات", path: "تعلم", courses: "دورات", support: "دعم", register: "تسجيل" },
+    hero: {
+      eyebrow: "تدريب تحرير AI + الوصول إلى الطلبات",
+      title: "تعلّم تحرير الفيديو بالذكاء الاصطناعي. اجتز الاختبار. قدّم على طلبات حقيقية.",
+      lede: "مسار عملي لمدة 7 أيام للمبتدئين، يتبعه اختبار مهارات وفرص طلبات لمستويات C و B و A.",
+      ctaPrimary: "تحدث مع مستشار",
+      ctaSecondary: "استعرض الطلبات",
+      statDays: "تعلم سريع",
+      statLevels: "عمولة الطلب",
+      statTime: "طلبات سريعة",
+      visualLabel: "تعلم -> اختبار -> تقديم",
+      visualTitle: "مسار واضح من مهارات البداية إلى الوصول للطلبات المؤهلة.",
+      carousel: translations.en.hero.carousel
+    },
+    orders: { eyebrow: "سوق الطلبات", title: "طلبات نشطة بانتظار محرري AI مؤهلين", text: "يمكن لمحرري C و B و A مراجعة النطاق والعمولة والوقت والمتطلبات قبل التقديم.", boardStatus: "طلبات بعمولة متاحة للمحررين المؤهلين", viewDetails: "عرض التفاصيل" },
+    support: { eyebrow: "قناة المستشارين متاحة", title: "اختر المستوى المناسب قبل التسجيل.", text: "اسأل عن المستويات والمتطلبات والاختبارات واللغات ومدى ملاءمة المسار لهدفك.", whatsapp: "محادثة واتساب", live: "فتح الاستشارة", note: "يساعدك فريقنا على اختيار مستوى البداية." },
+    profile: { ...translations.en.profile, commissionLabel: "عمولة لكل طلب", open: "فتح حسابي" },
+    courses: { eyebrow: "برامج التدريب", title: "اختر المستوى المناسب لهدفك.", text: "قارن مستويات التدريب والأهداف ومعايير التسليم قبل الاختيار.", consult: "استشارة", payment: "دفع", recommended: "الأكثر اختيارا", oneTime: "دورة بدفعة واحدة" },
+    modal: { content: "نطاق المهمة", pay: "نطاق العمولة", time: "الوقت المتوقع", requirements: "متطلبات التسليم", ask: "اسأل عن هذا الطلب" },
+    labels: { pay: "العمولة", time: "الوقت", level: "المستوى" },
+    footer: { text: "تدريب تحرير AI واختبار مهارات والوصول إلى الطلبات.", support: "الدعم", legal: "إفصاح المخاطر" },
+    legal: "لا تضمن Hour AI الدخل أو الوظائف أو حجم الطلبات."
+  },
+  id: {
+    nav: { live: "Platform aktif", orders: "Order", path: "Belajar", courses: "Kursus", support: "Bantuan", register: "Daftar" },
+    hero: {
+      eyebrow: "Pelatihan editing AI + akses order",
+      title: "Belajar editing video AI. Lulus tes. Ajukan order nyata.",
+      lede: "Jalur praktik 7 hari untuk pemula, dilanjutkan tes keterampilan dan akses peluang level C, B, dan A.",
+      ctaPrimary: "Bicara dengan advisor",
+      ctaSecondary: "Lihat order",
+      statDays: "Belajar cepat",
+      statLevels: "Komisi order",
+      statTime: "Order cepat",
+      visualLabel: "BELAJAR -> TES -> AJUKAN",
+      visualTitle: "Jalur jelas dari kemampuan pemula menuju akses order berkualifikasi.",
+      carousel: translations.en.hero.carousel
+    },
+    orders: { eyebrow: "Marketplace order", title: "Order aktif menunggu editor AI berkualifikasi", text: "Editor C, B, dan A dapat meninjau lingkup, komisi, estimasi waktu, dan persyaratan sebelum mengajukan.", boardStatus: "Order komisi tersedia untuk editor berkualifikasi", viewDetails: "Lihat detail" },
+    support: { eyebrow: "Kanal advisor online", title: "Diskusikan level awal sebelum mendaftar.", text: "Tanyakan level kursus, syarat tugas, aturan tes, bahasa, dan kecocokan dengan tujuan Anda.", whatsapp: "Chat WhatsApp", live: "Buka konsultasi online", note: "Tim kami membantu memilih level awal." },
+    profile: { ...translations.en.profile, commissionLabel: "Komisi per order", open: "Buka akun saya" },
+    courses: { eyebrow: "Program pelatihan", title: "Pilih level yang sesuai dengan tujuan Anda.", text: "Bandingkan level, target kualifikasi, dan standar tugas sebelum memilih.", consult: "Konsultasi", payment: "Pembayaran", recommended: "Paling dipilih", oneTime: "kursus sekali bayar" },
+    modal: { content: "Lingkup tugas", pay: "Rentang komisi", time: "Estimasi waktu", requirements: "Syarat pengiriman", ask: "Tanya order ini" },
+    labels: { pay: "Komisi", time: "Waktu", level: "Level" },
+    footer: { text: "Pelatihan editing AI, tes keterampilan, dan akses marketplace order.", support: "Bantuan", legal: "Peringatan risiko" },
+    legal: "Hour AI tidak menjamin pendapatan, pekerjaan, atau volume order."
+  }
+});
+
 const orders = [
   {
     id: "c1",
@@ -446,6 +659,71 @@ const localizedContent = {
     }
   }
 };
+
+Object.assign(localizedContent, {
+  zh: {
+    orders: {
+      c1: {
+        title: "C-Level 图片 AI 创作",
+        content: "根据简单需求制作一组高质量 AI 图片，包括主体方向、风格匹配和可交付成品。",
+        requirements: "生成 3-5 个图片方案，优化选定视觉，保持风格一致，并交付高清文件。"
+      },
+      c2: {
+        title: "C-Level 静态 AI 剪辑",
+        content: "为产品、个人资料或社交内容编辑静态 AI 创意素材，完成清晰构图和基础文字排版。",
+        requirements: "调整版式、裁切并优化画面，加入指定文字元素，提交源文件和最终图片。"
+      },
+      b1: {
+        title: "B-Level 视频 AI 创作",
+        content: "基于脚本、视觉方向、配音、字幕和品牌节奏，制作一条 AI 辅助短视频。",
+        requirements: "设计强开头，使画面与脚本一致，加入字幕，并交付最终视频和可编辑工程文件。"
+      },
+      b2: {
+        title: "B-Level 广告 AI 剪辑",
+        content: "围绕产品卖点、用户痛点、视觉证明、字幕和明确行动指令，剪辑一条 AI 辅助广告。",
+        requirements: "优化开场钩子，压缩节奏，匹配品牌语气，加入动态字幕，完成转化导向成片。"
+      },
+      a1: {
+        title: "A-Level 电影 AI 制作",
+        content: "制作具备电影感的 AI 视频，包括场景规划、视觉连续性、旁白节奏、高级剪辑和交付说明。",
+        requirements: "规划镜头序列，管理视觉资产，优化转场和平衡音频，交付最终视频和工程文件。"
+      },
+      a2: {
+        title: "A-Level 团队 AI 管理",
+        content: "审核小团队的 AI 剪辑作品，优化最终交付版本，并准备清晰的制作反馈。",
+        requirements: "检查质量标准，提供带时间点的反馈，安排修改优先级，并准备审核通过的交付版本。"
+      }
+    },
+    reviews: {
+      C: {
+        role: "C 级学员",
+        quote: "清单让我更容易理解第一个 AI 剪辑工作流，每天都知道该练习什么。"
+      },
+      B: {
+        role: "B 级学员",
+        quote: "商业短视频课程帮助我提升了开场、节奏、字幕和审核习惯。"
+      },
+      A: {
+        role: "A 级学员",
+        quote: "高级路径更重视质量控制，以及如何从需求说明一直管理到最终交付。"
+      }
+    },
+    pricing: {
+      C: {
+        name: "C 级 AI 剪辑师",
+        items: ["7 天新手工作流", "图片 AI 创作与静态 AI 剪辑标准", "认证后每单佣金 $20-$30", "预计 1-2 小时完成一个订单"]
+      },
+      B: {
+        name: "B 级 AI 剪辑师",
+        items: ["视频 AI 创作流程", "广告 AI 剪辑标准", "认证后每单佣金 $60-$70", "预计 1-2 小时完成一个订单"]
+      },
+      A: {
+        name: "A 级 AI 制作师",
+        items: ["电影 AI 制作流程", "团队 AI 管理标准", "认证后每单佣金 $80-$100", "预计 1-2 小时完成一个订单"]
+      }
+    }
+  }
+});
 
 const carouselSlides = [
   { src: "assets/carousel-learn.webp" },
@@ -993,6 +1271,9 @@ function setupCarousel() {
     image.src = slide.src;
   });
 
+  document.getElementById("carouselPrev").textContent = "‹";
+  document.getElementById("carouselNext").textContent = "›";
+
   const dots = document.getElementById("carouselDots");
   dots.innerHTML = carouselSlides
     .map(
@@ -1142,6 +1423,18 @@ async function handlePayPalReturn() {
 }
 
 function initLanguage() {
+  const languageLabels = {
+    en: "English",
+    zh: "中文",
+    es: "Español",
+    fr: "Français",
+    pt: "Português",
+    ar: "العربية",
+    id: "Indonesia"
+  };
+  document.querySelectorAll("#languageSelect option").forEach((option) => {
+    option.textContent = languageLabels[option.value] || option.textContent;
+  });
   const savedLanguage = localStorage.getItem("hourAiLanguage");
   if (savedLanguage && translations[savedLanguage]) currentLanguage = savedLanguage;
   document.getElementById("languageSelect").value = currentLanguage;
