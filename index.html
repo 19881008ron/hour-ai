@@ -25,40 +25,40 @@
       <div class="welcome-countdown" aria-label="Welcome animation countdown">
         <span id="welcomeCountdown">8</span>
       </div>
-      <button class="welcome-close" id="welcomeClose" type="button" aria-label="Skip welcome animation">&times;</button>
+      <button class="welcome-close" id="welcomeClose" type="button" aria-label="Skip welcome animation" data-i18n-aria-label="welcome.skip">&times;</button>
       <div class="welcome-content">
         <div class="welcome-sequence" aria-hidden="true">
-          <span>BOOT</span>
-          <span>LEARN</span>
-          <span>QUALIFY</span>
-          <span>DELIVER</span>
+          <span data-i18n="welcome.sequenceBoot">BOOT</span>
+          <span data-i18n="welcome.sequenceLearn">LEARN</span>
+          <span data-i18n="welcome.sequenceQualify">QUALIFY</span>
+          <span data-i18n="welcome.sequenceDeliver">DELIVER</span>
         </div>
         <div class="welcome-logo-wrap">
           <img class="welcome-logo" src="assets/hour-ai-logo.svg" alt="Hour AI" width="96" height="96" />
           <span class="welcome-orbit welcome-orbit-one" aria-hidden="true"></span>
           <span class="welcome-orbit welcome-orbit-two" aria-hidden="true"></span>
         </div>
-        <p class="welcome-kicker">Hour AI delivery system online</p>
+        <p class="welcome-kicker" data-i18n="welcome.kicker">Hour AI delivery system online</p>
         <h2 class="welcome-headline" aria-label="The AI learning and continuous-commission delivery system you have never seen before.">
-          <span data-text="The AI Learning">The AI Learning</span>
-          <span data-text="and Continuous-Commission">and Continuous-Commission</span>
-          <span data-text="Delivery System">Delivery System</span>
-          <span data-text="You Have Never Seen Before.">You Have Never Seen Before.</span>
+          <span data-welcome-line="0" data-text="The AI Learning">The AI Learning</span>
+          <span data-welcome-line="1" data-text="and Continuous-Commission">and Continuous-Commission</span>
+          <span data-welcome-line="2" data-text="Delivery System">Delivery System</span>
+          <span data-welcome-line="3" data-text="You Have Never Seen Before.">You Have Never Seen Before.</span>
         </h2>
-        <p class="welcome-line">Train, qualify, deliver AI work, and enter a system designed for recurring task commissions.</p>
+        <p class="welcome-line" data-i18n="welcome.line">Train, qualify, deliver AI work, and enter a system designed for recurring task commissions.</p>
         <div class="welcome-chips" aria-hidden="true">
-          <span>AI LEARNING</span>
-          <span>ORDER ACCESS</span>
-          <span>COMMISSION FLOW</span>
+          <span data-i18n="welcome.chipLearning">AI LEARNING</span>
+          <span data-i18n="welcome.chipOrders">ORDER ACCESS</span>
+          <span data-i18n="welcome.chipCommission">COMMISSION FLOW</span>
         </div>
         <div class="welcome-flow" aria-hidden="true">
-          <span><b>01</b> Train</span>
+          <span><b>01</b> <em data-i18n="welcome.flowTrain">Train</em></span>
           <i></i>
-          <span><b>02</b> Test</span>
+          <span><b>02</b> <em data-i18n="welcome.flowTest">Test</em></span>
           <i></i>
-          <span><b>03</b> Orders</span>
+          <span><b>03</b> <em data-i18n="welcome.flowOrders">Orders</em></span>
           <i></i>
-          <span><b>04</b> Commission</span>
+          <span><b>04</b> <em data-i18n="welcome.flowCommission">Commission</em></span>
         </div>
         <div class="welcome-scan" aria-hidden="true"><span></span></div>
       </div>
@@ -84,12 +84,11 @@
             <span class="sr-only">Select language</span>
             <select id="languageSelect" class="language-select" aria-label="Select language">
               <option value="en">English</option>
-              <option value="zh">中文</option>
+              <option value="id">Indonesia</option>
+              <option value="ar">العربية</option>
               <option value="es">Español</option>
               <option value="fr">Français</option>
-              <option value="pt">Português</option>
-              <option value="ar">العربية</option>
-              <option value="id">Indonesia</option>
+              <option value="ja">日本語</option>
             </select>
           </label>
           <button class="header-account" id="headerAccount" type="button" data-open-profile hidden aria-label="Open account">
@@ -100,7 +99,7 @@
             </span>
           </button>
           <button class="button button-quiet header-login" id="headerLogin" type="button" data-open-login>
-            <span>Sign in</span>
+            <span data-i18n="account.signIn">Sign in</span>
           </button>
           <button class="button button-quiet header-register" id="headerRegister" type="button" data-open-profile>
             <span data-i18n="nav.register">Sign up</span>
@@ -296,7 +295,7 @@
           <button class="button button-outline full-width" type="button" id="liveChatButton">
             <span data-i18n="support.live">Open online consultation</span>
           </button>
-          <p class="fine-print">Choose a topic and prepare your message in the consultation window. A support advisor will continue the conversation on WhatsApp.</p>
+          <p class="fine-print" data-i18n="support.finePrint">Choose a topic and prepare your message in the consultation window. A support advisor will continue the conversation on WhatsApp.</p>
         </div>
       </section>
     </main>
@@ -329,7 +328,7 @@
     <div class="modal" id="orderModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
       <div class="modal-backdrop" data-close-modal></div>
       <div class="modal-panel" tabindex="-1">
-        <button class="icon-button" type="button" data-close-modal aria-label="Close">&times;</button>
+        <button class="icon-button" type="button" data-close-modal aria-label="Close" data-i18n-aria-label="ui.close">&times;</button>
         <span class="order-level-pill" id="modalLevel"></span>
         <h2 id="orderModalTitle"></h2>
         <dl class="detail-list">
@@ -347,86 +346,86 @@
     <div class="modal" id="profileModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle">
       <div class="modal-backdrop" data-close-profile></div>
       <div class="modal-panel account-panel" tabindex="-1">
-        <button class="icon-button" type="button" data-close-profile aria-label="Close">&times;</button>
-        <p class="eyebrow">Hour AI account</p>
-        <h2 id="profileModalTitle">Create or access your account</h2>
+        <button class="icon-button" type="button" data-close-profile aria-label="Close" data-i18n-aria-label="ui.close">&times;</button>
+        <p class="eyebrow" data-i18n="account.eyebrow">Hour AI account</p>
+        <h2 id="profileModalTitle" data-i18n="account.title">Create or access your account</h2>
 
         <div id="accountGuest">
           <div class="account-tabs" role="tablist" aria-label="Account access">
-            <button class="account-tab is-active" type="button" role="tab" aria-selected="true" data-account-tab="register">Sign up</button>
-            <button class="account-tab" type="button" role="tab" aria-selected="false" data-account-tab="login">Sign in</button>
+            <button class="account-tab is-active" type="button" role="tab" aria-selected="true" data-account-tab="register" data-i18n="account.signUp">Sign up</button>
+            <button class="account-tab" type="button" role="tab" aria-selected="false" data-account-tab="login" data-i18n="account.signIn">Sign in</button>
           </div>
 
           <form class="profile-form account-form is-active" id="registerForm" data-account-panel="register">
             <div class="form-grid">
               <label>
-                <span>Username</span>
+                <span data-i18n="account.username">Username</span>
                 <input name="username" type="text" minlength="3" maxlength="30" autocomplete="username" required />
               </label>
               <label>
-                <span>Email</span>
+                <span data-i18n="account.email">Email</span>
                 <input name="email" type="email" autocomplete="email" required />
               </label>
               <label class="form-span-2">
-                <span>Password</span>
+                <span data-i18n="account.password">Password</span>
                 <input name="password" type="password" minlength="8" autocomplete="new-password" required />
-                <small>At least 8 characters. Passwords are encrypted by the authentication provider.</small>
+                <small data-i18n="account.passwordHelp">At least 8 characters. Passwords are encrypted by the authentication provider.</small>
               </label>
               <label>
-                <span>Nationality</span>
+                <span data-i18n="account.nationality">Nationality</span>
                 <input name="nationality" type="text" maxlength="80" autocomplete="country-name" required />
               </label>
               <label>
-                <span>Occupation</span>
+                <span data-i18n="account.occupation">Occupation</span>
                 <input name="occupation" type="text" maxlength="100" autocomplete="organization-title" required />
               </label>
               <label>
-                <span>Age</span>
+                <span data-i18n="account.age">Age</span>
                 <input name="age" type="number" min="18" max="100" inputmode="numeric" required />
               </label>
               <label>
-                <span>Gender</span>
+                <span data-i18n="account.gender">Gender</span>
                 <select name="gender" required>
-                  <option value="">Select</option>
-                  <option value="female">Female</option>
-                  <option value="male">Male</option>
-                  <option value="nonbinary">Non-binary</option>
-                  <option value="prefer_not_to_say">Prefer not to say</option>
+                  <option value="" data-i18n="account.genderSelect">Select</option>
+                  <option value="female" data-i18n="account.genderFemale">Female</option>
+                  <option value="male" data-i18n="account.genderMale">Male</option>
+                  <option value="nonbinary" data-i18n="account.genderNonbinary">Non-binary</option>
+                  <option value="prefer_not_to_say" data-i18n="account.genderPreferNot">Prefer not to say</option>
                 </select>
               </label>
             </div>
 
             <div class="captcha-row">
               <label>
-                <span>Verification code</span>
+                <span data-i18n="account.verification">Verification code</span>
                 <input name="captchaAnswer" type="text" minlength="5" maxlength="5" autocomplete="off" autocapitalize="characters" required />
               </label>
-              <div class="captcha-visual" id="captchaImage" aria-label="Verification image">Loading...</div>
-              <button class="captcha-refresh" id="refreshCaptcha" type="button" aria-label="Refresh verification code" title="Refresh verification code">&#8635;</button>
+              <div class="captcha-visual" id="captchaImage" aria-label="Verification image" data-i18n-aria-label="account.captchaImage">Loading...</div>
+              <button class="captcha-refresh" id="refreshCaptcha" type="button" aria-label="Refresh verification code" title="Refresh verification code" data-i18n-aria-label="account.refreshCaptcha" data-i18n-title="account.refreshCaptcha">&#8635;</button>
             </div>
             <input name="captchaToken" id="captchaToken" type="hidden" />
 
             <label class="consent-row">
               <input name="consent" type="checkbox" required />
-              <span>I agree that Hour AI may securely store my registration and qualification records.</span>
+              <span data-i18n="account.consent">I agree that Hour AI may securely store my registration and qualification records.</span>
             </label>
 
             <div class="form-status" id="registerStatus" role="status" aria-live="polite"></div>
-            <button class="button button-primary full-width" type="submit">Create account</button>
-            <p class="account-note">New accounts start without an A, B, or C level. Hour AI assigns a level only after the relevant examination is approved.</p>
+            <button class="button button-primary full-width" type="submit" data-i18n="account.create">Create account</button>
+            <p class="account-note" data-i18n="account.note">New accounts start without an A, B, or C level. Hour AI assigns a level only after the relevant examination is approved.</p>
           </form>
 
           <form class="profile-form account-form" id="loginForm" data-account-panel="login">
             <label>
-              <span>Email</span>
+              <span data-i18n="account.email">Email</span>
               <input name="email" type="email" autocomplete="email" required />
             </label>
             <label>
-              <span>Password</span>
+              <span data-i18n="account.password">Password</span>
               <input name="password" type="password" autocomplete="current-password" required />
             </label>
             <div class="form-status" id="loginStatus" role="status" aria-live="polite"></div>
-            <button class="button button-primary full-width" type="submit">Sign in</button>
+            <button class="button button-primary full-width" type="submit" data-i18n="account.signIn">Sign in</button>
           </form>
         </div>
 
@@ -434,7 +433,7 @@
           <div class="saved-profile">
             <div class="level-badge level-unverified" id="savedBadge">?</div>
             <div>
-              <span class="saved-label" id="savedLevelLabel">Qualification pending</span>
+              <span class="saved-label" id="savedLevelLabel" data-i18n="account.pending">Qualification pending</span>
               <strong id="savedName"></strong>
               <p id="savedMeta"></p>
             </div>
@@ -444,15 +443,15 @@
           <section class="payment-panel" id="paymentPanel">
             <div class="payment-heading">
               <div>
-                <span class="saved-label">Payment records</span>
-                <h3>Course payment history</h3>
+                <span class="saved-label" data-i18n="account.paymentRecords">Payment records</span>
+                <h3 data-i18n="account.paymentHistory">Course payment history</h3>
               </div>
-              <button class="button button-outline" id="paymentSupportButton" type="button">Confirm payment</button>
+              <button class="button button-outline" id="paymentSupportButton" type="button" data-i18n="account.confirmPayment">Confirm payment</button>
             </div>
             <div class="payment-table-wrap">
               <table class="payment-table" aria-label="Course payment history">
                 <thead>
-                  <tr><th>Course</th><th>Amount</th><th>Status</th><th>Date</th><th>Reference</th></tr>
+                  <tr><th data-i18n="account.tableCourse">Course</th><th data-i18n="account.tableAmount">Amount</th><th data-i18n="account.tableStatus">Status</th><th data-i18n="account.tableDate">Date</th><th data-i18n="account.tableReference">Reference</th></tr>
                 </thead>
                 <tbody id="paymentTableBody"></tbody>
               </table>
@@ -462,15 +461,15 @@
           <section class="admin-panel" id="adminPanel" hidden>
             <div class="admin-heading">
               <div>
-                <span class="saved-label">Administrator</span>
-                <h3>Customer qualification management</h3>
+                <span class="saved-label" data-i18n="account.admin">Administrator</span>
+                <h3 data-i18n="account.adminTitle">Customer qualification management</h3>
               </div>
-              <button class="button button-outline" id="exportCustomers" type="button">Export CSV backup</button>
+              <button class="button button-outline" id="exportCustomers" type="button" data-i18n="account.export">Export CSV backup</button>
             </div>
             <div class="customer-table-wrap">
               <table class="customer-table">
                 <thead>
-                  <tr><th>Customer</th><th>Country / occupation</th><th>Current level</th><th>Upgrade</th></tr>
+                  <tr><th data-i18n="account.customer">Customer</th><th data-i18n="account.context">Country / occupation</th><th data-i18n="account.currentLevel">Current level</th><th data-i18n="account.upgrade">Upgrade</th></tr>
                 </thead>
                 <tbody id="customerTableBody"></tbody>
               </table>
@@ -478,49 +477,49 @@
           </section>
 
           <div class="form-status" id="accountStatus" role="status" aria-live="polite"></div>
-          <button class="button button-outline full-width" id="logoutButton" type="button">Sign out</button>
+          <button class="button button-outline full-width" id="logoutButton" type="button" data-i18n="account.signOut">Sign out</button>
         </div>
       </div>
     </div>
 
     <button class="support-fab" id="supportFab" type="button" data-open-support aria-label="Open online consultation">
       <span class="support-fab-icon" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span>Support</span>
+      <span data-i18n="support.fab">Support</span>
     </button>
 
     <div class="modal" id="supportModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="supportModalTitle">
       <div class="modal-backdrop" data-close-support></div>
       <div class="modal-panel support-modal-panel" tabindex="-1">
-        <button class="icon-button" type="button" data-close-support aria-label="Close">&times;</button>
-        <div class="support-modal-status"><span class="status-dot" aria-hidden="true"></span> Advisor channel online</div>
-        <h2 id="supportModalTitle">How can we help?</h2>
-        <p class="support-modal-intro">Select a topic and write your question. Our support team continues the conversation through WhatsApp.</p>
+        <button class="icon-button" type="button" data-close-support aria-label="Close" data-i18n-aria-label="ui.close">&times;</button>
+        <div class="support-modal-status"><span class="status-dot" aria-hidden="true"></span> <span data-i18n="support.eyebrow">Advisor channel online</span></div>
+        <h2 id="supportModalTitle" data-i18n="support.modalTitle">How can we help?</h2>
+        <p class="support-modal-intro" data-i18n="support.modalIntro">Select a topic and write your question. Our support team continues the conversation through WhatsApp.</p>
         <div class="support-topics" role="group" aria-label="Consultation topic">
-          <button type="button" class="support-topic is-active" data-support-topic="Course selection">Course selection</button>
-          <button type="button" class="support-topic" data-support-topic="Skill test and qualification">Skill test</button>
-          <button type="button" class="support-topic" data-support-topic="Task orders and requirements">Task orders</button>
-          <button type="button" class="support-topic" data-support-topic="Account support">Account support</button>
+          <button type="button" class="support-topic is-active" data-support-topic="Course selection" data-i18n="support.topicCourse">Course selection</button>
+          <button type="button" class="support-topic" data-support-topic="Skill test and qualification" data-i18n="support.topicTest">Skill test</button>
+          <button type="button" class="support-topic" data-support-topic="Task orders and requirements" data-i18n="support.topicOrders">Task orders</button>
+          <button type="button" class="support-topic" data-support-topic="Account support" data-i18n="support.topicAccount">Account support</button>
         </div>
-        <label class="support-message-label" for="supportMessage">Your question</label>
-        <textarea id="supportMessage" rows="5" maxlength="800" placeholder="Write your question here..."></textarea>
-        <button class="button button-primary full-width" id="startConsultation" type="button">Start consultation</button>
-        <p class="support-privacy">Do not include passwords, verification codes, payment card details, or other sensitive information.</p>
+        <label class="support-message-label" for="supportMessage" data-i18n="support.question">Your question</label>
+        <textarea id="supportMessage" rows="5" maxlength="800" placeholder="Write your question here..." data-i18n-placeholder="support.placeholder"></textarea>
+        <button class="button button-primary full-width" id="startConsultation" type="button" data-i18n="support.start">Start consultation</button>
+        <p class="support-privacy" data-i18n="support.privacy">Do not include passwords, verification codes, payment card details, or other sensitive information.</p>
       </div>
     </div>
 
     <div class="modal" id="paymentModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle">
       <div class="modal-backdrop" data-close-payment></div>
       <div class="modal-panel payment-modal-panel" tabindex="-1">
-        <button class="icon-button" type="button" data-close-payment aria-label="Close">&times;</button>
-        <p class="eyebrow">Secure course payment</p>
-        <h2 id="paymentModalTitle">Choose your payment method</h2>
+        <button class="icon-button" type="button" data-close-payment aria-label="Close" data-i18n-aria-label="ui.close">&times;</button>
+        <p class="eyebrow" data-i18n="payment.eyebrow">Secure course payment</p>
+        <h2 id="paymentModalTitle" data-i18n="payment.title">Choose your payment method</h2>
         <div class="payment-summary">
           <div>
-            <span>Selected course</span>
+            <span data-i18n="payment.selectedCourse">Selected course</span>
             <strong id="paymentCourseName">Hour AI course</strong>
           </div>
           <div>
-            <span>Course price</span>
+            <span data-i18n="payment.coursePrice">Course price</span>
             <strong id="paymentCoursePrice">$0</strong>
           </div>
         </div>
@@ -529,18 +528,18 @@
           <article class="payment-method-card paypal-card">
             <div class="payment-method-top">
               <div class="payment-logo paypal-logo" aria-hidden="true">PayPal</div>
-              <span class="fee-pill">2% fee</span>
+              <span class="fee-pill" data-i18n="payment.paypalFee">2% fee</span>
             </div>
             <h3>PayPal</h3>
-            <p>Continue to PayPal Checkout. You can pay with a PayPal account, or pay without a PayPal account using Visa or Mastercard.</p>
+            <p data-i18n="payment.paypalText">Continue to PayPal Checkout. You can pay with a PayPal account, or pay without a PayPal account using Visa or Mastercard.</p>
             <div class="paypal-fee-box">
-              <span>Processing fee</span>
-              <strong>Course price + 2%</strong>
+              <span data-i18n="payment.processingFee">Processing fee</span>
+              <strong data-i18n="payment.coursePlusFee">Course price + 2%</strong>
             </div>
             <ul class="payment-mini-list">
-              <li>PayPal checkout opens in a secure PayPal page.</li>
-              <li>Pay with PayPal, Visa, or Mastercard inside the same checkout.</li>
-              <li>Course access opens after payment confirmation.</li>
+              <li data-i18n="payment.paypalStep1">PayPal checkout opens in a secure PayPal page.</li>
+              <li data-i18n="payment.paypalStep2">Pay with PayPal, Visa, or Mastercard inside the same checkout.</li>
+              <li data-i18n="payment.paypalStep3">Course access opens after payment confirmation.</li>
             </ul>
             <form
               class="paypal-hosted-form"
@@ -548,10 +547,10 @@
               method="post"
               target="_blank"
             >
-              <input class="paypal-hosted-button" type="submit" value="Pay Now" />
+              <input class="paypal-hosted-button" type="submit" value="Pay Now" data-i18n-value="payment.payNow" />
               <img class="paypal-card-icons" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="PayPal, Visa, Mastercard, and more" />
               <span class="paypal-powered">
-                Powered by:
+                <span data-i18n="payment.poweredBy">Powered by:</span>
                 <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" />
               </span>
             </form>
@@ -560,16 +559,16 @@
           <article class="payment-method-card crypto-card">
             <div class="payment-method-top">
               <div class="payment-logo crypto-logo" aria-hidden="true">Crypto</div>
-              <span class="fee-pill fee-free">0 fee</span>
+              <span class="fee-pill fee-free" data-i18n="payment.cryptoFee">0 fee</span>
             </div>
-            <h3>Cryptocurrency</h3>
-            <p>Pay with supported crypto networks. Send only through the matching network shown below.</p>
+            <h3 data-i18n="payment.cryptoTitle">Cryptocurrency</h3>
+            <p data-i18n="payment.cryptoText">Pay with supported crypto networks. Send only through the matching network shown below.</p>
             <div class="crypto-list" id="cryptoPaymentList"></div>
           </article>
         </div>
 
         <p class="payment-disclaimer">
-          Payment records are confirmed manually before course access is activated. Always verify the network and address before sending crypto.
+          <span data-i18n="payment.disclaimer">Payment records are confirmed manually before course access is activated. Always verify the network and address before sending crypto.</span>
         </p>
       </div>
     </div>

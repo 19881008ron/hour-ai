@@ -31,6 +31,7 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 92px;
+  overflow-wrap: anywhere;
 }
 
 body {
@@ -55,10 +56,33 @@ a {
 
 button,
 input,
-select {
+select,
+textarea {
   color: inherit;
   font: inherit;
   letter-spacing: 0;
+}
+
+[data-i18n],
+[data-i18n-placeholder],
+[data-i18n-value],
+.button,
+.nav-links a,
+.language-select,
+.level-chip,
+.order-code,
+.support-topic,
+.payment-logo,
+.fee-pill,
+.copy-address-button,
+.paypal-hosted-button {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+html[lang="ja"] body,
+html[lang="ar"] body {
+  line-break: strict;
 }
 
 button,
