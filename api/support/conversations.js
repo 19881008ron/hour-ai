@@ -1,4 +1,5 @@
-const { readJson, sendJson } = require("../_lib/http");
+const crypto = require("crypto");
+const { parseCookies, readJson, sendJson } = require("../_lib/http");
 const { authenticatedProfile, supabaseFetch } = require("../_lib/supabase");
 
 const SUPPORT_ROLES = new Set(["admin", "agent"]);
@@ -14,6 +15,36 @@ function isUuid(value) {
 function cleanTopic(value) {
   const topic = String(value || "course").trim().slice(0, 80);
   return topic || "course";
+}
+
+function cleanName(value) {
+  return String(value || "").trim().replace(/\s+/g, " ").slice(0, 80);
+}
+
+function cleanEmail(value) {
+  return String(value || "").trim().toLowerCase().slice(0, 120);
+}
+
+function guestIdFromRequest(req) {
+  const value = parseCookies(req).hour_ai_guest;
+  return /^[0-9a-f-]{36}$/i.test(String(value || "")) ? value : "";
+}
+
+function setGuestCookie(req, res, guestId) {
+  const secure = process.env.NODE_ENV === "production" ? "; Secure" : "";
+  const common = `; Path=/; HttpOnly; SameSite=Lax; Max-Age=15552000${secure}`;
+  const existing = res.getHeader("Set-Cookie");
+  const cookies = Array.isArray(existing) ? existing : existing ? [existing] : [];
+  res.setHeader("Set-Cookie", [...cookies, `hour_ai_guest=${encodeURIComponent(guestId)}${common}`]);
+}
+
+async function optionalAuth(req) {
+  try {
+    return await authenticatedProfile(req);
+  } catch (error) {
+    if (error.message === "Account database is not configured.") throw error;
+    return null;
+  }
 }
 
 async function loadProfiles(userIds) {
@@ -40,9 +71,11 @@ async function loadLatestMessages(conversationIds) {
   return latest;
 }
 
-async function listConversations(auth) {
-  const agent = isSupportAgent(auth.profile);
-  const filter = agent ? "" : `&user_id=eq.${encodeURIComponent(auth.profile.user_id)}`;
+async function listConversations(auth, guestId) {
+  const agent = isSupportAgent(auth?.profile);
+  let filter = "";
+  if (!agent && auth?.profile) filter = `&user_id=eq.${encodeURIComponent(auth.profile.user_id)}`;
+  if (!agent && !auth?.profile) filter = `&guest_id=eq.${encodeURIComponent(guestId)}`;
   const conversations = await supabaseFetch(
     `/rest/v1/support_conversations?select=*&order=last_message_at.desc${filter}`,
     { method: "GET" }
@@ -52,16 +85,35 @@ async function listConversations(auth) {
 
   return conversations.map((conversation) => ({
     ...conversation,
-    customer: profiles.get(conversation.user_id) || null,
+    customer: profiles.get(conversation.user_id) || {
+      user_id: null,
+      username: conversation.guest_name || "Guest visitor",
+      email: conversation.guest_email || "",
+      role: "guest"
+    },
     assignedAgent: profiles.get(conversation.assigned_to) || null,
     latestMessage: latestMessages.get(conversation.id) || null
   }));
 }
 
-async function createConversation(auth, body) {
+async function createConversation(auth, body, req, res) {
   const topic = cleanTopic(body.topic);
+  const guestId = auth?.profile ? "" : guestIdFromRequest(req) || crypto.randomUUID();
+  const guestName = cleanName(body.guestName);
+  const guestEmail = cleanEmail(body.guestEmail);
+  if (!auth?.profile && !guestName) {
+    const error = new Error("Please enter your name before starting support chat.");
+    error.status = 400;
+    throw error;
+  }
+
+  if (!auth?.profile) setGuestCookie(req, res, guestId);
+
+  const identityFilter = auth?.profile
+    ? `user_id=eq.${encodeURIComponent(auth.profile.user_id)}`
+    : `guest_id=eq.${encodeURIComponent(guestId)}`;
   const existing = await supabaseFetch(
-    `/rest/v1/support_conversations?user_id=eq.${encodeURIComponent(auth.profile.user_id)}&status=neq.closed&topic=eq.${encodeURIComponent(topic)}&select=*&order=last_message_at.desc&limit=1`,
+    `/rest/v1/support_conversations?${identityFilter}&status=neq.closed&topic=eq.${encodeURIComponent(topic)}&select=*&order=last_message_at.desc&limit=1`,
     { method: "GET" }
   );
   if (existing[0]) return existing[0];
@@ -70,7 +122,10 @@ async function createConversation(auth, body) {
     method: "POST",
     headers: { Prefer: "return=representation" },
     body: JSON.stringify({
-      user_id: auth.profile.user_id,
+      user_id: auth?.profile?.user_id || null,
+      guest_id: auth?.profile ? null : guestId,
+      guest_name: auth?.profile ? null : guestName,
+      guest_email: auth?.profile ? null : guestEmail,
       topic,
       status: "open",
       last_message_at: new Date().toISOString()
@@ -81,17 +136,18 @@ async function createConversation(auth, body) {
 
 module.exports = async function handler(req, res) {
   try {
-    const auth = await authenticatedProfile(req);
-    if (!auth) return sendJson(res, 401, { error: "Please sign in before starting online support." });
+    const auth = await optionalAuth(req);
+    const guestId = guestIdFromRequest(req);
+    if (!auth && req.method === "GET" && !guestId) return sendJson(res, 200, { conversations: [] });
 
     if (req.method === "GET") {
-      const conversations = await listConversations(auth);
+      const conversations = await listConversations(auth, guestId);
       return sendJson(res, 200, { conversations });
     }
 
     if (req.method === "POST") {
       const body = await readJson(req);
-      const conversation = await createConversation(auth, body);
+      const conversation = await createConversation(auth, body, req, res);
       return sendJson(res, 200, { conversation });
     }
 

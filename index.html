@@ -524,6 +524,22 @@
           <button type="button" class="support-topic" data-support-topic="Task orders and requirements" data-i18n="support.topicOrders">Task orders</button>
           <button type="button" class="support-topic" data-support-topic="Account support" data-i18n="support.topicAccount">Account support</button>
         </div>
+        <div class="support-guest-card" id="supportGuestCard">
+          <div>
+            <strong data-i18n="support.guestTitle">Tell us who you are</strong>
+            <span data-i18n="support.guestText">Temporary visitors can chat before creating an account.</span>
+          </div>
+          <div class="support-guest-grid">
+            <label>
+              <span data-i18n="support.guestName">Name</span>
+              <input id="supportGuestName" type="text" maxlength="80" autocomplete="name" data-i18n-placeholder="support.guestNamePlaceholder" placeholder="Your name" />
+            </label>
+            <label>
+              <span data-i18n="support.guestEmail">Email or contact</span>
+              <input id="supportGuestEmail" type="text" maxlength="120" autocomplete="email" data-i18n-placeholder="support.guestEmailPlaceholder" placeholder="Email or contact method" />
+            </label>
+          </div>
+        </div>
         <div class="support-thread" id="supportThread" aria-live="polite"></div>
         <label class="support-message-label" for="supportMessage" data-i18n="support.question">Your question</label>
         <textarea id="supportMessage" rows="5" maxlength="800" placeholder="Write your question here..." data-i18n-placeholder="support.placeholder"></textarea>

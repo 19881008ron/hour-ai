@@ -3,7 +3,10 @@ alter table public.profiles add constraint profiles_role_check check (role in ('
 
 create table if not exists public.support_conversations (
   id uuid primary key default gen_random_uuid(),
-  user_id uuid not null references public.profiles(user_id) on delete cascade,
+  user_id uuid null references public.profiles(user_id) on delete cascade,
+  guest_id text null,
+  guest_name text null,
+  guest_email text null,
   topic text not null default 'course',
   status text not null default 'open' check (status in ('open', 'pending', 'closed')),
   priority text not null default 'normal' check (priority in ('normal', 'high')),
@@ -18,11 +21,28 @@ create table if not exists public.support_conversations (
 create table if not exists public.support_messages (
   id uuid primary key default gen_random_uuid(),
   conversation_id uuid not null references public.support_conversations(id) on delete cascade,
-  sender_id uuid not null references public.profiles(user_id) on delete cascade,
-  sender_role text not null check (sender_role in ('customer', 'agent', 'admin')),
+  sender_id uuid null references public.profiles(user_id) on delete cascade,
+  sender_role text not null check (sender_role in ('guest', 'customer', 'agent', 'admin')),
+  sender_name text null,
   body text not null default '',
   created_at timestamptz not null default now(),
   read_at timestamptz null
+);
+
+alter table public.support_conversations alter column user_id drop not null;
+alter table public.support_conversations add column if not exists guest_id text null;
+alter table public.support_conversations add column if not exists guest_name text null;
+alter table public.support_conversations add column if not exists guest_email text null;
+alter table public.support_conversations drop constraint if exists support_conversations_identity_check;
+alter table public.support_conversations add constraint support_conversations_identity_check check (
+  user_id is not null or (guest_id is not null and guest_name is not null)
+);
+
+alter table public.support_messages alter column sender_id drop not null;
+alter table public.support_messages add column if not exists sender_name text null;
+alter table public.support_messages drop constraint if exists support_messages_sender_role_check;
+alter table public.support_messages add constraint support_messages_sender_role_check check (
+  sender_role in ('guest', 'customer', 'agent', 'admin')
 );
 
 create table if not exists public.support_attachments (
@@ -71,6 +91,7 @@ grant select, insert, update, delete on public.support_conversation_tags to serv
 grant usage, select on sequence public.support_agent_notes_id_seq to service_role;
 
 create index if not exists support_conversations_user_idx on public.support_conversations(user_id, last_message_at desc);
+create index if not exists support_conversations_guest_idx on public.support_conversations(guest_id, last_message_at desc);
 create index if not exists support_conversations_status_idx on public.support_conversations(status, last_message_at desc);
 create index if not exists support_messages_conversation_idx on public.support_messages(conversation_id, created_at asc);
 create index if not exists support_attachments_message_idx on public.support_attachments(message_id);

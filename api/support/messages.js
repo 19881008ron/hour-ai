@@ -1,5 +1,5 @@
 const crypto = require("crypto");
-const { readJson, sendJson } = require("../_lib/http");
+const { parseCookies, readJson, sendJson } = require("../_lib/http");
 const { authenticatedProfile, config, supabaseFetch } = require("../_lib/supabase");
 
 const SUPPORT_ROLES = new Set(["admin", "agent"]);
@@ -52,7 +52,21 @@ function parseAttachment(attachment) {
   };
 }
 
-async function requireConversationAccess(auth, conversationId) {
+function guestIdFromRequest(req) {
+  const value = parseCookies(req).hour_ai_guest;
+  return /^[0-9a-f-]{36}$/i.test(String(value || "")) ? value : "";
+}
+
+async function optionalAuth(req) {
+  try {
+    return await authenticatedProfile(req);
+  } catch (error) {
+    if (error.message === "Account database is not configured.") throw error;
+    return null;
+  }
+}
+
+async function requireConversationAccess(auth, guestId, conversationId) {
   if (!isUuid(conversationId)) {
     const error = new Error("Invalid conversation.");
     error.status = 400;
@@ -68,7 +82,10 @@ async function requireConversationAccess(auth, conversationId) {
     error.status = 404;
     throw error;
   }
-  if (!isSupportAgent(auth.profile) && conversation.user_id !== auth.profile.user_id) {
+  const agent = isSupportAgent(auth?.profile);
+  const registeredOwner = auth?.profile && conversation.user_id === auth.profile.user_id;
+  const guestOwner = !auth?.profile && guestId && conversation.guest_id === guestId;
+  if (!agent && !registeredOwner && !guestOwner) {
     const error = new Error("You do not have access to this conversation.");
     error.status = 403;
     throw error;
@@ -77,7 +94,7 @@ async function requireConversationAccess(auth, conversationId) {
 }
 
 async function markConversationRead(auth, conversation) {
-  const patch = isSupportAgent(auth.profile) ? { agent_unread: 0 } : { customer_unread: 0 };
+  const patch = isSupportAgent(auth?.profile) ? { agent_unread: 0 } : { customer_unread: 0 };
   await supabaseFetch(`/rest/v1/support_conversations?id=eq.${encodeURIComponent(conversation.id)}`, {
     method: "PATCH",
     body: JSON.stringify(patch)
@@ -99,8 +116,8 @@ async function loadAttachments(messageIds) {
   return grouped;
 }
 
-async function listMessages(auth, conversationId) {
-  const conversation = await requireConversationAccess(auth, conversationId);
+async function listMessages(auth, guestId, conversationId) {
+  const conversation = await requireConversationAccess(auth, guestId, conversationId);
   const messages = await supabaseFetch(
     `/rest/v1/support_messages?conversation_id=eq.${encodeURIComponent(conversation.id)}&select=*&order=created_at.asc`,
     { method: "GET" }
@@ -148,9 +165,9 @@ async function uploadAttachment(conversationId, messageId, attachment) {
   return created[0];
 }
 
-async function createMessage(auth, body) {
+async function createMessage(auth, guestId, body) {
   const conversationId = body.conversationId;
-  const conversation = await requireConversationAccess(auth, conversationId);
+  const conversation = await requireConversationAccess(auth, guestId, conversationId);
   const messageBody = cleanBody(body.body);
   const attachment = parseAttachment(body.attachment);
   if (!messageBody && !attachment) {
@@ -159,15 +176,16 @@ async function createMessage(auth, body) {
     throw error;
   }
 
-  const senderRole = isSupportAgent(auth.profile) ? auth.profile.role : "customer";
+  const senderRole = isSupportAgent(auth?.profile) ? auth.profile.role : auth?.profile ? "customer" : "guest";
   const now = new Date().toISOString();
   const messages = await supabaseFetch("/rest/v1/support_messages", {
     method: "POST",
     headers: { Prefer: "return=representation" },
     body: JSON.stringify({
       conversation_id: conversation.id,
-      sender_id: auth.profile.user_id,
+      sender_id: auth?.profile?.user_id || null,
       sender_role: senderRole,
+      sender_name: auth?.profile?.username || conversation.guest_name || "Guest visitor",
       body: messageBody
     })
   });
@@ -175,7 +193,7 @@ async function createMessage(auth, body) {
   let savedAttachment = null;
   if (attachment) savedAttachment = await uploadAttachment(conversation.id, message.id, attachment);
 
-  const update = isSupportAgent(auth.profile)
+  const update = isSupportAgent(auth?.profile)
     ? { last_message_at: now, updated_at: now, customer_unread: Number(conversation.customer_unread || 0) + 1, assigned_to: auth.profile.user_id }
     : { last_message_at: now, updated_at: now, agent_unread: Number(conversation.agent_unread || 0) + 1 };
   await supabaseFetch(`/rest/v1/support_conversations?id=eq.${encodeURIComponent(conversation.id)}`, {
@@ -191,18 +209,19 @@ async function createMessage(auth, body) {
 
 module.exports = async function handler(req, res) {
   try {
-    const auth = await authenticatedProfile(req);
-    if (!auth) return sendJson(res, 401, { error: "Please sign in before using online support." });
+    const auth = await optionalAuth(req);
+    const guestId = guestIdFromRequest(req);
+    if (!auth && !guestId) return sendJson(res, 401, { error: "Please start a support conversation first." });
 
     if (req.method === "GET") {
       const url = new URL(req.url, `https://${req.headers.host || "hour-ai.com"}`);
-      const messages = await listMessages(auth, url.searchParams.get("conversationId"));
+      const messages = await listMessages(auth, guestId, url.searchParams.get("conversationId"));
       return sendJson(res, 200, { messages });
     }
 
     if (req.method === "POST") {
       const body = await readJson(req);
-      const message = await createMessage(auth, body);
+      const message = await createMessage(auth, guestId, body);
       return sendJson(res, 200, { message });
     }
 

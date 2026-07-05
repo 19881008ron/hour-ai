@@ -626,7 +626,13 @@ const completeTranslations = {
       send: "Send",
       attach: "Attach image",
       replyPlaceholder: "Write a reply...",
-      signInRequired: "Please sign in or create an account before starting support chat.",
+      guestTitle: "Tell us who you are",
+      guestText: "Temporary visitors can chat before creating an account.",
+      guestName: "Name",
+      guestEmail: "Email or contact",
+      guestNamePlaceholder: "Your name",
+      guestEmailPlaceholder: "Email or contact method",
+      guestNameRequired: "Please enter your name so our advisor can identify you.",
       loading: "Loading support conversation...",
       noMessages: "No messages yet. Send the first question and our advisor can reply here.",
       sent: "Message sent.",
@@ -1747,6 +1753,7 @@ function renderPaymentRecords(records = []) {
 
 function showAccount(profile) {
   activeProfile = profile;
+  activeSupportConversationId = null;
   document.getElementById("accountGuest").hidden = true;
   document.getElementById("accountDashboard").hidden = false;
 
@@ -1787,6 +1794,7 @@ function showAccount(profile) {
 
 function showGuestAccount() {
   activeProfile = null;
+  activeSupportConversationId = null;
   document.getElementById("accountGuest").hidden = false;
   document.getElementById("accountDashboard").hidden = true;
   document.getElementById("headerRegister").hidden = false;
@@ -1805,14 +1813,31 @@ function selectedSupportTopic() {
   return active?.dataset.supportTopic || active?.textContent.trim() || t("support.topicCourse");
 }
 
+function supportGuestIdentity() {
+  const nameInput = document.getElementById("supportGuestName");
+  const emailInput = document.getElementById("supportGuestEmail");
+  const guestName = nameInput?.value.trim() || localStorage.getItem("hourAiGuestName") || "";
+  const guestEmail = emailInput?.value.trim() || localStorage.getItem("hourAiGuestEmail") || "";
+  if (nameInput && guestName) nameInput.value = guestName;
+  if (emailInput && guestEmail) emailInput.value = guestEmail;
+  return { guestName, guestEmail };
+}
+
+function updateSupportGuestCard() {
+  const card = document.getElementById("supportGuestCard");
+  if (!card) return;
+  card.hidden = Boolean(activeProfile);
+  if (!activeProfile) supportGuestIdentity();
+}
+
 function supportMessageElement(message) {
   const wrapper = document.createElement("article");
-  const mine = message.sender_id === activeProfile?.user_id;
+  const mine = message.sender_id === activeProfile?.user_id || (!activeProfile && message.sender_role === "guest");
   wrapper.className = `support-message ${mine ? "is-mine" : "is-theirs"}`;
 
   const meta = document.createElement("span");
   const date = new Date(message.created_at);
-  meta.textContent = `${message.sender_role} · ${Number.isNaN(date.getTime()) ? "" : date.toLocaleString()}`;
+  meta.textContent = `${message.sender_name || message.sender_role} · ${Number.isNaN(date.getTime()) ? "" : date.toLocaleString()}`;
   wrapper.append(meta);
 
   if (message.body) {
@@ -1864,12 +1889,28 @@ async function fileToSupportAttachment(file) {
 }
 
 async function ensureSupportConversation(topic = selectedSupportTopic()) {
+  const guest = activeProfile ? {} : supportGuestIdentity();
+  if (!activeProfile && !guest.guestName) throw new Error(t("support.guestNameRequired"));
+  if (!activeProfile) {
+    localStorage.setItem("hourAiGuestName", guest.guestName);
+    if (guest.guestEmail) localStorage.setItem("hourAiGuestEmail", guest.guestEmail);
+  }
   const data = await apiRequest("/api/support/conversations", {
     method: "POST",
-    body: JSON.stringify({ topic })
+    body: JSON.stringify({ topic, ...guest })
   });
   activeSupportConversationId = data.conversation.id;
   return data.conversation;
+}
+
+async function loadExistingSupportConversation() {
+  const data = await apiRequest("/api/support/conversations", { method: "GET", headers: {} });
+  const conversation = data.conversations?.[0];
+  if (conversation) {
+    activeSupportConversationId = conversation.id;
+    return conversation;
+  }
+  return null;
 }
 
 async function loadSupportMessages(targetId = "supportThread", conversationId = activeSupportConversationId) {
@@ -1894,17 +1935,15 @@ function startSupportPolling() {
 }
 
 async function openSupportChat(topic) {
-  if (!activeProfile) {
-    showToast(t("support.signInRequired"));
-    switchAccountTab("login");
-    openModal("profileModal");
-    return;
-  }
   openModal("supportModal");
+  updateSupportGuestCard();
   renderSupportThread("supportThread", []);
   try {
-    await ensureSupportConversation(topic || selectedSupportTopic());
-    await loadSupportMessages();
+    if (!activeSupportConversationId) {
+      const existing = await loadExistingSupportConversation();
+      if (!existing && activeProfile) await ensureSupportConversation(topic || selectedSupportTopic());
+    }
+    if (activeSupportConversationId) await loadSupportMessages();
     startSupportPolling();
   } catch (error) {
     showToast(error.message);
@@ -1917,7 +1956,6 @@ async function sendSupportMessage({ conversationId, textareaId, inputId, threadI
   const input = document.getElementById(inputId || "supportAttachment");
   const body = textarea.value.trim();
   const file = input?.files?.[0] || null;
-  if (!targetConversationId && !activeProfile) return openSupportChat();
   if (!body && !file) return;
   const button = textarea.closest(".modal-panel, .support-agent-thread")?.querySelector(".button-primary");
   if (button) button.disabled = true;
@@ -1957,6 +1995,7 @@ function renderSupportInbox(conversations = []) {
   }
   conversations.forEach((conversation) => {
     const customer = conversation.customer || {};
+    const isGuest = customer.role === "guest" || !customer.user_id;
     const button = document.createElement("button");
     button.className = `support-inbox-item${conversation.id === activeAgentConversationId ? " is-active" : ""}`;
     button.type = "button";
@@ -1971,9 +2010,9 @@ function renderSupportInbox(conversations = []) {
     top.append(name, unread);
 
     const topic = document.createElement("span");
-    topic.textContent = conversation.topic || t("support.topicCourse");
+    topic.textContent = `${isGuest ? "Guest visitor" : "Registered user"} · ${conversation.topic || t("support.topicCourse")}`;
     const latest = document.createElement("small");
-    latest.textContent = conversation.latestMessage?.body || customer.email || "";
+    latest.textContent = [customer.email, conversation.latestMessage?.body].filter(Boolean).join(" · ");
 
     button.append(top, topic, latest);
     button.addEventListener("click", () => openAgentConversation(conversation.id));
