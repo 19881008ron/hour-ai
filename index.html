@@ -540,17 +540,21 @@
             </label>
           </div>
         </div>
-        <div class="support-thread" id="supportThread" aria-live="polite"></div>
-        <label class="support-message-label" for="supportMessage" data-i18n="support.question">Your question</label>
-        <textarea id="supportMessage" rows="5" maxlength="800" placeholder="Write your question here..." data-i18n-placeholder="support.placeholder"></textarea>
-        <div class="support-composer-actions">
-          <label class="support-file-button">
-            <input id="supportAttachment" type="file" accept="image/png,image/jpeg,image/webp,image/gif" />
-            <span data-i18n="support.attach">Attach image</span>
-          </label>
-          <button class="button button-primary" id="startConsultation" type="button" data-i18n="support.send">Send</button>
+        <div class="support-chat-box">
+          <div class="support-thread" id="supportThread" aria-live="polite"></div>
+          <div class="support-composer-panel">
+            <label class="support-message-label" for="supportMessage" data-i18n="support.question">Your question</label>
+            <textarea id="supportMessage" rows="2" maxlength="800" placeholder="Write your question here..." data-i18n-placeholder="support.placeholder"></textarea>
+            <div class="support-composer-actions">
+              <label class="support-file-button">
+                <input id="supportAttachment" type="file" accept="image/png,image/jpeg,image/webp,image/gif" />
+                <span data-i18n="support.attach">Attach image</span>
+              </label>
+              <button class="button button-primary" id="startConsultation" type="button" data-i18n="support.send">Send</button>
+            </div>
+            <div class="support-file-preview" id="supportFilePreview"></div>
+          </div>
         </div>
-        <div class="support-file-preview" id="supportFilePreview"></div>
         <p class="support-privacy" data-i18n="support.privacy">Do not include passwords, verification codes, payment card details, or other sensitive information.</p>
       </div>
     </div>
