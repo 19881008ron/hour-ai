@@ -1849,7 +1849,7 @@ function supportMessageElement(message) {
   (message.attachments || []).forEach((attachment) => {
     const link = document.createElement("a");
     link.className = "support-attachment";
-    link.href = `/api/support/attachment?id=${encodeURIComponent(attachment.id)}`;
+    link.href = `/api/support?resource=attachment&id=${encodeURIComponent(attachment.id)}`;
     link.target = "_blank";
     link.rel = "noreferrer";
     const image = document.createElement("img");
@@ -1895,7 +1895,7 @@ async function ensureSupportConversation(topic = selectedSupportTopic()) {
     localStorage.setItem("hourAiGuestName", guest.guestName);
     if (guest.guestEmail) localStorage.setItem("hourAiGuestEmail", guest.guestEmail);
   }
-  const data = await apiRequest("/api/support/conversations", {
+  const data = await apiRequest("/api/support?resource=conversations", {
     method: "POST",
     body: JSON.stringify({ topic, ...guest })
   });
@@ -1904,7 +1904,7 @@ async function ensureSupportConversation(topic = selectedSupportTopic()) {
 }
 
 async function loadExistingSupportConversation() {
-  const data = await apiRequest("/api/support/conversations", { method: "GET", headers: {} });
+  const data = await apiRequest("/api/support?resource=conversations", { method: "GET", headers: {} });
   const conversation = data.conversations?.[0];
   if (conversation) {
     activeSupportConversationId = conversation.id;
@@ -1915,7 +1915,7 @@ async function loadExistingSupportConversation() {
 
 async function loadSupportMessages(targetId = "supportThread", conversationId = activeSupportConversationId) {
   if (!conversationId) return;
-  const data = await apiRequest(`/api/support/messages?conversationId=${encodeURIComponent(conversationId)}`, {
+  const data = await apiRequest(`/api/support?resource=messages&conversationId=${encodeURIComponent(conversationId)}`, {
     method: "GET",
     headers: {}
   });
@@ -1962,7 +1962,7 @@ async function sendSupportMessage({ conversationId, textareaId, inputId, threadI
   try {
     const conversation = targetConversationId ? { id: targetConversationId } : await ensureSupportConversation();
     const attachment = await fileToSupportAttachment(file);
-    await apiRequest("/api/support/messages", {
+    await apiRequest("/api/support?resource=messages", {
       method: "POST",
       body: JSON.stringify({
         conversationId: conversation.id,
@@ -2022,7 +2022,7 @@ function renderSupportInbox(conversations = []) {
 
 async function loadSupportInbox() {
   if (!isSupportAgentProfile()) return;
-  const data = await apiRequest("/api/support/conversations", { method: "GET", headers: {} });
+  const data = await apiRequest("/api/support?resource=conversations", { method: "GET", headers: {} });
   renderSupportInbox(data.conversations || []);
 }
 
