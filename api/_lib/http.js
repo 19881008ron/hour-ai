@@ -12,7 +12,7 @@ function readJson(req) {
     let raw = "";
     req.on("data", (chunk) => {
       raw += chunk;
-      if (raw.length > 100000) reject(new Error("Request is too large."));
+      if (raw.length > 6500000) reject(new Error("Request is too large."));
     });
     req.on("end", () => {
       try {

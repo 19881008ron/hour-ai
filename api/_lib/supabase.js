@@ -1,11 +1,31 @@
 const { parseCookies } = require("./http");
 
+function normalizeSupabaseUrl(value) {
+  const raw = String(value || "").trim().replace(/^["']|["']$/g, "");
+  if (!raw) return "";
+
+  let parsed;
+  try {
+    parsed = new URL(raw);
+  } catch {
+    throw new Error("SUPABASE_URL must be the Project URL, such as https://your-project.supabase.co.");
+  }
+
+  if (parsed.protocol !== "https:" || !parsed.hostname.endsWith(".supabase.co")) {
+    throw new Error("SUPABASE_URL must be the Project URL, such as https://your-project.supabase.co.");
+  }
+
+  return `${parsed.origin}${parsed.pathname
+    .replace(/\/(?:rest|auth)\/v1\/?$/i, "")
+    .replace(/\/+$/, "")}`;
+}
+
 function config() {
-  const url = process.env.SUPABASE_URL;
+  const url = normalizeSupabaseUrl(process.env.SUPABASE_URL);
   const publicKey = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_ANON_KEY;
   const secretKey = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !publicKey || !secretKey) throw new Error("Account database is not configured.");
-  return { url: url.replace(/\/$/, ""), publicKey, secretKey };
+  return { url, publicKey: publicKey.trim(), secretKey: secretKey.trim() };
 }
 
 async function supabaseFetch(path, options = {}, useServiceKey = true) {
@@ -56,4 +76,14 @@ async function requireAdmin(req) {
   return auth;
 }
 
-module.exports = { authenticatedProfile, config, requireAdmin, supabaseFetch };
+async function requireSupportAgent(req) {
+  const auth = await authenticatedProfile(req);
+  if (!auth || !["admin", "agent"].includes(auth.profile.role)) {
+    const error = new Error("Support agent access required.");
+    error.status = 403;
+    throw error;
+  }
+  return auth;
+}
+
+module.exports = { authenticatedProfile, config, requireAdmin, requireSupportAgent, supabaseFetch };

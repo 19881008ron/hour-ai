@@ -12,7 +12,6 @@
     <link rel="icon" type="image/svg+xml" href="assets/hour-ai-logo.svg" />
     <link rel="shortcut icon" href="assets/hour-ai-logo.svg" />
     <link rel="apple-touch-icon" href="assets/hour-ai-logo.svg" />
-    <link rel="preconnect" href="https://wa.me" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -121,7 +120,7 @@
               A practical 7-day learning path for beginners, followed by skill testing and access to C, B, and A level editing opportunities.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" id="heroWhatsapp" href="#" target="_blank" rel="noreferrer">
+              <a class="button button-primary" id="heroWhatsapp" href="#support" data-open-support>
                 <span data-i18n="hero.ctaPrimary">Talk to an advisor</span>
               </a>
               <a class="button button-outline" href="#orders">
@@ -289,13 +288,13 @@
           <p data-i18n="support.text">Ask about course levels, task requirements, testing rules, available languages, and whether the workflow fits your goals.</p>
         </div>
         <div class="support-actions">
-          <a class="button button-primary full-width" id="supportWhatsapp" href="#" target="_blank" rel="noreferrer">
-            <span data-i18n="support.whatsapp">Chat on WhatsApp</span>
+          <a class="button button-primary full-width" id="supportWhatsapp" href="#" data-open-support>
+            <span data-i18n="support.whatsapp">Open support center</span>
           </a>
           <button class="button button-outline full-width" type="button" id="liveChatButton">
             <span data-i18n="support.live">Open online consultation</span>
           </button>
-          <p class="fine-print" data-i18n="support.finePrint">Choose a topic and prepare your message in the consultation window. A support advisor will continue the conversation on WhatsApp.</p>
+          <p class="fine-print" data-i18n="support.finePrint">Choose a topic and continue the conversation in your secure Hour AI support center.</p>
         </div>
       </section>
     </main>
@@ -337,7 +336,7 @@
           <div><dt data-i18n="modal.time">Estimated time</dt><dd id="modalTime"></dd></div>
           <div><dt data-i18n="modal.requirements">Requirements</dt><dd id="modalRequirements"></dd></div>
         </dl>
-        <a class="button button-primary full-width" id="modalWhatsapp" href="#" target="_blank" rel="noreferrer">
+        <a class="button button-primary full-width" id="modalWhatsapp" href="#support" data-open-support>
           <span data-i18n="modal.ask">Ask about this order</span>
         </a>
       </div>
@@ -476,6 +475,31 @@
             </div>
           </section>
 
+          <section class="support-agent-panel" id="supportAgentPanel" hidden>
+            <div class="admin-heading">
+              <div>
+                <span class="saved-label" data-i18n="account.supportDesk">Support desk</span>
+                <h3 data-i18n="account.supportDeskTitle">Online customer conversations</h3>
+              </div>
+              <button class="button button-outline" id="refreshSupportInbox" type="button" data-i18n="account.refreshSupport">Refresh</button>
+            </div>
+            <div class="support-workspace">
+              <div class="support-inbox" id="supportInbox" aria-label="Support conversations"></div>
+              <div class="support-agent-thread">
+                <div class="support-empty" id="supportAgentEmpty" data-i18n="account.selectConversation">Select a conversation to reply.</div>
+                <div class="support-thread" id="supportAgentThread" hidden></div>
+                <div class="support-composer support-agent-composer" id="supportAgentComposer" hidden>
+                  <textarea id="supportAgentReply" rows="3" maxlength="2000" data-i18n-placeholder="support.replyPlaceholder" placeholder="Write a reply..."></textarea>
+                  <label class="support-file-button">
+                    <input id="supportAgentAttachment" type="file" accept="image/png,image/jpeg,image/webp,image/gif" />
+                    <span data-i18n="support.attach">Attach image</span>
+                  </label>
+                  <button class="button button-primary" id="sendSupportAgentReply" type="button" data-i18n="support.send">Send</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <div class="form-status" id="accountStatus" role="status" aria-live="polite"></div>
           <button class="button button-outline full-width" id="logoutButton" type="button" data-i18n="account.signOut">Sign out</button>
         </div>
@@ -493,16 +517,24 @@
         <button class="icon-button" type="button" data-close-support aria-label="Close" data-i18n-aria-label="ui.close">&times;</button>
         <div class="support-modal-status"><span class="status-dot" aria-hidden="true"></span> <span data-i18n="support.eyebrow">Advisor channel online</span></div>
         <h2 id="supportModalTitle" data-i18n="support.modalTitle">How can we help?</h2>
-        <p class="support-modal-intro" data-i18n="support.modalIntro">Select a topic and write your question. Our support team continues the conversation through WhatsApp.</p>
+        <p class="support-modal-intro" data-i18n="support.modalIntro">Select a topic and continue the conversation with Hour AI support. You can send text and images here.</p>
         <div class="support-topics" role="group" aria-label="Consultation topic">
           <button type="button" class="support-topic is-active" data-support-topic="Course selection" data-i18n="support.topicCourse">Course selection</button>
           <button type="button" class="support-topic" data-support-topic="Skill test and qualification" data-i18n="support.topicTest">Skill test</button>
           <button type="button" class="support-topic" data-support-topic="Task orders and requirements" data-i18n="support.topicOrders">Task orders</button>
           <button type="button" class="support-topic" data-support-topic="Account support" data-i18n="support.topicAccount">Account support</button>
         </div>
+        <div class="support-thread" id="supportThread" aria-live="polite"></div>
         <label class="support-message-label" for="supportMessage" data-i18n="support.question">Your question</label>
         <textarea id="supportMessage" rows="5" maxlength="800" placeholder="Write your question here..." data-i18n-placeholder="support.placeholder"></textarea>
-        <button class="button button-primary full-width" id="startConsultation" type="button" data-i18n="support.start">Start consultation</button>
+        <div class="support-composer-actions">
+          <label class="support-file-button">
+            <input id="supportAttachment" type="file" accept="image/png,image/jpeg,image/webp,image/gif" />
+            <span data-i18n="support.attach">Attach image</span>
+          </label>
+          <button class="button button-primary" id="startConsultation" type="button" data-i18n="support.send">Send</button>
+        </div>
+        <div class="support-file-preview" id="supportFilePreview"></div>
         <p class="support-privacy" data-i18n="support.privacy">Do not include passwords, verification codes, payment card details, or other sensitive information.</p>
       </div>
     </div>

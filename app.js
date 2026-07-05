@@ -1,5 +1,3 @@
-const whatsappNumber = "447835210931";
-
 const translations = {
   en: {
     nav: {
@@ -49,7 +47,7 @@ const translations = {
       eyebrow: "Advisor channel online",
       title: "Talk through the right starting level before you enroll.",
       text: "Ask about course levels, task requirements, testing rules, available languages, and whether the workflow fits your goals.",
-      whatsapp: "Chat on WhatsApp",
+      whatsapp: "Open support center",
       live: "Open online consultation",
       note: "Our advisor team can help you choose the right starting level."
     },
@@ -149,7 +147,7 @@ const translations = {
       eyebrow: "顾问通道在线",
       title: "报名前先确认适合你的起始等级。",
       text: "你可以咨询课程等级、任务样例、测试规则、支持语言，以及这套流程是否符合你的目标。",
-      whatsapp: "WhatsApp 咨询",
+      whatsapp: "在线客服中心",
       live: "打开在线咨询",
       note: "顾问团队可以帮助你选择适合的起步等级。"
     },
@@ -209,7 +207,7 @@ const translations = {
     },
     orders: { viewDetails: "Ver detalles" },
     courses: { consult: "Consultar antes de inscribirme", recommended: "Más elegido", oneTime: "curso de pago único" },
-    support: { whatsapp: "Chat en WhatsApp", live: "Abrir consulta online" },
+    support: { whatsapp: "Centro de soporte", live: "Abrir consulta online" },
     profileModal: { toast: "Tu perfil de muestra se guardó en este dispositivo." },
     legal: "Hour AI no garantiza ingresos, empleo ni volumen de pedidos."
   },
@@ -223,7 +221,7 @@ const translations = {
     },
     orders: { viewDetails: "Voir les détails" },
     courses: { consult: "Consulter avant l'inscription", recommended: "Le plus choisi", oneTime: "cours en paiement unique" },
-    support: { whatsapp: "Discuter sur WhatsApp", live: "Ouvrir la consultation" },
+    support: { whatsapp: "Centre d'assistance", live: "Ouvrir la consultation" },
     legal: "Hour AI ne garantit pas les revenus, les emplois ou le volume de commandes."
   },
   pt: {
@@ -236,7 +234,7 @@ const translations = {
     },
     orders: { viewDetails: "Ver detalhes" },
     courses: { consult: "Consultar antes de entrar", recommended: "Mais escolhido", oneTime: "curso de pagamento único" },
-    support: { whatsapp: "Conversar no WhatsApp", live: "Abrir consulta online" },
+    support: { whatsapp: "Centro de suporte", live: "Abrir consulta online" },
     legal: "A Hour AI não garante renda, emprego ou volume de pedidos."
   },
   ar: {
@@ -249,7 +247,7 @@ const translations = {
     },
     orders: { viewDetails: "عرض التفاصيل" },
     courses: { consult: "استشارة قبل التسجيل", recommended: "الأكثر اختياراً", oneTime: "دورة بدفعة واحدة" },
-    support: { whatsapp: "محادثة واتساب", live: "فتح الاستشارة" },
+    support: { whatsapp: "مركز الدعم", live: "فتح الاستشارة" },
     legal: "لا تضمن Hour AI الدخل أو الوظائف أو حجم الطلبات."
   },
   id: {
@@ -262,7 +260,7 @@ const translations = {
     },
     orders: { viewDetails: "Lihat detail" },
     courses: { consult: "Konsultasi sebelum daftar", recommended: "Paling dipilih", oneTime: "kursus sekali bayar" },
-    support: { whatsapp: "Chat WhatsApp", live: "Buka konsultasi online" },
+    support: { whatsapp: "Pusat bantuan", live: "Buka konsultasi online" },
     legal: "Hour AI tidak menjamin pendapatan, pekerjaan, atau jumlah order."
   }
 };
@@ -316,7 +314,7 @@ Object.assign(translations, {
       eyebrow: "顾问通道在线",
       title: "报名前先确认适合你的起始等级。",
       text: "你可以咨询课程等级、任务要求、测试规则、支持语言，以及这套流程是否符合你的目标。",
-      whatsapp: "WhatsApp 咨询",
+      whatsapp: "在线客服中心",
       live: "打开在线咨询",
       note: "顾问团队可以帮助你选择适合的起始等级。"
     },
@@ -374,7 +372,7 @@ Object.assign(translations, {
       carousel: translations.en.hero.carousel
     },
     orders: { eyebrow: "Mercado de pedidos", title: "Pedidos activos para editores AI calificados", text: "Los editores C, B y A pueden revisar alcance, comisión, tiempo estimado y requisitos antes de solicitar.", boardStatus: "Pedidos con comisión disponibles para editores calificados", viewDetails: "Ver detalles" },
-    support: { eyebrow: "Canal de asesoría activo", title: "Consulta el nivel adecuado antes de inscribirte.", text: "Pregunta por niveles, requisitos, pruebas, idiomas y si el flujo se adapta a tus metas.", whatsapp: "Chat en WhatsApp", live: "Abrir consulta online", note: "Nuestro equipo puede ayudarte a elegir el nivel inicial." },
+    support: { eyebrow: "Canal de asesoría activo", title: "Consulta el nivel adecuado antes de inscribirte.", text: "Pregunta por niveles, requisitos, pruebas, idiomas y si el flujo se adapta a tus metas.", whatsapp: "Centro de soporte", live: "Abrir consulta online", note: "Nuestro equipo puede ayudarte a elegir el nivel inicial." },
     profile: { ...translations.en.profile, commissionLabel: "Comisión por pedido", open: "Abrir mi cuenta" },
     courses: { eyebrow: "Programas de formación", title: "Elige el nivel que coincide con tu meta.", text: "Compara niveles, objetivos y estándares de entrega antes de elegir.", consult: "Consulta", payment: "Pago", recommended: "Más elegido", oneTime: "curso de pago único" },
     modal: { content: "Alcance", pay: "Comisión", time: "Tiempo estimado", requirements: "Requisitos", ask: "Consultar este pedido" },
@@ -398,7 +396,7 @@ Object.assign(translations, {
       carousel: translations.en.hero.carousel
     },
     orders: { eyebrow: "Marché des commandes", title: "Commandes actives pour éditeurs AI qualifiés", text: "Les éditeurs C, B et A peuvent consulter le périmètre, la commission, le temps estimé et les exigences.", boardStatus: "Commandes à commission ouvertes aux éditeurs qualifiés", viewDetails: "Voir les détails" },
-    support: { eyebrow: "Canal conseiller en ligne", title: "Choisissez le bon niveau avant l'inscription.", text: "Posez vos questions sur les niveaux, tests, langues et exigences.", whatsapp: "Discuter sur WhatsApp", live: "Ouvrir la consultation", note: "Notre équipe peut vous aider à choisir le bon niveau." },
+    support: { eyebrow: "Canal conseiller en ligne", title: "Choisissez le bon niveau avant l'inscription.", text: "Posez vos questions sur les niveaux, tests, langues et exigences.", whatsapp: "Centre d'assistance", live: "Ouvrir la consultation", note: "Notre équipe peut vous aider à choisir le bon niveau." },
     profile: { ...translations.en.profile, commissionLabel: "Commission par commande", open: "Ouvrir mon compte" },
     courses: { eyebrow: "Programmes de formation", title: "Choisissez le niveau adapté à votre objectif.", text: "Comparez les niveaux, objectifs et standards avant de choisir.", consult: "Consulter", payment: "Paiement", recommended: "Le plus choisi", oneTime: "cours en paiement unique" },
     modal: { content: "Périmètre", pay: "Commission", time: "Temps estimé", requirements: "Exigences", ask: "Demander cette commande" },
@@ -422,7 +420,7 @@ Object.assign(translations, {
       carousel: translations.en.hero.carousel
     },
     orders: { eyebrow: "Mercado de pedidos", title: "Pedidos ativos aguardando editores AI qualificados", text: "Editores C, B e A podem revisar escopo, comissão, tempo estimado e requisitos antes de se candidatar.", boardStatus: "Pedidos com comissão abertos para editores qualificados", viewDetails: "Ver detalhes" },
-    support: { eyebrow: "Canal de consultoria online", title: "Confirme o nível inicial antes da inscrição.", text: "Pergunte sobre níveis, requisitos, testes, idiomas e adequação ao seu objetivo.", whatsapp: "Conversar no WhatsApp", live: "Abrir consulta online", note: "Nossa equipe ajuda você a escolher o nível inicial." },
+    support: { eyebrow: "Canal de consultoria online", title: "Confirme o nível inicial antes da inscrição.", text: "Pergunte sobre níveis, requisitos, testes, idiomas e adequação ao seu objetivo.", whatsapp: "Centro de suporte", live: "Abrir consulta online", note: "Nossa equipe ajuda você a escolher o nível inicial." },
     profile: { ...translations.en.profile, commissionLabel: "Comissão por pedido", open: "Abrir minha conta" },
     courses: { eyebrow: "Programas de treinamento", title: "Escolha o nível que combina com seu objetivo.", text: "Compare níveis, metas e padrões antes de escolher.", consult: "Consultar", payment: "Pagamento", recommended: "Mais escolhido", oneTime: "curso de pagamento único" },
     modal: { content: "Escopo", pay: "Comissão", time: "Tempo estimado", requirements: "Requisitos", ask: "Consultar este pedido" },
@@ -446,7 +444,7 @@ Object.assign(translations, {
       carousel: translations.en.hero.carousel
     },
     orders: { eyebrow: "سوق الطلبات", title: "طلبات نشطة بانتظار محرري AI مؤهلين", text: "يمكن لمحرري C و B و A مراجعة النطاق والعمولة والوقت والمتطلبات قبل التقديم.", boardStatus: "طلبات بعمولة متاحة للمحررين المؤهلين", viewDetails: "عرض التفاصيل" },
-    support: { eyebrow: "قناة المستشارين متاحة", title: "اختر المستوى المناسب قبل التسجيل.", text: "اسأل عن المستويات والمتطلبات والاختبارات واللغات ومدى ملاءمة المسار لهدفك.", whatsapp: "محادثة واتساب", live: "فتح الاستشارة", note: "يساعدك فريقنا على اختيار مستوى البداية." },
+    support: { eyebrow: "قناة المستشارين متاحة", title: "اختر المستوى المناسب قبل التسجيل.", text: "اسأل عن المستويات والمتطلبات والاختبارات واللغات ومدى ملاءمة المسار لهدفك.", whatsapp: "مركز الدعم", live: "فتح الاستشارة", note: "يساعدك فريقنا على اختيار مستوى البداية." },
     profile: { ...translations.en.profile, commissionLabel: "عمولة لكل طلب", open: "فتح حسابي" },
     courses: { eyebrow: "برامج التدريب", title: "اختر المستوى المناسب لهدفك.", text: "قارن مستويات التدريب والأهداف ومعايير التسليم قبل الاختيار.", consult: "استشارة", payment: "دفع", recommended: "الأكثر اختيارا", oneTime: "دورة بدفعة واحدة" },
     modal: { content: "نطاق المهمة", pay: "نطاق العمولة", time: "الوقت المتوقع", requirements: "متطلبات التسليم", ask: "اسأل عن هذا الطلب" },
@@ -470,7 +468,7 @@ Object.assign(translations, {
       carousel: translations.en.hero.carousel
     },
     orders: { eyebrow: "Marketplace order", title: "Order aktif menunggu editor AI berkualifikasi", text: "Editor C, B, dan A dapat meninjau lingkup, komisi, estimasi waktu, dan persyaratan sebelum mengajukan.", boardStatus: "Order komisi tersedia untuk editor berkualifikasi", viewDetails: "Lihat detail" },
-    support: { eyebrow: "Kanal advisor online", title: "Diskusikan level awal sebelum mendaftar.", text: "Tanyakan level kursus, syarat tugas, aturan tes, bahasa, dan kecocokan dengan tujuan Anda.", whatsapp: "Chat WhatsApp", live: "Buka konsultasi online", note: "Tim kami membantu memilih level awal." },
+    support: { eyebrow: "Kanal advisor online", title: "Diskusikan level awal sebelum mendaftar.", text: "Tanyakan level kursus, syarat tugas, aturan tes, bahasa, dan kecocokan dengan tujuan Anda.", whatsapp: "Pusat bantuan", live: "Buka konsultasi online", note: "Tim kami membantu memilih level awal." },
     profile: { ...translations.en.profile, commissionLabel: "Komisi per order", open: "Buka akun saya" },
     courses: { eyebrow: "Program pelatihan", title: "Pilih level yang sesuai dengan tujuan Anda.", text: "Bandingkan level, target kualifikasi, dan standar tugas sebelum memilih.", consult: "Konsultasi", payment: "Pembayaran", recommended: "Paling dipilih", oneTime: "kursus sekali bayar" },
     modal: { content: "Lingkup tugas", pay: "Rentang komisi", time: "Estimasi waktu", requirements: "Syarat pengiriman", ask: "Tanya order ini" },
@@ -611,13 +609,13 @@ const completeTranslations = {
       eyebrow: "Advisor channel online",
       title: "Talk through the right starting level before you enroll.",
       text: "Ask about course levels, task requirements, testing rules, available languages, and whether the workflow fits your goals.",
-      whatsapp: "Chat on WhatsApp",
+      whatsapp: "Open support center",
       live: "Open online consultation",
       note: "Our advisor team can help you choose the right starting level.",
       fab: "Support",
-      finePrint: "Choose a topic and prepare your message in the consultation window. A support advisor will continue the conversation on WhatsApp.",
+      finePrint: "Choose a topic and continue the conversation in your secure Hour AI support center.",
       modalTitle: "How can we help?",
-      modalIntro: "Select a topic and write your question. Our support team continues the conversation through WhatsApp.",
+      modalIntro: "Select a topic and continue the conversation with Hour AI support. You can send text and images here.",
       topicCourse: "Course selection",
       topicTest: "Skill test",
       topicOrders: "Task orders",
@@ -625,6 +623,17 @@ const completeTranslations = {
       question: "Your question",
       placeholder: "Write your question here...",
       start: "Start consultation",
+      send: "Send",
+      attach: "Attach image",
+      replyPlaceholder: "Write a reply...",
+      signInRequired: "Please sign in or create an account before starting support chat.",
+      loading: "Loading support conversation...",
+      noMessages: "No messages yet. Send the first question and our advisor can reply here.",
+      sent: "Message sent.",
+      sending: "Sending...",
+      inboxEmpty: "No customer conversations yet.",
+      selectConversation: "Select a conversation to reply.",
+      attachmentTooLarge: "Images must be smaller than 4 MB.",
       privacy: "Do not include passwords, verification codes, payment card details, or other sensitive information.",
       whatsappIntro: "Hi Hour AI, I would like an online consultation.",
       whatsappQuestion: "Please tell me more about this topic."
@@ -695,6 +704,10 @@ const completeTranslations = {
       admin: "Administrator",
       adminTitle: "Customer qualification management",
       export: "Export CSV backup",
+      supportDesk: "Support desk",
+      supportDeskTitle: "Online customer conversations",
+      refreshSupport: "Refresh",
+      selectConversation: "Select a conversation to reply.",
       customer: "Customer",
       context: "Country / occupation",
       currentLevel: "Current level",
@@ -803,13 +816,13 @@ const completeTranslations = {
       eyebrow: "Kanal advisor online",
       title: "Diskusikan level awal yang tepat sebelum mendaftar.",
       text: "Tanyakan level kursus, syarat tugas, aturan tes, bahasa yang tersedia, dan kecocokan workflow dengan tujuan Anda.",
-      whatsapp: "Chat di WhatsApp",
+      whatsapp: "Pusat bantuan",
       live: "Buka konsultasi online",
       note: "Tim advisor kami dapat membantu memilih level awal yang tepat.",
       fab: "Bantuan",
-      finePrint: "Pilih topik dan siapkan pesan Anda di jendela konsultasi. Advisor akan melanjutkan percakapan melalui WhatsApp.",
+      finePrint: "Pilih topik dan lanjutkan percakapan di pusat bantuan Hour AI yang aman.",
       modalTitle: "Apa yang bisa kami bantu?",
-      modalIntro: "Pilih topik dan tulis pertanyaan Anda. Tim bantuan kami melanjutkan percakapan melalui WhatsApp.",
+      modalIntro: "Pilih topik dan lanjutkan percakapan dengan tim bantuan Hour AI. Anda dapat mengirim teks dan gambar di sini.",
       topicCourse: "Pilihan kursus",
       topicTest: "Tes skill",
       topicOrders: "Order tugas",
@@ -939,7 +952,7 @@ const completeTranslations = {
     signals: [{ title: "تعلم سير العمل", text: "اتبع دروسا منظمة وتمارين تحرير عملية." }, { title: "اجتز اختبار المهارة", text: "أثبت جودة التسليم قبل الوصول إلى الطلبات." }, { title: "تقدم للمهام", text: "اختر الفرص المناسبة لمستوى تأهيلك." }],
     orders: { eyebrow: "سوق الطلبات", title: "طلبات نشطة تنتظر محرري AI مؤهلين", text: "يمكن لمحرري المستويات C و B و A مراجعة نطاق المهمة والعمولة والوقت المتوقع ومتطلبات التسليم قبل التقديم.", boardStatus: "طلبات عمولة متاحة للمحررين المؤهلين", viewDetails: "عرض تفاصيل المهمة", orderNo: "رقم الطلب" },
     reviews: { eyebrow: "تجربة التعلم", title: "كيف يبدو سير العمل في كل مستوى.", text: "يستخدم المتعلمون سير العمل لفهم المعايير وبناء عادات التدريب والاستعداد لمراجعة التأهيل." },
-    support: { eyebrow: "قناة المستشار متصلة", title: "ناقش مستوى البداية المناسب قبل التسجيل.", text: "اسأل عن مستويات الدورة ومتطلبات المهام وقواعد الاختبار واللغات المتاحة ومدى مناسبة المسار لأهدافك.", whatsapp: "محادثة واتساب", live: "فتح الاستشارة عبر الإنترنت", note: "يمكن لفريقنا مساعدتك في اختيار مستوى البداية.", fab: "الدعم", finePrint: "اختر موضوعا وجهز رسالتك في نافذة الاستشارة. سيكمل المستشار المحادثة عبر واتساب.", modalTitle: "كيف يمكننا مساعدتك؟", modalIntro: "اختر موضوعا واكتب سؤالك. سيكمل فريق الدعم المحادثة عبر واتساب.", topicCourse: "اختيار الدورة", topicTest: "اختبار المهارة", topicOrders: "طلبات المهام", topicAccount: "دعم الحساب", question: "سؤالك", placeholder: "اكتب سؤالك هنا...", start: "بدء الاستشارة", privacy: "لا ترسل كلمات مرور أو رموز تحقق أو بيانات بطاقة دفع أو معلومات حساسة.", whatsappIntro: "مرحبا Hour AI، أريد استشارة عبر الإنترنت.", whatsappQuestion: "يرجى إخباري بالمزيد عن هذا الموضوع." },
+    support: { eyebrow: "قناة المستشار متصلة", title: "ناقش مستوى البداية المناسب قبل التسجيل.", text: "اسأل عن مستويات الدورة ومتطلبات المهام وقواعد الاختبار واللغات المتاحة ومدى مناسبة المسار لأهدافك.", whatsapp: "مركز الدعم", live: "فتح الاستشارة عبر الإنترنت", note: "يمكن لفريقنا مساعدتك في اختيار مستوى البداية.", fab: "الدعم", finePrint: "اختر موضوعا وتابع المحادثة داخل مركز دعم Hour AI الآمن.", modalTitle: "كيف يمكننا مساعدتك؟", modalIntro: "اختر موضوعا وتابع المحادثة مع فريق دعم Hour AI. يمكنك إرسال النصوص والصور هنا.", topicCourse: "اختيار الدورة", topicTest: "اختبار المهارة", topicOrders: "طلبات المهام", topicAccount: "دعم الحساب", question: "سؤالك", placeholder: "اكتب سؤالك هنا...", start: "بدء الاستشارة", send: "إرسال", attach: "إرفاق صورة", replyPlaceholder: "اكتب الرد...", privacy: "لا ترسل كلمات مرور أو رموز تحقق أو بيانات بطاقة دفع أو معلومات حساسة.", whatsappIntro: "مرحبا Hour AI، أريد استشارة عبر الإنترنت.", whatsappQuestion: "يرجى إخباري بالمزيد عن هذا الموضوع." },
     profile: { eyebrow: "تقدم المستويات", title: "مسار واضح من أول سير عمل إلى التسليم المتقدم.", text: "يبنى كل مستوى على السابق بمعايير أوضح ومراجعات أقوى ووصول إلى فئات مهام أكثر تقدما.", cTitle: "محرر AI مستوى C", cText: "سير عمل للمبتدئين، تحرير قوالب، تسميات، وقوائم تسليم.", bTitle: "محرر AI مستوى B", bText: "فيديوهات تجارية قصيرة، إيقاع أفضل، مراجعات، ومعايير جودة أقوى.", aTitle: "محرر AI مستوى A", aText: "مشاريع متقدمة، مراجعة فريق، إدارة مشاريع، وأهلية الوكيل.", commissionLabel: "عمولة لكل طلب", open: "فتح حسابي" },
     courses: { eyebrow: "برامج التدريب", title: "اختر المستوى المناسب لهدفك.", text: "قارن مستويات التدريب وأهداف التأهيل ومعايير المهام قبل اختيار مسارك.", consult: "استشارة", payment: "الدفع", recommended: "الأكثر اختيارا", oneTime: "دورة بدفع مرة واحدة" },
     modal: { content: "نطاق المهمة", pay: "نطاق العمولة", time: "الوقت المتوقع", requirements: "متطلبات التسليم", ask: "اسأل عن هذا الطلب" },
@@ -959,7 +972,7 @@ const completeTranslations = {
     signals: [{ title: "Aprende el flujo", text: "Sigue lecciones estructuradas y ejercicios prácticos de edición." }, { title: "Aprueba la prueba", text: "Demuestra calidad antes de acceder a pedidos." }, { title: "Solicita tareas", text: "Elige oportunidades alineadas con tu nivel calificado." }],
     orders: { eyebrow: "Mercado de pedidos", title: "Pedidos activos para editores AI calificados", text: "Editores de nivel C, B y A pueden revisar alcance, comisión, tiempo estimado y requisitos antes de solicitar.", boardStatus: "Pedidos con comisión disponibles para editores calificados", viewDetails: "Ver detalles", orderNo: "PEDIDO NO." },
     reviews: { eyebrow: "Experiencia de aprendizaje", title: "Cómo se siente el flujo en cada nivel.", text: "Los alumnos usan el flujo para entender estándares, practicar hábitos de entrega y prepararse para la revisión." },
-    support: { eyebrow: "Canal de asesoría activo", title: "Consulta el nivel inicial adecuado antes de inscribirte.", text: "Pregunta sobre niveles, requisitos, pruebas, idiomas y si el flujo se adapta a tus metas.", whatsapp: "Chat en WhatsApp", live: "Abrir consulta online", note: "Nuestro equipo puede ayudarte a elegir el nivel inicial.", fab: "Soporte", finePrint: "Elige un tema y prepara tu mensaje. Un asesor continuará la conversación en WhatsApp.", modalTitle: "¿Cómo podemos ayudarte?", modalIntro: "Elige un tema y escribe tu pregunta. Nuestro equipo continuará por WhatsApp.", topicCourse: "Selección de curso", topicTest: "Prueba de habilidad", topicOrders: "Pedidos", topicAccount: "Soporte de cuenta", question: "Tu pregunta", placeholder: "Escribe tu pregunta aquí...", start: "Iniciar consulta", privacy: "No incluyas contraseñas, códigos de verificación, tarjetas u otra información sensible.", whatsappIntro: "Hola Hour AI, quiero una consulta online.", whatsappQuestion: "Por favor cuéntame más sobre este tema." },
+    support: { eyebrow: "Canal de asesoría activo", title: "Consulta el nivel inicial adecuado antes de inscribirte.", text: "Pregunta sobre niveles, requisitos, pruebas, idiomas y si el flujo se adapta a tus metas.", whatsapp: "Centro de soporte", live: "Abrir consulta online", note: "Nuestro equipo puede ayudarte a elegir el nivel inicial.", fab: "Soporte", finePrint: "Elige un tema y continúa la conversación en tu centro de soporte seguro de Hour AI.", modalTitle: "¿Cómo podemos ayudarte?", modalIntro: "Elige un tema y continúa la conversación con soporte de Hour AI. Puedes enviar texto e imágenes aquí.", topicCourse: "Selección de curso", topicTest: "Prueba de habilidad", topicOrders: "Pedidos", topicAccount: "Soporte de cuenta", question: "Tu pregunta", placeholder: "Escribe tu pregunta aquí...", start: "Iniciar consulta", send: "Enviar", attach: "Adjuntar imagen", replyPlaceholder: "Escribe una respuesta...", privacy: "No incluyas contraseñas, códigos de verificación, tarjetas u otra información sensible.", whatsappIntro: "Hola Hour AI, quiero una consulta online.", whatsappQuestion: "Por favor cuéntame más sobre este tema." },
     profile: { eyebrow: "Progreso de nivel", title: "Un camino visible desde el primer flujo hasta entregas avanzadas.", text: "Cada nivel se basa en el anterior con estándares más claros, revisiones más fuertes y acceso a tareas más avanzadas.", cTitle: "Editor AI Nivel C", cText: "Flujo inicial, plantillas, subtítulos y listas de entrega.", bTitle: "Editor AI Nivel B", bText: "Videos comerciales cortos, mejor ritmo, revisiones y estándares más altos.", aTitle: "Editor AI Nivel A", aText: "Proyectos avanzados, revisión de equipo, gestión y elegibilidad de agente.", commissionLabel: "Comisión por pedido", open: "Abrir mi cuenta" },
     courses: { eyebrow: "Programas de formación", title: "Elige el nivel que coincide con tu meta.", text: "Compara niveles, objetivos y estándares antes de elegir.", consult: "Consulta", payment: "Pago", recommended: "Más elegido", oneTime: "curso de pago único" },
     modal: { content: "Alcance", pay: "Rango de comisión", time: "Tiempo estimado", requirements: "Requisitos", ask: "Preguntar por este pedido" },
@@ -979,7 +992,7 @@ const completeTranslations = {
     signals: [{ title: "Apprendre le workflow", text: "Suivez des leçons structurées et des exercices pratiques." }, { title: "Réussir le test", text: "Démontrez votre qualité avant l'accès aux commandes." }, { title: "Postuler aux tâches", text: "Choisissez les opportunités adaptées à votre niveau." }],
     orders: { eyebrow: "Marché des commandes", title: "Commandes actives pour éditeurs AI qualifiés", text: "Les éditeurs C, B et A peuvent consulter le périmètre, la commission, le temps estimé et les exigences avant de postuler.", boardStatus: "Commandes à commission ouvertes aux éditeurs qualifiés", viewDetails: "Voir les détails", orderNo: "COMMANDE N°" },
     reviews: { eyebrow: "Expérience d'apprentissage", title: "Le ressenti du workflow à chaque niveau.", text: "Les apprenants utilisent le workflow pour comprendre les standards, pratiquer et préparer la qualification." },
-    support: { eyebrow: "Canal conseiller en ligne", title: "Choisissez le bon niveau avant l'inscription.", text: "Posez vos questions sur les niveaux, exigences, tests, langues et adéquation avec vos objectifs.", whatsapp: "Chat WhatsApp", live: "Ouvrir la consultation", note: "Notre équipe peut vous aider à choisir le bon départ.", fab: "Support", finePrint: "Choisissez un sujet et préparez votre message. Un conseiller continuera sur WhatsApp.", modalTitle: "Comment pouvons-nous aider ?", modalIntro: "Choisissez un sujet et écrivez votre question. Notre équipe continue sur WhatsApp.", topicCourse: "Choix du cours", topicTest: "Test de compétence", topicOrders: "Commandes", topicAccount: "Support compte", question: "Votre question", placeholder: "Écrivez votre question ici...", start: "Commencer", privacy: "N'incluez pas de mots de passe, codes, cartes ou informations sensibles.", whatsappIntro: "Bonjour Hour AI, je souhaite une consultation en ligne.", whatsappQuestion: "Merci de m'en dire plus sur ce sujet." },
+    support: { eyebrow: "Canal conseiller en ligne", title: "Choisissez le bon niveau avant l'inscription.", text: "Posez vos questions sur les niveaux, exigences, tests, langues et adéquation avec vos objectifs.", whatsapp: "Centre d'assistance", live: "Ouvrir la consultation", note: "Notre équipe peut vous aider à choisir le bon départ.", fab: "Support", finePrint: "Choisissez un sujet et continuez la conversation dans votre centre d'assistance Hour AI sécurisé.", modalTitle: "Comment pouvons-nous aider ?", modalIntro: "Choisissez un sujet et continuez la conversation avec le support Hour AI. Vous pouvez envoyer du texte et des images ici.", topicCourse: "Choix du cours", topicTest: "Test de compétence", topicOrders: "Commandes", topicAccount: "Support compte", question: "Votre question", placeholder: "Écrivez votre question ici...", start: "Commencer", send: "Envoyer", attach: "Joindre une image", replyPlaceholder: "Écrire une réponse...", privacy: "N'incluez pas de mots de passe, codes, cartes ou informations sensibles.", whatsappIntro: "Bonjour Hour AI, je souhaite une consultation en ligne.", whatsappQuestion: "Merci de m'en dire plus sur ce sujet." },
     profile: { eyebrow: "Progression de niveau", title: "Un parcours visible du premier workflow à la livraison avancée.", text: "Chaque niveau s'appuie sur le précédent avec des standards plus clairs, des revues plus fortes et des tâches plus avancées.", cTitle: "Éditeur AI Niveau C", cText: "Workflow débutant, modèles, sous-titres et checklists.", bTitle: "Éditeur AI Niveau B", bText: "Vidéos commerciales courtes, rythme, révisions et standards élevés.", aTitle: "Éditeur AI Niveau A", aText: "Projets avancés, revue d'équipe, gestion et éligibilité agent.", commissionLabel: "Commission par commande", open: "Ouvrir mon compte" },
     courses: { eyebrow: "Programmes de formation", title: "Choisissez le niveau adapté à votre objectif.", text: "Comparez les niveaux, objectifs et standards avant de choisir.", consult: "Consulter", payment: "Paiement", recommended: "Le plus choisi", oneTime: "cours en paiement unique" },
     modal: { content: "Périmètre", pay: "Commission", time: "Temps estimé", requirements: "Exigences", ask: "Demander cette commande" },
@@ -999,7 +1012,7 @@ const completeTranslations = {
     signals: [{ title: "ワークフローを学ぶ", text: "構造化されたレッスンと実践的な編集演習を進めます。" }, { title: "スキルテストに合格", text: "案件アクセス前に納品品質を証明します。" }, { title: "案件に応募", text: "認定レベルに合う案件を選択します。" }],
     orders: { eyebrow: "案件マーケット", title: "認定AI編集者を待つアクティブ案件", text: "C、B、Aレベルの編集者は応募前に、作業範囲、報酬、目安時間、納品要件を確認できます。", boardStatus: "認定編集者向けのコミッション案件が公開中", viewDetails: "案件詳細を見る", orderNo: "案件番号" },
     reviews: { eyebrow: "学習体験", title: "各レベルでのワークフロー体験。", text: "学習者は基準を理解し、納品習慣を作り、認定レビューに備えます。" },
-    support: { eyebrow: "アドバイザー対応中", title: "受講前に最適な開始レベルを相談しましょう。", text: "コースレベル、案件要件、テストルール、対応言語、目標との相性を相談できます。", whatsapp: "WhatsAppで相談", live: "オンライン相談を開く", note: "アドバイザーが最適な開始レベル選びをサポートします。", fab: "サポート", finePrint: "相談ウィンドウでトピックを選び、メッセージを準備してください。担当者がWhatsAppで続けます。", modalTitle: "どのようにお手伝いできますか？", modalIntro: "トピックを選び、質問を書いてください。サポートチームがWhatsAppで続けます。", topicCourse: "コース選択", topicTest: "スキルテスト", topicOrders: "案件", topicAccount: "アカウント", question: "ご質問", placeholder: "ここに質問を書いてください...", start: "相談を開始", privacy: "パスワード、認証コード、カード情報などの機密情報は入力しないでください。", whatsappIntro: "こんにちは Hour AI、オンライン相談を希望します。", whatsappQuestion: "このトピックについて詳しく教えてください。" },
+    support: { eyebrow: "アドバイザー対応中", title: "受講前に最適な開始レベルを相談しましょう。", text: "コースレベル、案件要件、テストルール、対応言語、目標との相性を相談できます。", whatsapp: "サポートセンター", live: "オンライン相談を開く", note: "アドバイザーが最適な開始レベル選びをサポートします。", fab: "サポート", finePrint: "トピックを選び、安全な Hour AI サポートセンターで会話を続けてください。", modalTitle: "どのようにお手伝いできますか？", modalIntro: "トピックを選び、Hour AI サポートと会話を続けてください。ここでテキストと画像を送信できます。", topicCourse: "コース選択", topicTest: "スキルテスト", topicOrders: "案件", topicAccount: "アカウント", question: "ご質問", placeholder: "ここに質問を書いてください...", start: "相談を開始", send: "送信", attach: "画像を添付", replyPlaceholder: "返信を書く...", privacy: "パスワード、認証コード、カード情報などの機密情報は入力しないでください。", whatsappIntro: "こんにちは Hour AI、オンライン相談を希望します。", whatsappQuestion: "このトピックについて詳しく教えてください。" },
     profile: { eyebrow: "レベル進行", title: "最初のワークフローから高度な納品まで見える成長パス。", text: "各レベルは前のレベルを土台に、より明確な基準、強いレビュー、高度な案件カテゴリへ進みます。", cTitle: "Cレベル AI編集者", cText: "初心者ワークフロー、テンプレート編集、字幕、納品チェックリスト。", bTitle: "Bレベル AI編集者", bText: "商用ショート動画、改善されたテンポ、修正、より高い品質基準。", aTitle: "Aレベル AI編集者", aText: "高度なプロジェクト、チームレビュー、プロジェクト管理、代理資格。", commissionLabel: "1案件あたり報酬", open: "アカウントを開く" },
     courses: { eyebrow: "トレーニングプログラム", title: "目標に合うレベルを選択してください。", text: "学習レベル、認定目標、案件基準を比較してから選択できます。", consult: "相談", payment: "支払い", recommended: "人気", oneTime: "一回払いコース" },
     modal: { content: "作業範囲", pay: "報酬範囲", time: "目安時間", requirements: "納品要件", ask: "この案件を相談" },
@@ -1404,6 +1417,9 @@ let carouselTimer = null;
 let captchaToken = null;
 let selectedPaymentPlan = null;
 let activeProfile = null;
+let activeSupportConversationId = null;
+let supportPollTimer = null;
+let activeAgentConversationId = null;
 
 function deepMerge(target, source) {
   Object.keys(source || {}).forEach((key) => {
@@ -1441,10 +1457,6 @@ function translatedGender(value) {
     prefer_not_to_say: "account.genderPreferNot"
   }[value];
   return key ? t(key) : String(value || "-").replaceAll("_", " ");
-}
-
-function whatsappLink(message) {
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
 function localizedOrder(order) {
@@ -1557,7 +1569,7 @@ function renderPricing() {
           <div class="price-row"><span class="price">${plan.price}</span><span class="price-note">${t("courses.oneTime")}</span></div>
           <ul>${plan.items.map((item) => `<li>${item}</li>`).join("")}</ul>
           <div class="price-actions">
-            <a class="button button-outline full-width" href="${whatsappLink(`I want to consult about the ${plan.name} course.`)}" target="_blank" rel="noreferrer">
+            <a class="button button-outline full-width" href="#support" data-open-support data-support-open-topic="${plan.name}">
               <span>${t("courses.consult")}</span>
             </a>
             <button class="button button-primary full-width" type="button" data-payment-level="${plan.level}">
@@ -1615,7 +1627,7 @@ function openOrder(orderId) {
   document.getElementById("modalPay").textContent = order.pay;
   document.getElementById("modalTime").textContent = order.time;
   document.getElementById("modalRequirements").textContent = order.requirements;
-  document.getElementById("modalWhatsapp").href = whatsappLink(`${t("modal.ask")}: ${order.title}`);
+  document.getElementById("modalWhatsapp").dataset.supportOpenTopic = `${t("modal.ask")}: ${order.title}`;
   openModal("orderModal");
 }
 
@@ -1658,6 +1670,7 @@ async function apiRequest(path, options = {}) {
 
 function setFormStatus(id, message = "", type = "") {
   const status = document.getElementById(id);
+  if (!status) return;
   status.textContent = message;
   status.className = `form-status${type ? ` is-${type}` : ""}`;
 }
@@ -1766,6 +1779,10 @@ function showAccount(profile) {
   const adminPanel = document.getElementById("adminPanel");
   adminPanel.hidden = profile.role !== "admin";
   if (profile.role === "admin") loadAdminUsers();
+
+  const supportAgentPanel = document.getElementById("supportAgentPanel");
+  supportAgentPanel.hidden = !isSupportAgentProfile(profile);
+  if (isSupportAgentProfile(profile)) loadSupportInbox();
 }
 
 function showGuestAccount() {
@@ -1775,7 +1792,208 @@ function showGuestAccount() {
   document.getElementById("headerRegister").hidden = false;
   document.getElementById("headerLogin").hidden = false;
   document.getElementById("headerAccount").hidden = true;
+  document.getElementById("supportAgentPanel").hidden = true;
   switchAccountTab("register");
+}
+
+function isSupportAgentProfile(profile = activeProfile) {
+  return ["admin", "agent"].includes(profile?.role);
+}
+
+function selectedSupportTopic() {
+  const active = document.querySelector("[data-support-topic].is-active");
+  return active?.dataset.supportTopic || active?.textContent.trim() || t("support.topicCourse");
+}
+
+function supportMessageElement(message) {
+  const wrapper = document.createElement("article");
+  const mine = message.sender_id === activeProfile?.user_id;
+  wrapper.className = `support-message ${mine ? "is-mine" : "is-theirs"}`;
+
+  const meta = document.createElement("span");
+  const date = new Date(message.created_at);
+  meta.textContent = `${message.sender_role} · ${Number.isNaN(date.getTime()) ? "" : date.toLocaleString()}`;
+  wrapper.append(meta);
+
+  if (message.body) {
+    const body = document.createElement("p");
+    body.textContent = message.body;
+    wrapper.append(body);
+  }
+
+  (message.attachments || []).forEach((attachment) => {
+    const link = document.createElement("a");
+    link.className = "support-attachment";
+    link.href = `/api/support/attachment?id=${encodeURIComponent(attachment.id)}`;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    const image = document.createElement("img");
+    image.src = link.href;
+    image.alt = attachment.file_name || "Support attachment";
+    image.loading = "lazy";
+    link.append(image);
+    wrapper.append(link);
+  });
+
+  return wrapper;
+}
+
+function renderSupportThread(targetId, messages = []) {
+  const target = document.getElementById(targetId);
+  target.replaceChildren();
+  if (!messages.length) {
+    const empty = document.createElement("div");
+    empty.className = "support-empty";
+    empty.textContent = t("support.noMessages");
+    target.append(empty);
+    return;
+  }
+  messages.forEach((message) => target.append(supportMessageElement(message)));
+  target.scrollTop = target.scrollHeight;
+}
+
+async function fileToSupportAttachment(file) {
+  if (!file) return null;
+  if (file.size > 4 * 1024 * 1024) throw new Error(t("support.attachmentTooLarge"));
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve({ name: file.name, type: file.type, dataUrl: reader.result });
+    reader.onerror = () => reject(new Error("Image could not be read."));
+    reader.readAsDataURL(file);
+  });
+}
+
+async function ensureSupportConversation(topic = selectedSupportTopic()) {
+  const data = await apiRequest("/api/support/conversations", {
+    method: "POST",
+    body: JSON.stringify({ topic })
+  });
+  activeSupportConversationId = data.conversation.id;
+  return data.conversation;
+}
+
+async function loadSupportMessages(targetId = "supportThread", conversationId = activeSupportConversationId) {
+  if (!conversationId) return;
+  const data = await apiRequest(`/api/support/messages?conversationId=${encodeURIComponent(conversationId)}`, {
+    method: "GET",
+    headers: {}
+  });
+  renderSupportThread(targetId, data.messages || []);
+}
+
+function startSupportPolling() {
+  window.clearInterval(supportPollTimer);
+  supportPollTimer = window.setInterval(() => {
+    if (activeSupportConversationId && document.getElementById("supportModal").classList.contains("is-open")) {
+      loadSupportMessages().catch(() => {});
+    }
+    if (isSupportAgentProfile() && !document.getElementById("supportAgentPanel").hidden) {
+      loadSupportInbox().catch(() => {});
+    }
+  }, 12000);
+}
+
+async function openSupportChat(topic) {
+  if (!activeProfile) {
+    showToast(t("support.signInRequired"));
+    switchAccountTab("login");
+    openModal("profileModal");
+    return;
+  }
+  openModal("supportModal");
+  renderSupportThread("supportThread", []);
+  try {
+    await ensureSupportConversation(topic || selectedSupportTopic());
+    await loadSupportMessages();
+    startSupportPolling();
+  } catch (error) {
+    showToast(error.message);
+  }
+}
+
+async function sendSupportMessage({ conversationId, textareaId, inputId, threadId, afterSend } = {}) {
+  const targetConversationId = conversationId || activeSupportConversationId;
+  const textarea = document.getElementById(textareaId || "supportMessage");
+  const input = document.getElementById(inputId || "supportAttachment");
+  const body = textarea.value.trim();
+  const file = input?.files?.[0] || null;
+  if (!targetConversationId && !activeProfile) return openSupportChat();
+  if (!body && !file) return;
+  const button = textarea.closest(".modal-panel, .support-agent-thread")?.querySelector(".button-primary");
+  if (button) button.disabled = true;
+  try {
+    const conversation = targetConversationId ? { id: targetConversationId } : await ensureSupportConversation();
+    const attachment = await fileToSupportAttachment(file);
+    await apiRequest("/api/support/messages", {
+      method: "POST",
+      body: JSON.stringify({
+        conversationId: conversation.id,
+        body,
+        attachment
+      })
+    });
+    textarea.value = "";
+    if (input) input.value = "";
+    document.getElementById("supportFilePreview").textContent = "";
+    await loadSupportMessages(threadId || "supportThread", conversation.id);
+    if (afterSend) await afterSend();
+    showToast(t("support.sent"));
+  } catch (error) {
+    showToast(error.message);
+  } finally {
+    if (button) button.disabled = false;
+  }
+}
+
+function renderSupportInbox(conversations = []) {
+  const inbox = document.getElementById("supportInbox");
+  inbox.replaceChildren();
+  if (!conversations.length) {
+    const empty = document.createElement("div");
+    empty.className = "support-empty";
+    empty.textContent = t("support.inboxEmpty");
+    inbox.append(empty);
+    return;
+  }
+  conversations.forEach((conversation) => {
+    const customer = conversation.customer || {};
+    const button = document.createElement("button");
+    button.className = `support-inbox-item${conversation.id === activeAgentConversationId ? " is-active" : ""}`;
+    button.type = "button";
+    button.dataset.conversationId = conversation.id;
+
+    const top = document.createElement("span");
+    top.className = "support-inbox-top";
+    const name = document.createElement("strong");
+    name.textContent = customer.username || customer.email || "Customer";
+    const unread = document.createElement("em");
+    unread.textContent = conversation.agent_unread ? `${conversation.agent_unread}` : "";
+    top.append(name, unread);
+
+    const topic = document.createElement("span");
+    topic.textContent = conversation.topic || t("support.topicCourse");
+    const latest = document.createElement("small");
+    latest.textContent = conversation.latestMessage?.body || customer.email || "";
+
+    button.append(top, topic, latest);
+    button.addEventListener("click", () => openAgentConversation(conversation.id));
+    inbox.append(button);
+  });
+}
+
+async function loadSupportInbox() {
+  if (!isSupportAgentProfile()) return;
+  const data = await apiRequest("/api/support/conversations", { method: "GET", headers: {} });
+  renderSupportInbox(data.conversations || []);
+}
+
+async function openAgentConversation(conversationId) {
+  activeAgentConversationId = conversationId;
+  document.getElementById("supportAgentEmpty").hidden = true;
+  document.getElementById("supportAgentThread").hidden = false;
+  document.getElementById("supportAgentComposer").hidden = false;
+  await loadSupportMessages("supportAgentThread", conversationId);
+  await loadSupportInbox();
 }
 
 async function loadAccount() {
@@ -1912,10 +2130,21 @@ function setupProfile() {
     loadCaptcha();
   });
   document.getElementById("paymentSupportButton").addEventListener("click", () => {
-    window.open(whatsappLink(t("payment.confirmMessage")), "_blank", "noopener");
+    openSupportChat(t("payment.confirmMessage"));
   });
   document.getElementById("exportCustomers").addEventListener("click", () => {
     window.location.href = "/api/admin/export";
+  });
+  document.getElementById("refreshSupportInbox").addEventListener("click", loadSupportInbox);
+  document.getElementById("sendSupportAgentReply").addEventListener("click", () => {
+    if (!activeAgentConversationId) return;
+    sendSupportMessage({
+      conversationId: activeAgentConversationId,
+      textareaId: "supportAgentReply",
+      inputId: "supportAgentAttachment",
+      threadId: "supportAgentThread",
+      afterSend: loadSupportInbox
+    });
   });
   loadAccount();
 }
@@ -2002,6 +2231,14 @@ function setupEvents() {
   });
 
   document.body.addEventListener("click", (event) => {
+    const supportButton = event.target.closest("[data-open-support]");
+    if (supportButton) {
+      event.preventDefault();
+      closeModal("orderModal");
+      openSupportChat(supportButton.dataset.supportOpenTopic);
+      return;
+    }
+
     const orderButton = event.target.closest("[data-order-id]");
     if (orderButton) openOrder(orderButton.dataset.orderId);
 
@@ -2035,18 +2272,14 @@ function setupEvents() {
     item.addEventListener("click", () => closeModal("profileModal"));
   });
 
-  document.querySelectorAll("[data-open-support]").forEach((item) => {
-    item.addEventListener("click", (event) => {
-      event.preventDefault();
-      openModal("supportModal");
-    });
-  });
-
   document.getElementById("liveChatButton").addEventListener("click", () => {
-    openModal("supportModal");
+    openSupportChat();
   });
   document.querySelectorAll("[data-close-support]").forEach((item) => {
-    item.addEventListener("click", () => closeModal("supportModal"));
+    item.addEventListener("click", () => {
+      window.clearInterval(supportPollTimer);
+      closeModal("supportModal");
+    });
   });
   document.querySelectorAll("[data-close-payment]").forEach((item) => {
     item.addEventListener("click", () => closeModal("paymentModal"));
@@ -2057,15 +2290,13 @@ function setupEvents() {
       button.classList.add("is-active");
     });
   });
-  document.getElementById("startConsultation").addEventListener("click", () => {
-    const topic = document.querySelector("[data-support-topic].is-active")?.textContent.trim() || t("support.topicCourse");
-    const question = document.getElementById("supportMessage").value.trim();
-    const message = [
-      t("support.whatsappIntro"),
-      `Topic: ${topic}`,
-      question ? `Question: ${question}` : t("support.whatsappQuestion")
-    ].join("\n");
-    window.open(whatsappLink(message), "_blank", "noopener");
+  document.getElementById("supportAttachment").addEventListener("change", (event) => {
+    const file = event.currentTarget.files?.[0];
+    document.getElementById("supportFilePreview").textContent = file ? file.name : "";
+  });
+  document.getElementById("startConsultation").addEventListener("click", async () => {
+    if (!activeSupportConversationId) await openSupportChat();
+    await sendSupportMessage();
   });
 
   document.addEventListener("keydown", (event) => {
@@ -2079,9 +2310,8 @@ function setupEvents() {
 }
 
 function initLinks() {
-  const message = `${t("support.whatsappIntro")} ${t("support.topicCourse")}`;
-  document.getElementById("heroWhatsapp").href = whatsappLink(message);
-  document.getElementById("supportWhatsapp").href = whatsappLink(message);
+  document.getElementById("heroWhatsapp").href = "#support";
+  document.getElementById("supportWhatsapp").href = "#support";
 }
 
 async function handlePayPalReturn() {

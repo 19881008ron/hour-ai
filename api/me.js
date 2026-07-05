@@ -6,8 +6,7 @@ module.exports = async function handler(req, res) {
   try {
     const auth = await authenticatedProfile(req);
     if (!auth) return sendJson(res, 401, { error: "Not signed in." });
-    const { user_id, ...profile } = auth.profile;
-    sendJson(res, 200, { profile });
+    sendJson(res, 200, { profile: auth.profile });
   } catch (error) {
     clearSessionCookies(res);
     sendJson(res, error.message === "Account database is not configured." ? 503 : 401, { error: error.message });
