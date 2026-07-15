@@ -1035,6 +1035,228 @@ Object.keys(completeTranslations).forEach((language) => {
   translations[language] = deepMerge(translations[language] || {}, completeTranslations[language]);
 });
 
+const supportTranslationPatch = {
+  id: {
+    support: {
+      send: "Kirim",
+      attach: "Lampirkan gambar",
+      replyPlaceholder: "Tulis balasan...",
+      guestTitle: "Beri tahu kami siapa Anda",
+      guestText: "Pengunjung sementara dapat chat sebelum membuat akun.",
+      guestName: "Nama",
+      guestEmail: "Email atau kontak",
+      guestNamePlaceholder: "Nama Anda",
+      guestEmailPlaceholder: "Email atau metode kontak",
+      guestNameRequired: "Masukkan nama Anda agar advisor dapat mengenali Anda.",
+      noMessages: "Belum ada pesan. Kirim pertanyaan pertama dan advisor kami akan membalas di sini.",
+      sent: "Pesan terkirim.",
+      sending: "Mengirim...",
+      inboxEmpty: "Belum ada percakapan pelanggan.",
+      selectConversation: "Pilih percakapan untuk membalas.",
+      attachmentTooLarge: "Gambar harus lebih kecil dari 4 MB."
+    },
+    account: {
+      supportDesk: "Meja bantuan",
+      supportDeskTitle: "Percakapan pelanggan online",
+      refreshSupport: "Segarkan",
+      selectConversation: "Pilih percakapan untuk membalas."
+    }
+  },
+  ar: {
+    support: {
+      guestTitle: "أخبرنا من أنت",
+      guestText: "يمكن للزائر المؤقت الدردشة قبل إنشاء حساب.",
+      guestName: "الاسم",
+      guestEmail: "البريد أو وسيلة التواصل",
+      guestNamePlaceholder: "اسمك",
+      guestEmailPlaceholder: "البريد الإلكتروني أو وسيلة التواصل",
+      guestNameRequired: "يرجى إدخال اسمك حتى يتمكن المستشار من التعرف عليك.",
+      noMessages: "لا توجد رسائل بعد. أرسل سؤالك الأول وسيرد المستشار هنا.",
+      sent: "تم إرسال الرسالة.",
+      sending: "جار الإرسال...",
+      inboxEmpty: "لا توجد محادثات عملاء بعد.",
+      selectConversation: "اختر محادثة للرد.",
+      attachmentTooLarge: "يجب أن يكون حجم الصورة أقل من 4 ميجابايت."
+    },
+    account: {
+      supportDesk: "مكتب الدعم",
+      supportDeskTitle: "محادثات العملاء عبر الإنترنت",
+      refreshSupport: "تحديث",
+      selectConversation: "اختر محادثة للرد."
+    }
+  },
+  es: {
+    support: {
+      guestTitle: "Dinos quién eres",
+      guestText: "Los visitantes temporales pueden conversar antes de crear una cuenta.",
+      guestName: "Nombre",
+      guestEmail: "Email o contacto",
+      guestNamePlaceholder: "Tu nombre",
+      guestEmailPlaceholder: "Email o método de contacto",
+      guestNameRequired: "Ingresa tu nombre para que el asesor pueda identificarte.",
+      noMessages: "Aún no hay mensajes. Envía la primera pregunta y nuestro asesor responderá aquí.",
+      sent: "Mensaje enviado.",
+      sending: "Enviando...",
+      inboxEmpty: "Aún no hay conversaciones de clientes.",
+      selectConversation: "Selecciona una conversación para responder.",
+      attachmentTooLarge: "Las imágenes deben pesar menos de 4 MB."
+    },
+    account: {
+      supportDesk: "Mesa de soporte",
+      supportDeskTitle: "Conversaciones online con clientes",
+      refreshSupport: "Actualizar",
+      selectConversation: "Selecciona una conversación para responder."
+    }
+  },
+  fr: {
+    support: {
+      guestTitle: "Dites-nous qui vous êtes",
+      guestText: "Les visiteurs temporaires peuvent discuter avant de créer un compte.",
+      guestName: "Nom",
+      guestEmail: "Email ou contact",
+      guestNamePlaceholder: "Votre nom",
+      guestEmailPlaceholder: "Email ou moyen de contact",
+      guestNameRequired: "Veuillez saisir votre nom afin que le conseiller puisse vous identifier.",
+      noMessages: "Aucun message pour le moment. Envoyez la première question et notre conseiller répondra ici.",
+      sent: "Message envoyé.",
+      sending: "Envoi...",
+      inboxEmpty: "Aucune conversation client pour le moment.",
+      selectConversation: "Sélectionnez une conversation pour répondre.",
+      attachmentTooLarge: "Les images doivent faire moins de 4 Mo."
+    },
+    account: {
+      supportDesk: "Bureau support",
+      supportDeskTitle: "Conversations clients en ligne",
+      refreshSupport: "Actualiser",
+      selectConversation: "Sélectionnez une conversation pour répondre."
+    }
+  },
+  ja: {
+    support: {
+      guestTitle: "お名前を入力してください",
+      guestText: "アカウント作成前の一時訪問者もチャットできます。",
+      guestName: "名前",
+      guestEmail: "メールまたは連絡先",
+      guestNamePlaceholder: "あなたの名前",
+      guestEmailPlaceholder: "メールまたは連絡方法",
+      guestNameRequired: "担当者が識別できるように、お名前を入力してください。",
+      noMessages: "まだメッセージはありません。最初の質問を送信すると、担当者がここで返信します。",
+      sent: "メッセージを送信しました。",
+      sending: "送信中...",
+      inboxEmpty: "顧客との会話はまだありません。",
+      selectConversation: "返信する会話を選択してください。",
+      attachmentTooLarge: "画像は4MB未満にしてください。"
+    },
+    account: {
+      supportDesk: "サポートデスク",
+      supportDeskTitle: "オンライン顧客チャット",
+      refreshSupport: "更新",
+      selectConversation: "返信する会話を選択してください。"
+    }
+  }
+};
+
+Object.keys(supportTranslationPatch).forEach((language) => {
+  translations[language] = deepMerge(translations[language] || {}, supportTranslationPatch[language]);
+});
+
+const cryptoPaymentTranslationPatch = {
+  en: {
+    payment: {
+      title: "Pay with cryptocurrency",
+      onrampBadge: "Third-party platforms",
+      onrampTitle: "Need crypto first?",
+      onrampText: "Choose a trusted crypto platform, register, buy crypto with card or local banking options, then return here to send payment to the matching Hour AI address.",
+      onrampStep1: "Open one platform in a new tab.",
+      onrampStep2: "Complete the platform's KYC and buy USDT, BTC, or ETH.",
+      onrampStep3: "Return to Hour AI and send only through the matching network address.",
+      onrampOpen: "Open",
+      onrampNote: "Availability depends on your country, identity verification, and the platform's current rules.",
+      cryptoTitle: "Hour AI receiving addresses",
+      cryptoText: "Copy the matching address below after buying crypto. Send only through the exact network shown."
+    }
+  },
+  id: {
+    payment: {
+      title: "Bayar dengan kripto",
+      onrampBadge: "Platform pihak ketiga",
+      onrampTitle: "Belum punya kripto?",
+      onrampText: "Pilih platform kripto tepercaya, daftar, beli kripto dengan kartu atau opsi bank lokal, lalu kembali ke sini untuk mengirim pembayaran ke alamat Hour AI yang sesuai.",
+      onrampStep1: "Buka salah satu platform di tab baru.",
+      onrampStep2: "Selesaikan KYC platform dan beli USDT, BTC, atau ETH.",
+      onrampStep3: "Kembali ke Hour AI dan kirim hanya melalui alamat jaringan yang sesuai.",
+      onrampOpen: "Buka",
+      onrampNote: "Ketersediaan bergantung pada negara, verifikasi identitas, dan aturan platform saat ini.",
+      cryptoTitle: "Alamat penerimaan Hour AI",
+      cryptoText: "Salin alamat yang sesuai setelah membeli kripto. Kirim hanya melalui jaringan yang tepat."
+    }
+  },
+  ar: {
+    payment: {
+      title: "الدفع بالعملات الرقمية",
+      onrampBadge: "منصات طرف ثالث",
+      onrampTitle: "هل تحتاج إلى شراء عملات رقمية؟",
+      onrampText: "اختر منصة موثوقة، سجل حسابك، اشتر العملات الرقمية بالبطاقة أو خيارات الدفع البنكي المحلية، ثم عد إلى هنا وأرسل الدفع إلى عنوان Hour AI المطابق.",
+      onrampStep1: "افتح منصة واحدة في تبويب جديد.",
+      onrampStep2: "أكمل التحقق في المنصة واشتر USDT أو BTC أو ETH.",
+      onrampStep3: "عد إلى Hour AI وأرسل فقط عبر عنوان الشبكة المطابقة.",
+      onrampOpen: "فتح",
+      onrampNote: "يعتمد التوفر على بلدك والتحقق من الهوية وقواعد المنصة الحالية.",
+      cryptoTitle: "عناوين استلام Hour AI",
+      cryptoText: "انسخ العنوان المطابق بعد شراء العملات الرقمية. أرسل فقط عبر الشبكة المحددة."
+    }
+  },
+  es: {
+    payment: {
+      title: "Pagar con criptomoneda",
+      onrampBadge: "Plataformas externas",
+      onrampTitle: "¿Necesitas comprar cripto?",
+      onrampText: "Elige una plataforma cripto confiable, regístrate, compra cripto con tarjeta u opciones bancarias locales y vuelve aquí para enviar el pago a la dirección correcta de Hour AI.",
+      onrampStep1: "Abre una plataforma en una pestaña nueva.",
+      onrampStep2: "Completa el KYC de la plataforma y compra USDT, BTC o ETH.",
+      onrampStep3: "Vuelve a Hour AI y envía solo por la red indicada.",
+      onrampOpen: "Abrir",
+      onrampNote: "La disponibilidad depende de tu país, verificación de identidad y reglas actuales de la plataforma.",
+      cryptoTitle: "Direcciones de recepción de Hour AI",
+      cryptoText: "Copia la dirección correcta después de comprar cripto. Envía solo por la red exacta."
+    }
+  },
+  fr: {
+    payment: {
+      title: "Payer en cryptomonnaie",
+      onrampBadge: "Plateformes tierces",
+      onrampTitle: "Besoin d'acheter des cryptos ?",
+      onrampText: "Choisissez une plateforme crypto fiable, inscrivez-vous, achetez des cryptos par carte ou option bancaire locale, puis revenez ici pour payer l'adresse Hour AI correspondante.",
+      onrampStep1: "Ouvrez une plateforme dans un nouvel onglet.",
+      onrampStep2: "Effectuez le KYC de la plateforme et achetez USDT, BTC ou ETH.",
+      onrampStep3: "Revenez sur Hour AI et envoyez uniquement via le réseau indiqué.",
+      onrampOpen: "Ouvrir",
+      onrampNote: "La disponibilité dépend de votre pays, de la vérification d'identité et des règles actuelles de la plateforme.",
+      cryptoTitle: "Adresses de réception Hour AI",
+      cryptoText: "Copiez l'adresse correspondante après l'achat de crypto. Envoyez uniquement via le réseau exact."
+    }
+  },
+  ja: {
+    payment: {
+      title: "暗号資産で支払う",
+      onrampBadge: "外部プラットフォーム",
+      onrampTitle: "暗号資産を購入しますか？",
+      onrampText: "信頼できる暗号資産プラットフォームを選び、登録してカードまたは地域の銀行決済で暗号資産を購入し、ここに戻って一致するHour AIアドレスへ送金してください。",
+      onrampStep1: "いずれかのプラットフォームを新しいタブで開きます。",
+      onrampStep2: "プラットフォームの本人確認を完了し、USDT、BTC、またはETHを購入します。",
+      onrampStep3: "Hour AIに戻り、表示された一致ネットワークのアドレスにのみ送金します。",
+      onrampOpen: "開く",
+      onrampNote: "利用可否は国、本人確認、各プラットフォームの最新ルールによって異なります。",
+      cryptoTitle: "Hour AI 受取アドレス",
+      cryptoText: "暗号資産購入後、対応するアドレスをコピーしてください。必ず正確なネットワークで送金してください。"
+    }
+  }
+};
+
+Object.keys(cryptoPaymentTranslationPatch).forEach((language) => {
+  translations[language] = deepMerge(translations[language] || {}, cryptoPaymentTranslationPatch[language]);
+});
+
 const orders = [
   {
     id: "c1",
@@ -1415,6 +1637,58 @@ const cryptoPaymentOptions = [
   { id: "eth", asset: "ETH", network: "Ethereum", label: "Ethereum", address: "" }
 ];
 
+const cryptoOnrampPlatforms = [
+  {
+    id: "moonpay",
+    name: "MoonPay",
+    url: "https://www.moonpay.com/buy",
+    logo: "MP",
+    regions: "Global card + local banking options"
+  },
+  {
+    id: "transak",
+    name: "Transak",
+    url: "https://transak.com/buy-crypto",
+    logo: "TK",
+    regions: "Cards, bank transfer, Apple Pay and local methods"
+  },
+  {
+    id: "ramp",
+    name: "Ramp Network",
+    url: "https://ramp.network/buy/",
+    logo: "RN",
+    regions: "Cards, bank transfer and regional payment methods"
+  },
+  {
+    id: "mercuryo",
+    name: "Mercuryo",
+    url: "https://mercuryo.io/buy-crypto/",
+    logo: "MY",
+    regions: "Card-based crypto purchases"
+  },
+  {
+    id: "coinbase",
+    name: "Coinbase",
+    url: "https://www.coinbase.com/buy",
+    logo: "CB",
+    regions: "US, Europe and supported countries"
+  },
+  {
+    id: "kraken",
+    name: "Kraken",
+    url: "https://www.kraken.com/buy",
+    logo: "KR",
+    regions: "US, Europe and supported countries"
+  },
+  {
+    id: "okx",
+    name: "OKX",
+    url: "https://www.okx.com/buy-crypto",
+    logo: "OK",
+    regions: "Middle East, Southeast Asia, Europe and supported regions"
+  }
+];
+
 let currentLanguage = "en";
 let lastFocusedElement = null;
 let toastTimer = null;
@@ -1610,12 +1884,32 @@ function renderCryptoPaymentList() {
     .join("");
 }
 
+function renderCryptoPlatformList() {
+  const list = document.getElementById("cryptoPlatformList");
+  if (!list) return;
+  list.innerHTML = cryptoOnrampPlatforms
+    .map(
+      (platform) => `
+        <a class="onramp-row onramp-${platform.id}" href="${platform.url}" target="_blank" rel="noopener noreferrer">
+          <span class="onramp-mark" aria-hidden="true">${platform.logo}</span>
+          <span class="onramp-info">
+            <strong>${platform.name}</strong>
+            <span>${platform.regions}</span>
+          </span>
+          <span class="onramp-open">${t("payment.onrampOpen")}</span>
+        </a>
+      `
+    )
+    .join("");
+}
+
 function openPayment(level) {
   const basePlan = pricing.find((plan) => plan.level === level);
   if (!basePlan) return;
   selectedPaymentPlan = localizedPlan(basePlan);
   document.getElementById("paymentCourseName").textContent = selectedPaymentPlan.name;
   document.getElementById("paymentCoursePrice").textContent = selectedPaymentPlan.price;
+  renderCryptoPlatformList();
   renderCryptoPaymentList();
   openModal("paymentModal");
 }
@@ -2353,35 +2647,6 @@ function initLinks() {
   document.getElementById("supportWhatsapp").href = "#support";
 }
 
-async function handlePayPalReturn() {
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("payment") === "cancelled") {
-    showToast(t("payment.paypalCancelled"));
-    window.history.replaceState({}, "", window.location.pathname);
-    return;
-  }
-
-  if (params.get("payment") !== "paypal-return") return;
-  const orderId = params.get("token");
-  if (!orderId) {
-    showToast(t("payment.paypalMissing"));
-    window.history.replaceState({}, "", window.location.pathname);
-    return;
-  }
-
-  try {
-    const data = await apiRequest("/api/paypal/capture-order", {
-      method: "POST",
-      body: JSON.stringify({ orderId })
-    });
-    showToast(data.status === "COMPLETED" ? t("payment.paypalConfirmed") : `PayPal: ${data.status}`);
-  } catch (error) {
-    showToast(error.message || t("payment.paypalFailed"));
-  } finally {
-    window.history.replaceState({}, "", window.location.pathname);
-  }
-}
-
 function initLanguage() {
   const languageLabels = {
     en: "English",
@@ -2500,4 +2765,3 @@ setupProfile();
 initLinks();
 applyTranslations();
 applyRegionalLanguagePreference();
-handlePayPalReturn();

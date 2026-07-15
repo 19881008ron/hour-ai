@@ -577,35 +577,20 @@
         </div>
 
         <div class="payment-method-grid">
-          <article class="payment-method-card paypal-card">
+          <article class="payment-method-card onramp-card">
             <div class="payment-method-top">
-              <div class="payment-logo paypal-logo" aria-hidden="true">PayPal</div>
-              <span class="fee-pill" data-i18n="payment.paypalFee">2% fee</span>
+              <div class="payment-logo onramp-logo" aria-hidden="true">Buy crypto</div>
+              <span class="fee-pill" data-i18n="payment.onrampBadge">Third-party platforms</span>
             </div>
-            <h3>PayPal</h3>
-            <p data-i18n="payment.paypalText">Continue to PayPal Checkout. You can pay with a PayPal account, or pay without a PayPal account using Visa or Mastercard.</p>
-            <div class="paypal-fee-box">
-              <span data-i18n="payment.processingFee">Processing fee</span>
-              <strong data-i18n="payment.coursePlusFee">Course price + 2%</strong>
-            </div>
-            <ul class="payment-mini-list">
-              <li data-i18n="payment.paypalStep1">PayPal checkout opens in a secure PayPal page.</li>
-              <li data-i18n="payment.paypalStep2">Pay with PayPal, Visa, or Mastercard inside the same checkout.</li>
-              <li data-i18n="payment.paypalStep3">Course access opens after payment confirmation.</li>
+            <h3 data-i18n="payment.onrampTitle">Need crypto first?</h3>
+            <p data-i18n="payment.onrampText">Choose a trusted crypto platform, register, buy crypto with card or local banking options, then return here to send payment to the matching Hour AI address.</p>
+            <div class="onramp-list" id="cryptoPlatformList"></div>
+            <p class="onramp-note" data-i18n="payment.onrampNote">Availability depends on your country, identity verification, and the platform's current rules.</p>
+            <ul class="payment-mini-list onramp-steps">
+              <li data-i18n="payment.onrampStep1">Open one platform in a new tab.</li>
+              <li data-i18n="payment.onrampStep2">Complete the platform's KYC and buy USDT, BTC, or ETH.</li>
+              <li data-i18n="payment.onrampStep3">Return to Hour AI and send only through the matching network address.</li>
             </ul>
-            <form
-              class="paypal-hosted-form"
-              action="https://www.paypal.com/ncp/payment/DM44254V49TWE"
-              method="post"
-              target="_blank"
-            >
-              <input class="paypal-hosted-button" type="submit" value="Pay Now" data-i18n-value="payment.payNow" />
-              <img class="paypal-card-icons" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="PayPal, Visa, Mastercard, and more" />
-              <span class="paypal-powered">
-                <span data-i18n="payment.poweredBy">Powered by:</span>
-                <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" />
-              </span>
-            </form>
           </article>
 
           <article class="payment-method-card crypto-card">

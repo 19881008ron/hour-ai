@@ -2561,7 +2561,8 @@ body.welcome-open {
   flex-direction: column;
   width: min(900px, 100%);
   max-height: min(860px, calc(100vh - 28px));
-  overflow: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .support-modal-status {
@@ -2676,8 +2677,9 @@ body.welcome-open {
 
 .support-chat-box {
   display: grid;
-  grid-template-rows: minmax(300px, 1fr) auto;
-  min-height: 470px;
+  grid-template-rows: minmax(0, 1fr) auto;
+  height: clamp(360px, 46vh, 500px);
+  min-height: 0;
   overflow: hidden;
   background: #f7f9fb;
   border: 1px solid #cbd7e3;
@@ -2718,7 +2720,8 @@ body.welcome-open {
   display: grid;
   gap: 10px;
   align-content: start;
-  height: clamp(300px, 42vh, 520px);
+  min-height: 0;
+  height: auto;
   margin: 0;
   padding: 18px;
   overflow-y: auto;
@@ -3024,13 +3027,24 @@ body.welcome-open {
   letter-spacing: 0;
 }
 
-.paypal-logo {
+.paypal-logo,
+.onramp-logo {
   min-width: 104px;
   color: #ffffff;
   background: linear-gradient(135deg, #1f68ff 0%, #003087 100%);
   border: 1px solid rgba(255, 255, 255, 0.26);
   font-size: 16px;
   box-shadow: 0 10px 24px rgba(0, 48, 135, 0.32);
+}
+
+.onramp-logo {
+  min-width: 122px;
+  color: #071014;
+  background: linear-gradient(135deg, #e7ff6a 0%, #2bd576 100%);
+  border-color: rgba(231, 255, 106, 0.68);
+  box-shadow: 0 12px 28px rgba(43, 213, 118, 0.24);
+  font-size: 13px;
+  text-transform: uppercase;
 }
 
 .crypto-logo {
@@ -3075,7 +3089,8 @@ body.welcome-open {
   line-height: 1.55;
 }
 
-.paypal-card {
+.paypal-card,
+.onramp-card {
   grid-template-rows: auto auto auto auto 1fr auto;
   color: #fff;
   background:
@@ -3085,18 +3100,126 @@ body.welcome-open {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-.paypal-card h3 {
+.onramp-card {
+  grid-template-rows: auto auto auto auto auto;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(231, 255, 106, 0.14), transparent 34%),
+    radial-gradient(circle at 90% 12%, rgba(0, 184, 212, 0.12), transparent 32%),
+    linear-gradient(145deg, #071014 0%, #0d1420 56%, #05070a 100%);
+  border-color: #263442;
+}
+
+.paypal-card h3,
+.onramp-card h3 {
   color: #fff;
 }
 
-.paypal-card p {
+.paypal-card p,
+.onramp-card p {
   color: #c8d7f7;
 }
 
-.paypal-card .fee-pill {
+.paypal-card .fee-pill,
+.onramp-card .fee-pill {
   color: #06245f;
   background: #ffffff;
   border-color: rgba(255, 255, 255, 0.72);
+}
+
+.onramp-list {
+  display: grid;
+  gap: 9px;
+}
+
+.onramp-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  min-height: 58px;
+  padding: 10px;
+  color: #eef5ff;
+  text-decoration: none;
+  background:
+    linear-gradient(90deg, rgba(43, 213, 118, 0.08), transparent 46%),
+    rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 9px;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.onramp-row:hover {
+  background:
+    linear-gradient(90deg, rgba(43, 213, 118, 0.12), rgba(0, 184, 212, 0.08)),
+    rgba(255, 255, 255, 0.07);
+  border-color: rgba(231, 255, 106, 0.28);
+  transform: translateY(-1px);
+}
+
+.onramp-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  color: #071014;
+  background: linear-gradient(135deg, #2bd576, #e7ff6a);
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.onramp-info {
+  min-width: 0;
+}
+
+.onramp-info strong,
+.onramp-info span {
+  display: block;
+}
+
+.onramp-info strong {
+  overflow: hidden;
+  color: #fff;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.onramp-info span {
+  margin-top: 3px;
+  overflow: hidden;
+  color: #8fa1b8;
+  font-size: 10px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.onramp-open {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 0 10px;
+  color: #071014;
+  background: #e7ff6a;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 950;
+  white-space: nowrap;
+}
+
+.onramp-note {
+  padding: 10px 12px;
+  color: #b8c5d8 !important;
+  background: rgba(231, 255, 106, 0.07);
+  border: 1px solid rgba(231, 255, 106, 0.16);
+  border-radius: 8px;
+  font-size: 11px !important;
+  line-height: 1.45 !important;
+}
+
+.onramp-steps {
+  padding-top: 2px;
 }
 
 .paypal-fee-box {
@@ -3913,12 +4036,14 @@ body.welcome-open {
   }
 
   .support-chat-box {
-    min-height: 420px;
-    grid-template-rows: minmax(250px, 1fr) auto;
+    height: clamp(360px, 54vh, 520px);
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr) auto;
   }
 
   .support-thread {
-    height: clamp(250px, 45vh, 430px);
+    height: auto;
+    min-height: 0;
     padding: 10px;
   }
 
@@ -4097,6 +4222,45 @@ body.welcome-open {
 }
 
 @media (max-height: 760px) and (min-width: 681px) {
+  .support-modal-panel {
+    width: min(860px, calc(100vw - 32px));
+    max-height: calc(100vh - 20px);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .support-modal-panel h2 {
+    margin-top: 8px;
+    font-size: 28px;
+  }
+
+  .support-modal-intro {
+    margin: 8px 0 12px;
+    line-height: 1.45;
+  }
+
+  .support-topics {
+    margin-bottom: 12px;
+  }
+
+  .support-guest-card {
+    margin-bottom: 10px;
+    padding: 12px;
+  }
+
+  .support-chat-box {
+    height: clamp(300px, 40vh, 380px);
+  }
+
+  .support-composer-panel {
+    padding: 10px 12px 12px;
+  }
+
+  #supportMessage {
+    min-height: 48px;
+    max-height: 76px;
+  }
+
   .welcome-content {
     padding: 18px 28px;
   }
@@ -4144,6 +4308,15 @@ body.welcome-open {
 }
 
 @media (max-height: 800px) and (min-width: 681px) and (max-width: 1120px) {
+  .support-modal-panel {
+    width: min(820px, calc(100vw - 28px));
+    max-height: calc(100vh - 20px);
+  }
+
+  .support-chat-box {
+    height: clamp(310px, 42vh, 390px);
+  }
+
   .welcome-content {
     padding: 18px 28px;
   }
@@ -4188,6 +4361,14 @@ body.welcome-open {
 }
 
 @media (max-height: 850px) and (min-width: 1121px) {
+  .support-modal-panel {
+    max-height: calc(100vh - 28px);
+  }
+
+  .support-chat-box {
+    height: clamp(330px, 41vh, 430px);
+  }
+
   .welcome-content {
     padding: 22px 42px;
   }
