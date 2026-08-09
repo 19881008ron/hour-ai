@@ -1842,16 +1842,9 @@ function levelLabel(level) {
 function rankMedalMarkup(level, size = "medium") {
   const normalized = ["A", "B", "C"].includes(level) ? level : "C";
   return `
-    <span class="rank-crest rank-${normalized.toLowerCase()} rank-crest-${size}" role="img" aria-label="${levelLabel(normalized)} medal">
-      <span class="rank-crest-aura" aria-hidden="true"></span>
-      <span class="rank-crest-wings" aria-hidden="true"></span>
-      <span class="rank-crest-crown" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span class="rank-crest-shield">
-        <span class="rank-crest-stars" aria-hidden="true">&#9733;</span>
-        <span class="rank-letter">${normalized}</span>
-        <span class="rank-crest-brand">HOUR AI</span>
-      </span>
-      <span class="rank-crest-ribbon" aria-hidden="true"></span>
+    <span class="rank-medal rank-${normalized.toLowerCase()} rank-medal-${size}" role="img" aria-label="${levelLabel(normalized)} medal">
+      <span class="rank-medal-laurel" aria-hidden="true"></span>
+      <span class="rank-letter">${normalized}</span>
     </span>
   `;
 }
@@ -2205,17 +2198,10 @@ function showAccount(profile) {
   const accountLevelLabel = hasLevel ? levelLabel(profile.level) : t("levels.pending");
   const badge = document.getElementById("savedBadge");
   const badgeLevel = hasLevel ? profile.level : "?";
-  badge.className = hasLevel ? `rank-crest rank-${profile.level.toLowerCase()} rank-crest-large` : "rank-crest rank-pending rank-crest-large";
+  badge.className = hasLevel ? `rank-medal rank-${profile.level.toLowerCase()} rank-medal-large` : "rank-medal rank-pending rank-medal-large";
   badge.innerHTML = `
-    <span class="rank-crest-aura" aria-hidden="true"></span>
-    <span class="rank-crest-wings" aria-hidden="true"></span>
-    <span class="rank-crest-crown" aria-hidden="true"><i></i><i></i><i></i></span>
-    <span class="rank-crest-shield">
-      <span class="rank-crest-stars" aria-hidden="true">&#9733;</span>
-      <span class="rank-letter">${badgeLevel}</span>
-      <span class="rank-crest-brand">HOUR AI</span>
-    </span>
-    <span class="rank-crest-ribbon" aria-hidden="true"></span>
+    <span class="rank-medal-laurel" aria-hidden="true"></span>
+    <span class="rank-letter">${badgeLevel}</span>
   `;
   badge.setAttribute("aria-label", accountLevelLabel);
   document.getElementById("savedLevelLabel").textContent = accountLevelLabel;
@@ -2540,7 +2526,7 @@ function renderAdminUsers(users) {
     chip.className = "admin-rank-identity";
     chip.innerHTML = user.level
       ? `${rankMedalMarkup(user.level, "tiny")}<strong>${levelLabel(user.level)}</strong>`
-      : `<span class="rank-crest rank-pending rank-crest-tiny" aria-hidden="true"><span class="rank-crest-shield"><span class="rank-letter">?</span></span></span><strong>${t("account.pendingShort")}</strong>`;
+      : `<span class="rank-medal rank-pending rank-medal-tiny" aria-hidden="true"><span class="rank-medal-laurel"></span><span class="rank-letter">?</span></span><strong>${t("account.pendingShort")}</strong>`;
     current.append(chip);
 
     const action = document.createElement("td");
