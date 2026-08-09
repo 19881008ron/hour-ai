@@ -1,6 +1,12 @@
 const crypto = require("crypto");
 const { parseCookies, readJson, sendJson } = require("./_lib/http");
-const { authenticatedProfile, config, supabaseFetch } = require("./_lib/supabase");
+const {
+  authenticatedProfile,
+  config,
+  requestHeaders,
+  resilientFetch,
+  supabaseFetch
+} = require("./_lib/supabase");
 
 const SUPPORT_ROLES = new Set(["admin", "agent"]);
 const ALLOWED_MIME_TYPES = new Set(["image/png", "image/jpeg", "image/webp", "image/gif"]);
@@ -238,11 +244,10 @@ async function listMessages(auth, guestId, conversationId) {
 async function uploadAttachment(conversationId, messageId, attachment) {
   const { url, secretKey } = config();
   const storagePath = `${conversationId}/${messageId}/${Date.now()}-${crypto.randomUUID()}-${attachment.fileName}`;
-  const response = await fetch(`${url}/storage/v1/object/support-attachments/${encodeURIComponent(storagePath).replaceAll("%2F", "/")}`, {
+  const response = await resilientFetch(`${url}/storage/v1/object/support-attachments/${encodeURIComponent(storagePath).replaceAll("%2F", "/")}`, {
     method: "POST",
     headers: {
-      apikey: secretKey,
-      Authorization: `Bearer ${secretKey}`,
+      ...requestHeaders(secretKey),
       "Content-Type": attachment.mimeType,
       "x-upsert": "false"
     },
@@ -347,12 +352,9 @@ async function streamAttachment(req, res, auth, guestId, attachmentId) {
   const attachment = await requireAttachmentAccess(auth, guestId, attachmentId);
   const { url, secretKey } = config();
   const storageUrl = `${url}/storage/v1/object/support-attachments/${encodeURIComponent(attachment.storage_path).replaceAll("%2F", "/")}`;
-  const response = await fetch(storageUrl, {
+  const response = await resilientFetch(storageUrl, {
     method: "GET",
-    headers: {
-      apikey: secretKey,
-      Authorization: `Bearer ${secretKey}`
-    }
+    headers: requestHeaders(secretKey)
   });
   if (!response.ok) return sendJson(res, response.status, { error: "Attachment could not be loaded." });
 
@@ -371,6 +373,12 @@ module.exports = async function handler(req, res) {
     const resource = urlInfo.searchParams.get("resource") || "conversations";
     const auth = await optionalAuth(req);
     const guestId = guestIdFromRequest(req);
+
+    if (resource === "health") {
+      if (req.method !== "GET") return sendJson(res, 405, { error: "Method not allowed." });
+      await supabaseFetch("/rest/v1/support_conversations?select=id&limit=1", { method: "GET" });
+      return sendJson(res, 200, { ok: true, service: "support" });
+    }
 
     if (resource === "attachment") {
       if (req.method !== "GET") return sendJson(res, 405, { error: "Method not allowed." });
@@ -408,6 +416,10 @@ module.exports = async function handler(req, res) {
 
     return sendJson(res, 404, { error: "Support route not found." });
   } catch (error) {
-    return sendJson(res, error.status || 400, { error: error.message });
+    const status = Number(error.status || 500);
+    const publicMessage = status >= 500
+      ? "Online support is temporarily unavailable. Please try again shortly."
+      : error.message;
+    return sendJson(res, status, { error: publicMessage, code: error.code || "SUPPORT_REQUEST_FAILED" });
   }
 };
