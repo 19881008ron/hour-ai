@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --ink: #101318;
   --ink-soft: #20252d;
   --muted: #626b78;
@@ -4433,3 +4433,577 @@ body.welcome-open {
     transition-duration: 160ms !important;
   }
 }
+
+/* 2026-08-09: premium rank, marketplace and motion system */
+:root {
+  --money-green: #24d77b;
+  --money-green-deep: #087a4a;
+  --security-cyan: #20d9e8;
+  --rank-c: #38d9b0;
+  --rank-b: #9b8cff;
+  --rank-a: #ffb45e;
+}
+
+.site-header {
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  box-shadow: 0 14px 40px rgba(12, 18, 28, 0.08);
+  backdrop-filter: blur(18px) saturate(135%);
+}
+
+.rank-medal {
+  --rank-color: var(--rank-c);
+  --rank-dark: #0a725c;
+  --rank-glow: rgba(56, 217, 176, 0.32);
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 68px;
+  height: 76px;
+  padding-bottom: 12px;
+  color: #06140f;
+  border: 1px solid color-mix(in srgb, var(--rank-color) 82%, white);
+  border-radius: 44% 44% 49% 49% / 38% 38% 58% 58%;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.88), transparent 36%),
+    linear-gradient(155deg, color-mix(in srgb, var(--rank-color) 72%, white), var(--rank-color) 53%, var(--rank-dark));
+  box-shadow:
+    inset 0 0 0 4px rgba(255, 255, 255, 0.3),
+    inset 0 -12px 22px rgba(0, 0, 0, 0.16),
+    0 12px 28px var(--rank-glow);
+  vertical-align: middle;
+}
+
+.rank-medal::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.64);
+  border-radius: inherit;
+  box-shadow: inset 0 0 16px rgba(255, 255, 255, 0.26);
+}
+
+.rank-medal::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  z-index: -2;
+  width: 44px;
+  height: 24px;
+  background: linear-gradient(90deg, var(--rank-dark), var(--rank-color), var(--rank-dark));
+  clip-path: polygon(0 0, 100% 0, 84% 100%, 50% 72%, 16% 100%);
+  transform: translateX(-50%);
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+.rank-b {
+  --rank-color: var(--rank-b);
+  --rank-dark: #4937bd;
+  --rank-glow: rgba(155, 140, 255, 0.34);
+  color: #100a3c;
+}
+
+.rank-a {
+  --rank-color: var(--rank-a);
+  --rank-dark: #a95206;
+  --rank-glow: rgba(255, 180, 94, 0.38);
+  color: #2b1300;
+}
+
+.rank-pending {
+  --rank-color: #a7b3c4;
+  --rank-dark: #516174;
+  --rank-glow: rgba(116, 132, 154, 0.24);
+  color: #142131;
+}
+
+.rank-letter {
+  font-family: "Arial Black", "Inter", sans-serif;
+  font-size: 30px;
+  line-height: 1;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.66);
+}
+
+.rank-stars {
+  position: absolute;
+  bottom: 11px;
+  left: 50%;
+  width: max-content;
+  max-width: 90%;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 7px;
+  line-height: 1;
+  transform: translateX(-50%);
+}
+
+.rank-medal-tiny {
+  width: 34px;
+  height: 38px;
+  padding-bottom: 7px;
+}
+
+.rank-medal-tiny .rank-letter {
+  font-size: 16px;
+}
+
+.rank-medal-tiny .rank-stars {
+  bottom: 5px;
+  font-size: 3px;
+}
+
+.rank-medal-tiny::after {
+  bottom: -5px;
+  width: 22px;
+  height: 12px;
+}
+
+.board-legend i.rank-medal {
+  width: 34px;
+  height: 38px;
+}
+
+.board-legend .rank-letter {
+  font-size: 16px;
+  font-style: normal;
+}
+
+.rank-medal-small {
+  width: 48px;
+  height: 54px;
+  padding-bottom: 9px;
+}
+
+.rank-medal-small .rank-letter {
+  font-size: 21px;
+}
+
+.rank-medal-small .rank-stars {
+  bottom: 7px;
+  font-size: 4px;
+}
+
+.rank-medal-small::after {
+  bottom: -6px;
+  width: 30px;
+  height: 16px;
+}
+
+.rank-medal-large {
+  width: 88px;
+  height: 98px;
+}
+
+.rank-medal-large .rank-letter {
+  font-size: 40px;
+}
+
+.rank-identity,
+.price-rank,
+.admin-rank-identity {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rank-identity strong,
+.price-rank span,
+.admin-rank-identity strong {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.price-rank {
+  min-height: 82px;
+}
+
+.price-rank span {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.orders-grid,
+.pricing-grid,
+.profile-layout,
+.reviews-grid {
+  align-items: stretch;
+}
+
+.order-card,
+.price-card,
+.profile-card,
+.review-card {
+  --level-color: var(--rank-c);
+  --level-tint: rgba(56, 217, 176, 0.08);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-color: color-mix(in srgb, var(--level-color) 25%, var(--line));
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paper) 74%, var(--level-tint) 100%);
+  box-shadow: 0 16px 42px rgba(10, 19, 31, 0.08);
+  transform: translateY(0);
+  transition: transform 280ms cubic-bezier(.2,.8,.2,1), box-shadow 280ms ease, border-color 280ms ease, background-color 280ms ease;
+}
+
+.order-level-b,
+.price-level-b,
+.review-level-b,
+.profile-card:has(.rank-b) {
+  --level-color: var(--rank-b);
+  --level-tint: rgba(155, 140, 255, 0.09);
+}
+
+.order-level-a,
+.price-level-a,
+.review-level-a,
+.profile-card:has(.rank-a) {
+  --level-color: var(--rank-a);
+  --level-tint: rgba(255, 180, 94, 0.1);
+}
+
+.order-card::before,
+.price-card::before,
+.profile-card::before,
+.review-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 2;
+  height: 3px;
+  background: var(--level-color);
+  transform: scaleX(0.28);
+  transform-origin: left;
+  transition: transform 300ms ease;
+}
+
+.order-card::after,
+.price-card::after,
+.profile-card::after,
+.review-card::after {
+  content: "";
+  position: absolute;
+  inset: -70% auto auto -55%;
+  z-index: -1;
+  width: 72%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--level-color) 13%, transparent);
+  transition: transform 500ms cubic-bezier(.2,.8,.2,1), opacity 300ms ease;
+  pointer-events: none;
+}
+
+.order-card:hover,
+.price-card:hover,
+.profile-card:hover,
+.review-card:hover {
+  border-color: color-mix(in srgb, var(--level-color) 65%, var(--line));
+  box-shadow: 0 26px 62px rgba(10, 19, 31, 0.16), 0 0 0 1px color-mix(in srgb, var(--level-color) 24%, transparent);
+  transform: translateY(-8px);
+}
+
+.order-card:hover::before,
+.price-card:hover::before,
+.profile-card:hover::before,
+.review-card:hover::before {
+  transform: scaleX(1);
+}
+
+.order-card:hover::after,
+.price-card:hover::after,
+.profile-card:hover::after,
+.review-card:hover::after {
+  transform: translate(42%, 36%) scale(1.2);
+}
+
+.order-card {
+  /* Keep the staggered entrance without letting animation fill override hover transforms. */
+  animation: order-arrive 480ms backwards;
+  animation-delay: calc(var(--order-index, 0) * 70ms);
+}
+
+.order-card-header {
+  min-height: 62px;
+  align-items: center;
+}
+
+.order-card h3,
+.price-card h3,
+.profile-card h3 {
+  color: var(--ink);
+}
+
+.order-meta {
+  border-color: color-mix(in srgb, var(--level-color) 28%, var(--line));
+  background: color-mix(in srgb, var(--level-color) 7%, var(--paper));
+}
+
+.order-meta b,
+.commission-highlight strong,
+.price {
+  color: var(--money-green-deep);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.commission-highlight {
+  border: 1px solid color-mix(in srgb, var(--level-color) 38%, var(--line));
+  background: color-mix(in srgb, var(--level-color) 9%, var(--paper));
+  box-shadow: inset 4px 0 0 var(--level-color);
+}
+
+.price-card.recommended {
+  border-color: color-mix(in srgb, var(--level-color) 25%, var(--line));
+  box-shadow: 0 16px 42px rgba(10, 19, 31, 0.08);
+  transform: none;
+}
+
+.price-card.recommended:hover {
+  transform: translateY(-8px);
+}
+
+.orders-more-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.button-more-orders {
+  min-width: 220px;
+  min-height: 56px;
+  color: #effff7;
+  border: 1px solid rgba(66, 231, 147, 0.5);
+  background: #0a1712;
+  box-shadow: 0 16px 34px rgba(13, 114, 68, 0.22), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.button-more-orders:hover {
+  color: #fff;
+  border-color: var(--money-green);
+  background: #0b2a1c;
+  box-shadow: 0 20px 42px rgba(13, 114, 68, 0.34), 0 0 24px rgba(36, 215, 123, 0.16);
+  transform: translateY(-4px);
+}
+
+.more-orders-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+  color: #07120d;
+  border-radius: 50%;
+  background: var(--money-green);
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 280ms ease;
+}
+
+.button-more-orders.is-expanded .more-orders-icon {
+  transform: rotate(45deg);
+}
+
+.button-primary,
+.button-outline,
+.button-quiet {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-primary::after,
+.button-more-orders::after {
+  content: "";
+  position: absolute;
+  inset: -80% auto -80% -32%;
+  width: 24%;
+  background: rgba(255, 255, 255, 0.32);
+  transform: skewX(-20deg) translateX(-230%);
+  transition: transform 520ms ease;
+  pointer-events: none;
+}
+
+.button-primary:hover::after,
+.button-more-orders:hover::after {
+  transform: skewX(-20deg) translateX(620%);
+}
+
+.reveal-ready {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 620ms ease, transform 620ms cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal-ready.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Preserve the tactile lift after the entrance animation has settled. */
+.order-card.reveal-ready.is-visible:hover,
+.price-card.reveal-ready.is-visible:hover,
+.profile-card.reveal-ready.is-visible:hover,
+.review-card.reveal-ready.is-visible:hover {
+  transform: translateY(-8px);
+}
+
+.profile-card .rank-medal {
+  grid-area: badge;
+  align-self: center;
+}
+
+.profile-card {
+  color: #fff;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--level-color) 8%, transparent), transparent 46%),
+    #12171f;
+  border-color: color-mix(in srgb, var(--level-color) 34%, #303742);
+}
+
+.profile-card h3 {
+  color: #fff;
+}
+
+.profile-card p {
+  color: #a9b3c1;
+}
+
+.admin-rank-identity {
+  min-width: 132px;
+}
+
+@keyframes order-arrive {
+  from { opacity: 0; transform: translateY(18px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes medal-breathe {
+  0%, 100% { box-shadow: inset 0 0 0 4px rgba(255,255,255,.3), inset 0 -12px 22px rgba(0,0,0,.16), 0 12px 28px var(--rank-glow); }
+  50% { box-shadow: inset 0 0 0 4px rgba(255,255,255,.4), inset 0 -12px 22px rgba(0,0,0,.12), 0 15px 38px var(--rank-glow); }
+}
+
+.rank-medal-large {
+  animation: medal-breathe 3.6s ease-in-out infinite;
+}
+
+@media (max-width: 1120px) {
+  .rank-medal-large {
+    width: 76px;
+    height: 86px;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .orders-grid,
+  .pricing-grid,
+  .profile-layout,
+  .reviews-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .order-card:hover,
+  .price-card:hover,
+  .profile-card:hover,
+  .review-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .order-card.reveal-ready.is-visible:hover,
+  .price-card.reveal-ready.is-visible:hover,
+  .profile-card.reveal-ready.is-visible:hover,
+  .review-card.reveal-ready.is-visible:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 680px) {
+  .orders-grid,
+  .pricing-grid,
+  .profile-layout,
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rank-medal {
+    width: 58px;
+    height: 66px;
+  }
+
+  .rank-medal-small {
+    width: 44px;
+    height: 50px;
+  }
+
+  .rank-medal-tiny {
+    width: 32px;
+    height: 36px;
+  }
+
+  .rank-letter {
+    font-size: 25px;
+  }
+
+  .rank-medal-small .rank-letter {
+    font-size: 19px;
+  }
+
+  .rank-medal-tiny .rank-letter {
+    font-size: 15px;
+  }
+
+  .order-card-header {
+    gap: 10px;
+  }
+
+  .rank-identity {
+    gap: 8px;
+  }
+
+  .rank-identity strong {
+    font-size: 13px;
+  }
+
+  .price-rank {
+    min-height: 70px;
+  }
+
+  .orders-more-row {
+    margin-top: 24px;
+  }
+
+  .button-more-orders {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (hover: none) {
+  .order-card:hover,
+  .price-card:hover,
+  .profile-card:hover,
+  .review-card:hover,
+  .button-more-orders:hover {
+    transform: none;
+  }
+
+  .order-card.reveal-ready.is-visible:hover,
+  .price-card.reveal-ready.is-visible:hover,
+  .profile-card.reveal-ready.is-visible:hover,
+  .review-card.reveal-ready.is-visible:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rank-medal-large,
+  .order-card {
+    animation: none !important;
+  }
+
+  .reveal-ready {
+    opacity: 1;
+    transform: none;
+  }
+}
+

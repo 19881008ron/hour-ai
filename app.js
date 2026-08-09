@@ -519,9 +519,12 @@ Object.assign(translations.id.footer, {
     "Hour AI menyediakan pelatihan, penilaian keterampilan, dan informasi tentang peluang proyek potensial. Penyelesaian kursus, kualifikasi, ketersediaan order, persetujuan, kompensasi, dan pendapatan masa depan tidak dijamin. Hasil bergantung pada usaha, kemampuan, performa tes, kualitas pekerjaan, kebutuhan klien, permintaan pasar, lokasi, dan faktor lain. Contoh tugas, estimasi waktu, komisi, ulasan, dan pendapatan hanya bersifat ilustratif dan bukan janji pekerjaan, imbal hasil, atau pendapatan berulang."
 });
 
-const supportedLanguages = ["en", "id", "ar", "es", "fr", "ja"];
+const supportedLanguages = ["en", "ar", "zh"];
 const countryLanguageMap = {
-  ID: "id",
+  CN: "zh",
+  HK: "zh",
+  MO: "zh",
+  TW: "zh",
   SA: "ar",
   AE: "ar",
   QA: "ar",
@@ -530,18 +533,7 @@ const countryLanguageMap = {
   OM: "ar",
   JO: "ar",
   EG: "ar",
-  MA: "ar",
-  ES: "es",
-  MX: "es",
-  CO: "es",
-  AR: "es",
-  PE: "es",
-  CL: "es",
-  FR: "fr",
-  BE: "fr",
-  CH: "fr",
-  CA: "fr",
-  JP: "ja"
+  MA: "ar"
 };
 
 Object.keys(translations).forEach((language) => {
@@ -1032,7 +1024,19 @@ const completeTranslations = {
 };
 
 Object.keys(completeTranslations).forEach((language) => {
-  translations[language] = deepMerge(translations[language] || {}, completeTranslations[language]);
+  if (supportedLanguages.includes(language)) {
+    translations[language] = deepMerge(translations[language] || {}, completeTranslations[language]);
+  }
+});
+
+const marketplaceTranslationPatch = {
+  en: { orders: { more: "More orders", fewer: "Show fewer orders" } },
+  ar: { orders: { more: "المزيد من الطلبات", fewer: "عرض طلبات أقل" } },
+  zh: { orders: { more: "更多订单", fewer: "收起订单" } }
+};
+
+Object.keys(marketplaceTranslationPatch).forEach((language) => {
+  translations[language] = deepMerge(translations[language] || {}, marketplaceTranslationPatch[language]);
 });
 
 const supportTranslationPatch = {
@@ -1257,13 +1261,23 @@ Object.keys(cryptoPaymentTranslationPatch).forEach((language) => {
   translations[language] = deepMerge(translations[language] || {}, cryptoPaymentTranslationPatch[language]);
 });
 
+Object.keys(translations).forEach((language) => {
+  if (!supportedLanguages.includes(language)) delete translations[language];
+});
+
+const PROGRAM_CONFIG = Object.freeze({
+  C: Object.freeze({ tuition: 3500, price: "$3,500", commission: "$100-$150", stars: 2 }),
+  B: Object.freeze({ tuition: 6500, price: "$6,500", commission: "$350-$400", stars: 3 }),
+  A: Object.freeze({ tuition: 9500, price: "$9,500", commission: "$850-$900", stars: 4 })
+});
+
 const orders = [
   {
     id: "c1",
     level: "C",
     title: "Image AI creation",
     content: "Create a polished AI image set from a simple brief, including subject direction, style matching, and export-ready visuals.",
-    pay: "$20-$30",
+    pay: PROGRAM_CONFIG.C.commission,
     time: "1-2 hours",
     requirements: "Generate 3-5 image options, refine the selected visual, keep the style consistent, and deliver high-resolution files."
   },
@@ -1272,7 +1286,7 @@ const orders = [
     level: "C",
     title: "Static AI editing",
     content: "Edit static AI creative assets for a product, profile, or social post using clean composition and simple copy placement.",
-    pay: "$20-$30",
+    pay: PROGRAM_CONFIG.C.commission,
     time: "1-2 hours",
     requirements: "Adjust layout, crop and polish visuals, add required text elements, and submit both source and final image files."
   },
@@ -1281,7 +1295,7 @@ const orders = [
     level: "B",
     title: "Video AI creation",
     content: "Produce a short AI-assisted video from a script, visual direction, voiceover, captions, and branded pacing.",
-    pay: "$60-$70",
+    pay: PROGRAM_CONFIG.B.commission,
     time: "1-2 hours",
     requirements: "Build a strong opening, align scenes with the script, add captions, and deliver the final video plus editable project file."
   },
@@ -1290,7 +1304,7 @@ const orders = [
     level: "B",
     title: "Advertising AI editing",
     content: "Edit an AI-assisted ad using a product angle, customer pain point, visual proof, captions, and a clear call to action.",
-    pay: "$60-$70",
+    pay: PROGRAM_CONFIG.B.commission,
     time: "1-2 hours",
     requirements: "Improve the hook, tighten pacing, match the brand tone, add motion captions, and prepare a conversion-focused final cut."
   },
@@ -1299,7 +1313,7 @@ const orders = [
     level: "A",
     title: "Film AI production",
     content: "Create a cinematic AI video with scene planning, visual continuity, narration rhythm, advanced pacing, and final delivery notes.",
-    pay: "$80-$100",
+    pay: PROGRAM_CONFIG.A.commission,
     time: "1-2 hours",
     requirements: "Plan the sequence, manage visual assets, refine transitions, balance audio, and deliver the final video with project files."
   },
@@ -1308,7 +1322,7 @@ const orders = [
     level: "A",
     title: "Team AI management",
     content: "Review AI editing work from a small team, improve the final delivery, and prepare clear production feedback.",
-    pay: "$80-$100",
+    pay: PROGRAM_CONFIG.A.commission,
     time: "1-2 hours",
     requirements: "Check quality standards, provide timestamped feedback, assign revision priorities, and prepare the approved delivery version."
   }
@@ -1339,34 +1353,33 @@ const pricing = [
   {
     level: "C",
     name: "C-Level AI Editor",
-    price: "$199",
+    price: PROGRAM_CONFIG.C.price,
     items: [
       "7-day beginner workflow",
       "Image and static AI editing standards",
-      "$20-$30 commission per order after qualification",
+      `${PROGRAM_CONFIG.C.commission} commission per order after qualification`,
       "Estimated 1-2 hours to complete each order"
     ]
   },
   {
     level: "B",
     name: "B-Level AI Editor",
-    price: "$599",
-    recommended: true,
+    price: PROGRAM_CONFIG.B.price,
     items: [
       "Video AI creation workflow",
       "Advertising AI editing standards",
-      "$60-$70 commission per order after qualification",
+      `${PROGRAM_CONFIG.B.commission} commission per order after qualification`,
       "Estimated 1-2 hours to complete each order"
     ]
   },
   {
     level: "A",
     name: "A-Level AI Editor",
-    price: "$999",
+    price: PROGRAM_CONFIG.A.price,
     items: [
       "Film AI production workflow",
       "Team AI management standards",
-      "$80-$100 commission per order after qualification",
+      `${PROGRAM_CONFIG.A.commission} commission per order after qualification`,
       "Estimated 1-2 hours to complete each order"
     ]
   }
@@ -1423,15 +1436,15 @@ const localizedContent = {
     pricing: {
       C: {
         name: "C 级 AI 师",
-        items: ["7 天新手工作流", "模板剪辑课程", "C 级技能标准", "通过认证后可申请 $20-$30 任务"]
+        items: ["7 天新手工作流", "模板剪辑课程", "C 级技能标准", "通过认证后可申请 $100-$150 任务"]
       },
       B: {
         name: "B 级 AI 师",
-        items: ["商业短视频工作流", "AI 配音与节奏训练", "质量审核训练", "通过认证后可申请 $60-$70 任务"]
+        items: ["商业短视频工作流", "AI 配音与节奏训练", "质量审核训练", "通过认证后可申请 $350-$400 任务"]
       },
       A: {
         name: "A 级 AI 师",
-        items: ["高级项目工作流", "团队审核方法", "代理资格准备", "通过认证后可申请 $80-$100 任务"]
+        items: ["高级项目工作流", "团队审核方法", "代理资格准备", "通过认证后可申请 $850-$900 任务"]
       }
     }
   }
@@ -1488,15 +1501,15 @@ Object.assign(localizedContent, {
     pricing: {
       C: {
         name: "C 级 AI 剪辑师",
-        items: ["7 天新手工作流", "图片 AI 创作与静态 AI 剪辑标准", "认证后每单佣金 $20-$30", "预计 1-2 小时完成一个订单"]
+        items: ["7 天新手工作流", "图片 AI 创作与静态 AI 剪辑标准", "认证后每单佣金 $100-$150", "预计 1-2 小时完成一个订单"]
       },
       B: {
         name: "B 级 AI 剪辑师",
-        items: ["视频 AI 创作流程", "广告 AI 剪辑标准", "认证后每单佣金 $60-$70", "预计 1-2 小时完成一个订单"]
+        items: ["视频 AI 创作流程", "广告 AI 剪辑标准", "认证后每单佣金 $350-$400", "预计 1-2 小时完成一个订单"]
       },
       A: {
         name: "A 级 AI 制作师",
-        items: ["电影 AI 制作流程", "团队 AI 管理标准", "认证后每单佣金 $80-$100", "预计 1-2 小时完成一个订单"]
+        items: ["电影 AI 制作流程", "团队 AI 管理标准", "认证后每单佣金 $850-$900", "预计 1-2 小时完成一个订单"]
       }
     }
   }
@@ -1518,9 +1531,9 @@ const completeLocalizedContent = {
       A: { role: "Peserta Level A", quote: "Jalur lanjutan fokus pada kontrol kualitas dan cara mengelola tugas dari brief sampai delivery." }
     },
     pricing: {
-      C: { name: "Editor AI Level C", items: ["Workflow pemula 7 hari", "Standar kreasi gambar dan editing AI statis", "Komisi $20-$30 per order setelah kualifikasi", "Estimasi 1-2 jam untuk menyelesaikan setiap order"] },
-      B: { name: "Editor AI Level B", items: ["Workflow kreasi video AI", "Standar editing iklan AI", "Komisi $60-$70 per order setelah kualifikasi", "Estimasi 1-2 jam untuk menyelesaikan setiap order"] },
-      A: { name: "Editor AI Level A", items: ["Workflow produksi film AI", "Standar manajemen tim AI", "Komisi $80-$100 per order setelah kualifikasi", "Estimasi 1-2 jam untuk menyelesaikan setiap order"] }
+      C: { name: "Editor AI Level C", items: ["Workflow pemula 7 hari", "Standar kreasi gambar dan editing AI statis", "Komisi $100-$150 per order setelah kualifikasi", "Estimasi 1-2 jam untuk menyelesaikan setiap order"] },
+      B: { name: "Editor AI Level B", items: ["Workflow kreasi video AI", "Standar editing iklan AI", "Komisi $350-$400 per order setelah kualifikasi", "Estimasi 1-2 jam untuk menyelesaikan setiap order"] },
+      A: { name: "Editor AI Level A", items: ["Workflow produksi film AI", "Standar manajemen tim AI", "Komisi $850-$900 per order setelah kualifikasi", "Estimasi 1-2 jam untuk menyelesaikan setiap order"] }
     }
   },
   ar: {
@@ -1538,9 +1551,9 @@ const completeLocalizedContent = {
       A: { role: "متعلم مستوى A", quote: "ركز المسار المتقدم على ضبط الجودة وإدارة المهمة من الموجز إلى التسليم." }
     },
     pricing: {
-      C: { name: "محرر AI مستوى C", items: ["سير عمل مبتدئ لمدة 7 أيام", "معايير إنشاء الصور وتحرير AI الثابت", "عمولة 20-30 دولارا لكل طلب بعد التأهيل", "يقدر إكمال كل طلب خلال 1-2 ساعة"] },
-      B: { name: "محرر AI مستوى B", items: ["سير عمل إنشاء فيديو AI", "معايير تحرير إعلانات AI", "عمولة 60-70 دولارا لكل طلب بعد التأهيل", "يقدر إكمال كل طلب خلال 1-2 ساعة"] },
-      A: { name: "محرر AI مستوى A", items: ["سير عمل إنتاج فيلم AI", "معايير إدارة فريق AI", "عمولة 80-100 دولار لكل طلب بعد التأهيل", "يقدر إكمال كل طلب خلال 1-2 ساعة"] }
+      C: { name: "محرر AI مستوى C", items: ["سير عمل مبتدئ لمدة 7 أيام", "معايير إنشاء الصور وتحرير AI الثابت", "عمولة 100-150 دولارا لكل طلب بعد التأهيل", "يقدر إكمال كل طلب خلال 1-2 ساعة"] },
+      B: { name: "محرر AI مستوى B", items: ["سير عمل إنشاء فيديو AI", "معايير تحرير إعلانات AI", "عمولة 350-400 دولارا لكل طلب بعد التأهيل", "يقدر إكمال كل طلب خلال 1-2 ساعة"] },
+      A: { name: "محرر AI مستوى A", items: ["سير عمل إنتاج فيلم AI", "معايير إدارة فريق AI", "عمولة 850-900 دولار لكل طلب بعد التأهيل", "يقدر إكمال كل طلب خلال 1-2 ساعة"] }
     }
   },
   es: {
@@ -1558,9 +1571,9 @@ const completeLocalizedContent = {
       A: { role: "Alumno Nivel A", quote: "El camino avanzado se enfocó en control de calidad y gestión desde brief hasta entrega." }
     },
     pricing: {
-      C: { name: "Editor AI Nivel C", items: ["Flujo principiante de 7 días", "Estándares de imagen y edición AI estática", "Comisión de $20-$30 por pedido tras calificar", "Estimado de 1-2 horas para completar cada pedido"] },
-      B: { name: "Editor AI Nivel B", items: ["Flujo de creación de video AI", "Estándares de edición de anuncios AI", "Comisión de $60-$70 por pedido tras calificar", "Estimado de 1-2 horas para completar cada pedido"] },
-      A: { name: "Editor AI Nivel A", items: ["Flujo de producción cinematográfica AI", "Estándares de gestión de equipo AI", "Comisión de $80-$100 por pedido tras calificar", "Estimado de 1-2 horas para completar cada pedido"] }
+      C: { name: "Editor AI Nivel C", items: ["Flujo principiante de 7 días", "Estándares de imagen y edición AI estática", "Comisión de $100-$150 por pedido tras calificar", "Estimado de 1-2 horas para completar cada pedido"] },
+      B: { name: "Editor AI Nivel B", items: ["Flujo de creación de video AI", "Estándares de edición de anuncios AI", "Comisión de $350-$400 por pedido tras calificar", "Estimado de 1-2 horas para completar cada pedido"] },
+      A: { name: "Editor AI Nivel A", items: ["Flujo de producción cinematográfica AI", "Estándares de gestión de equipo AI", "Comisión de $850-$900 por pedido tras calificar", "Estimado de 1-2 horas para completar cada pedido"] }
     }
   },
   fr: {
@@ -1578,9 +1591,9 @@ const completeLocalizedContent = {
       A: { role: "Apprenant Niveau A", quote: "Le parcours avancé se concentre sur le contrôle qualité et la gestion du brief à la livraison." }
     },
     pricing: {
-      C: { name: "Éditeur AI Niveau C", items: ["Workflow débutant de 7 jours", "Standards image et édition AI statique", "Commission de $20-$30 par commande après qualification", "Environ 1-2 heures pour chaque commande"] },
-      B: { name: "Éditeur AI Niveau B", items: ["Workflow de création vidéo AI", "Standards d'édition publicitaire AI", "Commission de $60-$70 par commande après qualification", "Environ 1-2 heures pour chaque commande"] },
-      A: { name: "Éditeur AI Niveau A", items: ["Workflow de production film AI", "Standards de gestion d'équipe AI", "Commission de $80-$100 par commande après qualification", "Environ 1-2 heures pour chaque commande"] }
+      C: { name: "Éditeur AI Niveau C", items: ["Workflow débutant de 7 jours", "Standards image et édition AI statique", "Commission de $100-$150 par commande après qualification", "Environ 1-2 heures pour chaque commande"] },
+      B: { name: "Éditeur AI Niveau B", items: ["Workflow de création vidéo AI", "Standards d'édition publicitaire AI", "Commission de $350-$400 par commande après qualification", "Environ 1-2 heures pour chaque commande"] },
+      A: { name: "Éditeur AI Niveau A", items: ["Workflow de production film AI", "Standards de gestion d'équipe AI", "Commission de $850-$900 par commande après qualification", "Environ 1-2 heures pour chaque commande"] }
     }
   },
   ja: {
@@ -1598,9 +1611,9 @@ const completeLocalizedContent = {
       A: { role: "Aレベル学習者", quote: "上級パスでは品質管理と、依頼内容から納品まで管理する方法に集中できました。" }
     },
     pricing: {
-      C: { name: "Cレベル AI編集者", items: ["7日間の初心者ワークフロー", "AI画像制作と静的AI編集基準", "認定後、1案件あたり$20-$30報酬", "各案件の目安時間は1-2時間"] },
-      B: { name: "Bレベル AI編集者", items: ["動画AI制作ワークフロー", "広告AI編集基準", "認定後、1案件あたり$60-$70報酬", "各案件の目安時間は1-2時間"] },
-      A: { name: "Aレベル AI編集者", items: ["映画AI制作ワークフロー", "チームAI管理基準", "認定後、1案件あたり$80-$100報酬", "各案件の目安時間は1-2時間"] }
+      C: { name: "Cレベル AI編集者", items: ["7日間の初心者ワークフロー", "AI画像制作と静的AI編集基準", "認定後、1案件あたり$100-$150報酬", "各案件の目安時間は1-2時間"] },
+      B: { name: "Bレベル AI編集者", items: ["動画AI制作ワークフロー", "広告AI編集基準", "認定後、1案件あたり$350-$400報酬", "各案件の目安時間は1-2時間"] },
+      A: { name: "Aレベル AI編集者", items: ["映画AI制作ワークフロー", "チームAI管理基準", "認定後、1案件あたり$850-$900報酬", "各案件の目安時間は1-2時間"] }
     }
   }
 };
@@ -1609,7 +1622,13 @@ Object.keys(localizedContent).forEach((language) => {
   if (!supportedLanguages.includes(language)) delete localizedContent[language];
 });
 Object.keys(completeLocalizedContent).forEach((language) => {
-  localizedContent[language] = deepMerge(localizedContent[language] || {}, completeLocalizedContent[language]);
+  if (supportedLanguages.includes(language)) {
+    localizedContent[language] = deepMerge(localizedContent[language] || {}, completeLocalizedContent[language]);
+  }
+});
+
+Object.keys(localizedContent).forEach((language) => {
+  if (!supportedLanguages.includes(language)) delete localizedContent[language];
 });
 
 const carouselSlides = [
@@ -1700,6 +1719,8 @@ let activeProfile = null;
 let activeSupportConversationId = null;
 let supportPollTimer = null;
 let activeAgentConversationId = null;
+let showAllOrders = false;
+let revealObserver = null;
 
 function deepMerge(target, source) {
   Object.keys(source || {}).forEach((key) => {
@@ -1727,6 +1748,17 @@ function formatText(template, values = {}) {
 
 function levelLabel(level) {
   return t(`levels.${level}`) || `${level}-Level`;
+}
+
+function rankMedalMarkup(level, size = "medium") {
+  const normalized = ["A", "B", "C"].includes(level) ? level : "C";
+  const stars = "◆ ".repeat(PROGRAM_CONFIG[normalized].stars).trim();
+  return `
+    <span class="rank-medal rank-${normalized.toLowerCase()} rank-medal-${size}" role="img" aria-label="${levelLabel(normalized)} medal">
+      <span class="rank-letter">${normalized}</span>
+      <span class="rank-stars" aria-hidden="true">${stars}</span>
+    </span>
+  `;
 }
 
 function translatedGender(value) {
@@ -1792,15 +1824,18 @@ function applyTranslations() {
 
 function renderOrders() {
   const grid = document.getElementById("ordersGrid");
-  grid.innerHTML = orders
+  const featuredIds = new Set(["c1", "b1", "a1"]);
+  const visibleOrders = showAllOrders ? orders : orders.filter((order) => featuredIds.has(order.id));
+  grid.innerHTML = visibleOrders
     .map((baseOrder, index) => {
       const order = localizedOrder(baseOrder);
+      const orderIndex = orders.findIndex((item) => item.id === order.id);
       return `
-        <article class="order-card">
+        <article class="order-card order-level-${order.level.toLowerCase()}" data-level="${order.level}" style="--order-index:${index}">
           <img class="order-image" src="${levelImages[order.level]}" alt="" width="1000" height="750" loading="lazy" />
           <div class="order-card-header">
-            <span class="level-chip chip-${order.level.toLowerCase()}">${levelLabel(order.level)}</span>
-            <span class="order-code">${t("orders.orderNo")} ${371011 + index}</span>
+            <span class="rank-identity">${rankMedalMarkup(order.level, "small")}<strong>${levelLabel(order.level)}</strong></span>
+            <span class="order-code">${t("orders.orderNo")} ${371011 + orderIndex}</span>
           </div>
           <h3>${order.title}</h3>
           <p>${order.content}</p>
@@ -1815,6 +1850,15 @@ function renderOrders() {
       `;
     })
     .join("");
+
+  const button = document.getElementById("moreOrdersButton");
+  if (button) {
+    button.setAttribute("aria-expanded", String(showAllOrders));
+    button.classList.toggle("is-expanded", showAllOrders);
+    const label = button.querySelector("[data-i18n]");
+    if (label) label.textContent = t(showAllOrders ? "orders.fewer" : "orders.more");
+  }
+  observeRevealables(grid);
 }
 
 function renderReviews() {
@@ -1823,8 +1867,8 @@ function renderReviews() {
     .map((baseReview) => {
       const review = localizedReview(baseReview);
       return `
-        <article class="review-card">
-          <span class="level-chip chip-${review.level.toLowerCase()}">${review.level}-Level</span>
+        <article class="review-card review-level-${review.level.toLowerCase()}" data-level="${review.level}">
+          <span class="rank-identity">${rankMedalMarkup(review.level, "small")}<strong>${levelLabel(review.level)}</strong></span>
           <blockquote>${review.quote}</blockquote>
           <div class="review-author">
             <img class="review-avatar" src="${reviewAvatars[review.level]}" alt="" width="400" height="400" loading="lazy" />
@@ -1842,9 +1886,9 @@ function renderPricing() {
     .map((basePlan) => {
       const plan = localizedPlan(basePlan);
       return `
-        <article class="price-card${plan.recommended ? " recommended" : ""}">
+        <article class="price-card price-level-${plan.level.toLowerCase()}${plan.recommended ? " recommended" : ""}" data-level="${plan.level}">
           ${plan.recommended ? `<span class="recommended-tag">${t("courses.recommended")}</span>` : ""}
-          <span class="level-chip chip-${plan.level.toLowerCase()}">${levelLabel(plan.level)}</span>
+          <div class="price-rank">${rankMedalMarkup(plan.level, "medium")}<span>${levelLabel(plan.level)}</span></div>
           <h3>${plan.name}</h3>
           <div class="price-row"><span class="price">${plan.price}</span><span class="price-note">${t("courses.oneTime")}</span></div>
           <ul>${plan.items.map((item) => `<li>${item}</li>`).join("")}</ul>
@@ -1920,8 +1964,8 @@ function openOrder(orderId) {
   const order = localizedOrder(baseOrder);
 
   const modalLevel = document.getElementById("modalLevel");
-  modalLevel.className = `order-level-pill chip-${order.level.toLowerCase()}`;
-  modalLevel.textContent = levelLabel(order.level);
+  modalLevel.className = "order-level-pill rank-identity";
+  modalLevel.innerHTML = `${rankMedalMarkup(order.level, "tiny")}<strong>${levelLabel(order.level)}</strong>`;
   document.getElementById("orderModalTitle").textContent = order.title;
   document.getElementById("modalContent").textContent = order.content;
   document.getElementById("modalPay").textContent = order.pay;
@@ -2054,8 +2098,11 @@ function showAccount(profile) {
   const hasLevel = ["A", "B", "C"].includes(profile.level);
   const accountLevelLabel = hasLevel ? levelLabel(profile.level) : t("levels.pending");
   const badge = document.getElementById("savedBadge");
-  badge.textContent = hasLevel ? profile.level : "?";
-  badge.className = `level-badge ${hasLevel ? `level-${profile.level.toLowerCase()}` : "level-unverified"}`;
+  badge.className = hasLevel ? `rank-medal rank-${profile.level.toLowerCase()} rank-medal-large` : "rank-medal rank-pending rank-medal-large";
+  badge.innerHTML = hasLevel
+    ? `<span class="rank-letter">${profile.level}</span><span class="rank-stars" aria-hidden="true">${"◆ ".repeat(PROGRAM_CONFIG[profile.level].stars).trim()}</span>`
+    : `<span class="rank-letter">?</span><span class="rank-stars" aria-hidden="true">PENDING</span>`;
+  badge.setAttribute("aria-label", accountLevelLabel);
   document.getElementById("savedLevelLabel").textContent = accountLevelLabel;
   document.getElementById("savedName").textContent = profile.username;
   document.getElementById("savedMeta").textContent = profile.email;
@@ -2357,8 +2404,10 @@ function renderAdminUsers(users) {
 
     const current = document.createElement("td");
     const chip = document.createElement("span");
-    chip.className = user.level ? `level-chip chip-${user.level.toLowerCase()}` : "level-chip chip-pending";
-    chip.textContent = user.level ? levelLabel(user.level) : t("account.pendingShort");
+    chip.className = "admin-rank-identity";
+    chip.innerHTML = user.level
+      ? `${rankMedalMarkup(user.level, "tiny")}<strong>${levelLabel(user.level)}</strong>`
+      : `<span class="rank-medal rank-pending rank-medal-tiny"><span class="rank-letter">?</span></span><strong>${t("account.pendingShort")}</strong>`;
     current.append(chip);
 
     const action = document.createElement("td");
@@ -2578,6 +2627,13 @@ function setupEvents() {
     const paymentButton = event.target.closest("[data-payment-level]");
     if (paymentButton) openPayment(paymentButton.dataset.paymentLevel);
 
+    const moreOrdersButton = event.target.closest("#moreOrdersButton");
+    if (moreOrdersButton) {
+      showAllOrders = !showAllOrders;
+      renderOrders();
+      if (!showAllOrders) document.getElementById("orders")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
     const copyButton = event.target.closest("[data-copy-address]");
     if (copyButton) {
       const option = cryptoPaymentOptions.find((item) => item.id === copyButton.dataset.copyAddress);
@@ -2647,15 +2703,36 @@ function initLinks() {
   document.getElementById("supportWhatsapp").href = "#support";
 }
 
+function observeRevealables(root = document) {
+  if (!revealObserver) return;
+  root.querySelectorAll?.(".section-heading, .path-intro, .signal-item, .order-card, .profile-card, .price-card, .review-card").forEach((node) => {
+    if (node.dataset.revealObserved === "true") return;
+    node.dataset.revealObserved = "true";
+    node.classList.add("reveal-ready");
+    revealObserver.observe(node);
+  });
+}
+
+function initMotionSystem() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
+  revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -8%", threshold: 0.08 }
+  );
+  observeRevealables(document);
+}
+
 function initLanguage() {
   const languageLabels = {
     en: "English",
-    zh: "中文",
-    es: "Español",
-    fr: "Français",
-    pt: "Português",
     ar: "العربية",
-    id: "Indonesia"
+    zh: "简体中文"
   };
   document.querySelectorAll("#languageSelect option").forEach((option) => {
     option.textContent = languageLabels[option.value] || option.textContent;
@@ -2669,11 +2746,8 @@ function languageFromBrowser() {
   const candidates = [navigator.language, ...(navigator.languages || [])].filter(Boolean);
   for (const candidate of candidates) {
     const code = candidate.toLowerCase();
-    if (code.startsWith("id")) return "id";
     if (code.startsWith("ar")) return "ar";
-    if (code.startsWith("es")) return "es";
-    if (code.startsWith("fr")) return "fr";
-    if (code.startsWith("ja")) return "ja";
+    if (code.startsWith("zh")) return "zh";
   }
   return "en";
 }
@@ -2690,11 +2764,8 @@ function setLanguage(language, { persist = false, manual = false } = {}) {
 function initLanguageSystem() {
   const languageLabels = {
     en: "English",
-    id: "Indonesia",
     ar: "العربية",
-    es: "Español",
-    fr: "Français",
-    ja: "日本語"
+    zh: "简体中文"
   };
   document.querySelectorAll("#languageSelect option").forEach((option) => {
     option.textContent = languageLabels[option.value] || option.textContent;
@@ -2764,4 +2835,5 @@ setupCarousel();
 setupProfile();
 initLinks();
 applyTranslations();
+initMotionSystem();
 applyRegionalLanguagePreference();

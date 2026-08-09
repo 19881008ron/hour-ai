@@ -1,9 +1,9 @@
 const { readJson, sendJson } = require("../_lib/http");
 
 const courses = {
-  C: { name: "C-Level AI Editor", amount: 199 },
-  B: { name: "B-Level AI Editor", amount: 599 },
-  A: { name: "A-Level AI Editor", amount: 999 }
+  C: { name: "C-Level AI Editor", amount: 3500 },
+  B: { name: "B-Level AI Editor", amount: 6500 },
+  A: { name: "A-Level AI Editor", amount: 9500 }
 };
 
 function paypalBaseUrl() {
