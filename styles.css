@@ -7668,3 +7668,78 @@ body.welcome-open {
   }
 }
 
+/* Authoritative shared wing frame. Keep this block last. */
+.rank-medal {
+  --medal-core-inset: 26%;
+  overflow: visible !important;
+  background:
+    radial-gradient(circle, transparent 0 46%, rgba(71, 197, 213, .14) 47% 48%, transparent 49% 64%, rgba(71, 197, 213, .09) 65% 66%, transparent 67%) !important;
+  filter: drop-shadow(0 5px 7px rgba(2, 8, 13, .26)) !important;
+}
+
+.rank-medal::before {
+  inset: 21% !important;
+  border-radius: 50% !important;
+  background: #503208 !important;
+  box-shadow: inset 0 0 0 2px rgba(237, 202, 107, .48) !important;
+}
+
+.rank-medal::after {
+  inset: 27% !important;
+  border: 1px solid rgba(231, 199, 108, .64) !important;
+  background:
+    radial-gradient(circle at 38% 28%, rgba(255, 255, 255, .11), transparent 25%),
+    linear-gradient(145deg, color-mix(in srgb, var(--seal-face) 88%, #ffffff), var(--seal-face) 55%, var(--seal-face-deep)) !important;
+  box-shadow:
+    inset 0 0 13px rgba(0, 0, 0, .42),
+    0 0 0 2px rgba(4, 15, 22, .56) !important;
+}
+
+.rank-medal-laurel {
+  position: absolute !important;
+  inset: -1% -12% -8% !important;
+  z-index: 3 !important;
+  display: block !important;
+  background: url("assets/rank-medal-wing-frame.svg") center / contain no-repeat !important;
+  filter: none !important;
+  pointer-events: none !important;
+}
+
+.rank-medal-laurel::before,
+.rank-medal-laurel::after {
+  content: none !important;
+  display: none !important;
+}
+
+.rank-medal .rank-letter {
+  inset: var(--medal-core-inset) !important;
+  z-index: 4 !important;
+  overflow: visible !important;
+  color: #f4ce5f !important;
+  -webkit-text-fill-color: #f4ce5f !important;
+  text-shadow: 0 2px 0 rgba(47, 26, 0, .82), 0 0 7px rgba(238, 195, 79, .22) !important;
+}
+
+.rank-medal-tiny,
+.board-legend i.rank-medal {
+  --medal-core-inset: 27%;
+  --medal-letter: 10px;
+}
+
+.rank-medal-small { --medal-letter: 18px; }
+.rank-medal-medium { --medal-letter: 25px; }
+.rank-medal-large { --medal-letter: 31px; }
+
+.profile-card:hover .rank-medal,
+.price-card:hover .rank-medal,
+.order-card:hover .rank-medal,
+.review-card:hover .rank-medal {
+  transform: translateY(-3px) scale(1.035) !important;
+  filter: drop-shadow(0 8px 10px rgba(2, 8, 13, .3)) !important;
+}
+
+@media (max-width: 760px) {
+  .rank-medal-medium { --medal-letter: 22px; }
+  .rank-medal-large { --medal-letter: 27px; }
+}
+
