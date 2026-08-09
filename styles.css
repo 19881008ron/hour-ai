@@ -7712,12 +7712,20 @@ body.welcome-open {
 }
 
 .rank-medal .rank-letter {
-  inset: var(--medal-core-inset) !important;
+  inset: auto !important;
+  top: 50% !important;
+  left: 50% !important;
   z-index: 4 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 48% !important;
+  height: 48% !important;
   overflow: visible !important;
   color: #f4ce5f !important;
   -webkit-text-fill-color: #f4ce5f !important;
   text-shadow: 0 2px 0 rgba(47, 26, 0, .82), 0 0 7px rgba(238, 195, 79, .22) !important;
+  transform: translate(-50%, -58%) !important;
 }
 
 .rank-medal-tiny,
