@@ -1164,6 +1164,70 @@ Object.keys(supportTranslationPatch).forEach((language) => {
   translations[language] = deepMerge(translations[language] || {}, supportTranslationPatch[language]);
 });
 
+const directChatTranslationPatch = {
+  en: {
+    support: {
+      fab: "Chat",
+      modalTitle: "Hour AI Support",
+      modalIntro: "Online now",
+      placeholder: "Type a message",
+      attach: "Attach image",
+      send: "Send",
+      replyPlaceholder: "Type a reply",
+      noMessages: "Hello. How can we help you today?",
+      you: "You",
+      advisorName: "Hour AI Support",
+      visitor: "Website visitor",
+      registeredUser: "Registered user",
+      liveChat: "Online chat",
+      privacy: "Do not share passwords, verification codes, or payment details in chat.",
+      unavailable: "Online chat is temporarily unavailable. Please try again shortly."
+    }
+  },
+  ar: {
+    support: {
+      fab: "المحادثة",
+      modalTitle: "دعم Hour AI",
+      modalIntro: "متصل الآن",
+      placeholder: "اكتب رسالة",
+      attach: "إرفاق صورة",
+      send: "إرسال",
+      replyPlaceholder: "اكتب ردًا",
+      noMessages: "مرحبًا، كيف يمكننا مساعدتك اليوم؟",
+      you: "أنت",
+      advisorName: "دعم Hour AI",
+      visitor: "زائر الموقع",
+      registeredUser: "مستخدم مسجل",
+      liveChat: "محادثة مباشرة",
+      privacy: "لا ترسل كلمات المرور أو رموز التحقق أو بيانات الدفع في المحادثة.",
+      unavailable: "المحادثة غير متاحة مؤقتًا. يرجى المحاولة بعد قليل."
+    }
+  },
+  zh: {
+    support: {
+      fab: "在线咨询",
+      modalTitle: "Hour AI 在线客服",
+      modalIntro: "当前在线",
+      placeholder: "输入消息",
+      attach: "发送图片",
+      send: "发送",
+      replyPlaceholder: "输入回复",
+      noMessages: "您好，请直接发送您的问题，我们的客服将在这里回复。",
+      you: "我",
+      advisorName: "Hour AI 客服",
+      visitor: "网站访客",
+      registeredUser: "注册用户",
+      liveChat: "在线咨询",
+      privacy: "请勿在对话中发送密码、验证码或支付信息。",
+      unavailable: "在线客服暂时无法连接，请稍后重试。"
+    }
+  }
+};
+
+Object.keys(directChatTranslationPatch).forEach((language) => {
+  translations[language] = deepMerge(translations[language] || {}, directChatTranslationPatch[language]);
+});
+
 const cryptoPaymentTranslationPatch = {
   en: {
     payment: {
@@ -1752,11 +1816,9 @@ function levelLabel(level) {
 
 function rankMedalMarkup(level, size = "medium") {
   const normalized = ["A", "B", "C"].includes(level) ? level : "C";
-  const stars = "◆ ".repeat(PROGRAM_CONFIG[normalized].stars).trim();
   return `
     <span class="rank-medal rank-${normalized.toLowerCase()} rank-medal-${size}" role="img" aria-label="${levelLabel(normalized)} medal">
       <span class="rank-letter">${normalized}</span>
-      <span class="rank-stars" aria-hidden="true">${stars}</span>
     </span>
   `;
 }
@@ -2100,8 +2162,8 @@ function showAccount(profile) {
   const badge = document.getElementById("savedBadge");
   badge.className = hasLevel ? `rank-medal rank-${profile.level.toLowerCase()} rank-medal-large` : "rank-medal rank-pending rank-medal-large";
   badge.innerHTML = hasLevel
-    ? `<span class="rank-letter">${profile.level}</span><span class="rank-stars" aria-hidden="true">${"◆ ".repeat(PROGRAM_CONFIG[profile.level].stars).trim()}</span>`
-    : `<span class="rank-letter">?</span><span class="rank-stars" aria-hidden="true">PENDING</span>`;
+    ? `<span class="rank-letter">${profile.level}</span>`
+    : `<span class="rank-letter">?</span>`;
   badge.setAttribute("aria-label", accountLevelLabel);
   document.getElementById("savedLevelLabel").textContent = accountLevelLabel;
   document.getElementById("savedName").textContent = profile.username;
@@ -2149,28 +2211,6 @@ function isSupportAgentProfile(profile = activeProfile) {
   return ["admin", "agent"].includes(profile?.role);
 }
 
-function selectedSupportTopic() {
-  const active = document.querySelector("[data-support-topic].is-active");
-  return active?.dataset.supportTopic || active?.textContent.trim() || t("support.topicCourse");
-}
-
-function supportGuestIdentity() {
-  const nameInput = document.getElementById("supportGuestName");
-  const emailInput = document.getElementById("supportGuestEmail");
-  const guestName = nameInput?.value.trim() || localStorage.getItem("hourAiGuestName") || "";
-  const guestEmail = emailInput?.value.trim() || localStorage.getItem("hourAiGuestEmail") || "";
-  if (nameInput && guestName) nameInput.value = guestName;
-  if (emailInput && guestEmail) emailInput.value = guestEmail;
-  return { guestName, guestEmail };
-}
-
-function updateSupportGuestCard() {
-  const card = document.getElementById("supportGuestCard");
-  if (!card) return;
-  card.hidden = Boolean(activeProfile);
-  if (!activeProfile) supportGuestIdentity();
-}
-
 function supportMessageElement(message) {
   const wrapper = document.createElement("article");
   const mine = message.sender_id === activeProfile?.user_id || (!activeProfile && message.sender_role === "guest");
@@ -2178,7 +2218,12 @@ function supportMessageElement(message) {
 
   const meta = document.createElement("span");
   const date = new Date(message.created_at);
-  meta.textContent = `${message.sender_name || message.sender_role} · ${Number.isNaN(date.getTime()) ? "" : date.toLocaleString()}`;
+  const senderName = mine
+    ? t("support.you")
+    : ["admin", "agent"].includes(message.sender_role)
+      ? t("support.advisorName")
+      : message.sender_name || t("support.visitor");
+  meta.textContent = `${senderName} · ${Number.isNaN(date.getTime()) ? "" : date.toLocaleString()}`;
   wrapper.append(meta);
 
   if (message.body) {
@@ -2208,10 +2253,14 @@ function renderSupportThread(targetId, messages = []) {
   const target = document.getElementById(targetId);
   target.replaceChildren();
   if (!messages.length) {
-    const empty = document.createElement("div");
-    empty.className = "support-empty";
-    empty.textContent = t("support.noMessages");
-    target.append(empty);
+    const welcome = document.createElement("article");
+    welcome.className = "support-message is-theirs support-welcome-message";
+    const sender = document.createElement("span");
+    sender.textContent = t("support.advisorName");
+    const body = document.createElement("p");
+    body.textContent = t("support.noMessages");
+    welcome.append(sender, body);
+    target.append(welcome);
     return;
   }
   messages.forEach((message) => target.append(supportMessageElement(message)));
@@ -2229,24 +2278,20 @@ async function fileToSupportAttachment(file) {
   });
 }
 
-async function ensureSupportConversation(topic = selectedSupportTopic()) {
-  const guest = activeProfile ? {} : supportGuestIdentity();
-  if (!activeProfile && !guest.guestName) throw new Error(t("support.guestNameRequired"));
-  if (!activeProfile) {
-    localStorage.setItem("hourAiGuestName", guest.guestName);
-    if (guest.guestEmail) localStorage.setItem("hourAiGuestEmail", guest.guestEmail);
-  }
+async function ensureSupportConversation(topic = "Website live chat") {
   const data = await apiRequest("/api/support?resource=conversations", {
     method: "POST",
-    body: JSON.stringify({ topic, ...guest })
+    body: JSON.stringify({ topic })
   });
-  activeSupportConversationId = data.conversation.id;
-  return data.conversation;
+  const conversation = data?.conversation;
+  if (!conversation?.id) throw new Error(t("support.unavailable"));
+  activeSupportConversationId = conversation.id;
+  return conversation;
 }
 
 async function loadExistingSupportConversation() {
   const data = await apiRequest("/api/support?resource=conversations", { method: "GET", headers: {} });
-  const conversation = data.conversations?.[0];
+  const conversation = data?.conversations?.[0];
   if (conversation) {
     activeSupportConversationId = conversation.id;
     return conversation;
@@ -2260,7 +2305,7 @@ async function loadSupportMessages(targetId = "supportThread", conversationId = 
     method: "GET",
     headers: {}
   });
-  renderSupportThread(targetId, data.messages || []);
+  renderSupportThread(targetId, data?.messages || []);
 }
 
 function startSupportPolling() {
@@ -2272,17 +2317,16 @@ function startSupportPolling() {
     if (isSupportAgentProfile() && !document.getElementById("supportAgentPanel").hidden) {
       loadSupportInbox().catch(() => {});
     }
-  }, 12000);
+  }, 5000);
 }
 
 async function openSupportChat(topic) {
   openModal("supportModal");
-  updateSupportGuestCard();
   renderSupportThread("supportThread", []);
   try {
     if (!activeSupportConversationId) {
       const existing = await loadExistingSupportConversation();
-      if (!existing && activeProfile) await ensureSupportConversation(topic || selectedSupportTopic());
+      if (!existing) await ensureSupportConversation(topic || "Website live chat");
     }
     if (activeSupportConversationId) await loadSupportMessages();
     startSupportPolling();
@@ -2313,7 +2357,8 @@ async function sendSupportMessage({ conversationId, textareaId, inputId, threadI
     });
     textarea.value = "";
     if (input) input.value = "";
-    document.getElementById("supportFilePreview").textContent = "";
+    const preview = document.getElementById(threadId === "supportAgentThread" ? "supportAgentFilePreview" : "supportFilePreview");
+    if (preview) preview.textContent = "";
     await loadSupportMessages(threadId || "supportThread", conversation.id);
     if (afterSend) await afterSend();
     showToast(t("support.sent"));
@@ -2345,16 +2390,15 @@ function renderSupportInbox(conversations = []) {
     const top = document.createElement("span");
     top.className = "support-inbox-top";
     const name = document.createElement("strong");
-    name.textContent = customer.username || customer.email || "Customer";
+    name.textContent = customer.username || customer.email || t("support.visitor");
     const unread = document.createElement("em");
     unread.textContent = conversation.agent_unread ? `${conversation.agent_unread}` : "";
     top.append(name, unread);
 
     const topic = document.createElement("span");
-    topic.textContent = `${isGuest ? "Guest visitor" : "Registered user"} · ${conversation.topic || t("support.topicCourse")}`;
+    topic.textContent = `${isGuest ? t("support.visitor") : t("support.registeredUser")} · ${conversation.topic || t("support.liveChat")}`;
     const latest = document.createElement("small");
     latest.textContent = [customer.email, conversation.latestMessage?.body].filter(Boolean).join(" · ");
-
     button.append(top, topic, latest);
     button.addEventListener("click", () => openAgentConversation(conversation.id));
     inbox.append(button);
@@ -2364,7 +2408,7 @@ function renderSupportInbox(conversations = []) {
 async function loadSupportInbox() {
   if (!isSupportAgentProfile()) return;
   const data = await apiRequest("/api/support?resource=conversations", { method: "GET", headers: {} });
-  renderSupportInbox(data.conversations || []);
+  renderSupportInbox(data?.conversations || []);
 }
 
 async function openAgentConversation(conversationId) {
@@ -2518,6 +2562,10 @@ function setupProfile() {
     window.location.href = "/api/admin/export";
   });
   document.getElementById("refreshSupportInbox").addEventListener("click", loadSupportInbox);
+  document.getElementById("supportAgentAttachment").addEventListener("change", (event) => {
+    const file = event.currentTarget.files?.[0];
+    document.getElementById("supportAgentFilePreview").textContent = file ? file.name : "";
+  });
   document.getElementById("sendSupportAgentReply").addEventListener("click", () => {
     if (!activeAgentConversationId) return;
     sendSupportMessage({
@@ -2527,6 +2575,11 @@ function setupProfile() {
       threadId: "supportAgentThread",
       afterSend: loadSupportInbox
     });
+  });
+  document.getElementById("supportAgentReply").addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" || event.shiftKey || event.isComposing) return;
+    event.preventDefault();
+    document.getElementById("sendSupportAgentReply").click();
   });
   loadAccount();
 }
@@ -2673,17 +2726,17 @@ function setupEvents() {
   document.querySelectorAll("[data-close-payment]").forEach((item) => {
     item.addEventListener("click", () => closeModal("paymentModal"));
   });
-  document.querySelectorAll("[data-support-topic]").forEach((button) => {
-    button.addEventListener("click", () => {
-      document.querySelectorAll("[data-support-topic]").forEach((item) => item.classList.remove("is-active"));
-      button.classList.add("is-active");
-    });
-  });
   document.getElementById("supportAttachment").addEventListener("change", (event) => {
     const file = event.currentTarget.files?.[0];
     document.getElementById("supportFilePreview").textContent = file ? file.name : "";
   });
   document.getElementById("startConsultation").addEventListener("click", async () => {
+    if (!activeSupportConversationId) await openSupportChat();
+    await sendSupportMessage();
+  });
+  document.getElementById("supportMessage").addEventListener("keydown", async (event) => {
+    if (event.key !== "Enter" || event.shiftKey || event.isComposing) return;
+    event.preventDefault();
     if (!activeSupportConversationId) await openSupportChat();
     await sendSupportMessage();
   });

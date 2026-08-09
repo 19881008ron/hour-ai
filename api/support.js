@@ -116,10 +116,10 @@ async function listConversations(auth, guestId) {
   let filter = "";
   if (!agent && auth?.profile) filter = `&user_id=eq.${encodeURIComponent(auth.profile.user_id)}`;
   if (!agent && !auth?.profile) filter = `&guest_id=eq.${encodeURIComponent(guestId)}`;
-  const conversations = await supabaseFetch(
+  const conversations = (await supabaseFetch(
     `/rest/v1/support_conversations?select=*&order=last_message_at.desc${filter}`,
     { method: "GET" }
-  );
+  )) || [];
   const profiles = await loadProfiles(conversations.map((item) => item.user_id).concat(conversations.map((item) => item.assigned_to)));
   const latestMessages = await loadLatestMessages(conversations.map((item) => item.id));
 
@@ -139,26 +139,23 @@ async function listConversations(auth, guestId) {
 async function createConversation(auth, body, req, res) {
   const topic = cleanTopic(body.topic);
   const guestId = auth?.profile ? "" : guestIdFromRequest(req) || crypto.randomUUID();
-  const guestName = cleanName(body.guestName);
+  const guestName = auth?.profile
+    ? ""
+    : cleanName(body.guestName) || `Website visitor ${guestId.slice(0, 6).toUpperCase()}`;
   const guestEmail = cleanEmail(body.guestEmail);
-  if (!auth?.profile && !guestName) {
-    const error = new Error("Please enter your name before starting support chat.");
-    error.status = 400;
-    throw error;
-  }
 
   if (!auth?.profile) setGuestCookie(req, res, guestId);
 
   const identityFilter = auth?.profile
     ? `user_id=eq.${encodeURIComponent(auth.profile.user_id)}`
     : `guest_id=eq.${encodeURIComponent(guestId)}`;
-  const existing = await supabaseFetch(
+  const existing = (await supabaseFetch(
     `/rest/v1/support_conversations?${identityFilter}&status=neq.closed&topic=eq.${encodeURIComponent(topic)}&select=*&order=last_message_at.desc&limit=1`,
     { method: "GET" }
-  );
+  )) || [];
   if (existing[0]) return existing[0];
 
-  const created = await supabaseFetch("/rest/v1/support_conversations", {
+  const created = (await supabaseFetch("/rest/v1/support_conversations", {
     method: "POST",
     headers: { Prefer: "return=representation" },
     body: JSON.stringify({
@@ -170,7 +167,7 @@ async function createConversation(auth, body, req, res) {
       status: "open",
       last_message_at: new Date().toISOString()
     })
-  });
+  })) || [];
   return created[0];
 }
 

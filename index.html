@@ -195,12 +195,11 @@
       </section>
 
       <section class="section orders-section" id="orders">
-        <div class="section-heading heading-row">
+        <div class="section-heading section-heading-single">
           <div>
             <p class="eyebrow" data-i18n="orders.eyebrow">Order marketplace</p>
             <h2 data-i18n="orders.title">Active orders waiting for qualified AI editors</h2>
           </div>
-          <p data-i18n="orders.text">C, B, and A-Level editors can review task scope, commission range, estimated time, and delivery requirements before applying.</p>
         </div>
         <div class="board-toolbar">
           <div class="board-status">
@@ -233,7 +232,7 @@
         </div>
         <div class="profile-layout">
           <article class="profile-card">
-            <div class="rank-medal rank-c rank-medal-large" role="img" aria-label="C-Level medal"><span class="rank-letter">C</span><span class="rank-stars" aria-hidden="true">◆ ◆</span></div>
+            <div class="rank-medal rank-c rank-medal-large" role="img" aria-label="C-Level medal"><span class="rank-letter">C</span></div>
             <div class="level-index">01 / FOUNDATION</div>
             <h3 data-i18n="profile.cTitle">C-Level AI Editor</h3>
             <p data-i18n="profile.cText">Beginner workflow, template editing, captions, and delivery checklists.</p>
@@ -241,7 +240,7 @@
             <div class="level-meter level-meter-c" aria-label="C-Level capability"><i></i><i></i><i></i></div>
           </article>
           <article class="profile-card featured-profile">
-            <div class="rank-medal rank-b rank-medal-large" role="img" aria-label="B-Level medal"><span class="rank-letter">B</span><span class="rank-stars" aria-hidden="true">◆ ◆ ◆</span></div>
+            <div class="rank-medal rank-b rank-medal-large" role="img" aria-label="B-Level medal"><span class="rank-letter">B</span></div>
             <div class="level-index">02 / COMMERCIAL</div>
             <h3 data-i18n="profile.bTitle">B-Level AI Editor</h3>
             <p data-i18n="profile.bText">Commercial short videos, better pacing, revisions, and stronger quality standards.</p>
@@ -249,7 +248,7 @@
             <div class="level-meter level-meter-b" aria-label="B-Level capability"><i></i><i></i><i></i></div>
           </article>
           <article class="profile-card">
-            <div class="rank-medal rank-a rank-medal-large" role="img" aria-label="A-Level medal"><span class="rank-letter">A</span><span class="rank-stars" aria-hidden="true">◆ ◆ ◆ ◆</span></div>
+            <div class="rank-medal rank-a rank-medal-large" role="img" aria-label="A-Level medal"><span class="rank-letter">A</span></div>
             <div class="level-index">03 / ADVANCED</div>
             <h3 data-i18n="profile.aTitle">A-Level AI Editor</h3>
             <p data-i18n="profile.aText">Advanced projects, team review, project management, and agent eligibility.</p>
@@ -260,12 +259,11 @@
       </section>
 
       <section class="section courses-section" id="courses">
-        <div class="section-heading heading-row">
+        <div class="section-heading section-heading-single">
           <div>
             <p class="eyebrow" data-i18n="courses.eyebrow">Training programs</p>
             <h2 data-i18n="courses.title">Choose the level that matches your goal.</h2>
           </div>
-          <p data-i18n="courses.text">Compare the training levels, qualification goals, and expected task standards before choosing your path.</p>
         </div>
         <div class="pricing-grid" id="pricingGrid"></div>
       </section>
@@ -433,7 +431,7 @@
 
         <div class="account-dashboard" id="accountDashboard" hidden>
           <div class="saved-profile">
-            <div class="rank-medal rank-pending rank-medal-large" id="savedBadge" role="img" aria-label="Qualification pending"><span class="rank-letter">?</span><span class="rank-stars" aria-hidden="true">PENDING</span></div>
+            <div class="rank-medal rank-pending rank-medal-large" id="savedBadge" role="img" aria-label="Qualification pending"><span class="rank-letter">?</span></div>
             <div>
               <span class="saved-label" id="savedLevelLabel" data-i18n="account.pending">Qualification pending</span>
               <strong id="savedName"></strong>
@@ -493,6 +491,7 @@
                 <div class="support-thread" id="supportAgentThread" hidden></div>
                 <div class="support-composer support-agent-composer" id="supportAgentComposer" hidden>
                   <textarea id="supportAgentReply" rows="3" maxlength="2000" data-i18n-placeholder="support.replyPlaceholder" placeholder="Write a reply..."></textarea>
+                  <div class="support-file-preview" id="supportAgentFilePreview"></div>
                   <label class="support-file-button">
                     <input id="supportAgentAttachment" type="file" accept="image/png,image/jpeg,image/webp,image/gif" />
                     <span data-i18n="support.attach">Attach image</span>
@@ -517,45 +516,32 @@
     <div class="modal" id="supportModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="supportModalTitle">
       <div class="modal-backdrop" data-close-support></div>
       <div class="modal-panel support-modal-panel" tabindex="-1">
-        <button class="icon-button" type="button" data-close-support aria-label="Close" data-i18n-aria-label="ui.close">&times;</button>
-        <div class="support-modal-status"><span class="status-dot" aria-hidden="true"></span> <span data-i18n="support.eyebrow">Advisor channel online</span></div>
-        <h2 id="supportModalTitle" data-i18n="support.modalTitle">How can we help?</h2>
-        <p class="support-modal-intro" data-i18n="support.modalIntro">Select a topic and continue the conversation with Hour AI support. You can send text and images here.</p>
-        <div class="support-topics" role="group" aria-label="Consultation topic">
-          <button type="button" class="support-topic is-active" data-support-topic="Course selection" data-i18n="support.topicCourse">Course selection</button>
-          <button type="button" class="support-topic" data-support-topic="Skill test and qualification" data-i18n="support.topicTest">Skill test</button>
-          <button type="button" class="support-topic" data-support-topic="Task orders and requirements" data-i18n="support.topicOrders">Task orders</button>
-          <button type="button" class="support-topic" data-support-topic="Account support" data-i18n="support.topicAccount">Account support</button>
-        </div>
-        <div class="support-guest-card" id="supportGuestCard">
-          <div>
-            <strong data-i18n="support.guestTitle">Tell us who you are</strong>
-            <span data-i18n="support.guestText">Temporary visitors can chat before creating an account.</span>
+        <header class="support-chat-header">
+          <div class="support-chat-identity">
+            <span class="support-avatar" aria-hidden="true">HA</span>
+            <span class="support-chat-name">
+              <strong id="supportModalTitle" data-i18n="support.modalTitle">Hour AI Support</strong>
+              <small><span class="status-dot" aria-hidden="true"></span><span data-i18n="support.modalIntro">Online now</span></small>
+            </span>
           </div>
-          <div class="support-guest-grid">
-            <label>
-              <span data-i18n="support.guestName">Name</span>
-              <input id="supportGuestName" type="text" maxlength="80" autocomplete="name" data-i18n-placeholder="support.guestNamePlaceholder" placeholder="Your name" />
-            </label>
-            <label>
-              <span data-i18n="support.guestEmail">Email or contact</span>
-              <input id="supportGuestEmail" type="text" maxlength="120" autocomplete="email" data-i18n-placeholder="support.guestEmailPlaceholder" placeholder="Email or contact method" />
-            </label>
-          </div>
-        </div>
+          <button class="icon-button support-chat-close" type="button" data-close-support aria-label="Close" data-i18n-aria-label="ui.close">&times;</button>
+        </header>
         <div class="support-chat-box">
           <div class="support-thread" id="supportThread" aria-live="polite"></div>
           <div class="support-composer-panel">
-            <label class="support-message-label" for="supportMessage" data-i18n="support.question">Your question</label>
-            <textarea id="supportMessage" rows="2" maxlength="800" placeholder="Write your question here..." data-i18n-placeholder="support.placeholder"></textarea>
-            <div class="support-composer-actions">
-              <label class="support-file-button">
-                <input id="supportAttachment" type="file" accept="image/png,image/jpeg,image/webp,image/gif" />
-                <span data-i18n="support.attach">Attach image</span>
-              </label>
-              <button class="button button-primary" id="startConsultation" type="button" data-i18n="support.send">Send</button>
-            </div>
             <div class="support-file-preview" id="supportFilePreview"></div>
+            <div class="support-composer-actions">
+              <label class="support-file-button support-icon-control" title="Attach image">
+                <input id="supportAttachment" type="file" accept="image/png,image/jpeg,image/webp,image/gif" />
+                <span class="support-attach-icon" aria-hidden="true"></span>
+                <span class="sr-only" data-i18n="support.attach">Attach image</span>
+              </label>
+              <textarea id="supportMessage" rows="1" maxlength="800" placeholder="Type a message" data-i18n-placeholder="support.placeholder"></textarea>
+              <button class="support-send-button button-primary" id="startConsultation" type="button" data-i18n-aria-label="support.send" aria-label="Send">
+                <span class="support-send-icon" aria-hidden="true"></span>
+                <span class="sr-only" data-i18n="support.send">Send</span>
+              </button>
+            </div>
           </div>
         </div>
         <p class="support-privacy" data-i18n="support.privacy">Do not include passwords, verification codes, payment card details, or other sensitive information.</p>
