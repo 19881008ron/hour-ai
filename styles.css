@@ -7,8 +7,8 @@
   --line-dark: #303742;
   --paper: #ffffff;
   --canvas: #f3f5f7;
-  --panel: #0a0d12;
-  --panel-soft: #11161d;
+  --panel: #111820;
+  --panel-soft: #18222d;
   --cyan: #00b8d4;
   --cyan-soft: #dff8fc;
   --green: #2bd576;
@@ -7338,6 +7338,333 @@ body.welcome-open {
   .commission-highlight strong {
     min-height: 64px !important;
     font-size: clamp(28px, 8.6vw, 34px) !important;
+  }
+}
+
+/* 2026-08-10 authoritative theme and medal system.
+   This is the only layer that defines final medal geometry and interaction contrast. */
+:root {
+  --ha-dark: #111b27;
+  --ha-panel: #182430;
+  --ha-panel-raised: #1d2a37;
+}
+
+/* Header controls share one clear, neutral treatment. */
+#languageSelect,
+.site-header .header-login,
+.site-header .header-register {
+  color: #07131f !important;
+  -webkit-text-fill-color: #07131f !important;
+  background: #ffffff !important;
+  border-color: #cbd8e4 !important;
+  box-shadow: 0 10px 24px rgba(7, 19, 31, .08) !important;
+}
+
+#languageSelect:hover,
+#languageSelect:focus-visible,
+.site-header .header-login:hover,
+.site-header .header-login:focus-visible,
+.site-header .header-register:hover,
+.site-header .header-register:focus-visible {
+  color: #07131f !important;
+  -webkit-text-fill-color: #07131f !important;
+  background: #edf9fb !important;
+  border-color: #72dbe0 !important;
+  box-shadow: 0 12px 28px rgba(7, 19, 31, .11) !important;
+  transform: translateY(-2px) !important;
+}
+
+#languageSelect option {
+  color: #07131f !important;
+  background: #ffffff !important;
+}
+
+/* Slightly lighter dark surfaces while preserving the Hour AI contrast system. */
+.path-section,
+.site-footer,
+.board-toolbar,
+.modal-panel-dark,
+.admin-shell,
+.support-agent-shell {
+  background-color: var(--panel) !important;
+}
+
+.profile-card {
+  color: #ffffff !important;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--level-color) 12%, transparent), transparent 48%),
+    var(--ha-panel-raised) !important;
+  border-color: color-mix(in srgb, var(--level-color) 36%, #465567) !important;
+}
+
+/* Deep cards never become white on selection/hover. */
+.profile-card:hover,
+.profile-card:focus-within,
+.profile-card.featured-profile:hover {
+  color: #ffffff !important;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--level-color) 20%, transparent), transparent 52%),
+    #22303d !important;
+  border-color: color-mix(in srgb, var(--level-color) 74%, #ffffff) !important;
+  box-shadow: 0 28px 66px rgba(0, 0, 0, .28), inset 0 1px 0 rgba(255, 255, 255, .08) !important;
+}
+
+.profile-card:hover h3,
+.profile-card:focus-within h3,
+.profile-card:hover .level-index,
+.profile-card:focus-within .level-index {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.profile-card:hover > p,
+.profile-card:focus-within > p {
+  color: #c5d0dc !important;
+  -webkit-text-fill-color: #c5d0dc !important;
+}
+
+.account-tab.is-active,
+.support-topic.is-active,
+.support-inbox-item.is-active {
+  color: #07131f !important;
+  -webkit-text-fill-color: #07131f !important;
+  background: #dff6f8 !important;
+  border-color: #77dce1 !important;
+}
+
+/* AI-tech honor medal: gold orbital ring, energy core, wing blades, and stable letter node. */
+.rank-medal {
+  --medal-size: 78px;
+  --medal-core-inset: 22%;
+  --medal-letter: 30px;
+  --seal-face: #056b55;
+  --seal-face-deep: #02372d;
+  --rank-glow: rgba(35, 215, 175, .34);
+  position: relative !important;
+  isolation: isolate !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  flex: 0 0 var(--medal-size) !important;
+  width: var(--medal-size) !important;
+  height: var(--medal-size) !important;
+  min-width: var(--medal-size) !important;
+  min-height: var(--medal-size) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background:
+    radial-gradient(circle, var(--rank-glow) 0 20%, transparent 66%),
+    repeating-conic-gradient(from -4deg, transparent 0 10deg, rgba(95, 236, 246, .42) 10deg 11deg, transparent 11deg 20deg) !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  transform: none !important;
+  animation: medal-breathe 3.8s ease-in-out infinite !important;
+  transition: transform 220ms cubic-bezier(.2,.8,.2,1), filter 220ms ease !important;
+}
+
+.rank-medal::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 11% !important;
+  z-index: 2 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background:
+    radial-gradient(circle at 36% 22%, rgba(255,255,255,.92) 0 3%, transparent 7%),
+    repeating-conic-gradient(from 0deg, rgba(255,244,180,.86) 0 1deg, transparent 1deg 15deg),
+    conic-gradient(from 18deg, #7f510d, #e6b943, #fff1a4, #a86a12, #f7d76c, #7f510d) !important;
+  box-shadow:
+    0 10px 25px var(--rank-glow),
+    inset 0 0 0 1px rgba(255,250,205,.8),
+    inset 0 0 0 5px rgba(83,50,5,.22) !important;
+  clip-path: none !important;
+}
+
+.rank-medal::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: var(--medal-core-inset) !important;
+  z-index: 3 !important;
+  border: 1px solid rgba(255, 235, 151, .78) !important;
+  border-radius: 50% !important;
+  background:
+    radial-gradient(circle at 36% 25%, rgba(255,255,255,.28), transparent 25%),
+    linear-gradient(145deg, color-mix(in srgb, var(--seal-face) 84%, #ffffff), var(--seal-face) 52%, var(--seal-face-deep)) !important;
+  box-shadow:
+    inset 0 0 18px rgba(0,0,0,.34),
+    inset 0 1px 0 rgba(255,255,255,.3),
+    0 0 0 2px rgba(8, 24, 34, .52) !important;
+  clip-path: none !important;
+}
+
+.rank-medal-laurel {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  display: block !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(145deg, transparent 0 43%, #6f4ba4 44% 69%, #2a174d 70% 100%) 31% 87% / 22% 25% no-repeat,
+    linear-gradient(215deg, transparent 0 43%, #6f4ba4 44% 69%, #2a174d 70% 100%) 69% 87% / 22% 25% no-repeat !important;
+  pointer-events: none !important;
+  filter: drop-shadow(0 5px 8px rgba(0,0,0,.22)) !important;
+}
+
+.rank-medal-laurel::before,
+.rank-medal-laurel::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 25% !important;
+  width: 34% !important;
+  height: 47% !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(135deg, #7d4e0b 0 10%, #ffd875 26%, #a56a12 45%, #fff0a0 68%, #7b4c0a 100%) !important;
+  box-shadow: inset 0 0 0 1px rgba(255,239,160,.42) !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.rank-medal-laurel::before {
+  left: -1% !important;
+  clip-path: polygon(100% 8%, 54% 0, 68% 22%, 17% 11%, 42% 39%, 0 42%, 43% 58%, 12% 82%, 64% 73%, 53% 100%, 100% 74%) !important;
+  transform: rotate(-5deg) !important;
+}
+
+.rank-medal-laurel::after {
+  right: -1% !important;
+  clip-path: polygon(0 8%, 46% 0, 32% 22%, 83% 11%, 58% 39%, 100% 42%, 57% 58%, 88% 82%, 36% 73%, 47% 100%, 0 74%) !important;
+  transform: rotate(5deg) !important;
+}
+
+.rank-medal .rank-letter {
+  position: absolute !important;
+  inset: var(--medal-core-inset) !important;
+  z-index: 4 !important;
+  display: grid !important;
+  place-items: center !important;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  color: #ffe47c !important;
+  -webkit-text-fill-color: #ffe47c !important;
+  background: none !important;
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-size: var(--medal-letter) !important;
+  font-weight: 950 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  text-indent: 0 !important;
+  text-shadow: 0 2px 0 rgba(60,35,0,.82), 0 0 12px rgba(255,226,116,.42) !important;
+  transform: none !important;
+}
+
+.rank-medal .rank-letter::before,
+.rank-medal .rank-letter::after {
+  content: none !important;
+  display: none !important;
+}
+
+.rank-medal.rank-b {
+  --seal-face: #3e32b8;
+  --seal-face-deep: #160b50;
+  --rank-glow: rgba(119, 100, 255, .38);
+}
+
+.rank-medal.rank-a {
+  --seal-face: #8a271c;
+  --seal-face-deep: #320807;
+  --rank-glow: rgba(237, 172, 50, .4);
+}
+
+.rank-medal.rank-pending {
+  --seal-face: #5c6f82;
+  --seal-face-deep: #24313e;
+  --rank-glow: rgba(110, 138, 163, .3);
+}
+
+.rank-medal-tiny,
+.board-legend i.rank-medal {
+  --medal-size: 28px;
+  --medal-core-inset: 22%;
+  --medal-letter: 11px;
+}
+
+.rank-medal-tiny .rank-medal-laurel,
+.board-legend .rank-medal-laurel {
+  display: none !important;
+}
+
+.rank-medal-small {
+  --medal-size: 54px;
+  --medal-core-inset: 22%;
+  --medal-letter: 20px;
+}
+
+.rank-medal-medium {
+  --medal-size: 76px;
+  --medal-core-inset: 22%;
+  --medal-letter: 29px;
+}
+
+.rank-medal-large {
+  --medal-size: 94px;
+  --medal-core-inset: 22%;
+  --medal-letter: 37px;
+}
+
+.profile-card:hover .rank-medal,
+.price-card:hover .rank-medal,
+.order-card:hover .rank-medal,
+.review-card:hover .rank-medal {
+  transform: translateY(-4px) scale(1.045) !important;
+  filter: saturate(1.08) brightness(1.05) !important;
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    grid-template-columns: minmax(170px, 1fr) auto !important;
+  }
+
+  .profile-card:hover,
+  .profile-card:focus-within {
+    transform: translateY(-5px) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  #languageSelect,
+  .site-header .header-login,
+  .site-header .header-register {
+    min-width: 0 !important;
+    min-height: 44px !important;
+    padding-inline: 12px !important;
+    font-size: 14px !important;
+  }
+
+  .rank-medal-medium {
+    --medal-size: 64px;
+    --medal-letter: 25px;
+  }
+
+  .rank-medal-large {
+    --medal-size: 78px;
+    --medal-letter: 31px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rank-medal {
+    animation: none !important;
   }
 }
 
