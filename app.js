@@ -1228,31 +1228,6 @@ Object.keys(directChatTranslationPatch).forEach((language) => {
   translations[language] = deepMerge(translations[language] || {}, directChatTranslationPatch[language]);
 });
 
-const commissionTranslationPatch = {
-  en: {
-    profile: {
-      commissionPrefix: "Per-order",
-      commissionWord: "Commission"
-    }
-  },
-  ar: {
-    profile: {
-      commissionPrefix: "\u0644\u0643\u0644 \u0637\u0644\u0628",
-      commissionWord: "\u0627\u0644\u0639\u0645\u0648\u0644\u0629"
-    }
-  },
-  zh: {
-    profile: {
-      commissionPrefix: "\u6bcf\u7b14\u8ba2\u5355",
-      commissionWord: "\u4f63\u91d1"
-    }
-  }
-};
-
-Object.keys(commissionTranslationPatch).forEach((language) => {
-  translations[language] = deepMerge(translations[language] || {}, commissionTranslationPatch[language]);
-});
-
 const cryptoPaymentTranslationPatch = {
   en: {
     payment: {
@@ -1348,6 +1323,16 @@ const cryptoPaymentTranslationPatch = {
 
 Object.keys(cryptoPaymentTranslationPatch).forEach((language) => {
   translations[language] = deepMerge(translations[language] || {}, cryptoPaymentTranslationPatch[language]);
+});
+
+const memberStoreTranslationPatch = {
+  en: { nav: { store: "Member Store" } },
+  zh: { nav: { store: "会员商城入口" } },
+  ar: { nav: { store: "متجر الأعضاء" } }
+};
+
+Object.keys(memberStoreTranslationPatch).forEach((language) => {
+  translations[language] = deepMerge(translations[language] || {}, memberStoreTranslationPatch[language]);
 });
 
 Object.keys(translations).forEach((language) => {
@@ -1843,7 +1828,6 @@ function rankMedalMarkup(level, size = "medium") {
   const normalized = ["A", "B", "C"].includes(level) ? level : "C";
   return `
     <span class="rank-medal rank-${normalized.toLowerCase()} rank-medal-${size}" role="img" aria-label="${levelLabel(normalized)} medal">
-      <span class="rank-medal-laurel" aria-hidden="true"></span>
       <span class="rank-letter">${normalized}</span>
     </span>
   `;
@@ -2082,29 +2066,18 @@ function closeModal(id) {
 }
 
 async function apiRequest(path, options = {}) {
-  let response;
-  try {
-    response = await fetch(path, {
-      credentials: "same-origin",
-      ...options,
-      headers: {
-        "Content-Type": "application/json",
-        ...(options.headers || {})
-      }
-    });
-  } catch {
-    const error = new Error(path.startsWith("/api/support")
-      ? t("support.unavailable")
-      : "The service is temporarily unavailable. Please try again shortly.");
-    error.status = 503;
-    throw error;
-  }
+  const response = await fetch(path, {
+    credentials: "same-origin",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...(options.headers || {})
+    }
+  });
   const contentType = response.headers.get("content-type") || "";
   const data = contentType.includes("application/json") ? await response.json() : null;
   if (!response.ok) {
-    const error = new Error(data?.error || (path.startsWith("/api/support")
-      ? t("support.unavailable")
-      : "The account service could not complete this request."));
+    const error = new Error(data?.error || "The account service could not complete this request.");
     error.status = response.status;
     throw error;
   }
@@ -2197,12 +2170,10 @@ function showAccount(profile) {
   const hasLevel = ["A", "B", "C"].includes(profile.level);
   const accountLevelLabel = hasLevel ? levelLabel(profile.level) : t("levels.pending");
   const badge = document.getElementById("savedBadge");
-  const badgeLevel = hasLevel ? profile.level : "?";
   badge.className = hasLevel ? `rank-medal rank-${profile.level.toLowerCase()} rank-medal-large` : "rank-medal rank-pending rank-medal-large";
-  badge.innerHTML = `
-    <span class="rank-medal-laurel" aria-hidden="true"></span>
-    <span class="rank-letter">${badgeLevel}</span>
-  `;
+  badge.innerHTML = hasLevel
+    ? `<span class="rank-letter">${profile.level}</span>`
+    : `<span class="rank-letter">?</span>`;
   badge.setAttribute("aria-label", accountLevelLabel);
   document.getElementById("savedLevelLabel").textContent = accountLevelLabel;
   document.getElementById("savedName").textContent = profile.username;
@@ -2306,33 +2277,6 @@ function renderSupportThread(targetId, messages = []) {
   target.scrollTop = target.scrollHeight;
 }
 
-function localSupportMessage(body, role = "agent") {
-  return {
-    id: `local-${role}-${Date.now()}-${Math.random().toString(16).slice(2)}`,
-    sender_role: role,
-    sender_name: role === "guest" ? t("support.visitor") : t("support.advisorName"),
-    sender_id: role === "guest" ? activeProfile?.user_id || "guest" : "hour-ai-advisor",
-    body,
-    created_at: new Date().toISOString(),
-    attachments: []
-  };
-}
-
-function renderSupportReadyState(topic) {
-  const intro = topic
-    ? `${t("support.noMessages")} ${topic}`
-    : t("support.noMessages");
-  renderSupportThread("supportThread", [localSupportMessage(intro)]);
-}
-
-function appendSupportLocalMessage(targetId, message) {
-  const target = document.getElementById(targetId);
-  const welcome = target.querySelector(".support-welcome-message");
-  if (welcome) welcome.remove();
-  target.append(supportMessageElement(message));
-  target.scrollTop = target.scrollHeight;
-}
-
 async function fileToSupportAttachment(file) {
   if (!file) return null;
   if (file.size > 4 * 1024 * 1024) throw new Error(t("support.attachmentTooLarge"));
@@ -2388,7 +2332,7 @@ function startSupportPolling() {
 
 async function openSupportChat(topic) {
   openModal("supportModal");
-  renderSupportReadyState(topic);
+  renderSupportThread("supportThread", []);
   try {
     if (!activeSupportConversationId) {
       const existing = await loadExistingSupportConversation();
@@ -2396,8 +2340,8 @@ async function openSupportChat(topic) {
     }
     if (activeSupportConversationId) await loadSupportMessages();
     startSupportPolling();
-  } catch {
-    activeSupportConversationId = null;
+  } catch (error) {
+    showToast(error.message);
   }
 }
 
@@ -2429,16 +2373,7 @@ async function sendSupportMessage({ conversationId, textareaId, inputId, threadI
     if (afterSend) await afterSend();
     showToast(t("support.sent"));
   } catch (error) {
-    if ((threadId || "supportThread") === "supportThread") {
-      if (body) appendSupportLocalMessage("supportThread", localSupportMessage(body, "guest"));
-      appendSupportLocalMessage("supportThread", localSupportMessage(t("support.unavailable")));
-      textarea.value = "";
-      if (input) input.value = "";
-      const preview = document.getElementById("supportFilePreview");
-      if (preview) preview.textContent = "";
-    } else {
-      showToast(error.message);
-    }
+    showToast(error.message);
   } finally {
     if (button) button.disabled = false;
   }
@@ -2526,7 +2461,7 @@ function renderAdminUsers(users) {
     chip.className = "admin-rank-identity";
     chip.innerHTML = user.level
       ? `${rankMedalMarkup(user.level, "tiny")}<strong>${levelLabel(user.level)}</strong>`
-      : `<span class="rank-medal rank-pending rank-medal-tiny" aria-hidden="true"><span class="rank-medal-laurel"></span><span class="rank-letter">?</span></span><strong>${t("account.pendingShort")}</strong>`;
+      : `<span class="rank-medal rank-pending rank-medal-tiny"><span class="rank-letter">?</span></span><strong>${t("account.pendingShort")}</strong>`;
     current.append(chip);
 
     const action = document.createElement("td");
@@ -2955,7 +2890,7 @@ function initWelcomeAnimation() {
   closeButton.addEventListener("click", dismissWelcome);
 }
 
-document.getElementById("currentYear").textContent = "2024";
+document.getElementById("currentYear").textContent = new Date().getFullYear();
 initWelcomeAnimation();
 initLanguageSystem();
 setupEvents();

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0d12" />
+    <meta
+      name="description"
+      content="Hour AI member-only marketplace for qualified A, B, and C level members to review supply prices and product details."
+    />
+    <title>Hour AI | Member Store Entrance</title>
+    <link rel="icon" type="image/svg+xml" href="assets/hour-ai-logo.svg" />
+    <link rel="shortcut icon" href="assets/hour-ai-logo.svg" />
+    <link rel="apple-touch-icon" href="assets/hour-ai-logo.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="store-page">
+    <a class="skip-link" href="#storeMain">Skip to content</a>
+
+    <header class="site-header store-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html#top" aria-label="Hour AI home">
+          <img class="brand-mark" src="assets/hour-ai-logo.svg" alt="" width="34" height="34" aria-hidden="true" />
+          <span class="brand-name">Hour AI</span>
+          <span class="brand-status" data-store-i18n="nav.live">Live platform</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html#orders" data-store-i18n="nav.orders">Orders</a>
+          <a href="index.html#path" data-store-i18n="nav.path">Learning</a>
+          <a href="index.html#courses" data-store-i18n="nav.courses">Courses</a>
+          <a href="marketplace.html" aria-current="page" data-store-i18n="nav.store">Member Store</a>
+          <a href="index.html#support" data-store-i18n="nav.support">Support</a>
+        </nav>
+
+        <div class="header-actions">
+          <label class="language-control">
+            <span class="sr-only">Select language</span>
+            <select id="storeLanguageSelect" class="language-select" aria-label="Select language">
+              <option value="en">English</option>
+              <option value="ar">العربية</option>
+              <option value="zh">简体中文</option>
+            </select>
+          </label>
+          <a class="button button-quiet header-login" href="index.html#support" data-store-i18n="store.advisor">Advisor</a>
+          <a class="button button-quiet header-register" href="index.html#top" data-store-i18n="store.backHome">Home</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="storeMain">
+      <section class="store-hero">
+        <div class="store-hero-copy">
+          <div class="system-label">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-store-i18n="store.eyebrow">Member-only supply marketplace</span>
+          </div>
+          <h1 data-store-i18n="store.title">Member Store Entrance</h1>
+          <p data-store-i18n="store.lede">
+            Qualified Hour AI members can review supplier products, member-only supply prices, and product details before reselling in their own market.
+          </p>
+        </div>
+        <div class="store-hero-panel" aria-label="Marketplace process">
+          <div>
+            <span>01</span>
+            <strong data-store-i18n="store.stepSell">Sell locally</strong>
+          </div>
+          <div>
+            <span>02</span>
+            <strong data-store-i18n="store.stepPrice">Set your markup</strong>
+          </div>
+          <div>
+            <span>03</span>
+            <strong data-store-i18n="store.stepBuy">Buy at member price</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="store-section" aria-labelledby="storeCatalogTitle">
+        <div class="store-section-head">
+          <div>
+            <p class="section-kicker" data-store-i18n="store.catalogEyebrow">Product catalog</p>
+            <h2 id="storeCatalogTitle" data-store-i18n="store.catalogTitle">Products prepared for member resale</h2>
+          </div>
+          <p data-store-i18n="store.catalogText">
+            Each product shows C, B, and A level supply prices. Your local resale price is decided by you.
+          </p>
+        </div>
+
+        <div class="store-filter-bar" id="storeFilterBar" aria-label="Product categories"></div>
+        <div class="store-grid" id="storeGrid"></div>
+      </section>
+    </main>
+
+    <div class="store-detail-overlay" id="storeDetailOverlay" hidden>
+      <div class="store-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="storeDetailTitle">
+        <button class="modal-close store-detail-close" id="storeDetailClose" type="button" aria-label="Close">&times;</button>
+        <div id="storeDetailBody"></div>
+      </div>
+    </div>
+
+    <script src="marketplace.js"></script>
+  </body>
+</html>
