@@ -2903,6 +2903,14 @@ function openSupportFromIncomingLink() {
   window.setTimeout(() => openSupportChat(), 250);
 }
 
+function initBackToTop() {
+  const button = document.querySelector("[data-back-top]");
+  const sync = () => document.body.classList.toggle("has-scrolled", window.scrollY > 420);
+  button?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  sync();
+  window.addEventListener("scroll", sync, { passive: true });
+}
+
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 initWelcomeAnimation();
 initLanguageSystem();
@@ -2911,6 +2919,7 @@ openSupportFromIncomingLink();
 setupCarousel();
 setupProfile();
 initLinks();
+initBackToTop();
 applyTranslations();
 initMotionSystem();
 applyRegionalLanguagePreference();

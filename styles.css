@@ -8097,3 +8097,418 @@ body.welcome-open {
   }
 }
 
+/* 2026-08-18 QA lock: stable mobile/tablet layout, centered hero stats, premium rank letters. */
+.hero-proof,
+.hero-proof[aria-label] {
+  width: min(100%, 920px) !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  align-items: stretch !important;
+  justify-items: stretch !important;
+  overflow: visible !important;
+}
+
+.hero-proof div,
+.hero-proof div:first-child,
+.hero-proof div:nth-child(2),
+.hero-proof div:nth-child(3),
+.hero-proof div:last-child {
+  position: relative !important;
+  display: flex !important;
+  min-width: 0 !important;
+  min-height: 116px !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 18px 12px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  text-align: center !important;
+}
+
+.hero-proof strong,
+.hero-proof span {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  overflow: visible !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  letter-spacing: 0 !important;
+}
+
+.hero-proof strong {
+  font-size: clamp(26px, 1.72vw, 32px) !important;
+  font-weight: 720 !important;
+  line-height: 1 !important;
+}
+
+.hero-proof span {
+  font-size: clamp(10px, 0.74vw, 12px) !important;
+  font-weight: 760 !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase !important;
+}
+
+.rank-medal,
+.rank-medal.rank-c,
+.rank-medal.rank-b,
+.rank-medal.rank-a,
+.rank-medal.rank-pending,
+.rank-medal.rank-medal-large,
+.rank-medal.rank-medal-small,
+.rank-medal.rank-medal-tiny,
+.board-legend i.rank-medal {
+  --rank-size: 72px;
+  position: relative !important;
+  display: inline-grid !important;
+  width: var(--rank-size) !important;
+  height: var(--rank-size) !important;
+  min-width: var(--rank-size) !important;
+  min-height: var(--rank-size) !important;
+  max-width: var(--rank-size) !important;
+  max-height: var(--rank-size) !important;
+  place-items: center !important;
+  flex: 0 0 var(--rank-size) !important;
+  border-radius: 18px !important;
+  clip-path: none !important;
+  transform: none !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  isolation: isolate !important;
+}
+
+.rank-medal::before,
+.rank-medal::after,
+.rank-medal .rank-letter::before,
+.rank-medal .rank-letter::after {
+  pointer-events: none !important;
+}
+
+.rank-medal::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 7px !important;
+  display: block !important;
+  border: 1px solid currentColor !important;
+  border-radius: 14px !important;
+  opacity: 0.34 !important;
+  background:
+    linear-gradient(90deg, transparent 12%, currentColor 12% 13%, transparent 13% 87%, currentColor 87% 88%, transparent 88%),
+    linear-gradient(0deg, transparent 12%, currentColor 12% 13%, transparent 13% 87%, currentColor 87% 88%, transparent 88%) !important;
+  z-index: 0 !important;
+}
+
+.rank-medal::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: auto 12px 10px !important;
+  display: block !important;
+  height: 1px !important;
+  background: currentColor !important;
+  opacity: 0.48 !important;
+  box-shadow: 0 -42px 0 rgba(255, 255, 255, 0.16) !important;
+  z-index: 0 !important;
+}
+
+.rank-medal .rank-letter,
+.rank-letter {
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: currentColor !important;
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: calc(var(--rank-size) * 0.5) !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  text-shadow: 0 0 18px currentColor !important;
+  transform: none !important;
+}
+
+.rank-c {
+  color: #2fdc73 !important;
+  background: radial-gradient(circle at 24% 18%, rgba(47, 220, 115, 0.18), transparent 34%), linear-gradient(145deg, #12241b, #07120e) !important;
+  border: 1px solid rgba(47, 220, 115, 0.74) !important;
+  box-shadow: 0 18px 42px rgba(47, 220, 115, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.rank-b {
+  color: #7465ff !important;
+  background: radial-gradient(circle at 24% 18%, rgba(116, 101, 255, 0.2), transparent 34%), linear-gradient(145deg, #17172b, #0b1020) !important;
+  border: 1px solid rgba(116, 101, 255, 0.78) !important;
+  box-shadow: 0 18px 42px rgba(116, 101, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.rank-a {
+  color: #ff8a2f !important;
+  background: radial-gradient(circle at 24% 18%, rgba(255, 138, 47, 0.2), transparent 34%), linear-gradient(145deg, #24170e, #111215) !important;
+  border: 1px solid rgba(255, 138, 47, 0.78) !important;
+  box-shadow: 0 18px 42px rgba(255, 138, 47, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.rank-pending {
+  color: #94a3b8 !important;
+  background: linear-gradient(145deg, #111827, #0b1220) !important;
+  border: 1px solid rgba(148, 163, 184, 0.62) !important;
+}
+
+.rank-medal-large {
+  --rank-size: 74px !important;
+}
+
+.rank-medal-small {
+  --rank-size: 48px !important;
+  border-radius: 13px !important;
+}
+
+.rank-medal-tiny,
+.board-legend i.rank-medal {
+  --rank-size: 28px !important;
+  border-radius: 8px !important;
+}
+
+.rank-medal-small::before {
+  inset: 5px !important;
+  border-radius: 10px !important;
+}
+
+.rank-medal-tiny::before,
+.board-legend i.rank-medal::before {
+  inset: 3px !important;
+  border-radius: 6px !important;
+}
+
+.rank-medal-small::after,
+.rank-medal-tiny::after,
+.board-legend i.rank-medal::after {
+  display: none !important;
+}
+
+.rank-medal-tiny .rank-letter,
+.board-legend i.rank-medal .rank-letter {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+}
+
+.profile-card .rank-medal {
+  grid-row: 1 / span 5 !important;
+  align-self: center !important;
+  justify-self: center !important;
+}
+
+.site-floating-actions {
+  position: fixed !important;
+  right: max(18px, env(safe-area-inset-right)) !important;
+  bottom: max(18px, env(safe-area-inset-bottom)) !important;
+  z-index: 900 !important;
+  display: grid !important;
+  gap: 12px !important;
+  justify-items: end !important;
+  pointer-events: none !important;
+}
+
+.floating-action {
+  position: relative !important;
+  display: grid !important;
+  place-items: center !important;
+  width: 54px !important;
+  height: 54px !important;
+  min-width: 54px !important;
+  min-height: 54px !important;
+  padding: 0 !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(47, 220, 115, 0.46) !important;
+  background: #0b111a !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.34), 0 0 0 5px rgba(47, 220, 115, 0.08) !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  text-decoration: none !important;
+}
+
+.site-floating-actions .support-fab {
+  width: 66px !important;
+  height: 66px !important;
+  min-width: 66px !important;
+  min-height: 66px !important;
+  background: #2bd875 !important;
+  color: #06110b !important;
+}
+
+.site-floating-actions .support-fab > span:last-child:not(.floating-label) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+}
+
+.back-top-action {
+  opacity: 0 !important;
+  transform: translateY(8px) !important;
+  transition: opacity 180ms ease, transform 180ms ease !important;
+}
+
+body.has-scrolled .back-top-action {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.back-top-action > span:first-child {
+  display: grid !important;
+  place-items: center !important;
+  font-size: 24px !important;
+  font-weight: 760 !important;
+  line-height: 1 !important;
+}
+
+.store-filter-icon {
+  display: grid !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  place-items: center !important;
+  border-radius: 12px !important;
+}
+
+.store-filter-icon svg {
+  display: block !important;
+  width: 25px !important;
+  height: 25px !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 2 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+.store-filter-icon svg rect,
+.store-filter-icon svg circle {
+  fill: rgba(15, 23, 42, 0.03) !important;
+}
+
+@media (max-width: 760px) {
+  .site-floating-actions {
+    right: max(12px, env(safe-area-inset-right)) !important;
+    bottom: calc(max(14px, env(safe-area-inset-bottom)) + 6px) !important;
+    gap: 9px !important;
+  }
+
+  .floating-action {
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    min-height: 46px !important;
+  }
+
+  .site-floating-actions .support-fab {
+    width: 58px !important;
+    height: 58px !important;
+    min-width: 58px !important;
+    min-height: 58px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-proof,
+  .hero-proof[aria-label] {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .hero-proof div,
+  .hero-proof div:first-child,
+  .hero-proof div:nth-child(2),
+  .hero-proof div:nth-child(3),
+  .hero-proof div:last-child {
+    min-height: 74px !important;
+    gap: 7px !important;
+    padding: 10px 4px !important;
+  }
+
+  .hero-proof strong {
+    font-size: clamp(14px, 3.55vw, 16px) !important;
+    font-weight: 740 !important;
+  }
+
+  .hero-proof span {
+    font-size: 7px !important;
+    font-weight: 760 !important;
+  }
+
+  .rank-medal-large {
+    --rank-size: 60px !important;
+  }
+}
+
+/* 2026-08-18 store category lock: category buttons must read cleanly; product cards keep the 5-column desktop grid. */
+.store-filter-bar {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  align-items: stretch !important;
+}
+
+.store-filter {
+  display: grid !important;
+  grid-template-columns: 44px minmax(0, 1fr) !important;
+  align-items: center !important;
+  min-height: 66px !important;
+  gap: 14px !important;
+  padding: 12px 16px !important;
+}
+
+.store-filter strong {
+  display: block !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+  color: #0f172a !important;
+  font-size: clamp(14px, 0.92vw, 18px) !important;
+  font-weight: 780 !important;
+  line-height: 1.18 !important;
+  letter-spacing: 0 !important;
+  white-space: normal !important;
+  text-overflow: clip !important;
+}
+
+.store-filter-custom strong {
+  color: #ffffff !important;
+}
+
+[dir="rtl"] .store-filter {
+  grid-template-columns: minmax(0, 1fr) 44px !important;
+}
+
+@media (max-width: 1180px) {
+  .store-filter-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .store-filter-bar {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .store-filter {
+    min-height: 58px !important;
+    padding: 10px 12px !important;
+  }
+
+  .store-filter strong {
+    font-size: 14px !important;
+  }
+}
+

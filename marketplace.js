@@ -338,21 +338,29 @@
 
   function categoryIcon(category) {
     const icons = {
-      all: "▦",
-      mobile: "▯",
-      fashion: "◖",
-      jewelry: "◇",
-      home: "⌂",
-      furniture: "▱",
-      auto: "◉",
-      baby: "◌",
-      health: "+",
-      sports: "●",
-      creator: "▶",
-      travel: "✈",
-      custom: "+"
+      all: '<svg viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="7" width="7" height="7" rx="1.5"/><rect x="18" y="7" width="7" height="7" rx="1.5"/><rect x="7" y="18" width="7" height="7" rx="1.5"/><rect x="18" y="18" width="7" height="7" rx="1.5"/></svg>',
+      mobile: '<svg viewBox="0 0 32 32" aria-hidden="true"><rect x="10" y="4.5" width="12" height="23" rx="3"/><path d="M14 23.5h4"/></svg>',
+      fashion: '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 7l3.2 3h3.6L21 7l5 4-3.2 5v10H9.2V16L6 11l5-4z"/><path d="M14.2 10.2c.8.8 2.8.8 3.6 0"/></svg>',
+      jewelry: '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5l8 7-8 15-8-15 8-7z"/><path d="M8 12h16M12 5l4 7 4-7"/></svg>',
+      home: '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 15L16 7l10 8"/><path d="M10 14.5V26h12V14.5"/><path d="M14 26v-7h4v7"/></svg>',
+      furniture: '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 17v-3.5A3.5 3.5 0 0 1 11.5 10h9A3.5 3.5 0 0 1 24 13.5V17"/><path d="M6 17h20v7H6z"/><path d="M9 24v3M23 24v3"/></svg>',
+      auto: '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 18l2.2-6h11.6L24 18"/><path d="M6 18h20v7H6z"/><circle cx="10.5" cy="25" r="2"/><circle cx="21.5" cy="25" r="2"/></svg>',
+      baby: '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M13 5h6v6l-2 2v12a4 4 0 0 1-8 0V13l-2-2V8a3 3 0 0 1 3-3h3z"/><path d="M10 17h6M10 21h6"/></svg>',
+      health: '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27s-9-5.7-9-13a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 7.3-9 13-9 13z"/><path d="M16 12v8M12 16h8"/></svg>',
+      sports: '<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="10"/><path d="M8 13c4 1.5 7 5 9 12M24 13c-4 1.5-7 5-9 12M10 8c3.5 4 8.5 4 12 0"/></svg>',
+      creator: '<svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="8" width="17" height="16" rx="3"/><path d="M22 13l5-3v12l-5-3z"/><path d="M13 13l5 3-5 3z"/></svg>',
+      travel: '<svg viewBox="0 0 32 32" aria-hidden="true"><rect x="9" y="10" width="14" height="16" rx="2"/><path d="M13 10V7h6v3M12 26v2M20 26v2"/><path d="M24.5 6.5l2 2M23 9l4-4"/></svg>',
+      custom: '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 6v20M6 16h20"/><path d="M23 7l1.2 2.8L27 11l-2.8 1.2L23 15l-1.2-2.8L19 11l2.8-1.2L23 7z"/></svg>'
     };
-    return icons[category] || "•";
+    return icons[category] || icons.all;
+  }
+
+  function initBackToTop() {
+    const button = document.querySelector("[data-back-top]");
+    const sync = () => document.body.classList.toggle("has-scrolled", window.scrollY > 420);
+    button?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    sync();
+    window.addEventListener("scroll", sync, { passive: true });
   }
 
   function setLanguage(language, persist) {
@@ -495,6 +503,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     const saved = localStorage.getItem(languageKey);
     setLanguage(saved && supportedLanguages.includes(saved) ? saved : "en", false);
+    initBackToTop();
     document.getElementById("storeLanguageSelect")?.addEventListener("change", (event) => setLanguage(event.target.value, true));
     document.getElementById("storeDetailClose")?.addEventListener("click", closeDetail);
     document.getElementById("storeDetailOverlay")?.addEventListener("click", (event) => {

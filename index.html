@@ -509,10 +509,16 @@
       </div>
     </div>
 
-    <button class="support-fab" id="supportFab" type="button" data-open-support aria-label="Open online consultation">
-      <span class="support-fab-icon" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span data-i18n="support.fab">Support</span>
-    </button>
+    <div class="site-floating-actions" aria-label="Quick actions">
+      <button class="floating-action back-top-action" type="button" data-back-top aria-label="Back to top">
+        <span aria-hidden="true">↑</span>
+        <span class="sr-only">Back to top</span>
+      </button>
+      <button class="floating-action support-fab" id="supportFab" type="button" data-open-support aria-label="Open online consultation">
+        <span class="support-fab-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span data-i18n="support.fab">Support</span>
+      </button>
+    </div>
 
     <div class="modal" id="supportModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="supportModalTitle">
       <div class="modal-backdrop" data-close-support></div>
