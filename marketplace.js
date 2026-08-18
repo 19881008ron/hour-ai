@@ -18,18 +18,23 @@
       store: {
         advisor: "Advisor",
         backHome: "Home",
-        eyebrow: "Member supply marketplace",
+        eyebrow: "Member-only sourcing system",
         title: "Member Store",
-        lede: "Source selected products at your qualified member price and resell them in your local market.",
-        stepSell: "Find buyer",
-        stepPrice: "Set markup",
-        stepBuy: "Member supply",
-        catalogEyebrow: "Middle East demand categories",
-        catalogTitle: "Products ready for member resale",
-        catalogText: "Browse product categories, open a product, review the image gallery, and compare C, B, and A member supply prices.",
+        lede: "Qualified members can source selected products at internal supply prices, resell locally at their own markup, and keep the price difference as profit.",
+        benefit1: "Member supply prices",
+        benefit1Text: "C, B, and A members see different internal prices.",
+        benefit2: "No inventory pressure",
+        benefit2Text: "Sell first, then purchase through Hour AI for delivery support.",
+        benefit3: "Local resale profit",
+        benefit3Text: "You decide the retail price in your market.",
+        catalogEyebrow: "Choose a category",
+        catalogTitle: "Open a category to view member-only products",
+        catalogText: "Products appear only after you choose a category. Each product detail page shows a multi-image gallery on the left and C, B, and A member supply prices on the right.",
+        emptyTitle: "Select a product category",
+        emptyText: "Choose one category above to load member-only products and compare supply prices.",
         all: "All",
         custom: "Custom Sourcing",
-        customText: "Request a product",
+        customText: "Request product sourcing",
         cSupply: "C supply",
         bSupply: "B supply",
         aSupply: "A supply",
@@ -40,7 +45,7 @@
         gallery: "Product gallery",
         specs: "Highlights",
         profitTitle: "Resale workflow",
-        profitText: "Sell locally first, then purchase from Hour AI at your member supply price.",
+        profitText: "Sell locally first, then purchase from Hour AI at your qualified member supply price.",
         flow1: "Confirm product and local resale price.",
         flow2: "Receive payment from your customer.",
         flow3: "Purchase through Hour AI at member price.",
@@ -49,11 +54,8 @@
       },
       categories: {
         all: "All Categories",
-        electronics: "Consumer Electronics",
         mobile: "Mobile Accessories",
         fashion: "Fashion & Modest Wear",
-        beauty: "Beauty & Personal Care",
-        fragrance: "Fragrance & Oud",
         jewelry: "Jewelry & Watches",
         home: "Home & Kitchen",
         furniture: "Furniture & Decor",
@@ -65,22 +67,20 @@
         travel: "Travel & Bags",
         custom: "Custom Sourcing"
       },
-      tags: {
-        all: "Full catalog",
-        electronics: "Smart devices",
-        mobile: "High turnover",
-        fashion: "Gulf demand",
-        beauty: "Social commerce",
-        fragrance: "Gift market",
-        jewelry: "Premium retail",
-        home: "Daily demand",
-        furniture: "Home upgrade",
-        auto: "Car lifestyle",
-        baby: "Family buyers",
-        health: "Wellness picks",
-        sports: "Outdoor climate",
-        creator: "Live selling",
-        travel: "Travel retail"
+      icons: {
+        all: "ALL",
+        mobile: "M",
+        fashion: "F",
+        jewelry: "J",
+        home: "H",
+        furniture: "D",
+        auto: "A",
+        baby: "B",
+        health: "W",
+        sports: "S",
+        creator: "LIVE",
+        travel: "T",
+        custom: "+"
       }
     },
     zh: {
@@ -88,29 +88,34 @@
       store: {
         advisor: "客服",
         backHome: "首页",
-        eyebrow: "会员专供商城",
+        eyebrow: "会员专属供货系统",
         title: "会员商城",
-        lede: "会员可按认证等级查看专供价格，并在本地市场自由加价销售。",
-        stepSell: "找到买家",
-        stepPrice: "自由加价",
-        stepBuy: "会员供货",
-        catalogEyebrow: "中东需求类目",
-        catalogTitle: "适合会员转售的精选商品",
-        catalogText: "选择类目，打开商品详情，查看多图展示，并对比 C、B、A 会员供货价。",
+        lede: "通过认证的会员可以用内部供货价采购精选商品，在本地市场自由加价销售，并将差价作为利润。",
+        benefit1: "会员供货价",
+        benefit1Text: "C、B、A 会员可查看不同级别的内部价格。",
+        benefit2: "无需囤货压力",
+        benefit2Text: "先在本地成交客户，再通过 Hour AI 采购并获得交付支持。",
+        benefit3: "本地转售利润",
+        benefit3Text: "你可以根据所在市场自行决定销售价格。",
+        catalogEyebrow: "选择商品分类",
+        catalogTitle: "点击分类后查看会员专供商品",
+        catalogText: "只有选择分类后才会展示商品。商品详情页左侧展示多张图片，右侧展示 C、B、A 三类会员供货价。",
+        emptyTitle: "请选择一个商品分类",
+        emptyText: "点击上方分类后，即可加载会员专供商品并对比供货价格。",
         all: "全部",
         custom: "商品定制",
-        customText: "提交需求",
+        customText: "提交找货需求",
         cSupply: "C级供货价",
         bSupply: "B级供货价",
         aSupply: "A级供货价",
-        retail: "建议售价",
+        retail: "建议零售价",
         details: "查看详情",
-        request: "申请定制",
-        supplyTitle: "会员供货价",
+        request: "申请找货",
+        supplyTitle: "会员供货价格",
         gallery: "商品图片",
         specs: "商品卖点",
         profitTitle: "转售流程",
-        profitText: "先在本地成交客户，再按会员供货价从 Hour AI 采购。",
+        profitText: "先在本地成交客户，再按认证会员供货价从 Hour AI 采购。",
         flow1: "确认商品和本地销售价格。",
         flow2: "向你的客户收款。",
         flow3: "按会员价从 Hour AI 采购。",
@@ -118,39 +123,34 @@
         close: "关闭"
       },
       categories: {
-        all: "全部类目",
-        electronics: "消费电子",
+        all: "全部分类",
         mobile: "手机配件",
         fashion: "服装与端庄服饰",
-        beauty: "美容个护",
-        fragrance: "香水与沉香",
-        jewelry: "珠宝手表",
-        home: "家居厨具",
-        furniture: "家具装饰",
+        jewelry: "珠宝与手表",
+        home: "家居与厨房",
+        furniture: "家具与装饰",
         auto: "汽车配件",
         baby: "母婴用品",
         health: "健康护理",
         sports: "运动户外",
-        creator: "直播电商",
+        creator: "直播电商工具",
         travel: "旅行箱包",
         custom: "商品定制"
       },
-      tags: {
-        all: "全部商品",
-        electronics: "智能设备",
-        mobile: "高周转",
-        fashion: "海湾需求",
-        beauty: "社交电商",
-        fragrance: "礼品市场",
-        jewelry: "高端零售",
-        home: "日常需求",
-        furniture: "家居升级",
-        auto: "车载生活",
-        baby: "家庭消费",
-        health: "健康精选",
-        sports: "户外气候",
-        creator: "直播销售",
-        travel: "旅行零售"
+      icons: {
+        all: "全",
+        mobile: "机",
+        fashion: "衣",
+        jewelry: "钻",
+        home: "家",
+        furniture: "居",
+        auto: "车",
+        baby: "婴",
+        health: "康",
+        sports: "动",
+        creator: "播",
+        travel: "旅",
+        custom: "+"
       }
     },
     ar: {
@@ -158,42 +158,44 @@
       store: {
         advisor: "الدعم",
         backHome: "الرئيسية",
-        eyebrow: "سوق توريد للأعضاء",
+        eyebrow: "نظام توريد خاص بالأعضاء",
         title: "متجر الأعضاء",
-        lede: "اشتر منتجات مختارة بسعر العضوية المؤهلة وأعد بيعها في سوقك المحلي.",
-        stepSell: "ابحث عن مشتر",
-        stepPrice: "حدد هامشك",
-        stepBuy: "توريد العضوية",
-        catalogEyebrow: "فئات مطلوبة في الشرق الأوسط",
-        catalogTitle: "منتجات جاهزة لإعادة البيع",
-        catalogText: "تصفح الفئات، افتح المنتج، راجع معرض الصور، وقارن أسعار توريد عضوية C و B و A.",
+        lede: "يمكن للأعضاء المؤهلين شراء منتجات مختارة بأسعار توريد داخلية، ثم إعادة بيعها في أسواقهم المحلية بسعر يحددونه والاحتفاظ بفارق السعر كربح.",
+        benefit1: "أسعار توريد للأعضاء",
+        benefit1Text: "تظهر أسعار مختلفة لأعضاء مستويات C و B و A.",
+        benefit2: "بدون ضغط مخزون",
+        benefit2Text: "بع أولا، ثم اشتر عبر Hour AI للحصول على دعم التوريد.",
+        benefit3: "ربح إعادة البيع المحلي",
+        benefit3Text: "أنت تحدد سعر البيع المناسب في سوقك.",
+        catalogEyebrow: "اختر فئة",
+        catalogTitle: "افتح فئة لعرض منتجات الأعضاء",
+        catalogText: "تظهر المنتجات فقط بعد اختيار الفئة. صفحة التفاصيل تعرض معرض الصور في اليسار وأسعار توريد C و B و A في اليمين.",
+        emptyTitle: "اختر فئة منتجات",
+        emptyText: "اختر فئة من الأعلى لعرض منتجات الأعضاء ومقارنة أسعار التوريد.",
         all: "الكل",
         custom: "توريد مخصص",
         customText: "اطلب منتجا",
-        cSupply: "سعر C",
-        bSupply: "سعر B",
-        aSupply: "سعر A",
+        cSupply: "توريد C",
+        bSupply: "توريد B",
+        aSupply: "توريد A",
         retail: "سعر البيع",
         details: "عرض التفاصيل",
         request: "طلب توريد",
         supplyTitle: "أسعار توريد الأعضاء",
-        gallery: "معرض المنتج",
+        gallery: "صور المنتج",
         specs: "المزايا",
         profitTitle: "مسار إعادة البيع",
-        profitText: "بع محليا أولا، ثم اشتر من Hour AI بسعر توريد العضوية.",
+        profitText: "بع محليا أولا، ثم اشتر من Hour AI بسعر توريد العضوية المؤهلة.",
         flow1: "أكد المنتج وسعر البيع المحلي.",
         flow2: "استلم الدفع من عميلك.",
         flow3: "اشتر من Hour AI بسعر العضوية.",
-        flow4: "احتفظ بالهامش كربح لك.",
+        flow4: "احتفظ بفارق السعر كربح.",
         close: "إغلاق"
       },
       categories: {
         all: "كل الفئات",
-        electronics: "إلكترونيات استهلاكية",
         mobile: "إكسسوارات الجوال",
         fashion: "أزياء وملابس محتشمة",
-        beauty: "الجمال والعناية",
-        fragrance: "العطور والعود",
         jewelry: "مجوهرات وساعات",
         home: "المنزل والمطبخ",
         furniture: "أثاث وديكور",
@@ -201,74 +203,130 @@
         baby: "الأم والطفل",
         health: "الصحة والعافية",
         sports: "رياضة وخارج المنزل",
-        creator: "التجارة المباشرة",
+        creator: "أدوات التجارة المباشرة",
         travel: "السفر والحقائب",
         custom: "توريد مخصص"
       },
-      tags: {
-        all: "كل المنتجات",
-        electronics: "أجهزة ذكية",
-        mobile: "دوران سريع",
-        fashion: "طلب خليجي",
-        beauty: "تجارة اجتماعية",
-        fragrance: "سوق الهدايا",
-        jewelry: "بيع فاخر",
-        home: "طلب يومي",
-        furniture: "ترقية المنزل",
-        auto: "أسلوب السيارة",
-        baby: "مشتريات عائلية",
-        health: "اختيارات صحية",
-        sports: "مناخ خارجي",
-        creator: "بيع مباشر",
-        travel: "تجزئة السفر"
+      icons: {
+        all: "ALL",
+        mobile: "M",
+        fashion: "F",
+        jewelry: "J",
+        home: "H",
+        furniture: "D",
+        auto: "A",
+        baby: "B",
+        health: "W",
+        sports: "S",
+        creator: "LIVE",
+        travel: "T",
+        custom: "+"
       }
     }
   };
 
-  const categoryOrder = ["all", "electronics", "mobile", "fashion", "beauty", "fragrance", "jewelry", "home", "furniture", "auto", "baby", "health", "sports", "creator", "travel", "custom"];
+  const categoryOrder = ["all", "mobile", "fashion", "jewelry", "home", "furniture", "auto", "baby", "health", "sports", "creator", "travel", "custom"];
 
-  const productSeeds = [
-    ["electronics", "Smart Mini Projector", "便携智能投影仪", "جهاز عرض ذكي صغير", "Portable projector for home cinema, retail demos, and family entertainment.", "$145-$199", "$119", "$105", "$88"],
-    ["mobile", "MagSafe Power Bank Set", "磁吸快充移动电源套装", "مجموعة بطارية مغناطيسية", "Fast-charging accessory bundle with strong daily-use demand.", "$48-$79", "$31", "$27", "$22"],
-    ["fashion", "Premium Modest Wear Set", "高端端庄服饰套装", "مجموعة أزياء محتشمة فاخرة", "Lightweight fashion bundle suited to Gulf and wider Middle East retail.", "$69-$129", "$44", "$38", "$31"],
-    ["beauty", "LED Beauty Care Device", "LED美容护理仪", "جهاز عناية بالبشرة LED", "Demo-friendly beauty tech product for skincare and home use.", "$89-$169", "$58", "$49", "$41"],
-    ["fragrance", "Oud Aroma Gift Kit", "沉香香氛礼盒", "طقم هدايا عود وعطور", "Gift-ready oud and fragrance accessory set for premium retail offers.", "$55-$118", "$36", "$31", "$25"],
-    ["jewelry", "Smart Luxury Watch", "智能轻奢手表", "ساعة ذكية فاخرة", "Lifestyle watch product for gift, fashion, and social commerce sales.", "$79-$149", "$51", "$44", "$36"],
-    ["home", "Smart Kitchen Appliance", "智能厨房小家电", "جهاز مطبخ ذكي", "Compact kitchen product designed for family use and marketplace resale.", "$99-$179", "$68", "$58", "$47"],
-    ["furniture", "LED Decor Light Panel", "LED氛围装饰灯板", "لوحة إضاءة ديكور LED", "Visual decor item for bedrooms, studios, gaming rooms, and living spaces.", "$59-$119", "$39", "$34", "$28"],
-    ["auto", "Car Smart Display Kit", "汽车智能显示套件", "طقم شاشة سيارة ذكية", "Dashboard display accessory for navigation and daily driving upgrades.", "$85-$159", "$57", "$49", "$40"],
-    ["baby", "Smart Baby Care Monitor", "智能母婴看护设备", "جهاز مراقبة أطفال ذكي", "Family-focused monitoring product for nursery and home safety demand.", "$79-$149", "$52", "$45", "$37"],
-    ["health", "Portable Wellness Massager", "便携健康按摩仪", "جهاز تدليك صحي محمول", "Portable wellness product for relaxation, gifting, and daily home use.", "$49-$99", "$32", "$28", "$23"],
-    ["sports", "Outdoor Cooling Gear", "户外降温装备", "معدات تبريد خارجية", "Warm-climate outdoor product for sports, travel, and seasonal resale.", "$39-$89", "$25", "$22", "$18"],
-    ["creator", "Live Commerce Creator Kit", "直播电商创作套装", "طقم صانع للتجارة المباشرة", "Camera, lighting, and audio starter bundle for creators and live sellers.", "$169-$299", "$118", "$99", "$82"],
-    ["travel", "Premium Travel Bag Set", "高端旅行箱包套装", "مجموعة حقائب سفر فاخرة", "Organized luggage and travel bag bundle for business and family travel.", "$89-$179", "$59", "$50", "$42"]
-  ];
+  const categoryTemplates = {
+    mobile: [
+      ["MagSafe Power Bank Set", "Fast-charging accessory bundle with strong daily-use demand.", "$48-$79", 31],
+      ["Wireless Charging Dock", "Compact charging dock for phones, earbuds, and watches.", "$55-$89", 36],
+      ["Privacy Screen Bundle", "High-turnover phone protection set for retail and online sales.", "$29-$55", 18]
+    ],
+    fashion: [
+      ["Premium Modest Wear Set", "Lightweight fashion bundle suited to Gulf and wider Middle East retail.", "$69-$129", 44],
+      ["Cooling Travel Abaya Set", "Breathable daily-wear set for warm-climate buyers.", "$79-$139", 49],
+      ["Men's Business Thobe Pack", "Clean formal style bundle for office, travel, and gifting.", "$65-$119", 41]
+    ],
+    jewelry: [
+      ["Smart Luxury Watch", "Lifestyle watch product for gift, fashion, and social commerce sales.", "$79-$149", 51],
+      ["Minimal Gold Jewelry Set", "Gift-ready accessory set for premium visual marketing.", "$49-$99", 32],
+      ["Luxury Watch Display Box", "Retail display product for watches, jewelry, and gift packaging.", "$59-$109", 38]
+    ],
+    home: [
+      ["Smart Kitchen Appliance", "Compact kitchen product designed for family use and marketplace resale.", "$99-$179", 68],
+      ["Arabic Coffee Gift Kit", "Home hospitality product for gifting and local retail demand.", "$69-$129", 45],
+      ["Compact Air Purifier", "Home wellness appliance for bedrooms, offices, and family spaces.", "$89-$159", 58]
+    ],
+    furniture: [
+      ["LED Decor Light Panel", "Visual decor item for bedrooms, studios, gaming rooms, and living spaces.", "$59-$119", 39],
+      ["Foldable Study Desk", "Space-saving desk for apartments, students, and home offices.", "$79-$149", 52],
+      ["Luxury Storage Organizer", "Home organization product with strong visual resale appeal.", "$45-$89", 29]
+    ],
+    auto: [
+      ["Car Smart Display Kit", "Dashboard display accessory for navigation and daily driving upgrades.", "$85-$159", 57],
+      ["Car Cooling Seat Pad", "Warm-climate car accessory for comfort-focused buyers.", "$49-$99", 32],
+      ["Premium Car Vacuum Set", "Portable cleaning bundle for car lifestyle and family buyers.", "$39-$79", 25]
+    ],
+    baby: [
+      ["Smart Baby Care Monitor", "Family-focused monitoring product for nursery and home safety demand.", "$79-$149", 52],
+      ["Baby Travel Organizer", "Parent-friendly organizer for daily use and travel retail.", "$35-$75", 23],
+      ["Bottle Warmer Travel Kit", "Portable baby-care item for family and gifting demand.", "$45-$89", 29]
+    ],
+    health: [
+      ["Portable Wellness Massager", "Portable wellness product for relaxation, gifting, and daily home use.", "$49-$99", 32],
+      ["Posture Support Belt", "Daily wellness product for office workers and home fitness users.", "$29-$69", 19],
+      ["Smart Fitness Scale", "Home health product with clear demonstration and repeat demand.", "$39-$79", 25]
+    ],
+    sports: [
+      ["Outdoor Cooling Gear", "Warm-climate outdoor product for sports, travel, and seasonal resale.", "$39-$89", 25],
+      ["Foldable Camping Chair", "Outdoor lifestyle product for desert camping and family trips.", "$49-$99", 32],
+      ["Hydration Fitness Pack", "Simple sports bundle for gym, travel, and outdoor buyers.", "$35-$69", 22]
+    ],
+    creator: [
+      ["Live Commerce Creator Kit", "Camera, lighting, and audio starter bundle for creators and live sellers.", "$169-$299", 118],
+      ["Portable Studio Light", "Compact light for creators, product videos, and livestream selling.", "$59-$119", 39],
+      ["Wireless Lavalier Mic Set", "Creator audio bundle for short videos and live commerce.", "$49-$99", 32]
+    ],
+    travel: [
+      ["Premium Travel Bag Set", "Organized luggage and travel bag bundle for business and family travel.", "$89-$179", 59],
+      ["Smart Carry-On Scale", "Travel accessory for frequent flyers and family trips.", "$35-$69", 22],
+      ["Luxury Packing Cube Set", "High-visual travel organizer bundle for local resale.", "$29-$59", 18]
+    ]
+  };
 
-  const products = productSeeds.map((seed, index) => {
-    const [category, enTitle, zhTitle, arTitle, desc, retail, cPrice, bPrice, aPrice] = seed;
-    const imageIndex = index % assetPool.length;
-    return {
-      id: `ORDER-${371011 + index}`,
-      category,
-      images: [assetPool[imageIndex], assetPool[(imageIndex + 1) % assetPool.length], assetPool[(imageIndex + 2) % assetPool.length]],
-      title: { en: enTitle, zh: zhTitle, ar: arTitle },
-      desc: {
-        en: desc,
-        zh: `${i18n.zh.categories[category]}类会员专供商品，适合本地转售、社交电商和定制采购。`,
-        ar: `منتج من فئة ${i18n.ar.categories[category]} مناسب لإعادة البيع المحلي والتجارة الاجتماعية.`
-      },
-      specs: {
-        en: ["High demand", "Member supply price", "Resale ready"],
-        zh: ["需求明确", "会员供货价", "适合转售"],
-        ar: ["طلب واضح", "سعر عضوية", "جاهز للبيع"]
-      },
-      retail,
-      prices: { C: cPrice, B: bPrice, A: aPrice }
-    };
+  const categoryKeys = Object.keys(categoryTemplates);
+  const products = [];
+  let orderNumber = 371011;
+
+  categoryKeys.forEach((category) => {
+    for (let index = 0; index < 50; index += 1) {
+      const template = categoryTemplates[category][index % categoryTemplates[category].length];
+      const [baseTitle, baseDesc, retail, cBase] = template;
+      const variant = index + 1;
+      const cPrice = cBase + Math.floor(index / 3) * 2;
+      products.push({
+        id: `ORDER-${orderNumber}`,
+        category,
+        images: [
+          assetPool[(orderNumber + 0) % assetPool.length],
+          assetPool[(orderNumber + 1) % assetPool.length],
+          assetPool[(orderNumber + 2) % assetPool.length]
+        ],
+        title: {
+          en: `${baseTitle} ${variant}`,
+          zh: `${i18n.zh.categories[category]}精选商品 ${variant}`,
+          ar: `${i18n.ar.categories[category]} ${variant}`
+        },
+        desc: {
+          en: baseDesc,
+          zh: `适合本地转售、社交电商和会员采购的${i18n.zh.categories[category]}商品。`,
+          ar: `منتج مناسب لإعادة البيع المحلي والتجارة الاجتماعية ضمن فئة ${i18n.ar.categories[category]}.`
+        },
+        specs: {
+          en: ["Member supply price", "Resale ready", "Visual product content"],
+          zh: ["会员供货价", "适合转售", "适合内容展示"],
+          ar: ["سعر توريد للأعضاء", "جاهز لإعادة البيع", "مناسب للمحتوى المرئي"]
+        },
+        retail,
+        prices: { C: `$${cPrice}`, B: `$${Math.max(8, cPrice - 8)}`, A: `$${Math.max(5, cPrice - 16)}` }
+      });
+      orderNumber += 1;
+    }
   });
 
   let currentLanguage = "en";
-  let activeCategory = "all";
+  let activeCategory = null;
 
   function get(path) {
     return path.split(".").reduce((value, key) => (value ? value[key] : undefined), i18n[currentLanguage]) || path;
@@ -276,6 +334,25 @@
 
   function localized(value) {
     return value[currentLanguage] || value.en || "";
+  }
+
+  function categoryIcon(category) {
+    const icons = {
+      all: "▦",
+      mobile: "▯",
+      fashion: "◖",
+      jewelry: "◇",
+      home: "⌂",
+      furniture: "▱",
+      auto: "◉",
+      baby: "◌",
+      health: "+",
+      sports: "●",
+      creator: "▶",
+      travel: "✈",
+      custom: "+"
+    };
+    return icons[category] || "•";
   }
 
   function setLanguage(language, persist) {
@@ -298,9 +375,9 @@
     bar.innerHTML = categoryOrder
       .map((category) => {
         if (category === "custom") {
-          return `<a class="store-filter store-filter-custom" href="${supportUrl}"><strong>${get("store.custom")}</strong><small>${get("store.customText")}</small></a>`;
+          return `<a class="store-filter store-filter-custom" href="${supportUrl}"><span class="store-filter-icon">${categoryIcon(category)}</span><strong>${get("store.custom")}</strong></a>`;
         }
-        return `<button class="store-filter${activeCategory === category ? " is-active" : ""}" type="button" data-category="${category}"><strong>${i18n[currentLanguage].categories[category]}</strong><small>${category === "all" ? get("store.all") : i18n[currentLanguage].tags[category]}</small></button>`;
+        return `<button class="store-filter${activeCategory === category ? " is-active" : ""}" type="button" data-category="${category}"><span class="store-filter-icon">${categoryIcon(category)}</span><strong>${i18n[currentLanguage].categories[category]}</strong></button>`;
       })
       .join("");
     bar.querySelectorAll("button").forEach((button) => {
@@ -308,14 +385,28 @@
         activeCategory = button.dataset.category;
         renderCategories();
         renderProducts();
+        document.getElementById("storeGrid")?.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
+  }
+
+  function renderEmptyState() {
+    return `
+      <div class="store-empty-state">
+        <strong>${get("store.emptyTitle")}</strong>
+        <p>${get("store.emptyText")}</p>
+      </div>
+    `;
   }
 
   function renderProducts() {
     const grid = document.getElementById("storeGrid");
     if (!grid) return;
-    const visible = activeCategory === "all" ? products : products.filter((product) => product.category === activeCategory);
+    if (!activeCategory) {
+      grid.innerHTML = renderEmptyState();
+      return;
+    }
+    const visible = activeCategory === "all" ? products.slice(0, 50) : products.filter((product) => product.category === activeCategory).slice(0, 50);
     grid.innerHTML = visible
       .map((product) => `
         <article class="store-card">

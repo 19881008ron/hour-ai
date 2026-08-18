@@ -28,82 +28,28 @@ function config() {
   return { url, publicKey: publicKey.trim(), secretKey: secretKey.trim() };
 }
 
-function requestHeaders(key, accessToken) {
-  const authorization = accessToken
-    ? `Bearer ${accessToken}`
-    : key.startsWith("eyJ")
-      ? `Bearer ${key}`
-      : null;
-  return {
-    apikey: key,
-    ...(authorization ? { Authorization: authorization } : {})
-  };
-}
-
-function databaseUnavailable(cause) {
-  const error = new Error("Online support is temporarily unavailable. Please try again shortly.");
-  error.status = 503;
-  error.code = "SUPABASE_UNREACHABLE";
-  error.cause = cause;
-  return error;
-}
-
-async function resilientFetch(url, options = {}, settings = {}) {
-  const method = String(options.method || "GET").toUpperCase();
-  const retryableMethod = ["GET", "HEAD", "PATCH"].includes(method);
-  const maxAttempts = retryableMethod ? Number(settings.attempts || 3) : 1;
-  const timeoutMs = Number(settings.timeoutMs || 10000);
-  let lastError;
-
-  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), timeoutMs);
-    try {
-      const response = await fetch(url, { ...options, signal: controller.signal });
-      clearTimeout(timeout);
-      if (
-        attempt < maxAttempts &&
-        [408, 429, 502, 503, 504].includes(response.status)
-      ) {
-        await new Promise((resolve) => setTimeout(resolve, 180 * attempt));
-        continue;
-      }
-      return response;
-    } catch (error) {
-      clearTimeout(timeout);
-      lastError = error;
-      if (attempt >= maxAttempts) throw databaseUnavailable(error);
-      await new Promise((resolve) => setTimeout(resolve, 180 * attempt));
-    }
-  }
-
-  throw databaseUnavailable(lastError);
-}
-
 async function supabaseFetch(path, options = {}, useServiceKey = true) {
   const { url, publicKey, secretKey } = config();
   const key = useServiceKey ? secretKey : publicKey;
-  const response = await resilientFetch(`${url}${path}`, {
+  const authorization = options.accessToken
+    ? `Bearer ${options.accessToken}`
+    : key.startsWith("eyJ")
+      ? `Bearer ${key}`
+      : null;
+  const response = await fetch(`${url}${path}`, {
     ...options,
     headers: {
-      ...requestHeaders(key, options.accessToken),
+      apikey: key,
+      ...(authorization ? { Authorization: authorization } : {}),
       "Content-Type": "application/json",
       ...(options.headers || {})
     }
   });
   const text = await response.text();
-  let data = null;
-  if (text) {
-    try {
-      data = JSON.parse(text);
-    } catch {
-      data = { message: text.slice(0, 500) };
-    }
-  }
+  const data = text ? JSON.parse(text) : null;
   if (!response.ok) {
     const error = new Error(data?.msg || data?.message || data?.error_description || "Database request failed.");
     error.status = response.status;
-    error.code = data?.code || "SUPABASE_REQUEST_FAILED";
     throw error;
   }
   return data;
@@ -140,12 +86,4 @@ async function requireSupportAgent(req) {
   return auth;
 }
 
-module.exports = {
-  authenticatedProfile,
-  config,
-  requestHeaders,
-  requireAdmin,
-  requireSupportAgent,
-  resilientFetch,
-  supabaseFetch
-};
+module.exports = { authenticatedProfile, config, requireAdmin, requireSupportAgent, supabaseFetch };
