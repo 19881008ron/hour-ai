@@ -2863,6 +2863,13 @@ function initWelcomeAnimation() {
   const countdown = document.getElementById("welcomeCountdown");
   const closeButton = document.getElementById("welcomeClose");
   if (!overlay || !countdown || !closeButton) return;
+  const params = new URLSearchParams(window.location.search);
+  const shouldSkipWelcome = window.location.hash || params.get("skipWelcome") === "1" || params.get("support") === "1";
+  if (shouldSkipWelcome) {
+    overlay.remove();
+    document.body.classList.remove("welcome-open");
+    return;
+  }
 
   const welcomeSeconds = 8;
   let remainingSeconds = welcomeSeconds;
@@ -2890,10 +2897,17 @@ function initWelcomeAnimation() {
   closeButton.addEventListener("click", dismissWelcome);
 }
 
+function openSupportFromIncomingLink() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("support") !== "1") return;
+  window.setTimeout(() => openSupportChat(), 250);
+}
+
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 initWelcomeAnimation();
 initLanguageSystem();
 setupEvents();
+openSupportFromIncomingLink();
 setupCarousel();
 setupProfile();
 initLinks();
