@@ -8512,3 +8512,273 @@ body.has-scrolled .back-top-action {
   }
 }
 
+/* 2026-08-18 final visual lock: user-approved ABC images and aligned floating actions. */
+.rank-medal,
+.rank-medal.rank-c,
+.rank-medal.rank-b,
+.rank-medal.rank-a,
+.rank-medal.rank-medal-large,
+.rank-medal.rank-medal-small,
+.rank-medal.rank-medal-tiny,
+.board-legend i.rank-medal {
+  --rank-size: 74px;
+  position: relative !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  width: var(--rank-size) !important;
+  min-width: var(--rank-size) !important;
+  height: var(--rank-size) !important;
+  min-height: var(--rank-size) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 18px !important;
+  background-color: transparent !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  overflow: visible !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+.rank-medal.rank-c {
+  background-image: url("assets/rank-c-premium.webp") !important;
+}
+
+.rank-medal.rank-b {
+  background-image: url("assets/rank-b-premium.webp") !important;
+}
+
+.rank-medal.rank-a {
+  background-image: url("assets/rank-a-premium.webp") !important;
+}
+
+.rank-medal::before,
+.rank-medal::after,
+.rank-medal .rank-letter::before,
+.rank-medal .rank-letter::after,
+.rank-letter::before,
+.rank-letter::after {
+  display: none !important;
+  content: none !important;
+}
+
+.rank-medal .rank-letter,
+.rank-letter {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+}
+
+.rank-medal-large {
+  --rank-size: 82px !important;
+}
+
+.rank-medal-small {
+  --rank-size: 52px !important;
+  border-radius: 14px !important;
+}
+
+.rank-medal-tiny,
+.board-legend i.rank-medal {
+  --rank-size: 30px !important;
+  border-radius: 8px !important;
+}
+
+.rank-pending {
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.22), rgba(15, 23, 42, 0.92)) !important;
+  border: 1px solid rgba(148, 163, 184, 0.5) !important;
+}
+
+.rank-pending .rank-letter {
+  position: static !important;
+  display: grid !important;
+  place-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 1 !important;
+  color: #cbd5e1 !important;
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+
+.profile-card {
+  grid-template-columns: 92px minmax(0, 1fr) !important;
+}
+
+.profile-card .rank-medal {
+  grid-row: 1 / span 5 !important;
+  align-self: center !important;
+  justify-self: center !important;
+}
+
+.board-legend span {
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.site-floating-actions {
+  right: max(22px, env(safe-area-inset-right)) !important;
+  bottom: max(22px, env(safe-area-inset-bottom)) !important;
+  gap: 12px !important;
+  justify-items: center !important;
+  align-items: center !important;
+}
+
+.floating-action,
+.site-floating-actions .support-fab,
+.site-floating-actions .back-top-action {
+  display: grid !important;
+  place-items: center !important;
+  width: 66px !important;
+  min-width: 66px !important;
+  height: 66px !important;
+  min-height: 66px !important;
+  padding: 0 !important;
+  border-radius: 999px !important;
+  transform: none !important;
+}
+
+.back-top-action {
+  background: radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.16), transparent 34%), #071014 !important;
+  border: 2px solid rgba(43, 216, 117, 0.82) !important;
+  box-shadow: 0 16px 34px rgba(4, 10, 13, 0.26), 0 0 0 8px rgba(43, 216, 117, 0.12) !important;
+  color: #ffffff !important;
+}
+
+body.has-scrolled .back-top-action {
+  transform: none !important;
+}
+
+.back-top-icon,
+.back-top-icon svg {
+  display: block !important;
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.back-top-icon svg {
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 4.4 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.28)) !important;
+}
+
+@media (max-width: 760px) {
+  .site-floating-actions {
+    right: max(14px, env(safe-area-inset-right)) !important;
+    bottom: calc(max(16px, env(safe-area-inset-bottom)) + 6px) !important;
+    gap: 10px !important;
+  }
+
+  .floating-action,
+  .site-floating-actions .support-fab,
+  .site-floating-actions .back-top-action {
+    width: 58px !important;
+    min-width: 58px !important;
+    height: 58px !important;
+    min-height: 58px !important;
+  }
+
+  .back-top-icon,
+  .back-top-icon svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .rank-medal-large {
+    --rank-size: 68px !important;
+  }
+}
+
+/* 2026-08-18 image-only ABC badge lock: no generated badge shapes, identical canvas, identical center. */
+.rank-medal.rank-a,
+.rank-medal.rank-b,
+.rank-medal.rank-c,
+.rank-medal.rank-medal-large,
+.rank-medal.rank-medal-small,
+.rank-medal.rank-medal-tiny,
+.board-legend i.rank-medal {
+  display: inline-grid !important;
+  place-items: center !important;
+  flex: 0 0 var(--rank-size) !important;
+  width: var(--rank-size) !important;
+  min-width: var(--rank-size) !important;
+  max-width: var(--rank-size) !important;
+  height: var(--rank-size) !important;
+  min-height: var(--rank-size) !important;
+  max-height: var(--rank-size) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  overflow: visible !important;
+}
+
+.rank-medal .rank-medal-img {
+  display: block !important;
+  grid-area: 1 / 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  transform: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.rank-medal .rank-letter {
+  grid-area: 1 / 1 !important;
+  pointer-events: none !important;
+}
+
+.rank-medal:not(.rank-pending)::before,
+.rank-medal:not(.rank-pending)::after,
+.rank-medal:not(.rank-pending) .rank-letter,
+.rank-medal:not(.rank-pending) .rank-letter::before,
+.rank-medal:not(.rank-pending) .rank-letter::after {
+  display: none !important;
+  content: none !important;
+}
+
+.site-floating-actions {
+  width: 66px !important;
+  justify-items: center !important;
+  align-items: center !important;
+}
+
+.site-floating-actions .floating-action,
+.site-floating-actions .support-fab,
+.site-floating-actions .back-top-action {
+  position: relative !important;
+  inset: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  top: auto !important;
+  margin: 0 auto !important;
+}
+
+@media (max-width: 760px) {
+  .site-floating-actions {
+    width: 58px !important;
+  }
+}
+

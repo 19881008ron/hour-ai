@@ -208,9 +208,9 @@
             <span data-i18n="orders.boardStatus">Commission orders open for qualified editors</span>
           </div>
           <div class="board-legend" aria-label="Level legend">
-            <span><i class="rank-medal rank-c rank-medal-tiny" aria-hidden="true"><b class="rank-letter">C</b></i>C-Level</span>
-            <span><i class="rank-medal rank-b rank-medal-tiny" aria-hidden="true"><b class="rank-letter">B</b></i>B-Level</span>
-            <span><i class="rank-medal rank-a rank-medal-tiny" aria-hidden="true"><b class="rank-letter">A</b></i>A-Level</span>
+            <span><i class="rank-medal rank-c rank-medal-tiny" aria-hidden="true"><img class="rank-medal-img" src="assets/rank-c-premium.webp" alt="" aria-hidden="true" decoding="async" loading="lazy"><b class="rank-letter">C</b></i>C-Level</span>
+            <span><i class="rank-medal rank-b rank-medal-tiny" aria-hidden="true"><img class="rank-medal-img" src="assets/rank-b-premium.webp" alt="" aria-hidden="true" decoding="async" loading="lazy"><b class="rank-letter">B</b></i>B-Level</span>
+            <span><i class="rank-medal rank-a rank-medal-tiny" aria-hidden="true"><img class="rank-medal-img" src="assets/rank-a-premium.webp" alt="" aria-hidden="true" decoding="async" loading="lazy"><b class="rank-letter">A</b></i>A-Level</span>
           </div>
         </div>
         <div class="orders-grid" id="ordersGrid"></div>
@@ -233,7 +233,7 @@
         </div>
         <div class="profile-layout">
           <article class="profile-card">
-            <div class="rank-medal rank-c rank-medal-large" role="img" aria-label="C-Level medal"><span class="rank-letter">C</span></div>
+            <div class="rank-medal rank-c rank-medal-large" role="img" aria-label="C-Level medal"><img class="rank-medal-img" src="assets/rank-c-premium.webp" alt="" aria-hidden="true" decoding="async" loading="lazy"><span class="rank-letter">C</span></div>
             <div class="level-index">01 / FOUNDATION</div>
             <h3 data-i18n="profile.cTitle">C-Level AI Editor</h3>
             <p data-i18n="profile.cText">Beginner workflow, template editing, captions, and delivery checklists.</p>
@@ -241,7 +241,7 @@
             <div class="level-meter level-meter-c" aria-label="C-Level capability"><i></i><i></i><i></i></div>
           </article>
           <article class="profile-card featured-profile">
-            <div class="rank-medal rank-b rank-medal-large" role="img" aria-label="B-Level medal"><span class="rank-letter">B</span></div>
+            <div class="rank-medal rank-b rank-medal-large" role="img" aria-label="B-Level medal"><img class="rank-medal-img" src="assets/rank-b-premium.webp" alt="" aria-hidden="true" decoding="async" loading="lazy"><span class="rank-letter">B</span></div>
             <div class="level-index">02 / COMMERCIAL</div>
             <h3 data-i18n="profile.bTitle">B-Level AI Editor</h3>
             <p data-i18n="profile.bText">Commercial short videos, better pacing, revisions, and stronger quality standards.</p>
@@ -249,7 +249,7 @@
             <div class="level-meter level-meter-b" aria-label="B-Level capability"><i></i><i></i><i></i></div>
           </article>
           <article class="profile-card">
-            <div class="rank-medal rank-a rank-medal-large" role="img" aria-label="A-Level medal"><span class="rank-letter">A</span></div>
+            <div class="rank-medal rank-a rank-medal-large" role="img" aria-label="A-Level medal"><img class="rank-medal-img" src="assets/rank-a-premium.webp" alt="" aria-hidden="true" decoding="async" loading="lazy"><span class="rank-letter">A</span></div>
             <div class="level-index">03 / ADVANCED</div>
             <h3 data-i18n="profile.aTitle">A-Level AI Editor</h3>
             <p data-i18n="profile.aText">Advanced projects, team review, project management, and agent eligibility.</p>
@@ -511,7 +511,12 @@
 
     <div class="site-floating-actions" aria-label="Quick actions">
       <button class="floating-action back-top-action" type="button" data-back-top aria-label="Back to top">
-        <span aria-hidden="true">↑</span>
+        <span class="back-top-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" focusable="false">
+            <path d="M16 24V8" />
+            <path d="M8.5 15.5 16 8l7.5 7.5" />
+          </svg>
+        </span>
         <span class="sr-only">Back to top</span>
       </button>
       <button class="floating-action support-fab" id="supportFab" type="button" data-open-support aria-label="Open online consultation">

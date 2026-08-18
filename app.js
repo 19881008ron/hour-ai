@@ -1828,6 +1828,7 @@ function rankMedalMarkup(level, size = "medium") {
   const normalized = ["A", "B", "C"].includes(level) ? level : "C";
   return `
     <span class="rank-medal rank-${normalized.toLowerCase()} rank-medal-${size}" role="img" aria-label="${levelLabel(normalized)} medal">
+      <img class="rank-medal-img" src="assets/rank-${normalized.toLowerCase()}-premium.webp" alt="" aria-hidden="true" decoding="async" loading="lazy">
       <span class="rank-letter">${normalized}</span>
     </span>
   `;
