@@ -3,14 +3,69 @@
   const languageKey = "hourAiLanguage";
   const supportUrl = "index.html?support=1#support";
 
-  const assetPool = [
-    "assets/order-level-a.webp",
-    "assets/order-level-b.webp",
-    "assets/order-level-c.webp",
-    "assets/carousel-apply.webp",
-    "assets/carousel-learn.webp",
-    "assets/carousel-test.webp"
-  ];
+  const productImageFallback = "assets/store-mobile-1.svg";
+  const categoryImagePools = {
+    mobile: [
+      "assets/store-mobile-1.svg",
+      "assets/store-mobile-2.svg",
+      "assets/store-mobile-3.svg"
+    ],
+    fashion: [
+      "assets/store-fashion-1.svg",
+      "assets/store-fashion-2.svg",
+      "assets/store-fashion-3.svg"
+    ],
+    jewelry: [
+      "assets/store-jewelry-1.svg",
+      "assets/store-jewelry-2.svg",
+      "assets/store-jewelry-3.svg"
+    ],
+    home: [
+      "assets/store-home-1.svg",
+      "assets/store-home-2.svg",
+      "assets/store-home-3.svg"
+    ],
+    furniture: [
+      "assets/store-furniture-1.svg",
+      "assets/store-furniture-2.svg",
+      "assets/store-furniture-3.svg"
+    ],
+    auto: [
+      "assets/store-auto-1.svg",
+      "assets/store-auto-2.svg",
+      "assets/store-auto-3.svg"
+    ],
+    baby: [
+      "assets/store-baby-1.svg",
+      "assets/store-baby-2.svg",
+      "assets/store-baby-3.svg"
+    ],
+    health: [
+      "assets/store-health-1.svg",
+      "assets/store-health-2.svg",
+      "assets/store-health-3.svg"
+    ],
+    sports: [
+      "assets/store-sports-1.svg",
+      "assets/store-sports-2.svg",
+      "assets/store-sports-3.svg"
+    ],
+    creator: [
+      "assets/store-creator-1.svg",
+      "assets/store-creator-2.svg",
+      "assets/store-creator-3.svg"
+    ],
+    travel: [
+      "assets/store-travel-1.svg",
+      "assets/store-travel-2.svg",
+      "assets/store-travel-3.svg"
+    ]
+  };
+
+  function imageSetFor(category, index) {
+    const pool = categoryImagePools[category] || categoryImagePools.mobile;
+    return [pool[index % pool.length], pool[(index + 1) % pool.length], pool[(index + 2) % pool.length]];
+  }
 
   const i18n = {
     en: {
@@ -229,84 +284,164 @@
 
   const categoryTemplates = {
     mobile: [
-      ["MagSafe Power Bank Set", "Fast-charging accessory bundle with strong daily-use demand.", "$48-$79", 31],
-      ["Wireless Charging Dock", "Compact charging dock for phones, earbuds, and watches.", "$55-$89", 36],
-      ["Privacy Screen Bundle", "High-turnover phone protection set for retail and online sales.", "$29-$55", 18]
+      ["MagSafe Power Bank Set", "Fast-charging phone power bundle for daily mobile users.", "$48-$79", 31],
+      ["65W GaN Fast Charger Kit", "Compact wall charger kit for phones, tablets, and travel.", "$35-$69", 23],
+      ["Wireless Earbuds Retail Pack", "High-demand audio accessory for commuting, work, and social media.", "$39-$89", 26],
+      ["Privacy Screen Protector Bundle", "Fast-moving phone protection bundle for online resale.", "$19-$45", 12],
+      ["Magnetic Car Phone Mount", "Dashboard phone holder for navigation and daily driving.", "$18-$39", 11],
+      ["USB-C Hub Adapter", "Useful mobile and laptop adapter for creators, students, and offices.", "$29-$59", 18],
+      ["Smart Watch Strap Set", "Low-cost wearable accessory with strong repeat-purchase demand.", "$15-$35", 9],
+      ["Rugged Phone Case Bundle", "Protective phone case set for retail bundles and upsells.", "$22-$49", 14],
+      ["3-in-1 Wireless Charging Stand", "Desk charging stand for phone, earbuds, and watch users.", "$45-$85", 29],
+      ["Bluetooth Tracking Tag Pack", "Travel and daily-use locator tags for bags, keys, and wallets.", "$29-$59", 18]
     ],
     fashion: [
-      ["Premium Modest Wear Set", "Lightweight fashion bundle suited to Gulf and wider Middle East retail.", "$69-$129", 44],
-      ["Cooling Travel Abaya Set", "Breathable daily-wear set for warm-climate buyers.", "$79-$139", 49],
-      ["Men's Business Thobe Pack", "Clean formal style bundle for office, travel, and gifting.", "$65-$119", 41]
+      ["Premium Modest Wear Set", "Lightweight coordinated outfit for Gulf daily wear and gifting.", "$69-$129", 44],
+      ["Breathable Abaya Collection", "Warm-climate abaya line designed for daily wear and social commerce.", "$79-$139", 49],
+      ["Men's Business Thobe Pack", "Clean formal thobe set for office, travel, and gifting.", "$65-$119", 41],
+      ["Luxury Hijab Bundle", "Soft-fabric hijab set for modest fashion resale.", "$25-$59", 16],
+      ["Kaftan Lounge Set", "Comfort-focused modest lounge set for home and Ramadan-season demand.", "$49-$99", 32],
+      ["Modest Activewear Set", "Covered activewear outfit for fitness, travel, and casual use.", "$55-$109", 35],
+      ["Family Eid Outfit Pack", "Coordinated family clothing bundle for seasonal gift campaigns.", "$89-$179", 59],
+      ["Men's Sandal Retail Set", "Arabic sandal selection for daily wear and travel retail.", "$39-$89", 25],
+      ["Women's Tote & Scarf Set", "Fashion accessory bundle suitable for gift and boutique resale.", "$45-$95", 29],
+      ["Premium Prayer Wear Set", "Comfortable prayer wear bundle for women and gifting occasions.", "$35-$79", 23]
     ],
     jewelry: [
       ["Smart Luxury Watch", "Lifestyle watch product for gift, fashion, and social commerce sales.", "$79-$149", 51],
       ["Minimal Gold Jewelry Set", "Gift-ready accessory set for premium visual marketing.", "$49-$99", 32],
-      ["Luxury Watch Display Box", "Retail display product for watches, jewelry, and gift packaging.", "$59-$109", 38]
+      ["Luxury Watch Display Box", "Retail display product for watches, jewelry, and gift packaging.", "$59-$109", 38],
+      ["Men's Steel Bracelet Set", "Daily accessory bundle for men's fashion and gift retail.", "$29-$69", 19],
+      ["Pearl Necklace Gift Box", "Elegant gift item for social commerce and boutique resale.", "$45-$95", 29],
+      ["Arabic Initial Pendant Set", "Personalized-style pendant set with strong gifting appeal.", "$35-$79", 23],
+      ["Women's Fashion Watch Pack", "Affordable watch bundle for gift and fashion resale.", "$39-$89", 25],
+      ["Travel Jewelry Organizer", "Compact organizer for watches, rings, and earrings.", "$25-$55", 16],
+      ["Luxury Cufflink Set", "Men's formal accessory for business and event gifting.", "$35-$75", 23],
+      ["Crystal Bracelet Gift Set", "Visual accessory set for livestream and boutique campaigns.", "$29-$65", 19]
     ],
     home: [
-      ["Smart Kitchen Appliance", "Compact kitchen product for family use and marketplace resale.", "$99-$179", 68],
-      ["Arabic Coffee Gift Kit", "Home hospitality product for gifting and local retail demand.", "$69-$129", 45],
-      ["Compact Air Purifier", "Home wellness appliance for bedrooms, offices, and family spaces.", "$89-$159", 58]
+      ["Compact Air Fryer", "High-demand kitchen appliance for family cooking and apartment living.", "$89-$169", 59],
+      ["Arabic Coffee Gift Kit", "Hospitality gift set for homes, offices, and seasonal campaigns.", "$69-$129", 45],
+      ["Electric Kettle Set", "Daily-use kitchen item with broad household demand.", "$29-$69", 19],
+      ["Capsule Coffee Machine", "Compact coffee appliance for home and office buyers.", "$99-$199", 68],
+      ["Kitchen Storage Organizer", "Practical cabinet and pantry organizer for family kitchens.", "$25-$59", 16],
+      ["Digital Kitchen Scale", "Small appliance for cooking, baking, and healthy meal prep.", "$18-$39", 11],
+      ["Countertop Blender", "Home drink and smoothie appliance for family use.", "$45-$95", 29],
+      ["Stainless Cookware Set", "Kitchen cookware bundle for new homes and gifting.", "$79-$159", 52],
+      ["Smart Home Diffuser", "Home fragrance device for living rooms, bedrooms, and offices.", "$39-$79", 25],
+      ["Cordless Vacuum Cleaner", "Compact home cleaning product for apartments and villas.", "$89-$179", 59]
     ],
     furniture: [
       ["LED Decor Light Panel", "Visual decor item for bedrooms, studios, gaming rooms, and living spaces.", "$59-$119", 39],
       ["Foldable Study Desk", "Space-saving desk for apartments, students, and home offices.", "$79-$149", 52],
-      ["Luxury Storage Organizer", "Home organization product with strong visual resale appeal.", "$45-$89", 29]
+      ["Luxury Storage Organizer", "Home organization product with strong visual resale appeal.", "$45-$89", 29],
+      ["3D LED Wall Clock", "Modern decor product popular for bedrooms, offices, and lounges.", "$29-$69", 19],
+      ["Velvet Hanger Storage Pack", "Wardrobe organization bundle for family homes.", "$25-$55", 16],
+      ["Gaming Chair Cushion Set", "Comfort upgrade for gaming, office, and creator setups.", "$45-$99", 29],
+      ["Minimal Coffee Table", "Compact furniture piece for apartments and living rooms.", "$89-$179", 59],
+      ["Decorative Floor Lamp", "Home lighting product for modern interiors and gift sales.", "$69-$139", 45],
+      ["Under-Sink Organizer Rack", "Storage product for kitchen and bathroom organization.", "$25-$55", 16],
+      ["Luxury Cushion Cover Set", "Affordable decor bundle for sofa and bedroom refreshes.", "$19-$45", 12]
     ],
     auto: [
       ["Car Smart Display Kit", "Dashboard display accessory for navigation and daily driving upgrades.", "$85-$159", 57],
       ["Car Cooling Seat Pad", "Warm-climate car accessory for comfort-focused buyers.", "$49-$99", 32],
-      ["Premium Car Vacuum Set", "Portable cleaning bundle for car lifestyle and family buyers.", "$39-$79", 25]
+      ["Premium Car Vacuum Set", "Portable cleaning bundle for car lifestyle and family buyers.", "$39-$79", 25],
+      ["4K Dash Camera", "Driver safety and evidence camera for daily traffic and road trips.", "$59-$129", 39],
+      ["Magnetic Phone Car Charger", "Wireless charging mount for navigation and commuting.", "$35-$75", 23],
+      ["Foldable Car Sunshade", "Heat-control accessory for Gulf parking and summer demand.", "$18-$39", 11],
+      ["Portable Tire Inflator", "Emergency car tool for travel, family cars, and desert trips.", "$45-$89", 29],
+      ["Car Trunk Organizer", "Storage organizer for families, road trips, and daily errands.", "$29-$69", 19],
+      ["LED Ambient Light Kit", "Interior car styling product for youth and lifestyle buyers.", "$25-$59", 16],
+      ["Leather Steering Wheel Cover", "Comfort and styling accessory for daily drivers.", "$19-$45", 12]
     ],
     baby: [
       ["Smart Baby Care Monitor", "Family-focused monitoring product for nursery and home safety demand.", "$79-$149", 52],
       ["Baby Travel Organizer", "Parent-friendly organizer for daily use and travel retail.", "$35-$75", 23],
-      ["Bottle Warmer Travel Kit", "Portable baby-care item for family and gifting demand.", "$45-$89", 29]
+      ["Bottle Warmer Travel Kit", "Portable baby-care item for family and gifting demand.", "$45-$89", 29],
+      ["Diaper Backpack", "High-utility parent bag for travel, malls, and daily family use.", "$35-$79", 23],
+      ["Baby Stroller Fan", "Warm-climate baby comfort product for outdoor and travel use.", "$22-$49", 14],
+      ["Baby Feeding Bottle Set", "Repeat-demand baby feeding bundle for family buyers.", "$25-$59", 16],
+      ["Portable Changing Mat", "Practical baby travel item for parents and gift bundles.", "$18-$39", 11],
+      ["Baby Safety Gate", "Home safety product for apartments and villas.", "$49-$99", 32],
+      ["Nursery Night Light", "Soft-light product for baby rooms and bedtime routines.", "$19-$45", 12],
+      ["Baby Grooming Kit", "Small care kit for newborn gifting and daily use.", "$18-$39", 11]
     ],
     health: [
       ["Portable Wellness Massager", "Portable wellness product for relaxation, gifting, and daily home use.", "$49-$99", 32],
       ["Posture Support Belt", "Daily wellness product for office workers and home fitness users.", "$29-$69", 19],
-      ["Smart Fitness Scale", "Home health product with clear customer appeal and repeat demand.", "$39-$79", 25]
+      ["Smart Fitness Scale", "Home health product with clear customer appeal and repeat demand.", "$39-$79", 25],
+      ["Massage Gun Set", "Recovery product for gym users, families, and office workers.", "$59-$129", 39],
+      ["Neck Heating Massager", "Comfort product for home relaxation and gift campaigns.", "$49-$109", 32],
+      ["Digital Blood Pressure Monitor", "Home monitoring device for family wellness buyers.", "$39-$89", 25],
+      ["Walking Pad Compact Treadmill", "Home fitness product for apartments and warm climates.", "$149-$299", 98],
+      ["Resistance Band Training Kit", "Low-cost fitness bundle for home workout users.", "$19-$45", 12],
+      ["Air Quality Monitor", "Home wellness device for offices, bedrooms, and family spaces.", "$45-$95", 29],
+      ["Ergonomic Office Cushion", "Daily comfort product for work-from-home and office users.", "$29-$69", 19]
     ],
     sports: [
       ["Outdoor Cooling Gear", "Warm-climate outdoor product for sports, travel, and seasonal resale.", "$39-$89", 25],
       ["Foldable Camping Chair", "Outdoor lifestyle product for desert camping and family trips.", "$49-$99", 32],
-      ["Hydration Fitness Pack", "Simple sports bundle for gym, travel, and outdoor buyers.", "$35-$69", 22]
+      ["Hydration Fitness Pack", "Simple sports bundle for gym, travel, and outdoor buyers.", "$35-$69", 22],
+      ["Padel Racket Starter Set", "Popular racket-sport bundle for Gulf fitness and social clubs.", "$79-$159", 52],
+      ["Yoga Mat Fitness Kit", "Home workout bundle for wellness and social commerce sales.", "$29-$69", 19],
+      ["Adjustable Dumbbell Set", "Compact home fitness product for apartment users.", "$89-$179", 59],
+      ["Camping Lantern Power Bank", "Outdoor lighting and charging accessory for trips.", "$35-$79", 23],
+      ["Cooling Sports Towel Pack", "Hot-weather sports item for gyms, outdoor training, and travel.", "$15-$35", 9],
+      ["Insulated Water Bottle Set", "Daily-use sports and office hydration product.", "$19-$45", 12],
+      ["Portable Beach Shade", "Outdoor family product for beach, camping, and desert trips.", "$49-$99", 32]
     ],
     creator: [
       ["Live Commerce Creator Kit", "Camera, lighting, and audio starter bundle for creators and live sellers.", "$169-$299", 118],
       ["Portable Studio Light", "Compact light for creators, product videos, and livestream selling.", "$59-$119", 39],
-      ["Wireless Lavalier Mic Set", "Creator audio bundle for short videos and live commerce.", "$49-$99", 32]
+      ["Wireless Lavalier Mic Set", "Creator audio bundle for short videos and live commerce.", "$49-$99", 32],
+      ["Product Photo Light Box", "Clean product photography setup for ecommerce sellers.", "$59-$129", 39],
+      ["Phone Tripod With Remote", "Starter filming tool for short video and livestream content.", "$25-$59", 16],
+      ["Desktop Teleprompter Kit", "Creator speaking tool for course, sales, and product videos.", "$79-$159", 52],
+      ["RGB Background Light Bar", "Visual studio lighting for reels, livestreams, and product demos.", "$49-$99", 32],
+      ["Mobile Gimbal Stabilizer", "Smooth video accessory for creators and travel sellers.", "$79-$169", 52],
+      ["USB Podcast Microphone", "Desk audio product for creators, teachers, and live sellers.", "$49-$109", 32],
+      ["Green Screen Backdrop Set", "Content-production background set for creators and ecommerce teams.", "$39-$89", 25]
     ],
     travel: [
       ["Premium Travel Bag Set", "Organized luggage and travel bag bundle for business and family travel.", "$89-$179", 59],
       ["Smart Carry-On Scale", "Travel accessory for frequent flyers and family trips.", "$35-$69", 22],
-      ["Luxury Packing Cube Set", "High-visual travel organizer bundle for local resale.", "$29-$59", 18]
+      ["Luxury Packing Cube Set", "High-visual travel organizer bundle for local resale.", "$29-$59", 18],
+      ["Universal Travel Adapter", "International charging adapter for frequent flyers and students.", "$19-$45", 12],
+      ["Hardshell Luggage Set", "Family and business travel suitcase set for airport buyers.", "$129-$269", 85],
+      ["Anti-Theft Backpack", "Travel and daily commute bag for work, school, and flights.", "$49-$99", 32],
+      ["Travel Toiletry Organizer", "Compact organizer for grooming, cosmetics, and family trips.", "$18-$39", 11],
+      ["Memory Foam Neck Pillow", "Comfort travel product for long flights and road trips.", "$19-$45", 12],
+      ["Passport Wallet Set", "Travel document organizer for family and business travelers.", "$18-$39", 11],
+      ["Foldable Weekender Bag", "Lightweight travel bag for short trips and extra luggage needs.", "$29-$69", 19]
     ]
   };
 
   const categoryKeys = Object.keys(categoryTemplates);
   const products = [];
   let orderNumber = 371011;
+  const variantLabels = [
+    { en: "Retail", zh: "零售款", ar: "تجزئة" },
+    { en: "Pro", zh: "专业款", ar: "احترافي" },
+    { en: "Compact", zh: "便携款", ar: "مدمج" },
+    { en: "Premium", zh: "高端款", ar: "فاخر" },
+    { en: "Travel", zh: "旅行款", ar: "سفر" }
+  ];
 
   categoryKeys.forEach((category) => {
     for (let index = 0; index < 50; index += 1) {
       const template = categoryTemplates[category][index % categoryTemplates[category].length];
       const [baseTitle, baseDesc, retail, cBase] = template;
-      const variant = index + 1;
+      const variant = variantLabels[Math.floor(index / categoryTemplates[category].length) % variantLabels.length];
       const cPrice = cBase + Math.floor(index / 3) * 2;
       products.push({
         id: `ORDER-${orderNumber}`,
         category,
-        images: [
-          assetPool[(orderNumber + 0) % assetPool.length],
-          assetPool[(orderNumber + 1) % assetPool.length],
-          assetPool[(orderNumber + 2) % assetPool.length]
-        ],
+        images: imageSetFor(category, index),
         title: {
-          en: `${baseTitle} ${variant}`,
-          zh: `${i18n.zh.categories[category]}精选商品 ${variant}`,
-          ar: `${i18n.ar.categories[category]} ${variant}`
+          en: `${variant.en} ${baseTitle}`,
+          zh: `${variant.zh}${i18n.zh.categories[category]}商品`,
+          ar: `${variant.ar} - ${i18n.ar.categories[category]}`
         },
         desc: {
           en: baseDesc,
@@ -419,7 +554,7 @@
       .map((product) => `
         <article class="store-card">
           <div class="store-card-media">
-            <img src="${product.images[0]}" alt="${localized(product.title)}" loading="lazy" />
+            <img src="${product.images[0]}" alt="${localized(product.title)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${productImageFallback}';" />
             <span>${product.id}</span>
           </div>
           <div class="store-card-body">
@@ -453,9 +588,9 @@
       <div class="store-detail-grid">
         <div class="store-detail-gallery">
           <p class="section-kicker">${get("store.gallery")}</p>
-          <div class="store-main-image"><img src="${product.images[0]}" alt="${localized(product.title)}" /></div>
+          <div class="store-main-image"><img src="${product.images[0]}" alt="${localized(product.title)}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${productImageFallback}';" /></div>
           <div class="store-thumb-grid">
-            ${product.images.map((image, index) => `<button type="button" data-detail-image="${image}" aria-label="Show product image ${index + 1}"><img src="${image}" alt="" /></button>`).join("")}
+            ${product.images.map((image, index) => `<button type="button" data-detail-image="${image}" aria-label="Show product image ${index + 1}"><img src="${image}" alt="" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${productImageFallback}';" /></button>`).join("")}
           </div>
         </div>
         <aside class="store-detail-pricing-panel">

@@ -1711,11 +1711,24 @@ const carouselSlides = [
   { src: "assets/carousel-apply.webp" }
 ];
 
-const levelImages = {
-  C: "assets/order-level-c.webp",
-  B: "assets/order-level-b.webp",
-  A: "assets/order-level-a.webp"
-};
+  const levelImages = {
+    C: "assets/order-level-c.webp",
+    B: "assets/order-level-b.webp",
+    A: "assets/order-level-a.webp"
+  };
+
+  const orderImages = {
+    c1: "assets/order-image-ai-creation.svg",
+    c2: "assets/order-static-ai-editing.svg",
+    b1: "assets/order-video-ai-creation.svg",
+    b2: "assets/order-ad-ai-editing.svg",
+    a1: "assets/order-film-ai-production.svg",
+    a2: "assets/order-team-ai-management.svg"
+  };
+
+  function orderImageSrc(order) {
+    return orderImages[order.id] || levelImages[order.level];
+  }
 
 const reviewAvatars = {
   C: "assets/avatar-maya.webp",
@@ -1905,7 +1918,7 @@ function renderOrders() {
       const orderIndex = orders.findIndex((item) => item.id === order.id);
       return `
         <article class="order-card order-level-${order.level.toLowerCase()}" data-level="${order.level}" style="--order-index:${index}">
-          <img class="order-image" src="${levelImages[order.level]}" alt="" width="1000" height="750" loading="lazy" />
+          <img class="order-image" src="${orderImageSrc(order)}" alt="" width="1000" height="750" loading="lazy" />
           <div class="order-card-header">
             <span class="rank-identity">${rankMedalMarkup(order.level, "small")}<strong>${levelLabel(order.level)}</strong></span>
             <span class="order-code">${t("orders.orderNo")} ${371011 + orderIndex}</span>

@@ -1,6 +1,6 @@
-# Hour AI landing page
+# Hour AI website
 
-Static MVP for `hour-ai.com`.
+Production website package for `hour-ai.com`.
 
 ## Local preview
 
@@ -16,13 +16,12 @@ Create a GitHub repository, upload these files, import the repository into Verce
 
 ## Current scope
 
-- English default language with multi-language switching
+- English default language with Arabic and Chinese switching
 - Hero carousel
-- A/B/C AI editor order marketplace preview
+- A/B/C AI editor order marketplace
 - Order detail modal
 - Reviews by AI editor level
-- WhatsApp consultation buttons
-- Registration/profile modal with AI level badge
-- Course consultation pricing section
-
-Payment and real account storage are placeholders for the next phase.
+- Online support chat
+- Registration, login, profile, payment records, and administrator tools
+- Course pricing and crypto payment guidance
+- Member store with category browsing and member supply prices
