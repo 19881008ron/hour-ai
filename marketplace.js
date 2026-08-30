@@ -3,62 +3,62 @@
   const languageKey = "hourAiLanguage";
   const supportUrl = "index.html?support=1#support";
 
-  const productImageFallback = "assets/store-mobile-1.svg";
+  const productImageFallback = "assets/carousel-learn.webp";
   const categoryImagePools = {
     mobile: [
-      "assets/store-mobile-1.svg",
-      "assets/store-mobile-2.svg",
-      "assets/store-mobile-3.svg"
+      "https://images.unsplash.com/photo-1609592806596-b43ed73a8f19?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?auto=format&fit=crop&w=1100&q=82"
     ],
     fashion: [
-      "assets/store-fashion-1.svg",
-      "assets/store-fashion-2.svg",
-      "assets/store-fashion-3.svg"
+      "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1100&q=82"
     ],
     jewelry: [
-      "assets/store-jewelry-1.svg",
-      "assets/store-jewelry-2.svg",
-      "assets/store-jewelry-3.svg"
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=1100&q=82"
     ],
     home: [
-      "assets/store-home-1.svg",
-      "assets/store-home-2.svg",
-      "assets/store-home-3.svg"
+      "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1100&q=82"
     ],
     furniture: [
-      "assets/store-furniture-1.svg",
-      "assets/store-furniture-2.svg",
-      "assets/store-furniture-3.svg"
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=1100&q=82"
     ],
     auto: [
-      "assets/store-auto-1.svg",
-      "assets/store-auto-2.svg",
-      "assets/store-auto-3.svg"
+      "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1100&q=82"
     ],
     baby: [
-      "assets/store-baby-1.svg",
-      "assets/store-baby-2.svg",
-      "assets/store-baby-3.svg"
+      "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1546015720-b8b30df5aa27?auto=format&fit=crop&w=1100&q=82"
     ],
     health: [
-      "assets/store-health-1.svg",
-      "assets/store-health-2.svg",
-      "assets/store-health-3.svg"
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1571019613914-85f342c6a11e?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1100&q=82"
     ],
     sports: [
-      "assets/store-sports-1.svg",
-      "assets/store-sports-2.svg",
-      "assets/store-sports-3.svg"
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=1100&q=82"
     ],
     creator: [
-      "assets/store-creator-1.svg",
-      "assets/store-creator-2.svg",
-      "assets/store-creator-3.svg"
+      "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1100&q=82"
     ],
     travel: [
-      "assets/store-travel-1.svg",
-      "assets/store-travel-2.svg",
-      "assets/store-travel-3.svg"
+      "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1100&q=82"
     ]
   };
 
