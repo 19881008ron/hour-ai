@@ -1718,12 +1718,12 @@ const carouselSlides = [
   };
 
   const orderImages = {
-    c1: "assets/order-image-ai-creation.svg",
-    c2: "assets/order-static-ai-editing.svg",
-    b1: "assets/order-video-ai-creation.svg",
-    b2: "assets/order-ad-ai-editing.svg",
-    a1: "assets/order-film-ai-production.svg",
-    a2: "assets/order-team-ai-management.svg"
+    c1: "assets/order-level-c.webp",
+    c2: "assets/carousel-apply.webp",
+    b1: "assets/order-level-b.webp",
+    b2: "assets/carousel-test.webp",
+    a1: "assets/order-level-a.webp",
+    a2: "assets/carousel-learn.webp"
   };
 
   function orderImageSrc(order) {
