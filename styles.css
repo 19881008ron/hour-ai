@@ -555,6 +555,320 @@ body.welcome-open {
   }
 }
 
+/* 2026-09-01 launch QA lock: mobile-first alignment, clipping and floating controls. */
+.hero-proof,
+.hero-proof[aria-label] {
+  width: min(100%, 980px) !important;
+  max-width: 100% !important;
+  margin-inline: auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+  justify-content: center !important;
+  gap: 18px !important;
+  overflow: visible !important;
+}
+
+.hero-proof > div,
+.hero-proof div:first-child,
+.hero-proof div:nth-child(2),
+.hero-proof div:nth-child(3),
+.hero-proof div:last-child,
+.hero-proof .hero-proof-card,
+.hero-proof-card {
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 126px !important;
+  padding: 26px 18px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  overflow: hidden !important;
+}
+
+.hero-proof strong,
+.hero-proof-card strong {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 auto !important;
+  color: #ffffff !important;
+  font-size: clamp(34px, 3.6vw, 52px) !important;
+  font-weight: 620 !important;
+  line-height: 1.02 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+.hero-proof span,
+.hero-proof-card span {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 10px auto 0 !important;
+  color: #d7e7ff !important;
+  font-size: clamp(13px, 1.2vw, 16px) !important;
+  font-weight: 780 !important;
+  line-height: 1.18 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  white-space: normal !important;
+  overflow-wrap: normal !important;
+}
+
+.rank-medal:not(.rank-pending),
+.rank-medal.rank-a,
+.rank-medal.rank-b,
+.rank-medal.rank-c,
+.rank-medal.rank-medal-large:not(.rank-pending),
+.rank-medal.rank-medal-small:not(.rank-pending),
+.rank-medal.rank-medal-tiny:not(.rank-pending),
+.board-legend i.rank-medal {
+  position: relative !important;
+  flex: 0 0 auto !important;
+  aspect-ratio: 1 / 1 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.rank-medal-large:not(.rank-pending) {
+  width: 92px !important;
+  height: 92px !important;
+}
+
+.rank-medal-small:not(.rank-pending) {
+  width: 62px !important;
+  height: 62px !important;
+}
+
+.rank-medal-tiny:not(.rank-pending),
+.board-legend i.rank-medal {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.rank-medal:not(.rank-pending)::before,
+.rank-medal:not(.rank-pending)::after,
+.rank-medal:not(.rank-pending) .rank-letter,
+.rank-medal:not(.rank-pending) .rank-letter::before,
+.rank-medal:not(.rank-pending) .rank-letter::after {
+  display: none !important;
+  content: none !important;
+}
+
+.rank-medal .rank-medal-img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  transform: none !important;
+  margin: 0 !important;
+}
+
+.site-floating-actions {
+  position: fixed !important;
+  right: max(22px, env(safe-area-inset-right)) !important;
+  bottom: max(22px, env(safe-area-inset-bottom)) !important;
+  z-index: 120 !important;
+  width: 64px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 12px !important;
+  pointer-events: none !important;
+}
+
+.site-floating-actions .floating-action,
+.site-floating-actions .support-fab,
+.site-floating-actions .back-top-action {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  flex: 0 0 64px !important;
+  width: 64px !important;
+  height: 64px !important;
+  min-width: 64px !important;
+  min-height: 64px !important;
+  max-width: 64px !important;
+  max-height: 64px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  pointer-events: auto !important;
+}
+
+.site-floating-actions .back-top-action {
+  order: 1 !important;
+  color: #ffffff !important;
+  background: #08111d !important;
+  border: 1px solid rgba(49, 223, 129, 0.9) !important;
+  box-shadow: 0 0 0 7px rgba(49, 223, 129, 0.11), 0 18px 44px rgba(2, 8, 20, 0.35) !important;
+}
+
+.site-floating-actions .support-fab {
+  order: 2 !important;
+}
+
+.site-floating-actions .back-top-action svg,
+.site-floating-actions .back-top-action > span:first-child {
+  width: 32px !important;
+  height: 32px !important;
+  stroke-width: 3.4 !important;
+  display: block !important;
+}
+
+#supportModal .support-modal-panel {
+  width: min(calc(100vw - 32px), 1080px) !important;
+  max-width: min(calc(100vw - 32px), 1080px) !important;
+  height: min(calc(100dvh - 32px), 900px) !important;
+  max-height: calc(100dvh - 32px) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#supportModal .support-chat-box {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#supportModal .support-thread {
+  flex: 1 1 auto !important;
+  min-height: 220px !important;
+  max-height: none !important;
+  overflow-y: auto !important;
+}
+
+#supportModal .support-composer {
+  flex: 0 0 auto !important;
+}
+
+@media (min-width: 1440px) {
+  .store-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+
+  .store-card-body {
+    padding: 18px !important;
+  }
+
+  .store-card h3 {
+    font-size: 20px !important;
+    line-height: 1.16 !important;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .hero-proof,
+  .hero-proof[aria-label] {
+    width: min(100%, 760px) !important;
+    gap: 14px !important;
+  }
+
+  .hero-proof strong,
+  .hero-proof-card strong {
+    font-size: clamp(30px, 4.1vw, 42px) !important;
+  }
+
+  .hero-proof > div,
+  .hero-proof .hero-proof-card,
+  .hero-proof-card {
+    min-height: 112px !important;
+    padding: 22px 14px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-proof,
+  .hero-proof[aria-label] {
+    width: min(100%, 330px) !important;
+    max-width: 330px !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .hero-proof > div,
+  .hero-proof div:first-child,
+  .hero-proof div:nth-child(2),
+  .hero-proof div:nth-child(3),
+  .hero-proof div:last-child,
+  .hero-proof .hero-proof-card,
+  .hero-proof-card {
+    min-height: 110px !important;
+    padding: 20px 12px !important;
+  }
+
+  .hero-proof strong,
+  .hero-proof-card strong {
+    font-size: clamp(30px, 9.4vw, 38px) !important;
+    font-weight: 610 !important;
+  }
+
+  .hero-proof span,
+  .hero-proof-card span {
+    font-size: 13px !important;
+    line-height: 1.16 !important;
+  }
+
+  .site-floating-actions {
+    right: max(14px, env(safe-area-inset-right)) !important;
+    bottom: max(14px, env(safe-area-inset-bottom)) !important;
+    width: 56px !important;
+    gap: 10px !important;
+  }
+
+  .site-floating-actions .floating-action,
+  .site-floating-actions .support-fab,
+  .site-floating-actions .back-top-action {
+    flex-basis: 56px !important;
+    width: 56px !important;
+    height: 56px !important;
+    min-width: 56px !important;
+    min-height: 56px !important;
+    max-width: 56px !important;
+    max-height: 56px !important;
+  }
+
+  .site-floating-actions .back-top-action svg,
+  .site-floating-actions .back-top-action > span:first-child {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  #supportModal .support-modal-panel {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    border-radius: 0 !important;
+  }
+}
+
 @keyframes welcomeBeam {
   0% {
     opacity: 0;
@@ -9466,6 +9780,1298 @@ body.has-scrolled .back-top-action {
   .hero-proof-card span {
     margin-top: 8px !important;
     font-size: 14px !important;
+  }
+}
+
+/* 2026-09-01 prelaunch final guards: mobile-first alignment, no clipped KPI text, clean rank assets. */
+.hero-proof,
+.hero-proof[aria-label] {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(10px, 1.1vw, 16px) !important;
+  width: 100% !important;
+  max-width: 1080px !important;
+  margin-inline: auto !important;
+  align-items: stretch !important;
+  justify-items: stretch !important;
+  overflow: visible !important;
+}
+
+.hero-proof > div,
+.hero-proof div:first-child,
+.hero-proof div:nth-child(2),
+.hero-proof div:nth-child(3),
+.hero-proof div:last-child,
+.hero-proof .hero-proof-card,
+.hero-proof-card {
+  min-width: 0 !important;
+  width: 100% !important;
+  min-height: clamp(104px, 9vw, 126px) !important;
+  box-sizing: border-box !important;
+  display: grid !important;
+  align-content: center !important;
+  justify-items: center !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  padding: clamp(16px, 1.45vw, 22px) clamp(10px, 1.3vw, 18px) !important;
+  gap: 8px !important;
+}
+
+.hero-proof strong,
+.hero-proof-card strong {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: clip !important;
+  font-size: clamp(24px, 1.85vw, 34px) !important;
+  font-weight: 520 !important;
+  line-height: 1.04 !important;
+  letter-spacing: 0 !important;
+  transform: none !important;
+}
+
+.hero-proof span,
+.hero-proof-card span {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  text-align: center !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  font-size: clamp(11px, 0.82vw, 14px) !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0 !important;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .hero-proof strong,
+  .hero-proof-card strong {
+    font-size: clamp(24px, 2vw, 31px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-proof,
+  .hero-proof[aria-label] {
+    grid-template-columns: 1fr !important;
+    max-width: 520px !important;
+    gap: 10px !important;
+  }
+
+  .hero-proof > div,
+  .hero-proof div:first-child,
+  .hero-proof div:nth-child(2),
+  .hero-proof div:nth-child(3),
+  .hero-proof div:last-child,
+  .hero-proof .hero-proof-card,
+  .hero-proof-card {
+    min-height: 76px !important;
+    padding: 14px 12px !important;
+    gap: 5px !important;
+  }
+
+  .hero-proof strong,
+  .hero-proof-card strong {
+    font-size: 28px !important;
+  }
+
+  .hero-proof span,
+  .hero-proof-card span {
+    font-size: 12px !important;
+  }
+}
+
+.rank-medal:not(.rank-pending),
+.rank-medal.rank-a,
+.rank-medal.rank-b,
+.rank-medal.rank-c,
+.rank-medal.rank-medal-large:not(.rank-pending),
+.rank-medal.rank-medal-small:not(.rank-pending),
+.rank-medal.rank-medal-tiny:not(.rank-pending),
+.board-legend i.rank-medal {
+  display: inline-grid !important;
+  place-items: center !important;
+  flex: 0 0 auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  overflow: visible !important;
+}
+
+.rank-medal-large:not(.rank-pending) {
+  width: 92px !important;
+  height: 92px !important;
+}
+
+.rank-medal-small:not(.rank-pending) {
+  width: 58px !important;
+  height: 58px !important;
+}
+
+.rank-medal-tiny:not(.rank-pending),
+.board-legend i.rank-medal {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.rank-medal:not(.rank-pending)::before,
+.rank-medal:not(.rank-pending)::after,
+.rank-medal:not(.rank-pending) .rank-letter,
+.rank-medal:not(.rank-pending) .rank-letter::before,
+.rank-medal:not(.rank-pending) .rank-letter::after {
+  display: none !important;
+  content: none !important;
+}
+
+.rank-medal .rank-medal-img {
+  position: static !important;
+  inset: auto !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.rank-identity,
+.level-card-header,
+.board-legend span {
+  align-items: center !important;
+}
+
+@media (max-width: 760px) {
+  .rank-medal-large:not(.rank-pending) {
+    width: 72px !important;
+    height: 72px !important;
+  }
+
+  .rank-medal-small:not(.rank-pending) {
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .rank-medal-tiny:not(.rank-pending),
+  .board-legend i.rank-medal {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+
+.site-floating-actions {
+  position: fixed !important;
+  right: max(22px, env(safe-area-inset-right)) !important;
+  bottom: max(28px, env(safe-area-inset-bottom)) !important;
+  z-index: 3000 !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+  width: 66px !important;
+  justify-items: center !important;
+  align-items: center !important;
+}
+
+.site-floating-actions .floating-action,
+.site-floating-actions .support-fab,
+.site-floating-actions .back-top-action {
+  width: 66px !important;
+  height: 66px !important;
+  min-width: 66px !important;
+  min-height: 66px !important;
+  max-width: 66px !important;
+  max-height: 66px !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  transform: none !important;
+}
+
+.site-floating-actions .support-fab > span:last-child:not(.floating-label),
+.site-floating-actions .floating-label {
+  display: none !important;
+}
+
+.site-floating-actions .back-top-action {
+  border: 2px solid rgba(47, 220, 115, 0.95) !important;
+  background: #071014 !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24), 0 0 0 10px rgba(47, 220, 115, 0.12) !important;
+}
+
+.site-floating-actions .back-top-action svg {
+  width: 36px !important;
+  height: 36px !important;
+  stroke-width: 3 !important;
+}
+
+@media (max-width: 760px) {
+  .site-floating-actions {
+    right: max(16px, env(safe-area-inset-right)) !important;
+    bottom: max(18px, env(safe-area-inset-bottom)) !important;
+    width: 58px !important;
+    gap: 10px !important;
+  }
+
+  .site-floating-actions .floating-action,
+  .site-floating-actions .support-fab,
+  .site-floating-actions .back-top-action {
+    width: 58px !important;
+    height: 58px !important;
+    min-width: 58px !important;
+    min-height: 58px !important;
+    max-width: 58px !important;
+    max-height: 58px !important;
+  }
+}
+
+#supportModal .support-modal-panel {
+  width: min(1060px, calc(100vw - 32px)) !important;
+  max-width: min(1060px, calc(100vw - 32px)) !important;
+  max-height: min(860px, calc(100svh - 32px)) !important;
+  overflow: hidden !important;
+  display: grid !important;
+  grid-template-rows: auto minmax(0, 1fr) auto !important;
+}
+
+#supportModal .support-chat-box {
+  min-height: 360px !important;
+  height: min(52svh, 520px) !important;
+  display: grid !important;
+  grid-template-rows: minmax(0, 1fr) auto !important;
+}
+
+#supportModal .support-thread {
+  min-height: 0 !important;
+  overflow: auto !important;
+}
+
+@media (max-width: 760px) {
+  #supportModal .support-modal-panel {
+    width: calc(100vw - 12px) !important;
+    max-width: calc(100vw - 12px) !important;
+    max-height: calc(100svh - 12px) !important;
+    margin: 6px !important;
+  }
+
+  #supportModal .support-chat-box {
+    min-height: 300px !important;
+    height: 46svh !important;
+  }
+}
+
+@media (min-width: 1180px) {
+  .store-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+}
+
+.store-grid,
+.store-card,
+.store-card-body,
+.store-filter,
+.store-filter strong,
+.store-filter span {
+  min-width: 0 !important;
+}
+
+.store-card h3,
+.store-card p,
+.store-filter strong,
+.store-filter span {
+  overflow-wrap: anywhere !important;
+}
+
+.store-empty-state {
+  grid-column: 1 / -1 !important;
+  min-height: 180px !important;
+  display: grid !important;
+  place-items: center !important;
+  text-align: center !important;
+}
+
+/* 2026-09-01 locked launch guard. Keep this block last. It fixes prior regressions:
+   clipped KPI text, uneven rank badges, modal sizing, floating-button drift, and store grid density. */
+.hero-proof,
+.hero-proof[aria-label] {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  max-width: 980px !important;
+  margin-inline: auto !important;
+  align-items: stretch !important;
+  justify-items: stretch !important;
+  overflow: visible !important;
+}
+
+.hero-proof > div,
+.hero-proof div:first-child,
+.hero-proof div:nth-child(2),
+.hero-proof div:nth-child(3),
+.hero-proof div:last-child,
+.hero-proof .hero-proof-card,
+.hero-proof-card {
+  min-width: 0 !important;
+  width: 100% !important;
+  min-height: 108px !important;
+  box-sizing: border-box !important;
+  display: grid !important;
+  align-content: center !important;
+  justify-items: center !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  padding: 18px 10px !important;
+  gap: 8px !important;
+}
+
+.hero-proof strong,
+.hero-proof-card strong {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  font-size: clamp(22px, 1.45vw, 30px) !important;
+  font-weight: 500 !important;
+  line-height: 1.04 !important;
+  letter-spacing: 0 !important;
+  transform: none !important;
+}
+
+.hero-proof span,
+.hero-proof-card span {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  text-align: center !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  font-size: clamp(11px, 0.76vw, 13px) !important;
+  font-weight: 700 !important;
+  line-height: 1.16 !important;
+  letter-spacing: 0 !important;
+}
+
+@media (max-width: 1120px) {
+  .hero-proof,
+  .hero-proof[aria-label] {
+    grid-template-columns: 1fr !important;
+    max-width: 430px !important;
+    gap: 10px !important;
+  }
+
+  .hero-proof > div,
+  .hero-proof div:first-child,
+  .hero-proof div:nth-child(2),
+  .hero-proof div:nth-child(3),
+  .hero-proof div:last-child,
+  .hero-proof .hero-proof-card,
+  .hero-proof-card {
+    min-height: 68px !important;
+    padding: 12px 10px !important;
+    gap: 5px !important;
+  }
+
+  .hero-proof strong,
+  .hero-proof-card strong {
+    font-size: 26px !important;
+  }
+
+  .hero-proof span,
+  .hero-proof-card span {
+    font-size: 12px !important;
+  }
+}
+
+.rank-medal:not(.rank-pending),
+.rank-medal.rank-a,
+.rank-medal.rank-b,
+.rank-medal.rank-c,
+.rank-medal.rank-medal-large:not(.rank-pending),
+.rank-medal.rank-medal-small:not(.rank-pending),
+.rank-medal.rank-medal-tiny:not(.rank-pending),
+.board-legend i.rank-medal {
+  display: inline-grid !important;
+  place-items: center !important;
+  flex: 0 0 auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  overflow: visible !important;
+}
+
+.rank-medal-large:not(.rank-pending) {
+  width: 86px !important;
+  height: 86px !important;
+}
+
+.rank-medal-small:not(.rank-pending) {
+  width: 54px !important;
+  height: 54px !important;
+}
+
+.rank-medal-tiny:not(.rank-pending),
+.board-legend i.rank-medal {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.rank-medal:not(.rank-pending)::before,
+.rank-medal:not(.rank-pending)::after,
+.rank-medal:not(.rank-pending) .rank-letter,
+.rank-medal:not(.rank-pending) .rank-letter::before,
+.rank-medal:not(.rank-pending) .rank-letter::after {
+  display: none !important;
+  content: none !important;
+}
+
+.rank-medal .rank-medal-img {
+  position: static !important;
+  inset: auto !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.rank-identity,
+.level-card-header,
+.board-legend span {
+  align-items: center !important;
+}
+
+.site-floating-actions {
+  position: fixed !important;
+  right: max(22px, env(safe-area-inset-right)) !important;
+  bottom: max(28px, env(safe-area-inset-bottom)) !important;
+  z-index: 3000 !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+  width: 66px !important;
+  justify-items: center !important;
+  align-items: center !important;
+}
+
+.site-floating-actions .floating-action,
+.site-floating-actions .support-fab,
+.site-floating-actions .back-top-action {
+  width: 66px !important;
+  height: 66px !important;
+  min-width: 66px !important;
+  min-height: 66px !important;
+  max-width: 66px !important;
+  max-height: 66px !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  transform: none !important;
+}
+
+.site-floating-actions .support-fab > span:last-child:not(.floating-label),
+.site-floating-actions .floating-label {
+  display: none !important;
+}
+
+.site-floating-actions .back-top-action {
+  border: 2px solid rgba(47, 220, 115, 0.95) !important;
+  background: #071014 !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24), 0 0 0 10px rgba(47, 220, 115, 0.12) !important;
+}
+
+.site-floating-actions .back-top-action svg,
+.site-floating-actions .back-top-action > span:first-child {
+  width: 36px !important;
+  height: 36px !important;
+  font-size: 34px !important;
+  line-height: 1 !important;
+  display: grid !important;
+  place-items: center !important;
+}
+
+#supportModal .support-modal-panel {
+  width: min(1060px, calc(100vw - 32px)) !important;
+  max-width: min(1060px, calc(100vw - 32px)) !important;
+  height: min(900px, calc(100svh - 32px)) !important;
+  max-height: min(900px, calc(100svh - 32px)) !important;
+  overflow: hidden !important;
+  display: grid !important;
+  grid-template-rows: auto minmax(0, 1fr) auto !important;
+}
+
+#supportModal .support-chat-box {
+  min-height: 360px !important;
+  height: auto !important;
+  display: grid !important;
+  grid-template-rows: minmax(0, 1fr) auto !important;
+}
+
+#supportModal .support-thread {
+  min-height: 0 !important;
+  overflow: auto !important;
+}
+
+@media (max-width: 760px) {
+  .rank-medal-large:not(.rank-pending) {
+    width: 68px !important;
+    height: 68px !important;
+  }
+
+  .rank-medal-small:not(.rank-pending) {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .rank-medal-tiny:not(.rank-pending),
+  .board-legend i.rank-medal {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .site-floating-actions {
+    right: max(14px, env(safe-area-inset-right)) !important;
+    bottom: max(18px, env(safe-area-inset-bottom)) !important;
+    width: 58px !important;
+    gap: 10px !important;
+  }
+
+  .site-floating-actions .floating-action,
+  .site-floating-actions .support-fab,
+  .site-floating-actions .back-top-action {
+    width: 58px !important;
+    height: 58px !important;
+    min-width: 58px !important;
+    min-height: 58px !important;
+    max-width: 58px !important;
+    max-height: 58px !important;
+  }
+
+  #supportModal .support-modal-panel {
+    width: calc(100vw - 12px) !important;
+    max-width: calc(100vw - 12px) !important;
+    height: calc(100svh - 12px) !important;
+    max-height: calc(100svh - 12px) !important;
+    margin: 6px !important;
+  }
+
+  #supportModal .support-chat-box {
+    min-height: 280px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .store-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1279px) {
+  .store-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 899px) {
+  .store-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* 2026-09-01 mobile release lock: prevent horizontal clipping from older stacked overrides. */
+@media (max-width: 760px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .site-header,
+  .site-header .header-inner,
+  .hero-section,
+  .hero-grid,
+  .hero-copy,
+  .hero-copy h1,
+  .hero-lede,
+  .hero-actions,
+  .hero-proof,
+  .store-page,
+  .store-shell,
+  .store-hero,
+  .store-category-grid,
+  .store-grid {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .site-header .header-inner {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 14px 14px 12px !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: 12px !important;
+  }
+
+  .site-header .header-inner > .brand,
+  .site-header .header-inner > .header-actions,
+  .site-header .header-inner > .nav-links {
+    width: min(100%, 360px) !important;
+    max-width: min(100%, 360px) !important;
+    margin-inline: auto !important;
+  }
+
+  .brand {
+    max-width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .brand-status {
+    display: none !important;
+  }
+
+  .header-actions {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    align-items: stretch !important;
+  }
+
+  .site-header .header-register {
+    grid-column: 1 / -1 !important;
+  }
+
+  .language-control,
+  .header-actions .language-select,
+  .header-actions .button,
+  .site-header .header-login,
+  .site-header .header-register {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 48px !important;
+    padding: 0 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    font-size: 15px !important;
+    line-height: 1 !important;
+  }
+
+  .nav-links,
+  .store-page .nav-links {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    justify-items: stretch !important;
+  }
+
+  .nav-links a,
+  .store-page .nav-links a {
+    min-width: 0 !important;
+    width: 100% !important;
+    height: 46px !important;
+    padding: 0 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    line-height: 1.08 !important;
+    font-size: 14px !important;
+  }
+
+  .hero-section {
+    padding: 48px 14px 34px !important;
+  }
+
+  .hero-grid {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .hero-copy h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    text-align: left !important;
+    font-size: 34px !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0 !important;
+  }
+
+  [dir="rtl"] .hero-copy h1 {
+    text-align: right !important;
+  }
+
+  .hero-lede {
+    width: 100% !important;
+    overflow-wrap: anywhere !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+  }
+
+  .hero-actions {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .hero-actions .button {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .hero-proof,
+  .hero-proof[aria-label] {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-top: 20px !important;
+  }
+
+  .hero-proof > div,
+  .hero-proof .hero-proof-card,
+  .hero-proof-card {
+    width: 100% !important;
+    min-height: 74px !important;
+    padding: 12px 12px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-proof strong,
+  .hero-proof-card strong {
+    width: 100% !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: clip !important;
+    font-size: 25px !important;
+    font-weight: 500 !important;
+    line-height: 1.05 !important;
+  }
+
+  .hero-proof span,
+  .hero-proof-card span {
+    text-align: center !important;
+    font-size: 12px !important;
+    line-height: 1.16 !important;
+  }
+}
+
+/* 2026-09-01 final mobile guard: every top control and KPI card must stay inside the viewport. */
+@media (max-width: 760px) {
+  .site-header,
+  .store-page .site-header {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-inline: 0 !important;
+    overflow-x: clip !important;
+  }
+
+  .site-header .header-inner,
+  .store-page .site-header .header-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-inline: 12px !important;
+    margin: 0 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    justify-items: stretch !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .site-header .header-inner > .brand,
+  .site-header .header-inner > .header-actions,
+  .site-header .header-inner > nav.nav-links,
+  .store-page .site-header .header-inner > .brand,
+  .store-page .site-header .header-inner > .header-actions,
+  .store-page .site-header .header-inner > nav.nav-links {
+    justify-self: stretch !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .site-header .brand,
+  .store-page .site-header .brand {
+    justify-content: center !important;
+  }
+
+  .site-header .header-actions,
+  .store-page .site-header .header-actions {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .site-header .header-register,
+  .store-page .site-header .header-register {
+    grid-column: 1 / -1 !important;
+  }
+
+  .site-header .nav-links,
+  .store-page .site-header .nav-links {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .site-header .nav-links a,
+  .store-page .site-header .nav-links a,
+  .site-header .header-actions .button,
+  .store-page .site-header .header-actions .button,
+  .site-header .header-actions .language-select,
+  .store-page .site-header .header-actions .language-select {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    text-overflow: clip !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .hero-section,
+  .store-hero {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding-inline: 14px !important;
+    margin-inline: calc(50% - 50vw) !important;
+    overflow-x: clip !important;
+  }
+
+  .hero-grid,
+  .store-hero-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline: 0 !important;
+  }
+
+  .hero-proof,
+  .hero-proof[aria-label] {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    overflow: visible !important;
+  }
+
+  .hero-proof > div,
+  .hero-proof div:first-child,
+  .hero-proof div:nth-child(2),
+  .hero-proof div:nth-child(3),
+  .hero-proof div:last-child,
+  .hero-proof .hero-proof-card,
+  .hero-proof-card {
+    display: grid !important;
+    place-items: center !important;
+    min-height: 86px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 14px 12px !important;
+    text-align: center !important;
+    overflow: hidden !important;
+  }
+
+  .hero-proof strong,
+  .hero-proof-card strong {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(27px, 8.2vw, 34px) !important;
+    font-weight: 600 !important;
+    line-height: 1.04 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    letter-spacing: 0 !important;
+  }
+
+  .hero-proof span,
+  .hero-proof-card span {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 6px !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    line-height: 1.18 !important;
+    text-align: center !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
+/* 2026-09-01 decisive mobile header fix: no multi-column header controls on small screens. */
+@media (max-width: 760px) {
+  .site-header .header-inner,
+  .store-page .site-header .header-inner {
+    justify-items: center !important;
+    padding-inline: 18px !important;
+  }
+
+  .site-header .header-inner > .brand,
+  .site-header .header-inner > .header-actions,
+  .site-header .header-inner > nav.nav-links,
+  .store-page .site-header .header-inner > .brand,
+  .store-page .site-header .header-inner > .header-actions,
+  .store-page .site-header .header-inner > nav.nav-links {
+    width: min(100%, 330px) !important;
+    max-width: min(100%, 330px) !important;
+    justify-self: center !important;
+  }
+
+  .site-header .header-actions,
+  .store-page .site-header .header-actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .site-header .header-register,
+  .store-page .site-header .header-register {
+    grid-column: auto !important;
+  }
+
+  .site-header .nav-links,
+  .store-page .site-header .nav-links {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  .site-header .nav-links a,
+  .store-page .site-header .nav-links a,
+  .site-header .header-actions .button,
+  .store-page .site-header .header-actions .button,
+  .site-header .header-actions .language-select,
+  .store-page .site-header .header-actions .language-select {
+    min-height: 46px !important;
+    height: auto !important;
+  }
+}
+
+/* 2026-09-01 absolute final override: this block must remain at the end of the file. */
+@media (max-width: 760px) {
+  .hero-section .hero-proof,
+  .hero-section .hero-proof[aria-label],
+  body .hero-proof,
+  body .hero-proof[aria-label] {
+    width: min(100%, 330px) !important;
+    max-width: 330px !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    justify-items: stretch !important;
+    align-items: stretch !important;
+    overflow: visible !important;
+  }
+
+  .hero-section .hero-proof > div,
+  body .hero-proof > div,
+  body .hero-proof div:first-child,
+  body .hero-proof div:nth-child(2),
+  body .hero-proof div:nth-child(3),
+  body .hero-proof div:last-child,
+  body .hero-proof .hero-proof-card,
+  body .hero-proof-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 108px !important;
+    padding: 19px 18px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    overflow: hidden !important;
+  }
+
+  .hero-section .hero-proof strong,
+  body .hero-proof strong,
+  body .hero-proof-card strong {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    font-size: 31px !important;
+    font-weight: 560 !important;
+    line-height: 1.04 !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    transform: none !important;
+  }
+
+  body .hero-proof span,
+  body .hero-proof-card span {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 8px !important;
+    font-size: 13px !important;
+    font-weight: 780 !important;
+    line-height: 1.16 !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+  }
+}
+
+@media (max-width: 370px) {
+  body .hero-proof,
+  body .hero-proof[aria-label] {
+    max-width: 304px !important;
+  }
+
+  body .hero-proof strong,
+  body .hero-proof-card strong {
+    font-size: 28px !important;
+  }
+}
+
+@media (min-width: 761px) {
+  body .hero-proof,
+  body .hero-proof[aria-label] {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  body .hero-proof > div,
+  body .hero-proof .hero-proof-card,
+  body .hero-proof-card {
+    overflow: hidden !important;
+  }
+
+  body .hero-proof strong,
+  body .hero-proof-card strong {
+    font-size: clamp(30px, 3.2vw, 48px) !important;
+    font-weight: 560 !important;
+  }
+}
+
+#supportModal .support-modal-panel {
+  height: min(calc(100dvh - 56px), 820px) !important;
+  max-height: calc(100dvh - 56px) !important;
+}
+
+@media (max-width: 760px) {
+  #supportModal .support-modal-panel {
+    height: calc(100dvh - 12px) !important;
+    max-height: calc(100dvh - 12px) !important;
+  }
+}
+
+/* 2026-09-01 mobile-first production QA lock. Keep this as the final stylesheet block. */
+body .hero-proof,
+body .hero-proof[aria-label] {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  width: min(100%, 900px) !important;
+  max-width: 900px !important;
+  gap: 16px !important;
+  margin-inline: auto !important;
+  align-items: stretch !important;
+  justify-items: stretch !important;
+  overflow: visible !important;
+}
+
+body .hero-proof > div,
+body .hero-proof .hero-proof-card,
+body .hero-proof-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  min-height: 108px !important;
+  padding: 18px 14px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  overflow: hidden !important;
+}
+
+body .hero-proof strong,
+body .hero-proof-card strong {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  font-size: clamp(24px, 2.05vw, 34px) !important;
+  font-weight: 500 !important;
+  line-height: 1.06 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+body .hero-proof span,
+body .hero-proof-card span {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-top: 8px !important;
+  font-size: 13px !important;
+  font-weight: 780 !important;
+  line-height: 1.16 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  white-space: normal !important;
+  overflow-wrap: normal !important;
+}
+
+@media (max-width: 1120px) {
+  body .hero-proof,
+  body .hero-proof[aria-label] {
+    grid-template-columns: 1fr !important;
+    width: min(100%, 360px) !important;
+    max-width: 360px !important;
+  }
+
+  body .hero-proof strong,
+  body .hero-proof-card strong {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  body .hero-proof,
+  body .hero-proof[aria-label] {
+    width: min(100%, 320px) !important;
+    max-width: 320px !important;
+  }
+
+  body .hero-proof strong,
+  body .hero-proof-card strong {
+    font-size: 28px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-floating-actions {
+    right: max(12px, env(safe-area-inset-right)) !important;
+    bottom: max(14px, env(safe-area-inset-bottom)) !important;
+    width: 50px !important;
+    gap: 8px !important;
+  }
+
+  .site-floating-actions .floating-action,
+  .site-floating-actions .support-fab,
+  .site-floating-actions .back-top-action {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+  }
+
+  .site-floating-actions .support-fab svg,
+  .site-floating-actions .back-top-action svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .hero-lede,
+  .store-hero .section-copy,
+  .store-hero p {
+    padding-right: 62px !important;
+  }
+}
+
+/* 2026-09-01 support modal safety lock: no floating UI may cover chat input. */
+body.support-open .site-floating-actions {
+  display: none !important;
+}
+
+body.support-open .toast {
+  bottom: auto !important;
+  top: 18px !important;
+  left: 16px !important;
+  right: auto !important;
+  width: min(520px, calc(100vw - 32px)) !important;
+  max-width: calc(100vw - 32px) !important;
+  transform: translateY(-14px) !important;
+  z-index: 7000 !important;
+}
+
+body.support-open .toast.is-visible {
+  transform: translateY(0) !important;
+}
+
+@media (max-width: 760px) {
+  body.support-open .toast {
+    top: min(38dvh, 360px) !important;
+    left: 12px !important;
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
+    padding: 12px 14px !important;
+    font-size: 13px !important;
+    line-height: 1.35 !important;
   }
 }
 

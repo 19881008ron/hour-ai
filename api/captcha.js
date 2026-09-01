@@ -1,5 +1,5 @@
 const crypto = require("crypto");
-const { sendJson, signCaptcha } = require("./_lib/http");
+const { sendJson, signCaptcha } = require("../lib/http");
 
 module.exports = async function handler(req, res) {
   if (req.method !== "GET") return sendJson(res, 405, { error: "Method not allowed." });

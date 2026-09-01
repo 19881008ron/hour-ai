@@ -1,5 +1,5 @@
-const { readJson, sendJson, setSessionCookies } = require("./_lib/http");
-const { supabaseFetch } = require("./_lib/supabase");
+const { readJson, sendJson, setSessionCookies } = require("../lib/http");
+const { supabaseFetch } = require("../lib/supabase");
 
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") return sendJson(res, 405, { error: "Method not allowed." });

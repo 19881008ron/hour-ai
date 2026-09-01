@@ -1,36 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Image AI creation workflow">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Image AI creation">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07131c"/><stop offset="1" stop-color="#102b2a"/></linearGradient>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#34f28a"/><stop offset="1" stop-color="#00d8ff"/></linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#09111e"/><stop offset="1" stop-color="#132033"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2ee783"/><stop offset="1" stop-color="#12c8ff"/></linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="15" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#000" flood-opacity=".36"/></filter>
   </defs>
-  <rect width="1200" height="760" fill="url(#bg)"/>
-  <path d="M0 592c204-105 404-124 600-57s396 50 600-50v275H0z" fill="#0b1d28"/>
-  <g opacity=".34" stroke="#1fdd9b" stroke-width="1">
-    <path d="M70 94h1060M70 178h1060M70 262h1060M70 346h1060M70 430h1060"/>
-    <path d="M152 60v520M312 60v520M472 60v520M632 60v520M792 60v520M952 60v520"/>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="965" cy="138" r="210" fill="#12c8ff" opacity=".11" filter="url(#glow)"/>
+  <circle cx="160" cy="770" r="260" fill="#2ee783" opacity=".10" filter="url(#glow)"/>
+  <g opacity=".22" stroke="#7f93aa" stroke-width="2">
+    <path d="M90 160H1110M90 740H1110M180 90V810M1020 90V810"/>
+    <path d="M120 230h180l60-60h210M650 730h210l72-72h150"/>
   </g>
-  <g transform="translate(94 94)">
-    <rect width="430" height="520" rx="28" fill="#0e1824" stroke="#243749"/>
-    <rect x="34" y="34" width="362" height="250" rx="20" fill="#14283a"/>
-    <circle cx="124" cy="132" r="54" fill="#25db82" opacity=".9"/>
-    <path d="M54 256l118-116 78 76 52-45 94 85z" fill="url(#g)" opacity=".82"/>
-    <rect x="34" y="330" width="256" height="18" rx="9" fill="#d8f7ff" opacity=".7"/>
-    <rect x="34" y="376" width="324" height="14" rx="7" fill="#6ec7ff" opacity=".38"/>
-    <rect x="34" y="412" width="274" height="14" rx="7" fill="#6ec7ff" opacity=".28"/>
+  <rect x="112" y="110" width="976" height="680" rx="42" fill="#0e1725" stroke="#233148" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="112" y="110" width="976" height="70" rx="42" fill="#121e2e"/>
+  <circle cx="162" cy="145" r="10" fill="#ff5e74"/><circle cx="194" cy="145" r="10" fill="#ffb35c"/><circle cx="226" cy="145" r="10" fill="#2ee783"/>
+  <text x="600" y="151" text-anchor="middle" fill="#8aa0b6" font-family="Arial, sans-serif" font-size="18" font-weight="700">HOUR AI ORDER WORKSPACE</text>
+  <g transform="translate(190 230)">
+    <rect x="0" y="0" width="375" height="440" rx="28" fill="#eef7ff"/>
+    <rect x="32" y="34" width="310" height="220" rx="22" fill="#bfeeff"/>
+    <path d="M70 210l82-86 62 58 52-48 54 76" fill="none" stroke="url(#accent)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="36" y="292" width="146" height="28" rx="14" fill="#a8b8ca"/><rect x="36" y="345" width="250" height="24" rx="12" fill="#cad7e5"/>
+    <rect x="450" y="42" width="330" height="356" rx="24" fill="#111d2e" stroke="#2f425c" stroke-width="3"/>
+    <rect x="488" y="88" width="250" height="34" rx="17" fill="url(#accent)" opacity=".9"/>
+    <rect x="488" y="158" width="200" height="20" rx="10" fill="#74879f"/><rect x="488" y="202" width="230" height="20" rx="10" fill="#74879f"/><rect x="488" y="246" width="150" height="20" rx="10" fill="#74879f"/>
+    <circle cx="625" cy="340" r="44" fill="none" stroke="url(#accent)" stroke-width="10"/>
   </g>
-  <g transform="translate(615 118)">
-    <rect width="424" height="318" rx="24" fill="#f8fbff"/>
-    <rect x="24" y="24" width="376" height="180" rx="18" fill="#e9f3ff"/>
-    <path d="M53 178l104-90 70 62 42-36 104 64z" fill="#10c985"/>
-    <circle cx="322" cy="76" r="33" fill="#ffb34d"/>
-    <rect x="30" y="228" width="200" height="16" rx="8" fill="#0c1622"/>
-    <rect x="30" y="260" width="316" height="11" rx="6" fill="#8ca0b7"/>
-  </g>
-  <g transform="translate(692 492)" fill="none" stroke="url(#g)" stroke-width="10" filter="url(#glow)">
-    <path d="M0 30h105l40-30h155l40 30h90"/>
-    <circle cx="145" cy="0" r="16" fill="#07131c"/>
-    <circle cx="300" cy="30" r="16" fill="#07131c"/>
-  </g>
-  <text x="94" y="700" fill="#f8fbff" font-family="Arial, sans-serif" font-size="48" font-weight="800">Image AI Creation</text>
 </svg>

@@ -2,6 +2,7 @@
   const supportedLanguages = ["en", "ar", "zh"];
   const languageKey = "hourAiLanguage";
   const supportUrl = "index.html?support=1#support";
+  const productCatalogUrl = "data/member-products.json?v=20260901";
 
   const productImageFallback = "assets/carousel-learn.webp";
   const categoryImagePools = {
@@ -59,6 +60,11 @@
       "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&w=1100&q=82",
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=82",
       "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1100&q=82"
+    ],
+    gaming: [
+      "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=1100&q=82",
+      "https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=1100&q=82"
     ]
   };
 
@@ -120,6 +126,7 @@
         sports: "Sports & Outdoor",
         creator: "Creator & Live Commerce",
         travel: "Travel & Bags",
+        gaming: "Gaming & Entertainment",
         custom: "Custom Sourcing"
       },
       icons: {
@@ -135,6 +142,7 @@
         sports: "S",
         creator: "LIVE",
         travel: "T",
+        gaming: "G",
         custom: "+"
       }
     },
@@ -190,6 +198,7 @@
         sports: "运动户外",
         creator: "直播电商工具",
         travel: "旅行箱包",
+        gaming: "游戏与娱乐",
         custom: "商品定制"
       },
       icons: {
@@ -205,6 +214,7 @@
         sports: "动",
         creator: "播",
         travel: "旅",
+        gaming: "游",
         custom: "+"
       }
     },
@@ -260,6 +270,7 @@
         sports: "رياضة وخارج المنزل",
         creator: "أدوات التجارة المباشرة",
         travel: "السفر والحقائب",
+        gaming: "الألعاب والترفيه",
         custom: "توريد مخصص"
       },
       icons: {
@@ -275,12 +286,13 @@
         sports: "S",
         creator: "LIVE",
         travel: "T",
+        gaming: "G",
         custom: "+"
       }
     }
   };
 
-  const categoryOrder = ["all", "mobile", "fashion", "jewelry", "home", "furniture", "auto", "baby", "health", "sports", "creator", "travel", "custom"];
+  const categoryOrder = ["all", "mobile", "fashion", "jewelry", "home", "furniture", "auto", "baby", "health", "sports", "creator", "travel", "gaming", "custom"];
 
   const categoryTemplates = {
     mobile: [
@@ -414,11 +426,23 @@
       ["Memory Foam Neck Pillow", "Comfort travel product for long flights and road trips.", "$19-$45", 12],
       ["Passport Wallet Set", "Travel document organizer for family and business travelers.", "$18-$39", 11],
       ["Foldable Weekender Bag", "Lightweight travel bag for short trips and extra luggage needs.", "$29-$69", 19]
+    ],
+    gaming: [
+      ["Console Accessory Kit", "Gaming accessory bundle for console owners, families, and gift buyers.", "$49-$109", 32],
+      ["RGB Gaming Headset", "High-visual audio product for gamers, students, and livestream users.", "$39-$89", 25],
+      ["Mechanical Keyboard Set", "Gaming and desk setup product for creators, students, and office users.", "$59-$129", 39],
+      ["Wireless Gaming Mouse", "Daily-use gaming accessory for PC setups and esports fans.", "$29-$69", 19],
+      ["Mobile Game Controller", "Phone gaming grip and controller for mobile-first entertainment buyers.", "$35-$79", 23],
+      ["LED Gaming Desk Mat", "Low-cost desk upgrade with strong visual appeal for online resale.", "$19-$45", 12],
+      ["Streaming Capture Card", "Creator and gaming tool for livestream and content production.", "$49-$99", 32],
+      ["Gaming Chair Footrest", "Comfort accessory for long gaming, work, and study sessions.", "$45-$95", 29],
+      ["Portable Mini Projector", "Entertainment device for gaming rooms, family nights, and travel.", "$89-$179", 59],
+      ["VR Headset Carry Case", "Protection and travel accessory for VR and gaming devices.", "$25-$59", 16]
     ]
   };
 
   const categoryKeys = Object.keys(categoryTemplates);
-  const products = [];
+  let products = [];
   let orderNumber = 371011;
   const variantLabels = [
     { en: "Retail", zh: "零售款", ar: "تجزئة" },
@@ -460,6 +484,66 @@
     }
   });
 
+  function localizedBundle(value, fallback = {}) {
+    if (typeof value === "string") {
+      return { en: value, ar: value, zh: value };
+    }
+    return {
+      en: value?.en || fallback.en || "",
+      ar: value?.ar || value?.en || fallback.ar || fallback.en || "",
+      zh: value?.zh || value?.en || fallback.zh || fallback.en || ""
+    };
+  }
+
+  function normalizeImageList(images, fallbackImages) {
+    if (!Array.isArray(images)) return fallbackImages;
+    const cleanImages = images.map((image) => String(image || "").trim()).filter(Boolean).slice(0, 8);
+    return cleanImages.length ? cleanImages : fallbackImages;
+  }
+
+  function normalizeExternalProduct(raw, index, generatedProduct) {
+    const fallback = generatedProduct || products[index] || products[0];
+    const category = categoryKeys.includes(raw?.category) ? raw.category : fallback.category;
+    const fallbackTitle = fallback?.title || {};
+    const fallbackDesc = fallback?.desc || {};
+    const fallbackSpecs = fallback?.specs || {};
+    const prices = raw?.prices || {};
+    return {
+      id: raw?.id || fallback?.id || `ORDER-${371011 + index}`,
+      category,
+      images: normalizeImageList(raw?.images, fallback?.images || imageSetFor(category, index)),
+      title: localizedBundle(raw?.title, fallbackTitle),
+      desc: localizedBundle(raw?.desc, fallbackDesc),
+      specs: {
+        en: Array.isArray(raw?.specs?.en) ? raw.specs.en : fallbackSpecs.en,
+        ar: Array.isArray(raw?.specs?.ar) ? raw.specs.ar : fallbackSpecs.ar,
+        zh: Array.isArray(raw?.specs?.zh) ? raw.specs.zh : fallbackSpecs.zh
+      },
+      retail: raw?.retail || fallback?.retail || "$49-$99",
+      prices: {
+        C: prices.C || fallback?.prices?.C || "$30",
+        B: prices.B || fallback?.prices?.B || "$24",
+        A: prices.A || fallback?.prices?.A || "$18"
+      }
+    };
+  }
+
+  async function loadExternalCatalog() {
+    try {
+      const response = await fetch(productCatalogUrl, { cache: "no-store" });
+      if (!response.ok) return;
+      const catalog = await response.json();
+      const records = Array.isArray(catalog) ? catalog : catalog.products;
+      if (!Array.isArray(records) || !records.length) return;
+      const generatedProducts = products.slice();
+      products = records
+        .map((record, index) => normalizeExternalProduct(record, index, generatedProducts[index]))
+        .filter((product) => categoryKeys.includes(product.category));
+    } catch (error) {
+      products = products.length ? products : [];
+    }
+  }
+
   let currentLanguage = "en";
   let activeCategory = null;
 
@@ -485,6 +569,7 @@
       sports: '<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="10"/><path d="M8 13c4 1.5 7 5 9 12M24 13c-4 1.5-7 5-9 12M10 8c3.5 4 8.5 4 12 0"/></svg>',
       creator: '<svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="8" width="17" height="16" rx="3"/><path d="M22 13l5-3v12l-5-3z"/><path d="M13 13l5 3-5 3z"/></svg>',
       travel: '<svg viewBox="0 0 32 32" aria-hidden="true"><rect x="9" y="10" width="14" height="16" rx="2"/><path d="M13 10V7h6v3M12 26v2M20 26v2"/><path d="M24.5 6.5l2 2M23 9l4-4"/></svg>',
+      gaming: '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 13h14a5 5 0 0 1 4.7 3.3l1.2 3.5A4 4 0 0 1 25.1 25c-1.3 0-2.5-.6-3.3-1.7l-1.2-1.6h-9.2l-1.2 1.6A4 4 0 0 1 6.9 25a4 4 0 0 1-3.8-5.2l1.2-3.5A5 5 0 0 1 9 13z"/><path d="M10 17v4M8 19h4M20 18h.1M23 21h.1"/></svg>',
       custom: '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 6v20M6 16h20"/><path d="M23 7l1.2 2.8L27 11l-2.8 1.2L23 15l-1.2-2.8L19 11l2.8-1.2L23 7z"/></svg>'
     };
     return icons[category] || icons.all;
@@ -635,9 +720,12 @@
     document.body.classList.remove("store-modal-open");
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", async () => {
     const saved = localStorage.getItem(languageKey);
     setLanguage(saved && supportedLanguages.includes(saved) ? saved : "en", false);
+    await loadExternalCatalog();
+    renderCategories();
+    renderProducts();
     initBackToTop();
     document.getElementById("storeLanguageSelect")?.addEventListener("change", (event) => setLanguage(event.target.value, true));
     document.getElementById("storeDetailClose")?.addEventListener("click", closeDetail);

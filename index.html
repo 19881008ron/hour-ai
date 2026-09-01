@@ -12,7 +12,100 @@
     <link rel="icon" type="image/svg+xml" href="assets/hour-ai-logo.svg" />
     <link rel="shortcut icon" href="assets/hour-ai-logo.svg" />
     <link rel="apple-touch-icon" href="assets/hour-ai-logo.svg" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260901-prelaunch-mobile" />
+    <style id="hourai-critical-layout-fix">
+      .hero-proof,
+      .hero-proof[aria-label] {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+        width: 100% !important;
+        max-width: 900px !important;
+        margin-inline: auto !important;
+        align-items: stretch !important;
+        justify-items: stretch !important;
+        overflow: visible !important;
+      }
+
+      .hero-proof > div,
+      .hero-proof .hero-proof-card {
+        min-width: 0 !important;
+        width: 100% !important;
+        min-height: 108px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        overflow: hidden !important;
+        padding: 18px 14px !important;
+      }
+
+      .hero-proof strong,
+      .hero-proof-card strong {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
+        font-size: clamp(24px, 2.05vw, 34px) !important;
+        font-weight: 500 !important;
+        line-height: 1.06 !important;
+        letter-spacing: 0 !important;
+      }
+
+      .hero-proof span,
+      .hero-proof-card span {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 12px !important;
+        text-align: center !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        font-size: clamp(11px, 0.76vw, 13px) !important;
+        font-weight: 700 !important;
+        line-height: 1.18 !important;
+        letter-spacing: 0 !important;
+      }
+
+      @media (max-width: 1120px) {
+        .hero-proof,
+        .hero-proof[aria-label] {
+          grid-template-columns: 1fr !important;
+          max-width: 360px !important;
+        }
+
+        .hero-proof > div,
+        .hero-proof .hero-proof-card {
+          min-height: 68px !important;
+          padding: 12px 10px !important;
+        }
+
+        .hero-proof strong,
+        .hero-proof-card strong {
+          font-size: 30px !important;
+        }
+
+        .hero-proof span,
+        .hero-proof-card span {
+          margin-top: 6px !important;
+          font-size: 12px !important;
+        }
+      }
+
+      @media (max-width: 390px) {
+        .hero-proof,
+        .hero-proof[aria-label] {
+          max-width: 320px !important;
+        }
+
+        .hero-proof strong,
+        .hero-proof-card strong {
+          font-size: 28px !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#mainContent">Skip to content</a>
@@ -612,6 +705,6 @@
     </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="app.js"></script>
+    <script src="app.js?v=20260901-prelaunch-mobile"></script>
   </body>
 </html>

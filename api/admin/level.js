@@ -1,5 +1,5 @@
-const { readJson, sendJson } = require("../_lib/http");
-const { requireAdmin, supabaseFetch } = require("../_lib/supabase");
+const { readJson, sendJson } = require("../../lib/http");
+const { requireAdmin, supabaseFetch } = require("../../lib/supabase");
 
 const LEVELS = new Set([null, "C", "B", "A"]);
 

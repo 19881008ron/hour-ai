@@ -1,6 +1,6 @@
 const crypto = require("crypto");
-const { parseCookies, readJson, sendJson } = require("./_lib/http");
-const { authenticatedProfile, config, supabaseFetch } = require("./_lib/supabase");
+const { parseCookies, readJson, sendJson } = require("../lib/http");
+const { authenticatedProfile, config, supabaseFetch } = require("../lib/supabase");
 
 const SUPPORT_ROLES = new Set(["admin", "agent"]);
 const ALLOWED_MIME_TYPES = new Set(["image/png", "image/jpeg", "image/webp", "image/gif"]);

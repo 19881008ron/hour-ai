@@ -1705,6 +1705,16 @@ Object.keys(localizedContent).forEach((language) => {
   if (!supportedLanguages.includes(language)) delete localizedContent[language];
 });
 
+const activeLocalizedContent = {};
+supportedLanguages.forEach((language) => {
+  activeLocalizedContent[language] = localizedContent[language] || localizedContent.en;
+});
+Object.keys(localizedContent).forEach((language) => delete localizedContent[language]);
+Object.assign(localizedContent, activeLocalizedContent);
+Object.keys(translations).forEach((language) => {
+  if (!supportedLanguages.includes(language)) delete translations[language];
+});
+
 const carouselSlides = [
   { src: "assets/carousel-learn.webp" },
   { src: "assets/carousel-test.webp" },
@@ -2067,6 +2077,7 @@ function openModal(id) {
   modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
+  if (id === "supportModal") document.body.classList.add("support-open");
   requestAnimationFrame(() => modal.querySelector(".modal-panel")?.focus());
 }
 
@@ -2075,6 +2086,7 @@ function closeModal(id) {
   if (!modal.classList.contains("is-open")) return;
   modal.classList.remove("is-open");
   modal.setAttribute("aria-hidden", "true");
+  if (id === "supportModal") document.body.classList.remove("support-open");
   if (!document.querySelector(".modal.is-open")) document.body.classList.remove("modal-open");
   lastFocusedElement?.focus?.();
 }
@@ -2815,7 +2827,12 @@ function initLanguage() {
     option.textContent = languageLabels[option.value] || option.textContent;
   });
   const savedLanguage = localStorage.getItem("hourAiLanguage");
-  if (savedLanguage && translations[savedLanguage]) currentLanguage = savedLanguage;
+  if (savedLanguage && supportedLanguages.includes(savedLanguage) && translations[savedLanguage]) {
+    currentLanguage = savedLanguage;
+  } else if (savedLanguage) {
+    localStorage.removeItem("hourAiLanguage");
+    localStorage.removeItem("hourAiLanguageManual");
+  }
   document.getElementById("languageSelect").value = currentLanguage;
 }
 

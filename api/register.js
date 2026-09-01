@@ -1,5 +1,5 @@
-const { readJson, sendJson, setSessionCookies, validateCaptcha } = require("./_lib/http");
-const { supabaseFetch } = require("./_lib/supabase");
+const { readJson, sendJson, setSessionCookies, validateCaptcha } = require("../lib/http");
+const { supabaseFetch } = require("../lib/supabase");
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const USERNAME = /^[a-zA-Z0-9_.-]{3,30}$/;

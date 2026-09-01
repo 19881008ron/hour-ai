@@ -1,5 +1,5 @@
-const { clearSessionCookies, sendJson } = require("./_lib/http");
-const { authenticatedProfile } = require("./_lib/supabase");
+const { clearSessionCookies, sendJson } = require("../lib/http");
+const { authenticatedProfile } = require("../lib/supabase");
 
 module.exports = async function handler(req, res) {
   if (req.method !== "GET") return sendJson(res, 405, { error: "Method not allowed." });

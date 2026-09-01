@@ -1,5 +1,5 @@
-const { sendJson } = require("../_lib/http");
-const { requireAdmin, supabaseFetch } = require("../_lib/supabase");
+const { sendJson } = require("../../lib/http");
+const { requireAdmin, supabaseFetch } = require("../../lib/supabase");
 
 function csvCell(value) {
   return `"${String(value ?? "").replace(/"/g, '""')}"`;
