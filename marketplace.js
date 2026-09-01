@@ -101,6 +101,9 @@
         aSupply: "A supply",
         retail: "Retail guide",
         details: "View details",
+        noonEnglish: "English Details",
+        noonArabic: "Arabic Details",
+        noonUnavailable: "Noon detail link pending",
         request: "Request sourcing",
         supplyTitle: "Member supply prices",
         gallery: "Product gallery",
@@ -173,6 +176,9 @@
         aSupply: "A级供货价",
         retail: "建议零售价",
         details: "查看详情",
+        noonEnglish: "英文介绍",
+        noonArabic: "阿拉伯语介绍",
+        noonUnavailable: "Noon 详情链接待补充",
         request: "申请找货",
         supplyTitle: "会员供货价格",
         gallery: "商品图片",
@@ -245,6 +251,9 @@
         aSupply: "توريد A",
         retail: "سعر البيع",
         details: "عرض التفاصيل",
+        noonEnglish: "تفاصيل باللغة الإنجليزية",
+        noonArabic: "تفاصيل باللغة العربية",
+        noonUnavailable: "رابط تفاصيل نون قيد الإضافة",
         request: "طلب توريد",
         supplyTitle: "أسعار توريد الأعضاء",
         gallery: "صور المنتج",
@@ -501,6 +510,15 @@
     return cleanImages.length ? cleanImages : fallbackImages;
   }
 
+  function normalizeNoonLinks(rawLinks = {}, fallbackLinks = {}) {
+    const links = rawLinks.noon || rawLinks || {};
+    const fallback = fallbackLinks.noon || fallbackLinks || {};
+    return {
+      en: String(links.en || links.english || fallback.en || fallback.english || "").trim(),
+      ar: String(links.ar || links.arabic || fallback.ar || fallback.arabic || "").trim()
+    };
+  }
+
   function normalizeExternalProduct(raw, index, generatedProduct) {
     const fallback = generatedProduct || products[index] || products[0];
     const category = categoryKeys.includes(raw?.category) ? raw.category : fallback.category;
@@ -524,7 +542,8 @@
         C: prices.C || fallback?.prices?.C || "$30",
         B: prices.B || fallback?.prices?.B || "$24",
         A: prices.A || fallback?.prices?.A || "$18"
-      }
+      },
+      noon: normalizeNoonLinks(raw?.noon || raw?.links, fallback?.noon || fallback?.links)
     };
   }
 
@@ -553,6 +572,19 @@
 
   function localized(value) {
     return value[currentLanguage] || value.en || "";
+  }
+
+  function externalLinkButtons(product) {
+    const noon = normalizeNoonLinks(product.noon || product.links);
+    if (!noon.en && !noon.ar) {
+      return `<p class="store-link-pending">${get("store.noonUnavailable")}</p>`;
+    }
+    return `
+      <div class="store-external-links" aria-label="Noon product details">
+        ${noon.en ? `<a class="button store-noon-link store-noon-link-en" href="${noon.en}" target="_blank" rel="noopener noreferrer">${get("store.noonEnglish")}</a>` : ""}
+        ${noon.ar ? `<a class="button store-noon-link store-noon-link-ar" href="${noon.ar}" target="_blank" rel="noopener noreferrer">${get("store.noonArabic")}</a>` : ""}
+      </div>
+    `;
   }
 
   function categoryIcon(category) {
@@ -699,6 +731,7 @@
               <li>${get("store.flow4")}</li>
             </ol>
           </div>
+          ${externalLinkButtons(product)}
           <a class="button button-primary store-request-button" href="${supportUrl}">${get("store.request")}</a>
         </aside>
       </div>
