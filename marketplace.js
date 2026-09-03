@@ -510,9 +510,9 @@
     return cleanImages.length ? cleanImages : fallbackImages;
   }
 
-  function normalizeNoonLinks(rawLinks = {}, fallbackLinks = {}) {
-    const links = rawLinks.noon || rawLinks || {};
-    const fallback = fallbackLinks.noon || fallbackLinks || {};
+  function normalizeMarketplaceLinks(rawLinks = {}, fallbackLinks = {}) {
+    const links = rawLinks.marketplace || rawLinks.amazon || rawLinks.noon || rawLinks || {};
+    const fallback = fallbackLinks.marketplace || fallbackLinks.amazon || fallbackLinks.noon || fallbackLinks || {};
     return {
       en: String(links.en || links.english || fallback.en || fallback.english || "").trim(),
       ar: String(links.ar || links.arabic || fallback.ar || fallback.arabic || "").trim()
@@ -543,7 +543,7 @@
         B: prices.B || fallback?.prices?.B || "$24",
         A: prices.A || fallback?.prices?.A || "$18"
       },
-      noon: normalizeNoonLinks(raw?.noon || raw?.links, fallback?.noon || fallback?.links)
+      marketplace: normalizeMarketplaceLinks(raw?.marketplace || raw?.amazon || raw?.noon || raw?.links, fallback?.marketplace || fallback?.amazon || fallback?.noon || fallback?.links)
     };
   }
 
@@ -575,14 +575,14 @@
   }
 
   function externalLinkButtons(product) {
-    const noon = normalizeNoonLinks(product.noon || product.links);
-    if (!noon.en && !noon.ar) {
+    const links = normalizeMarketplaceLinks(product.marketplace || product.amazon || product.noon || product.links);
+    if (!links.en && !links.ar) {
       return `<p class="store-link-pending">${get("store.noonUnavailable")}</p>`;
     }
     return `
-      <div class="store-external-links" aria-label="Noon product details">
-        ${noon.en ? `<a class="button store-noon-link store-noon-link-en" href="${noon.en}" target="_blank" rel="noopener noreferrer">${get("store.noonEnglish")}</a>` : ""}
-        ${noon.ar ? `<a class="button store-noon-link store-noon-link-ar" href="${noon.ar}" target="_blank" rel="noopener noreferrer">${get("store.noonArabic")}</a>` : ""}
+      <div class="store-external-links" aria-label="External product details">
+        ${links.en ? `<a class="button store-noon-link store-noon-link-en" href="${links.en}" target="_blank" rel="noopener noreferrer">${get("store.noonEnglish")}</a>` : ""}
+        ${links.ar ? `<a class="button store-noon-link store-noon-link-ar" href="${links.ar}" target="_blank" rel="noopener noreferrer">${get("store.noonArabic")}</a>` : ""}
       </div>
     `;
   }
