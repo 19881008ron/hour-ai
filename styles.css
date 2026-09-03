@@ -11138,3 +11138,30 @@ body.support-open .toast.is-visible {
   }
 }
 
+/* Amazon product photos: keep real catalog images complete, centered, and uncropped. */
+.store-card-media,
+.store-main-image,
+.store-thumb-grid button {
+  background: #ffffff !important;
+}
+
+.store-card-media img,
+.store-main-image img,
+.store-thumb-grid img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  transform: none !important;
+  padding: 10px !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 760px) {
+  .store-card-media img,
+  .store-main-image img,
+  .store-thumb-grid img {
+    padding: 8px !important;
+  }
+}
+
