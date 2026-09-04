@@ -1,6 +1,7 @@
 (function () {
   const supportedLanguages = ["en", "ar", "zh"];
   const languageKey = "hourAiLanguage";
+  const languageManualKey = "hourAiLanguageManual";
   const supportUrl = "index.html?support=1#support";
   const productCatalogUrl = "data/member-products.json?v=20260901";
 
@@ -621,7 +622,10 @@
     document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr";
     const select = document.getElementById("storeLanguageSelect");
     if (select) select.value = currentLanguage;
-    if (persist) localStorage.setItem(languageKey, currentLanguage);
+    if (persist) {
+      localStorage.setItem(languageKey, currentLanguage);
+      localStorage.setItem(languageManualKey, "true");
+    }
     document.querySelectorAll("[data-store-i18n]").forEach((node) => {
       node.textContent = get(node.getAttribute("data-store-i18n"));
     });
@@ -755,7 +759,8 @@
 
   document.addEventListener("DOMContentLoaded", async () => {
     const saved = localStorage.getItem(languageKey);
-    setLanguage(saved && supportedLanguages.includes(saved) ? saved : "en", false);
+    const manual = localStorage.getItem(languageManualKey) === "true";
+    setLanguage(manual && saved && supportedLanguages.includes(saved) ? saved : "en", false);
     await loadExternalCatalog();
     renderCategories();
     renderProducts();

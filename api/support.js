@@ -70,6 +70,11 @@ function guestIdFromRequest(req) {
   return /^[0-9a-f-]{36}$/i.test(String(value || "")) ? value : "";
 }
 
+function cleanGuestId(value) {
+  const guestId = String(value || "").trim();
+  return /^[0-9a-f-]{36}$/i.test(guestId) ? guestId : "";
+}
+
 function setGuestCookie(req, res, guestId) {
   const secure = process.env.NODE_ENV === "production" ? "; Secure" : "";
   const common = `; Path=/; HttpOnly; SameSite=Lax; Max-Age=15552000${secure}`;
@@ -138,7 +143,7 @@ async function listConversations(auth, guestId) {
 
 async function createConversation(auth, body, req, res) {
   const topic = cleanTopic(body.topic);
-  const guestId = auth?.profile ? "" : guestIdFromRequest(req) || crypto.randomUUID();
+  const guestId = auth?.profile ? "" : guestIdFromRequest(req) || cleanGuestId(body.guestId) || crypto.randomUUID();
   const guestName = auth?.profile
     ? ""
     : cleanName(body.guestName) || `Website visitor ${guestId.slice(0, 6).toUpperCase()}`;
@@ -271,7 +276,7 @@ async function uploadAttachment(conversationId, messageId, attachment) {
 }
 
 async function createMessage(auth, guestId, body) {
-  const conversation = await requireConversationAccess(auth, guestId, body.conversationId);
+  const conversation = await requireConversationAccess(auth, guestId || cleanGuestId(body.guestId), body.conversationId);
   const messageBody = cleanBody(body.body);
   const attachment = parseAttachment(body.attachment);
   if (!messageBody && !attachment) {
@@ -370,7 +375,7 @@ module.exports = async function handler(req, res) {
     const urlInfo = new URL(req.url, `https://${req.headers.host || "hour-ai.com"}`);
     const resource = urlInfo.searchParams.get("resource") || "conversations";
     const auth = await optionalAuth(req);
-    const guestId = guestIdFromRequest(req);
+    const guestId = guestIdFromRequest(req) || cleanGuestId(urlInfo.searchParams.get("guestId"));
 
     if (resource === "attachment") {
       if (req.method !== "GET") return sendJson(res, 405, { error: "Method not allowed." });

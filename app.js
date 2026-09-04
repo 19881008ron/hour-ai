@@ -1818,6 +1818,7 @@ let supportPollTimer = null;
 let activeAgentConversationId = null;
 let showAllOrders = false;
 let revealObserver = null;
+const supportGuestKey = "hourAiSupportGuestId";
 
 function deepMerge(target, source) {
   Object.keys(source || {}).forEach((key) => {
@@ -2314,10 +2315,20 @@ async function fileToSupportAttachment(file) {
   });
 }
 
+function getSupportGuestId() {
+  let guestId = localStorage.getItem(supportGuestKey);
+  if (!/^[0-9a-f-]{36}$/i.test(String(guestId || ""))) {
+    const randomUUID = window.crypto?.randomUUID?.bind(window.crypto);
+    guestId = randomUUID ? randomUUID() : `${Date.now()}-${Math.random()}`.replace(/[^0-9a-f-]/gi, "").padEnd(36, "0").slice(0, 36);
+    localStorage.setItem(supportGuestKey, guestId);
+  }
+  return guestId;
+}
+
 async function ensureSupportConversation(topic = "Website live chat") {
   const data = await apiRequest("/api/support?resource=conversations", {
     method: "POST",
-    body: JSON.stringify({ topic })
+    body: JSON.stringify({ topic, guestId: getSupportGuestId() })
   });
   const conversation = data?.conversation;
   if (!conversation?.id) throw new Error(t("support.unavailable"));
@@ -2326,7 +2337,7 @@ async function ensureSupportConversation(topic = "Website live chat") {
 }
 
 async function loadExistingSupportConversation() {
-  const data = await apiRequest("/api/support?resource=conversations", { method: "GET", headers: {} });
+  const data = await apiRequest(`/api/support?resource=conversations&guestId=${encodeURIComponent(getSupportGuestId())}`, { method: "GET", headers: {} });
   const conversation = data?.conversations?.[0];
   if (conversation) {
     activeSupportConversationId = conversation.id;
@@ -2337,7 +2348,7 @@ async function loadExistingSupportConversation() {
 
 async function loadSupportMessages(targetId = "supportThread", conversationId = activeSupportConversationId) {
   if (!conversationId) return;
-  const data = await apiRequest(`/api/support?resource=messages&conversationId=${encodeURIComponent(conversationId)}`, {
+  const data = await apiRequest(`/api/support?resource=messages&conversationId=${encodeURIComponent(conversationId)}&guestId=${encodeURIComponent(getSupportGuestId())}`, {
     method: "GET",
     headers: {}
   });
@@ -2387,6 +2398,7 @@ async function sendSupportMessage({ conversationId, textareaId, inputId, threadI
       method: "POST",
       body: JSON.stringify({
         conversationId: conversation.id,
+        guestId: getSupportGuestId(),
         body,
         attachment
       })
@@ -2399,6 +2411,11 @@ async function sendSupportMessage({ conversationId, textareaId, inputId, threadI
     if (afterSend) await afterSend();
     showToast(t("support.sent"));
   } catch (error) {
+    if (!activeProfile && [401, 403, 404].includes(error.status) && targetConversationId) {
+      activeSupportConversationId = null;
+      await sendSupportMessage({ conversationId: null, textareaId, inputId, threadId, afterSend });
+      return;
+    }
     showToast(error.message);
   } finally {
     if (button) button.disabled = false;
@@ -2865,28 +2882,20 @@ function initLanguageSystem() {
     option.textContent = languageLabels[option.value] || option.textContent;
   });
   const savedLanguage = localStorage.getItem("hourAiLanguage");
-  if (savedLanguage && supportedLanguages.includes(savedLanguage)) {
+  const manualLanguage = localStorage.getItem("hourAiLanguageManual") === "true";
+  if (manualLanguage && savedLanguage && supportedLanguages.includes(savedLanguage)) {
     setLanguage(savedLanguage);
     return;
   }
   localStorage.removeItem("hourAiLanguage");
   localStorage.removeItem("hourAiLanguageManual");
-  setLanguage(languageFromBrowser());
+  setLanguage("en");
 }
 
 async function applyRegionalLanguagePreference() {
-  if (localStorage.getItem("hourAiLanguageManual") === "true" || localStorage.getItem("hourAiLanguage")) return;
-  try {
-    const response = await fetch("/api/locale", { cache: "no-store" });
-    if (!response.ok) return;
-    const data = await response.json();
-    if (supportedLanguages.includes(data?.language) && data.language !== currentLanguage) {
-      setLanguage(data.language);
-      applyTranslations();
-    }
-  } catch (error) {
-    // Browser language remains the fallback when regional detection is unavailable.
-  }
+  if (localStorage.getItem("hourAiLanguageManual") === "true") return;
+  setLanguage("en");
+  applyTranslations();
 }
 
 function initWelcomeAnimation() {
