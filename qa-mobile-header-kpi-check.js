@@ -101,21 +101,42 @@ async function waitLoaded(ws) {
         const nav = document.querySelector(".site-header .nav-links");
         const proof = document.querySelector(".hero-proof");
         const proofItems = Array.from(document.querySelectorAll(".hero-proof > div"));
+        const signals = Array.from(document.querySelectorAll(".signal-item"));
+        const profiles = Array.from(document.querySelectorAll(".profile-card"));
+        const legend = Array.from(document.querySelectorAll(".board-legend > span"));
         const rect = (el) => {
           const r = el.getBoundingClientRect();
           return { left: Math.round(r.left), top: Math.round(r.top), right: Math.round(r.right), width: Math.round(r.width), height: Math.round(r.height) };
         };
+        const firstProfile = profiles[0];
+        const profileChildren = firstProfile ? Array.from(firstProfile.children).map((el) => ({
+          tag: el.tagName,
+          cls: el.className,
+          text: el.textContent.trim().replace(/\\s+/g, " ").slice(0, 60),
+          rect: rect(el),
+          display: getComputedStyle(el).display,
+          gridColumn: getComputedStyle(el).gridColumn,
+          position: getComputedStyle(el).position,
+          width: getComputedStyle(el).width,
+          margin: getComputedStyle(el).margin
+        })) : [];
+        const rowInfo = (items) => items.map((el) => rect(el)).map((r) => ({ left: r.left, top: r.top, width: r.width, height: r.height }));
         return {
           lang: document.documentElement.lang,
           header: rect(header),
           brand: rect(brand),
           brandNameColor: getComputedStyle(document.querySelector(".brand-name")).color,
           nav: rect(nav),
+          navItems: Array.from(nav.querySelectorAll("a")).map((el) => ({ text: el.textContent.trim(), ...rect(el) })),
           navTops: Array.from(nav.querySelectorAll("a")).map((el) => Math.round(el.getBoundingClientRect().top)),
           proof: rect(proof),
           proofDisplay: getComputedStyle(proof).display,
           proofColumns: getComputedStyle(proof).gridTemplateColumns,
           proofItems: proofItems.map((el) => ({ rect: rect(el), gridColumn: getComputedStyle(el).gridColumn, text: el.textContent.trim().replace(/\\s+/g, " ") })),
+          signalRows: rowInfo(signals),
+          profileRows: rowInfo(profiles),
+          profileChildren,
+          legendRows: rowInfo(legend),
           overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth
         };
       })()`,
@@ -123,6 +144,16 @@ async function waitLoaded(ws) {
 
     const png = await send(ws, "Page.captureScreenshot", { format: "png", captureBeyondViewport: false });
     fs.writeFileSync(path.join(outDir, "mobile-header-kpi-check.png"), Buffer.from(png.data, "base64"));
+    const sectionShots = [
+      { name: "mobile-workflow-row-check.png", y: 930 },
+      { name: "mobile-level-row-check.png", y: 2500 },
+    ];
+    for (const shot of sectionShots) {
+      await send(ws, "Runtime.evaluate", { expression: `window.scrollTo(0, ${shot.y})` });
+      await sleep(250);
+      const sectionPng = await send(ws, "Page.captureScreenshot", { format: "png", captureBeyondViewport: false });
+      fs.writeFileSync(path.join(outDir, shot.name), Buffer.from(sectionPng.data, "base64"));
+    }
 
     ws.close();
     console.log(JSON.stringify(audit.result.value, null, 2));
