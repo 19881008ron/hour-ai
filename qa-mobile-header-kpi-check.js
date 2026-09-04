@@ -104,6 +104,8 @@ async function waitLoaded(ws) {
         const signals = Array.from(document.querySelectorAll(".signal-item"));
         const profiles = Array.from(document.querySelectorAll(".profile-card"));
         const legend = Array.from(document.querySelectorAll(".board-legend > span"));
+        const reviewsGrid = document.querySelector(".reviews-grid");
+        const reviews = Array.from(document.querySelectorAll(".review-card"));
         const rect = (el) => {
           const r = el.getBoundingClientRect();
           return { left: Math.round(r.left), top: Math.round(r.top), right: Math.round(r.right), width: Math.round(r.width), height: Math.round(r.height) };
@@ -137,6 +139,9 @@ async function waitLoaded(ws) {
           profileRows: rowInfo(profiles),
           profileChildren,
           legendRows: rowInfo(legend),
+          reviewsGrid: rect(reviewsGrid),
+          reviewRows: rowInfo(reviews),
+          reviewGap: getComputedStyle(reviewsGrid).gap,
           overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth
         };
       })()`,
@@ -147,11 +152,30 @@ async function waitLoaded(ws) {
     const sectionShots = [
       { name: "mobile-workflow-row-check.png", y: 930 },
       { name: "mobile-level-row-check.png", y: 2500 },
+      { name: "mobile-reviews-merge-check.png", selector: ".reviews-grid" },
     ];
     for (const shot of sectionShots) {
-      await send(ws, "Runtime.evaluate", { expression: `window.scrollTo(0, ${shot.y})` });
-      await sleep(250);
-      const sectionPng = await send(ws, "Page.captureScreenshot", { format: "png", captureBeyondViewport: false });
+      let captureOptions = { format: "png", captureBeyondViewport: false };
+      if (shot.selector) {
+        const position = await send(ws, "Runtime.evaluate", {
+          returnByValue: true,
+          expression: `(() => {
+            const el = document.querySelector("${shot.selector}");
+            if (!el) return null;
+            const rect = el.getBoundingClientRect();
+            return { y: Math.max(0, Math.round(rect.top + window.scrollY - 110)) };
+          })()`,
+        });
+        captureOptions = {
+          format: "png",
+          captureBeyondViewport: true,
+          clip: { x: 0, y: position.result.value.y, width: 390, height: 844, scale: 1 },
+        };
+      } else {
+        await send(ws, "Runtime.evaluate", { expression: `window.scrollTo(0, ${shot.y})` });
+        await sleep(250);
+      }
+      const sectionPng = await send(ws, "Page.captureScreenshot", captureOptions);
       fs.writeFileSync(path.join(outDir, shot.name), Buffer.from(sectionPng.data, "base64"));
     }
 
