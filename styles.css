@@ -11785,3 +11785,378 @@ body .hero-proof-card span {
   }
 }
 
+/* 2026-09-05 mobile header and KPI final lock. PC layout is untouched above 1024px. */
+@media (max-width: 1024px) {
+  body .site-header,
+  body.store-page .site-header {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: rgba(5, 10, 16, 0.97) !important;
+    color: #f8fafc !important;
+    overflow: hidden !important;
+  }
+
+  body .site-header .header-inner,
+  body.store-page .site-header .header-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: minmax(118px, 1fr) auto !important;
+    grid-template-areas:
+      "brand actions"
+      "nav nav" !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 8px 10px 6px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    direction: ltr !important;
+  }
+
+  body .site-header .brand,
+  body .site-header .header-inner > .brand,
+  body.store-page .site-header .brand,
+  body.store-page .site-header .header-inner > .brand {
+    grid-area: brand !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 36px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    padding: 4px 8px 4px 4px !important;
+    border-radius: 999px !important;
+    background: rgba(15, 23, 42, 0.82) !important;
+    border: 1px solid rgba(148, 163, 184, 0.22) !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+
+  body .site-header .brand-mark,
+  body.store-page .site-header .brand-mark {
+    flex: 0 0 28px !important;
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    border-radius: 50% !important;
+  }
+
+  body .site-header .brand-name,
+  body.store-page .site-header .brand-name {
+    display: block !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    color: #f8fafc !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-shadow: none !important;
+  }
+
+  body .site-header .brand-status,
+  body.store-page .site-header .brand-status {
+    display: none !important;
+  }
+
+  body .site-header .header-actions,
+  body.store-page .site-header .header-actions {
+    grid-area: actions !important;
+    width: auto !important;
+    max-width: 49vw !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 6px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scrollbar-width: none !important;
+  }
+
+  body .site-header .header-actions::-webkit-scrollbar,
+  body.store-page .site-header .header-actions::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  body .site-header .header-actions .button,
+  body.store-page .site-header .header-actions .button,
+  body .site-header .header-actions .language-select,
+  body.store-page .site-header .header-actions .language-select {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 58px !important;
+    max-width: none !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    padding: 0 9px !important;
+    border-radius: 999px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  body .site-header nav.nav-links,
+  body.store-page .site-header nav.nav-links {
+    grid-area: nav !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 7px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+    scroll-snap-type: x proximity !important;
+    scrollbar-width: none !important;
+  }
+
+  body .site-header nav.nav-links::-webkit-scrollbar,
+  body.store-page .site-header nav.nav-links::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  body .site-header nav.nav-links a,
+  body.store-page .site-header nav.nav-links a {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: auto !important;
+    max-width: none !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    padding: 0 11px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(148, 163, 184, 0.2) !important;
+    background: rgba(15, 23, 42, 0.72) !important;
+    color: #e5edf7 !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    scroll-snap-align: start !important;
+  }
+
+  body .site-header nav.nav-links a::after,
+  body.store-page .site-header nav.nav-links a::after {
+    display: none !important;
+  }
+
+  body .hero-section {
+    padding-top: 18px !important;
+  }
+
+  body .hero-proof,
+  body .hero-proof[aria-label] {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+    margin-top: 14px !important;
+    overflow: visible !important;
+  }
+
+  body .hero-proof > div,
+  body .hero-proof div:first-child,
+  body .hero-proof div:nth-child(2),
+  body .hero-proof div:nth-child(3),
+  body .hero-proof div:last-child,
+  body .hero-proof .hero-proof-card,
+  body .hero-proof-card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    min-height: 74px !important;
+    height: 74px !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    align-content: center !important;
+    justify-items: center !important;
+    gap: 7px !important;
+    padding: 8px 5px !important;
+    text-align: center !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  body .hero-proof strong,
+  body .hero-proof-card strong {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    color: #f8fafc !important;
+    font-size: clamp(18px, 4.45vw, 25px) !important;
+    font-weight: 650 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: clip !important;
+    text-align: center !important;
+  }
+
+  body .hero-proof span,
+  body .hero-proof-card span {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    color: #dbeafe !important;
+    font-size: clamp(8px, 2.45vw, 12px) !important;
+    font-weight: 700 !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0 !important;
+    white-space: normal !important;
+    overflow: hidden !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+  }
+}
+
+@media (max-width: 380px) {
+  body .site-header .header-inner,
+  body.store-page .site-header .header-inner {
+    grid-template-columns: minmax(104px, 1fr) auto !important;
+    padding-inline: 8px !important;
+  }
+
+  body .site-header .brand-name,
+  body.store-page .site-header .brand-name {
+    font-size: 15px !important;
+  }
+
+  body .site-header .header-actions,
+  body.store-page .site-header .header-actions {
+    max-width: 47vw !important;
+  }
+
+  body .site-header nav.nav-links a,
+  body.store-page .site-header nav.nav-links a {
+    padding-inline: 9px !important;
+    font-size: 11px !important;
+  }
+
+  body .hero-proof,
+  body .hero-proof[aria-label] {
+    gap: 6px !important;
+  }
+
+  body .hero-proof strong,
+  body .hero-proof-card strong {
+    font-size: 16px !important;
+  }
+
+  body .hero-proof span,
+  body .hero-proof-card span {
+    font-size: 8px !important;
+  }
+}
+
+/* 2026-09-05 mobile visual correction: outrank older emergency locks. */
+@media (max-width: 1024px) {
+  html body .site-header .header-inner > nav.nav-links,
+  html body.store-page .site-header .header-inner > nav.nav-links {
+    justify-self: stretch !important;
+    justify-content: flex-start !important;
+    place-content: normal flex-start !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline: 0 !important;
+    padding-inline: 0 !important;
+    scroll-padding-inline: 0 !important;
+    scroll-snap-type: x proximity !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+  html body .site-header .header-inner > nav.nav-links a:first-child,
+  html body.store-page .site-header .header-inner > nav.nav-links a:first-child {
+    margin-left: 0 !important;
+  }
+
+  html body .site-header .header-inner > nav.nav-links a:last-child,
+  html body.store-page .site-header .header-inner > nav.nav-links a:last-child {
+    margin-right: 0 !important;
+  }
+
+  html body .hero-section .hero-copy h1 {
+    font-size: clamp(34px, 9.4vw, 46px) !important;
+    line-height: 1.04 !important;
+  }
+
+  html body .hero-section .hero-copy .hero-lede {
+    font-size: clamp(15px, 4.1vw, 19px) !important;
+    line-height: 1.42 !important;
+  }
+
+  html body .hero-section .hero-copy > .hero-proof,
+  html body .hero-section .hero-copy > .hero-proof[aria-label] {
+    justify-self: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+    margin: 14px 0 0 !important;
+    padding: 0 !important;
+  }
+
+  html body .hero-section .hero-copy > .hero-proof > div,
+  html body .hero-section .hero-copy > .hero-proof div:first-child,
+  html body .hero-section .hero-copy > .hero-proof div:nth-child(2),
+  html body .hero-section .hero-copy > .hero-proof div:nth-child(3),
+  html body .hero-section .hero-copy > .hero-proof div:last-child {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 74px !important;
+    min-height: 74px !important;
+    padding: 8px 5px !important;
+    align-content: center !important;
+    justify-items: center !important;
+    overflow: hidden !important;
+  }
+
+  html body .hero-section .hero-copy > .hero-proof strong {
+    font-size: clamp(18px, 4.45vw, 25px) !important;
+    font-weight: 650 !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+  }
+
+  html body .hero-section .hero-copy > .hero-proof span {
+    font-size: clamp(8px, 2.45vw, 12px) !important;
+    font-weight: 700 !important;
+    line-height: 1.08 !important;
+    white-space: normal !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+  }
+}
+
