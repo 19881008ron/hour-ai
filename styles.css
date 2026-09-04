@@ -11165,3 +11165,102 @@ body.support-open .toast.is-visible {
   }
 }
 
+/* 2026-09-04 KPI position lock: fixed center alignment, no horizontal drift or clipping. */
+body .hero-proof,
+body .hero-proof[aria-label] {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  width: min(100%, 860px) !important;
+  max-width: 860px !important;
+  gap: 18px !important;
+  margin-inline: auto !important;
+  overflow: visible !important;
+}
+
+body .hero-proof > div,
+body .hero-proof .hero-proof-card,
+body .hero-proof-card {
+  display: grid !important;
+  grid-template-rows: auto auto !important;
+  place-items: center !important;
+  justify-items: center !important;
+  align-content: center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 126px !important;
+  padding: 22px 18px !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+  text-align: center !important;
+}
+
+body .hero-proof strong,
+body .hero-proof-card strong {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  font-size: clamp(30px, 2.65vw, 44px) !important;
+  font-weight: 520 !important;
+  line-height: 1.04 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+body .hero-proof span,
+body .hero-proof-card span {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 8px 0 0 !important;
+  font-size: clamp(12px, 1vw, 15px) !important;
+  font-weight: 740 !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+}
+
+@media (max-width: 1120px) {
+  body .hero-proof,
+  body .hero-proof[aria-label] {
+    grid-template-columns: 1fr !important;
+    width: min(100%, 360px) !important;
+    max-width: 360px !important;
+  }
+
+  body .hero-proof > div,
+  body .hero-proof .hero-proof-card,
+  body .hero-proof-card {
+    min-height: 118px !important;
+  }
+
+  body .hero-proof strong,
+  body .hero-proof-card strong {
+    font-size: 34px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  body .hero-proof,
+  body .hero-proof[aria-label] {
+    width: min(100%, 328px) !important;
+    max-width: 328px !important;
+  }
+
+  body .hero-proof strong,
+  body .hero-proof-card strong {
+    font-size: 30px !important;
+  }
+}
+
+@media (min-width: 1121px) {
+  body .hero-proof strong,
+  body .hero-proof-card strong {
+    font-size: clamp(24px, 1.72vw, 25px) !important;
+    font-weight: 500 !important;
+  }
+}
+

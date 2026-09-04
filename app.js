@@ -36,7 +36,7 @@ const translations = {
       title: "Active orders waiting for qualified AI editors",
       text: "C, B, and A-Level editors can review task scope, commission range, estimated time, and delivery requirements before applying.",
       boardStatus: "Commission orders open for qualified editors",
-      viewDetails: "View task details"
+      viewDetails: "Order Inquiry"
     },
     reviews: {
       eyebrow: "Learning experience",
@@ -589,7 +589,7 @@ const completeTranslations = {
       title: "Active orders waiting for qualified AI editors",
       text: "Qualified C-, B-, and A-Level editors can review each order's scope, commission range, estimated delivery time, and requirements before applying.",
       boardStatus: "Commission-based orders are open to qualified editors",
-      viewDetails: "View task details",
+      viewDetails: "Order Inquiry",
       orderNo: "ORDER NO."
     },
     reviews: {

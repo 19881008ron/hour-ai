@@ -1,0 +1,9602 @@
+[
+  {
+    "id": "ORDER-371011",
+    "category": "mobile",
+    "title": "Retail MagSafe Power Bank Set",
+    "amazonPrice": {
+      "aed": 99,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371012",
+    "category": "mobile",
+    "title": "Retail 65W GaN Fast Charger Kit",
+    "amazonPrice": {
+      "aed": 176.04,
+      "usd": 48,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371013",
+    "category": "mobile",
+    "title": "Retail Wireless Earbuds Retail Pack",
+    "amazonPrice": {
+      "aed": 158.98,
+      "usd": 43,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371014",
+    "category": "mobile",
+    "title": "Retail Privacy Screen Protector Bundle",
+    "amazonPrice": {
+      "aed": 118.99,
+      "usd": 32,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371015",
+    "category": "mobile",
+    "title": "Retail Magnetic Car Phone Mount",
+    "amazonPrice": {
+      "aed": 108.95,
+      "usd": 30,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$10",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371016",
+    "category": "mobile",
+    "title": "Retail USB-C Hub Adapter",
+    "amazonPrice": {
+      "aed": 288.89,
+      "usd": 79,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$26",
+      "B": "$20",
+      "A": "$16"
+    }
+  },
+  {
+    "id": "ORDER-371017",
+    "category": "mobile",
+    "title": "Retail Smart Watch Strap Set",
+    "amazonPrice": {
+      "aed": 179,
+      "usd": 49,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371018",
+    "category": "mobile",
+    "title": "Retail Rugged Phone Case Bundle",
+    "amazonPrice": {
+      "aed": 118.99,
+      "usd": 32,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371019",
+    "category": "mobile",
+    "title": "Retail 3-in-1 Wireless Charging Stand",
+    "amazonPrice": {
+      "aed": 99,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371020",
+    "category": "mobile",
+    "title": "Retail Bluetooth Tracking Tag Pack",
+    "amazonPrice": {
+      "aed": 219,
+      "usd": 60,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$20",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371021",
+    "category": "mobile",
+    "title": "Pro MagSafe Power Bank Set",
+    "amazonPrice": {
+      "aed": 41,
+      "usd": 11,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371022",
+    "category": "mobile",
+    "title": "Pro 65W GaN Fast Charger Kit",
+    "amazonPrice": {
+      "aed": 74.99,
+      "usd": 20,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371023",
+    "category": "mobile",
+    "title": "Pro Wireless Earbuds Retail Pack",
+    "amazonPrice": {
+      "aed": 134.99,
+      "usd": 37,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371024",
+    "category": "mobile",
+    "title": "Pro Privacy Screen Protector Bundle",
+    "amazonPrice": {
+      "aed": 300.14,
+      "usd": 82,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$27",
+      "B": "$21",
+      "A": "$16"
+    }
+  },
+  {
+    "id": "ORDER-371025",
+    "category": "mobile",
+    "title": "Pro Magnetic Car Phone Mount",
+    "amazonPrice": {
+      "aed": 231.34,
+      "usd": 63,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$21",
+      "B": "$16",
+      "A": "$13"
+    }
+  },
+  {
+    "id": "ORDER-371026",
+    "category": "mobile",
+    "title": "Pro USB-C Hub Adapter",
+    "amazonPrice": {
+      "aed": 121.5,
+      "usd": 33,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371027",
+    "category": "mobile",
+    "title": "Pro Smart Watch Strap Set",
+    "amazonPrice": {
+      "aed": 158.98,
+      "usd": 43,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371028",
+    "category": "mobile",
+    "title": "Pro Rugged Phone Case Bundle",
+    "amazonPrice": {
+      "aed": 118.99,
+      "usd": 32.4,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371029",
+    "category": "mobile",
+    "title": "Pro 3-in-1 Wireless Charging Stand",
+    "amazonPrice": {
+      "aed": 168.9,
+      "usd": 46,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$12",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371030",
+    "category": "mobile",
+    "title": "Pro Bluetooth Tracking Tag Pack",
+    "amazonPrice": {
+      "aed": 218.95,
+      "usd": 60,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$20",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371031",
+    "category": "mobile",
+    "title": "Compact MagSafe Power Bank Set",
+    "amazonPrice": {
+      "aed": 87.37,
+      "usd": 24,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371032",
+    "category": "mobile",
+    "title": "Compact 65W GaN Fast Charger Kit",
+    "amazonPrice": {
+      "aed": 78.99,
+      "usd": 22,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$6",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371033",
+    "category": "mobile",
+    "title": "Compact Wireless Earbuds Retail Pack",
+    "amazonPrice": {
+      "aed": 169,
+      "usd": 46,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$12",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371034",
+    "category": "mobile",
+    "title": "Compact Privacy Screen Protector Bundle",
+    "amazonPrice": {
+      "aed": 158.83,
+      "usd": 43,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371035",
+    "category": "mobile",
+    "title": "Compact Magnetic Car Phone Mount",
+    "amazonPrice": {
+      "aed": 35,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371036",
+    "category": "mobile",
+    "title": "Compact USB-C Hub Adapter",
+    "amazonPrice": {
+      "aed": 87,
+      "usd": 24,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371037",
+    "category": "mobile",
+    "title": "Compact Smart Watch Strap Set",
+    "amazonPrice": {
+      "aed": 85,
+      "usd": 23,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371038",
+    "category": "mobile",
+    "title": "Compact Rugged Phone Case Bundle",
+    "amazonPrice": {
+      "aed": 109.99,
+      "usd": 30,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$10",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371039",
+    "category": "mobile",
+    "title": "Compact 3-in-1 Wireless Charging Stand",
+    "amazonPrice": {
+      "aed": 35.99,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371040",
+    "category": "mobile",
+    "title": "Compact Bluetooth Tracking Tag Pack",
+    "amazonPrice": {
+      "aed": 69.95,
+      "usd": 19,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371041",
+    "category": "mobile",
+    "title": "Premium MagSafe Power Bank Set",
+    "amazonPrice": {
+      "aed": 59,
+      "usd": 16,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371042",
+    "category": "mobile",
+    "title": "Premium 65W GaN Fast Charger Kit",
+    "amazonPrice": {
+      "aed": 102,
+      "usd": 28,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371043",
+    "category": "mobile",
+    "title": "Premium Wireless Earbuds Retail Pack",
+    "amazonPrice": {
+      "aed": 134.99,
+      "usd": 37,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371044",
+    "category": "mobile",
+    "title": "Premium Privacy Screen Protector Bundle",
+    "amazonPrice": {
+      "aed": 119,
+      "usd": 32,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371045",
+    "category": "mobile",
+    "title": "Premium Magnetic Car Phone Mount",
+    "amazonPrice": {
+      "aed": 89,
+      "usd": 24,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371046",
+    "category": "mobile",
+    "title": "Premium USB-C Hub Adapter",
+    "amazonPrice": {
+      "aed": 89.97,
+      "usd": 24,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371047",
+    "category": "mobile",
+    "title": "Premium Smart Watch Strap Set",
+    "amazonPrice": {
+      "aed": 89.79,
+      "usd": 24,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371048",
+    "category": "mobile",
+    "title": "Premium Rugged Phone Case Bundle",
+    "amazonPrice": {
+      "aed": 85,
+      "usd": 23,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371049",
+    "category": "mobile",
+    "title": "Premium 3-in-1 Wireless Charging Stand",
+    "amazonPrice": {
+      "aed": 1157,
+      "usd": 315,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$105",
+      "B": "$79",
+      "A": "$63"
+    }
+  },
+  {
+    "id": "ORDER-371050",
+    "category": "mobile",
+    "title": "Premium Bluetooth Tracking Tag Pack",
+    "amazonPrice": {
+      "aed": 319,
+      "usd": 87,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$29",
+      "B": "$22",
+      "A": "$17"
+    }
+  },
+  {
+    "id": "ORDER-371051",
+    "category": "mobile",
+    "title": "Travel MagSafe Power Bank Set",
+    "amazonPrice": {
+      "aed": 171.14,
+      "usd": 47,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371052",
+    "category": "mobile",
+    "title": "Travel 65W GaN Fast Charger Kit",
+    "amazonPrice": {
+      "aed": 499,
+      "usd": 136,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371053",
+    "category": "mobile",
+    "title": "Travel Wireless Earbuds Retail Pack",
+    "amazonPrice": {
+      "aed": 129,
+      "usd": 35,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371054",
+    "category": "mobile",
+    "title": "Travel Privacy Screen Protector Bundle",
+    "amazonPrice": {
+      "aed": 49,
+      "usd": 13,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371055",
+    "category": "mobile",
+    "title": "Travel Magnetic Car Phone Mount",
+    "amazonPrice": {
+      "aed": 171.14,
+      "usd": 47,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371056",
+    "category": "mobile",
+    "title": "Travel USB-C Hub Adapter",
+    "amazonPrice": {
+      "aed": 49,
+      "usd": 13,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371057",
+    "category": "mobile",
+    "title": "Travel Smart Watch Strap Set",
+    "amazonPrice": {
+      "aed": 68.98,
+      "usd": 19,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371058",
+    "category": "mobile",
+    "title": "Travel Rugged Phone Case Bundle",
+    "amazonPrice": {
+      "aed": 69,
+      "usd": 19,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371059",
+    "category": "mobile",
+    "title": "Travel 3-in-1 Wireless Charging Stand",
+    "amazonPrice": {
+      "aed": 231.34,
+      "usd": 63,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$21",
+      "B": "$16",
+      "A": "$13"
+    }
+  },
+  {
+    "id": "ORDER-371060",
+    "category": "mobile",
+    "title": "Travel Bluetooth Tracking Tag Pack",
+    "amazonPrice": {
+      "aed": 79.99,
+      "usd": 22,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$6",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371061",
+    "category": "fashion",
+    "title": "Retail Premium Modest Wear Set",
+    "amazonPrice": {
+      "aed": 52,
+      "usd": 14,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371062",
+    "category": "fashion",
+    "title": "Retail Breathable Abaya Collection",
+    "amazonPrice": {
+      "aed": 88,
+      "usd": 24,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371063",
+    "category": "fashion",
+    "title": "Retail Men's Business Thobe Pack",
+    "amazonPrice": {
+      "aed": 188,
+      "usd": 51,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$17",
+      "B": "$13",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371064",
+    "category": "fashion",
+    "title": "Retail Luxury Hijab Bundle",
+    "amazonPrice": {
+      "aed": 99,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371065",
+    "category": "fashion",
+    "title": "Retail Kaftan Lounge Set",
+    "amazonPrice": {
+      "aed": 35,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371066",
+    "category": "fashion",
+    "title": "Retail Modest Activewear Set",
+    "amazonPrice": {
+      "aed": 188,
+      "usd": 51,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$17",
+      "B": "$13",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371067",
+    "category": "fashion",
+    "title": "Retail Family Eid Outfit Pack",
+    "amazonPrice": {
+      "aed": 202,
+      "usd": 55,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$18",
+      "B": "$14",
+      "A": "$11"
+    }
+  },
+  {
+    "id": "ORDER-371068",
+    "category": "fashion",
+    "title": "Retail Men's Sandal Retail Set",
+    "amazonPrice": {
+      "aed": 43.52,
+      "usd": 12,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371069",
+    "category": "fashion",
+    "title": "Retail Women's Tote & Scarf Set",
+    "amazonPrice": {
+      "aed": 129,
+      "usd": 35,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371070",
+    "category": "fashion",
+    "title": "Retail Premium Prayer Wear Set",
+    "amazonPrice": {
+      "aed": 58,
+      "usd": 16,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371071",
+    "category": "fashion",
+    "title": "Pro Premium Modest Wear Set",
+    "amazonPrice": {
+      "aed": 89,
+      "usd": 24,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371072",
+    "category": "fashion",
+    "title": "Pro Breathable Abaya Collection",
+    "amazonPrice": {
+      "aed": 35,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371073",
+    "category": "fashion",
+    "title": "Pro Men's Business Thobe Pack",
+    "amazonPrice": {
+      "aed": 47,
+      "usd": 13,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371074",
+    "category": "fashion",
+    "title": "Pro Luxury Hijab Bundle",
+    "amazonPrice": {
+      "aed": 155,
+      "usd": 42,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$11",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371075",
+    "category": "fashion",
+    "title": "Pro Kaftan Lounge Set",
+    "amazonPrice": {
+      "aed": 76,
+      "usd": 21,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371076",
+    "category": "fashion",
+    "title": "Pro Modest Activewear Set",
+    "amazonPrice": {
+      "aed": 95,
+      "usd": 26,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371077",
+    "category": "fashion",
+    "title": "Pro Family Eid Outfit Pack",
+    "amazonPrice": {
+      "aed": 156.68,
+      "usd": 43,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371078",
+    "category": "fashion",
+    "title": "Pro Men's Sandal Retail Set",
+    "amazonPrice": {
+      "aed": 280,
+      "usd": 76,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$25",
+      "B": "$19",
+      "A": "$15"
+    }
+  },
+  {
+    "id": "ORDER-371079",
+    "category": "fashion",
+    "title": "Pro Women's Tote & Scarf Set",
+    "amazonPrice": {
+      "aed": 184.94,
+      "usd": 50,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$17",
+      "B": "$13",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371080",
+    "category": "fashion",
+    "title": "Pro Premium Prayer Wear Set",
+    "amazonPrice": {
+      "aed": 35,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371081",
+    "category": "fashion",
+    "title": "Compact Premium Modest Wear Set",
+    "amazonPrice": {
+      "aed": 71,
+      "usd": 19,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371082",
+    "category": "fashion",
+    "title": "Compact Breathable Abaya Collection",
+    "amazonPrice": {
+      "aed": 176,
+      "usd": 48,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371083",
+    "category": "fashion",
+    "title": "Compact Men's Business Thobe Pack",
+    "amazonPrice": {
+      "aed": 51.75,
+      "usd": 14,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371084",
+    "category": "fashion",
+    "title": "Compact Luxury Hijab Bundle",
+    "amazonPrice": {
+      "aed": 89,
+      "usd": 24,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371085",
+    "category": "fashion",
+    "title": "Compact Kaftan Lounge Set",
+    "amazonPrice": {
+      "aed": 171,
+      "usd": 47,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371086",
+    "category": "fashion",
+    "title": "Compact Modest Activewear Set",
+    "amazonPrice": {
+      "aed": 89,
+      "usd": 24,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371087",
+    "category": "fashion",
+    "title": "Compact Family Eid Outfit Pack",
+    "amazonPrice": {
+      "aed": 62.81,
+      "usd": 17,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371088",
+    "category": "fashion",
+    "title": "Compact Men's Sandal Retail Set",
+    "amazonPrice": {
+      "aed": 181,
+      "usd": 49,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371089",
+    "category": "fashion",
+    "title": "Compact Women's Tote & Scarf Set",
+    "amazonPrice": {
+      "aed": 87,
+      "usd": 24,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371090",
+    "category": "fashion",
+    "title": "Compact Premium Prayer Wear Set",
+    "amazonPrice": {
+      "aed": 89,
+      "usd": 24,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371091",
+    "category": "fashion",
+    "title": "Premium Premium Modest Wear Set",
+    "amazonPrice": {
+      "aed": 194,
+      "usd": 53,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$18",
+      "B": "$13",
+      "A": "$11"
+    }
+  },
+  {
+    "id": "ORDER-371092",
+    "category": "fashion",
+    "title": "Premium Breathable Abaya Collection",
+    "amazonPrice": {
+      "aed": 35,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371093",
+    "category": "fashion",
+    "title": "Premium Men's Business Thobe Pack",
+    "amazonPrice": {
+      "aed": 89,
+      "usd": 24,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371094",
+    "category": "fashion",
+    "title": "Premium Luxury Hijab Bundle",
+    "amazonPrice": {
+      "aed": 95,
+      "usd": 26,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371095",
+    "category": "fashion",
+    "title": "Premium Kaftan Lounge Set",
+    "amazonPrice": {
+      "aed": 107.41,
+      "usd": 29,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$10",
+      "B": "$7",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371096",
+    "category": "fashion",
+    "title": "Premium Modest Activewear Set",
+    "amazonPrice": {
+      "aed": 121.67,
+      "usd": 33,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371097",
+    "category": "fashion",
+    "title": "Premium Family Eid Outfit Pack",
+    "amazonPrice": {
+      "aed": 50,
+      "usd": 14,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371098",
+    "category": "fashion",
+    "title": "Premium Men's Sandal Retail Set",
+    "amazonPrice": {
+      "aed": 99,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371099",
+    "category": "fashion",
+    "title": "Premium Women's Tote & Scarf Set",
+    "amazonPrice": {
+      "aed": 326.71,
+      "usd": 89,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$30",
+      "B": "$22",
+      "A": "$18"
+    }
+  },
+  {
+    "id": "ORDER-371100",
+    "category": "fashion",
+    "title": "Premium Premium Prayer Wear Set",
+    "amazonPrice": {
+      "aed": 185,
+      "usd": 50,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$17",
+      "B": "$13",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371101",
+    "category": "fashion",
+    "title": "Travel Premium Modest Wear Set",
+    "amazonPrice": {
+      "aed": 350.1,
+      "usd": 95,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$32",
+      "B": "$24",
+      "A": "$19"
+    }
+  },
+  {
+    "id": "ORDER-371102",
+    "category": "fashion",
+    "title": "Travel Breathable Abaya Collection",
+    "amazonPrice": {
+      "aed": 96.05,
+      "usd": 26,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371103",
+    "category": "fashion",
+    "title": "Travel Men's Business Thobe Pack",
+    "amazonPrice": {
+      "aed": 193,
+      "usd": 53,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$18",
+      "B": "$13",
+      "A": "$11"
+    }
+  },
+  {
+    "id": "ORDER-371104",
+    "category": "fashion",
+    "title": "Travel Luxury Hijab Bundle",
+    "amazonPrice": {
+      "aed": 118.7,
+      "usd": 32,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371105",
+    "category": "fashion",
+    "title": "Travel Kaftan Lounge Set",
+    "amazonPrice": {
+      "aed": 207.66,
+      "usd": 57,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$19",
+      "B": "$14",
+      "A": "$11"
+    }
+  },
+  {
+    "id": "ORDER-371106",
+    "category": "fashion",
+    "title": "Travel Modest Activewear Set",
+    "amazonPrice": {
+      "aed": 129,
+      "usd": 35,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371107",
+    "category": "fashion",
+    "title": "Travel Family Eid Outfit Pack",
+    "amazonPrice": {
+      "aed": 135,
+      "usd": 37,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371108",
+    "category": "fashion",
+    "title": "Travel Men's Sandal Retail Set",
+    "amazonPrice": {
+      "aed": 107,
+      "usd": 29,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$10",
+      "B": "$7",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371109",
+    "category": "fashion",
+    "title": "Travel Women's Tote & Scarf Set",
+    "amazonPrice": {
+      "aed": 52.26,
+      "usd": 14,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371110",
+    "category": "fashion",
+    "title": "Travel Premium Prayer Wear Set",
+    "amazonPrice": {
+      "aed": 88,
+      "usd": 24,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371111",
+    "category": "jewelry",
+    "title": "Retail Smart Luxury Watch",
+    "amazonPrice": {
+      "aed": 1149,
+      "usd": 313,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$104",
+      "B": "$78",
+      "A": "$63"
+    }
+  },
+  {
+    "id": "ORDER-371112",
+    "category": "jewelry",
+    "title": "Retail Minimal Gold Jewelry Set",
+    "amazonPrice": {
+      "aed": 6699,
+      "usd": 1824,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$608",
+      "B": "$456",
+      "A": "$365"
+    }
+  },
+  {
+    "id": "ORDER-371113",
+    "category": "jewelry",
+    "title": "Retail Luxury Watch Display Box",
+    "amazonPrice": {
+      "aed": 3059,
+      "usd": 833,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$278",
+      "B": "$208",
+      "A": "$167"
+    }
+  },
+  {
+    "id": "ORDER-371114",
+    "category": "jewelry",
+    "title": "Retail Men's Steel Bracelet Set",
+    "amazonPrice": {
+      "aed": 79.9,
+      "usd": 22,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$6",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371115",
+    "category": "jewelry",
+    "title": "Retail Pearl Necklace Gift Box",
+    "amazonPrice": {
+      "aed": 169,
+      "usd": 46,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$12",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371116",
+    "category": "jewelry",
+    "title": "Retail Arabic Initial Pendant Set",
+    "amazonPrice": {
+      "aed": 160,
+      "usd": 44,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371117",
+    "category": "jewelry",
+    "title": "Retail Women's Fashion Watch Pack",
+    "amazonPrice": {
+      "aed": 392,
+      "usd": 107,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$36",
+      "B": "$27",
+      "A": "$21"
+    }
+  },
+  {
+    "id": "ORDER-371118",
+    "category": "jewelry",
+    "title": "Retail Travel Jewelry Organizer",
+    "amazonPrice": {
+      "aed": 180,
+      "usd": 49,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371119",
+    "category": "jewelry",
+    "title": "Retail Luxury Cufflink Set",
+    "amazonPrice": {
+      "aed": 960,
+      "usd": 261,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$87",
+      "B": "$65",
+      "A": "$52"
+    }
+  },
+  {
+    "id": "ORDER-371120",
+    "category": "jewelry",
+    "title": "Retail Crystal Bracelet Gift Set",
+    "amazonPrice": {
+      "aed": 117,
+      "usd": 32,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371121",
+    "category": "jewelry",
+    "title": "Pro Smart Luxury Watch",
+    "amazonPrice": {
+      "aed": 185,
+      "usd": 50,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$17",
+      "B": "$13",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371122",
+    "category": "jewelry",
+    "title": "Pro Minimal Gold Jewelry Set",
+    "amazonPrice": {
+      "aed": 183,
+      "usd": 49.83,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$17",
+      "B": "$12",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371123",
+    "category": "jewelry",
+    "title": "Pro Luxury Watch Display Box",
+    "amazonPrice": {
+      "aed": 235,
+      "usd": 64,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$21",
+      "B": "$16",
+      "A": "$13"
+    }
+  },
+  {
+    "id": "ORDER-371124",
+    "category": "jewelry",
+    "title": "Pro Men's Steel Bracelet Set",
+    "amazonPrice": {
+      "aed": 215,
+      "usd": 59,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$20",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371125",
+    "category": "jewelry",
+    "title": "Pro Pearl Necklace Gift Box",
+    "amazonPrice": {
+      "aed": 77,
+      "usd": 21,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371126",
+    "category": "jewelry",
+    "title": "Pro Arabic Initial Pendant Set",
+    "amazonPrice": {
+      "aed": 369,
+      "usd": 100,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$33",
+      "B": "$25",
+      "A": "$20"
+    }
+  },
+  {
+    "id": "ORDER-371127",
+    "category": "jewelry",
+    "title": "Pro Women's Fashion Watch Pack",
+    "amazonPrice": {
+      "aed": 445,
+      "usd": 121,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$40",
+      "B": "$30",
+      "A": "$24"
+    }
+  },
+  {
+    "id": "ORDER-371128",
+    "category": "jewelry",
+    "title": "Pro Travel Jewelry Organizer",
+    "amazonPrice": {
+      "aed": 125,
+      "usd": 34,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371129",
+    "category": "jewelry",
+    "title": "Pro Luxury Cufflink Set",
+    "amazonPrice": {
+      "aed": 181,
+      "usd": 49,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371130",
+    "category": "jewelry",
+    "title": "Pro Crystal Bracelet Gift Set",
+    "amazonPrice": {
+      "aed": 129,
+      "usd": 35,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371131",
+    "category": "jewelry",
+    "title": "Compact Smart Luxury Watch",
+    "amazonPrice": {
+      "aed": 339,
+      "usd": 92,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$31",
+      "B": "$23",
+      "A": "$18"
+    }
+  },
+  {
+    "id": "ORDER-371132",
+    "category": "jewelry",
+    "title": "Compact Minimal Gold Jewelry Set",
+    "amazonPrice": {
+      "aed": 1800,
+      "usd": 490,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$163",
+      "B": "$123",
+      "A": "$98"
+    }
+  },
+  {
+    "id": "ORDER-371133",
+    "category": "jewelry",
+    "title": "Compact Luxury Watch Display Box",
+    "amazonPrice": {
+      "aed": 125,
+      "usd": 34,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371134",
+    "category": "jewelry",
+    "title": "Compact Men's Steel Bracelet Set",
+    "amazonPrice": {
+      "aed": 117.96,
+      "usd": 32,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371135",
+    "category": "jewelry",
+    "title": "Compact Pearl Necklace Gift Box",
+    "amazonPrice": {
+      "aed": 59.99,
+      "usd": 16,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371136",
+    "category": "jewelry",
+    "title": "Compact Arabic Initial Pendant Set",
+    "amazonPrice": {
+      "aed": 119.51,
+      "usd": 33,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371137",
+    "category": "jewelry",
+    "title": "Compact Women's Fashion Watch Pack",
+    "amazonPrice": {
+      "aed": 185,
+      "usd": 50,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$17",
+      "B": "$13",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371138",
+    "category": "jewelry",
+    "title": "Compact Travel Jewelry Organizer",
+    "amazonPrice": {
+      "aed": 152,
+      "usd": 41,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371139",
+    "category": "jewelry",
+    "title": "Compact Luxury Cufflink Set",
+    "amazonPrice": {
+      "aed": 160.88,
+      "usd": 44,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371140",
+    "category": "jewelry",
+    "title": "Compact Crystal Bracelet Gift Set",
+    "amazonPrice": {
+      "aed": 165,
+      "usd": 45,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371141",
+    "category": "jewelry",
+    "title": "Premium Smart Luxury Watch",
+    "amazonPrice": {
+      "aed": 183,
+      "usd": 49.83,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$17",
+      "B": "$12",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371142",
+    "category": "jewelry",
+    "title": "Premium Minimal Gold Jewelry Set",
+    "amazonPrice": {
+      "aed": 159,
+      "usd": 43,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371143",
+    "category": "jewelry",
+    "title": "Premium Luxury Watch Display Box",
+    "amazonPrice": {
+      "aed": 209.99,
+      "usd": 57,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$19",
+      "B": "$14",
+      "A": "$11"
+    }
+  },
+  {
+    "id": "ORDER-371144",
+    "category": "jewelry",
+    "title": "Premium Men's Steel Bracelet Set",
+    "amazonPrice": {
+      "aed": 116.99,
+      "usd": 32,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371145",
+    "category": "jewelry",
+    "title": "Premium Pearl Necklace Gift Box",
+    "amazonPrice": {
+      "aed": 919,
+      "usd": 250,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$83",
+      "B": "$63",
+      "A": "$50"
+    }
+  },
+  {
+    "id": "ORDER-371146",
+    "category": "jewelry",
+    "title": "Premium Arabic Initial Pendant Set",
+    "amazonPrice": {
+      "aed": 125,
+      "usd": 34,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371147",
+    "category": "jewelry",
+    "title": "Premium Women's Fashion Watch Pack",
+    "amazonPrice": {
+      "aed": 1520,
+      "usd": 414,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$138",
+      "B": "$104",
+      "A": "$83"
+    }
+  },
+  {
+    "id": "ORDER-371148",
+    "category": "jewelry",
+    "title": "Premium Travel Jewelry Organizer",
+    "amazonPrice": {
+      "aed": 115,
+      "usd": 31,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$10",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371149",
+    "category": "jewelry",
+    "title": "Premium Luxury Cufflink Set",
+    "amazonPrice": {
+      "aed": 117.85,
+      "usd": 32,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371150",
+    "category": "jewelry",
+    "title": "Premium Crystal Bracelet Gift Set",
+    "amazonPrice": {
+      "aed": 487,
+      "usd": 133,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$44",
+      "B": "$33",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371151",
+    "category": "jewelry",
+    "title": "Travel Smart Luxury Watch",
+    "amazonPrice": {
+      "aed": 849,
+      "usd": 231,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$77",
+      "B": "$58",
+      "A": "$46"
+    }
+  },
+  {
+    "id": "ORDER-371152",
+    "category": "jewelry",
+    "title": "Travel Minimal Gold Jewelry Set",
+    "amazonPrice": {
+      "aed": 250,
+      "usd": 68,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371153",
+    "category": "jewelry",
+    "title": "Travel Luxury Watch Display Box",
+    "amazonPrice": {
+      "aed": 285.58,
+      "usd": 78,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$26",
+      "B": "$20",
+      "A": "$16"
+    }
+  },
+  {
+    "id": "ORDER-371154",
+    "category": "jewelry",
+    "title": "Travel Men's Steel Bracelet Set",
+    "amazonPrice": {
+      "aed": 77.8,
+      "usd": 21,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371155",
+    "category": "jewelry",
+    "title": "Travel Pearl Necklace Gift Box",
+    "amazonPrice": {
+      "aed": 215,
+      "usd": 59,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$20",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371156",
+    "category": "jewelry",
+    "title": "Travel Arabic Initial Pendant Set",
+    "amazonPrice": {
+      "aed": 287,
+      "usd": 78,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$26",
+      "B": "$20",
+      "A": "$16"
+    }
+  },
+  {
+    "id": "ORDER-371157",
+    "category": "jewelry",
+    "title": "Travel Women's Fashion Watch Pack",
+    "amazonPrice": {
+      "aed": 110.37,
+      "usd": 30,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$10",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371158",
+    "category": "jewelry",
+    "title": "Travel Travel Jewelry Organizer",
+    "amazonPrice": {
+      "aed": 120,
+      "usd": 33,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371159",
+    "category": "jewelry",
+    "title": "Travel Luxury Cufflink Set",
+    "amazonPrice": {
+      "aed": 600,
+      "usd": 163,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$54",
+      "B": "$41",
+      "A": "$33"
+    }
+  },
+  {
+    "id": "ORDER-371160",
+    "category": "jewelry",
+    "title": "Travel Crystal Bracelet Gift Set",
+    "amazonPrice": {
+      "aed": 280,
+      "usd": 76,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$25",
+      "B": "$19",
+      "A": "$15"
+    }
+  },
+  {
+    "id": "ORDER-371161",
+    "category": "home",
+    "title": "Retail Compact Air Fryer",
+    "amazonPrice": {
+      "aed": 69.99,
+      "usd": 19,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371162",
+    "category": "home",
+    "title": "Retail Arabic Coffee Gift Kit",
+    "amazonPrice": {
+      "aed": 55.99,
+      "usd": 15,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371163",
+    "category": "home",
+    "title": "Retail Electric Kettle Set",
+    "amazonPrice": {
+      "aed": 45.99,
+      "usd": 13,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371164",
+    "category": "home",
+    "title": "Retail Capsule Coffee Machine",
+    "amazonPrice": {
+      "aed": 68,
+      "usd": 19,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371165",
+    "category": "home",
+    "title": "Retail Kitchen Storage Organizer",
+    "amazonPrice": {
+      "aed": 129,
+      "usd": 35,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371166",
+    "category": "home",
+    "title": "Retail Digital Kitchen Scale",
+    "amazonPrice": {
+      "aed": 49,
+      "usd": 13,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371167",
+    "category": "home",
+    "title": "Retail Countertop Blender",
+    "amazonPrice": {
+      "aed": 59.31,
+      "usd": 16,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371168",
+    "category": "home",
+    "title": "Retail Stainless Cookware Set",
+    "amazonPrice": {
+      "aed": 108.89,
+      "usd": 30,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$10",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371169",
+    "category": "home",
+    "title": "Retail Smart Home Diffuser",
+    "amazonPrice": {
+      "aed": 55.99,
+      "usd": 15.25,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371170",
+    "category": "home",
+    "title": "Retail Cordless Vacuum Cleaner",
+    "amazonPrice": {
+      "aed": 37.7,
+      "usd": 10,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371171",
+    "category": "home",
+    "title": "Pro Compact Air Fryer",
+    "amazonPrice": {
+      "aed": 42.75,
+      "usd": 12,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371172",
+    "category": "home",
+    "title": "Pro Arabic Coffee Gift Kit",
+    "amazonPrice": {
+      "aed": 99,
+      "usd": 27,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371173",
+    "category": "home",
+    "title": "Pro Electric Kettle Set",
+    "amazonPrice": {
+      "aed": 55,
+      "usd": 15,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371174",
+    "category": "home",
+    "title": "Pro Capsule Coffee Machine",
+    "amazonPrice": {
+      "aed": 42,
+      "usd": 11,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371175",
+    "category": "home",
+    "title": "Pro Kitchen Storage Organizer",
+    "amazonPrice": {
+      "aed": 80,
+      "usd": 22,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$6",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371176",
+    "category": "home",
+    "title": "Pro Digital Kitchen Scale",
+    "amazonPrice": {
+      "aed": 145,
+      "usd": 39,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$13",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371177",
+    "category": "home",
+    "title": "Pro Countertop Blender",
+    "amazonPrice": {
+      "aed": 185,
+      "usd": 50,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$17",
+      "B": "$13",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371178",
+    "category": "home",
+    "title": "Pro Stainless Cookware Set",
+    "amazonPrice": {
+      "aed": 73,
+      "usd": 20,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371179",
+    "category": "home",
+    "title": "Pro Smart Home Diffuser",
+    "amazonPrice": {
+      "aed": 29.95,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371180",
+    "category": "home",
+    "title": "Pro Cordless Vacuum Cleaner",
+    "amazonPrice": {
+      "aed": 18.81,
+      "usd": 5,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371181",
+    "category": "home",
+    "title": "Compact Compact Air Fryer",
+    "amazonPrice": {
+      "aed": 12.99,
+      "usd": 4,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371182",
+    "category": "home",
+    "title": "Compact Arabic Coffee Gift Kit",
+    "amazonPrice": {
+      "aed": 31.4,
+      "usd": 9,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371183",
+    "category": "home",
+    "title": "Compact Electric Kettle Set",
+    "amazonPrice": {
+      "aed": 31.48,
+      "usd": 9,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371184",
+    "category": "home",
+    "title": "Compact Capsule Coffee Machine",
+    "amazonPrice": {
+      "aed": 27.25,
+      "usd": 7,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371185",
+    "category": "home",
+    "title": "Compact Kitchen Storage Organizer",
+    "amazonPrice": {
+      "aed": 95,
+      "usd": 26,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371186",
+    "category": "home",
+    "title": "Compact Digital Kitchen Scale",
+    "amazonPrice": {
+      "aed": 69.9,
+      "usd": 19,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371187",
+    "category": "home",
+    "title": "Compact Countertop Blender",
+    "amazonPrice": {
+      "aed": 13.5,
+      "usd": 4,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371188",
+    "category": "home",
+    "title": "Compact Stainless Cookware Set",
+    "amazonPrice": {
+      "aed": 60,
+      "usd": 16,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371189",
+    "category": "home",
+    "title": "Compact Smart Home Diffuser",
+    "amazonPrice": {
+      "aed": 18.8,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371190",
+    "category": "home",
+    "title": "Compact Cordless Vacuum Cleaner",
+    "amazonPrice": {
+      "aed": 29,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371191",
+    "category": "home",
+    "title": "Premium Compact Air Fryer",
+    "amazonPrice": {
+      "aed": 18.81,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371192",
+    "category": "home",
+    "title": "Premium Arabic Coffee Gift Kit",
+    "amazonPrice": {
+      "aed": 32.43,
+      "usd": 9,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371193",
+    "category": "home",
+    "title": "Premium Electric Kettle Set",
+    "amazonPrice": {
+      "aed": 145.98,
+      "usd": 40,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$13",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371194",
+    "category": "home",
+    "title": "Premium Capsule Coffee Machine",
+    "amazonPrice": {
+      "aed": 55.99,
+      "usd": 15,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371195",
+    "category": "home",
+    "title": "Premium Kitchen Storage Organizer",
+    "amazonPrice": {
+      "aed": 68,
+      "usd": 19,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371196",
+    "category": "home",
+    "title": "Premium Digital Kitchen Scale",
+    "amazonPrice": {
+      "aed": 31.9,
+      "usd": 9,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371197",
+    "category": "home",
+    "title": "Premium Countertop Blender",
+    "amazonPrice": {
+      "aed": 75,
+      "usd": 20,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371198",
+    "category": "home",
+    "title": "Premium Stainless Cookware Set",
+    "amazonPrice": {
+      "aed": 70,
+      "usd": 19,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371199",
+    "category": "home",
+    "title": "Premium Smart Home Diffuser",
+    "amazonPrice": {
+      "aed": 22.86,
+      "usd": 6,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371200",
+    "category": "home",
+    "title": "Premium Cordless Vacuum Cleaner",
+    "amazonPrice": {
+      "aed": 29.77,
+      "usd": 8,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371201",
+    "category": "home",
+    "title": "Travel Compact Air Fryer",
+    "amazonPrice": {
+      "aed": 83.72,
+      "usd": 23,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371202",
+    "category": "home",
+    "title": "Travel Arabic Coffee Gift Kit",
+    "amazonPrice": {
+      "aed": 115,
+      "usd": 31,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$10",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371203",
+    "category": "home",
+    "title": "Travel Electric Kettle Set",
+    "amazonPrice": {
+      "aed": 100,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371204",
+    "category": "home",
+    "title": "Travel Capsule Coffee Machine",
+    "amazonPrice": {
+      "aed": 38.99,
+      "usd": 11,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371205",
+    "category": "home",
+    "title": "Travel Kitchen Storage Organizer",
+    "amazonPrice": {
+      "aed": 59.99,
+      "usd": 16,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371206",
+    "category": "home",
+    "title": "Travel Digital Kitchen Scale",
+    "amazonPrice": {
+      "aed": 68,
+      "usd": 19,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371207",
+    "category": "home",
+    "title": "Travel Countertop Blender",
+    "amazonPrice": {
+      "aed": 79.99,
+      "usd": 22,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$6",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371208",
+    "category": "home",
+    "title": "Travel Stainless Cookware Set",
+    "amazonPrice": {
+      "aed": 35.98,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371209",
+    "category": "home",
+    "title": "Travel Smart Home Diffuser",
+    "amazonPrice": {
+      "aed": 16.6,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371210",
+    "category": "home",
+    "title": "Travel Cordless Vacuum Cleaner",
+    "amazonPrice": {
+      "aed": 24.79,
+      "usd": 7,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371211",
+    "category": "furniture",
+    "title": "Retail LED Decor Light Panel",
+    "amazonPrice": {
+      "aed": 59.99,
+      "usd": 16,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371212",
+    "category": "furniture",
+    "title": "Retail Foldable Study Desk",
+    "amazonPrice": {
+      "aed": 49.99,
+      "usd": 14,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371213",
+    "category": "furniture",
+    "title": "Retail Luxury Storage Organizer",
+    "amazonPrice": {
+      "aed": 84.99,
+      "usd": 23,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371214",
+    "category": "furniture",
+    "title": "Retail 3D LED Wall Clock",
+    "amazonPrice": {
+      "aed": 36.99,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371215",
+    "category": "furniture",
+    "title": "Retail Velvet Hanger Storage Pack",
+    "amazonPrice": {
+      "aed": 20.2,
+      "usd": 6,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371216",
+    "category": "furniture",
+    "title": "Retail Gaming Chair Cushion Set",
+    "amazonPrice": {
+      "aed": 36,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371217",
+    "category": "furniture",
+    "title": "Retail Minimal Coffee Table",
+    "amazonPrice": {
+      "aed": 45.9,
+      "usd": 12,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371218",
+    "category": "furniture",
+    "title": "Retail Decorative Floor Lamp",
+    "amazonPrice": {
+      "aed": 49.9,
+      "usd": 14,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371219",
+    "category": "furniture",
+    "title": "Retail Under-Sink Organizer Rack",
+    "amazonPrice": {
+      "aed": 49.98,
+      "usd": 14,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371220",
+    "category": "furniture",
+    "title": "Retail Luxury Cushion Cover Set",
+    "amazonPrice": {
+      "aed": 31.92,
+      "usd": 9,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371221",
+    "category": "furniture",
+    "title": "Pro LED Decor Light Panel",
+    "amazonPrice": {
+      "aed": 145,
+      "usd": 39,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$13",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371222",
+    "category": "furniture",
+    "title": "Pro Foldable Study Desk",
+    "amazonPrice": {
+      "aed": 31.2,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371223",
+    "category": "furniture",
+    "title": "Pro Luxury Storage Organizer",
+    "amazonPrice": {
+      "aed": 69.9,
+      "usd": 19,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371224",
+    "category": "furniture",
+    "title": "Pro 3D LED Wall Clock",
+    "amazonPrice": {
+      "aed": 24.89,
+      "usd": 7,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371225",
+    "category": "furniture",
+    "title": "Pro Velvet Hanger Storage Pack",
+    "amazonPrice": {
+      "aed": 19.9,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371226",
+    "category": "furniture",
+    "title": "Pro Gaming Chair Cushion Set",
+    "amazonPrice": {
+      "aed": 35.99,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371227",
+    "category": "furniture",
+    "title": "Pro Minimal Coffee Table",
+    "amazonPrice": {
+      "aed": 24.6,
+      "usd": 7,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371228",
+    "category": "furniture",
+    "title": "Pro Decorative Floor Lamp",
+    "amazonPrice": {
+      "aed": 69.7,
+      "usd": 19,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371229",
+    "category": "furniture",
+    "title": "Pro Under-Sink Organizer Rack",
+    "amazonPrice": {
+      "aed": 20,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371230",
+    "category": "furniture",
+    "title": "Pro Luxury Cushion Cover Set",
+    "amazonPrice": {
+      "aed": 29,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371231",
+    "category": "furniture",
+    "title": "Compact LED Decor Light Panel",
+    "amazonPrice": {
+      "aed": 81.09,
+      "usd": 22,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$6",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371232",
+    "category": "furniture",
+    "title": "Compact Foldable Study Desk",
+    "amazonPrice": {
+      "aed": 60,
+      "usd": 16,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371233",
+    "category": "furniture",
+    "title": "Compact Luxury Storage Organizer",
+    "amazonPrice": {
+      "aed": 27.77,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371234",
+    "category": "furniture",
+    "title": "Compact 3D LED Wall Clock",
+    "amazonPrice": {
+      "aed": 12.95,
+      "usd": 4,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371235",
+    "category": "furniture",
+    "title": "Compact Velvet Hanger Storage Pack",
+    "amazonPrice": {
+      "aed": 19.88,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371236",
+    "category": "furniture",
+    "title": "Compact Gaming Chair Cushion Set",
+    "amazonPrice": {
+      "aed": 89.96,
+      "usd": 24,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371237",
+    "category": "furniture",
+    "title": "Compact Minimal Coffee Table",
+    "amazonPrice": {
+      "aed": 28.36,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371238",
+    "category": "furniture",
+    "title": "Compact Decorative Floor Lamp",
+    "amazonPrice": {
+      "aed": 28,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371239",
+    "category": "furniture",
+    "title": "Compact Under-Sink Organizer Rack",
+    "amazonPrice": {
+      "aed": 29.99,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371240",
+    "category": "furniture",
+    "title": "Compact Luxury Cushion Cover Set",
+    "amazonPrice": {
+      "aed": 89.99,
+      "usd": 25,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371241",
+    "category": "furniture",
+    "title": "Premium LED Decor Light Panel",
+    "amazonPrice": {
+      "aed": 29.55,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371242",
+    "category": "furniture",
+    "title": "Premium Foldable Study Desk",
+    "amazonPrice": {
+      "aed": 78,
+      "usd": 21,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371243",
+    "category": "furniture",
+    "title": "Premium Luxury Storage Organizer",
+    "amazonPrice": {
+      "aed": 19.9,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371244",
+    "category": "furniture",
+    "title": "Premium 3D LED Wall Clock",
+    "amazonPrice": {
+      "aed": 57.99,
+      "usd": 16,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371245",
+    "category": "furniture",
+    "title": "Premium Velvet Hanger Storage Pack",
+    "amazonPrice": {
+      "aed": 21.63,
+      "usd": 6,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371246",
+    "category": "furniture",
+    "title": "Premium Gaming Chair Cushion Set",
+    "amazonPrice": {
+      "aed": 59,
+      "usd": 16,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371247",
+    "category": "furniture",
+    "title": "Premium Minimal Coffee Table",
+    "amazonPrice": {
+      "aed": 38,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371248",
+    "category": "furniture",
+    "title": "Premium Decorative Floor Lamp",
+    "amazonPrice": {
+      "aed": 27.88,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371249",
+    "category": "furniture",
+    "title": "Premium Under-Sink Organizer Rack",
+    "amazonPrice": {
+      "aed": 24.62,
+      "usd": 7,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371250",
+    "category": "furniture",
+    "title": "Premium Luxury Cushion Cover Set",
+    "amazonPrice": {
+      "aed": 46.88,
+      "usd": 13,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371251",
+    "category": "furniture",
+    "title": "Travel LED Decor Light Panel",
+    "amazonPrice": {
+      "aed": 12,
+      "usd": 3,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371252",
+    "category": "furniture",
+    "title": "Travel Foldable Study Desk",
+    "amazonPrice": {
+      "aed": 33,
+      "usd": 9,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371253",
+    "category": "furniture",
+    "title": "Travel Luxury Storage Organizer",
+    "amazonPrice": {
+      "aed": 35.99,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371254",
+    "category": "furniture",
+    "title": "Travel 3D LED Wall Clock",
+    "amazonPrice": {
+      "aed": 33,
+      "usd": 8.99,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371255",
+    "category": "furniture",
+    "title": "Travel Velvet Hanger Storage Pack",
+    "amazonPrice": {
+      "aed": 20.99,
+      "usd": 6,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371256",
+    "category": "furniture",
+    "title": "Travel Gaming Chair Cushion Set",
+    "amazonPrice": {
+      "aed": 13.99,
+      "usd": 4,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371257",
+    "category": "furniture",
+    "title": "Travel Minimal Coffee Table",
+    "amazonPrice": {
+      "aed": 21,
+      "usd": 6,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371258",
+    "category": "furniture",
+    "title": "Travel Decorative Floor Lamp",
+    "amazonPrice": {
+      "aed": 22.3,
+      "usd": 6,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371259",
+    "category": "furniture",
+    "title": "Travel Under-Sink Organizer Rack",
+    "amazonPrice": {
+      "aed": 37.9,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371260",
+    "category": "furniture",
+    "title": "Travel Luxury Cushion Cover Set",
+    "amazonPrice": {
+      "aed": 39.7,
+      "usd": 11,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371261",
+    "category": "auto",
+    "title": "Retail Car Smart Display Kit",
+    "amazonPrice": {
+      "aed": 36.9,
+      "usd": 10,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371262",
+    "category": "auto",
+    "title": "Retail Car Cooling Seat Pad",
+    "amazonPrice": {
+      "aed": 36.9,
+      "usd": 10,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371263",
+    "category": "auto",
+    "title": "Retail Premium Car Vacuum Set",
+    "amazonPrice": {
+      "aed": 38.9,
+      "usd": 11,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371264",
+    "category": "auto",
+    "title": "Retail 4K Dash Camera",
+    "amazonPrice": {
+      "aed": 35.9,
+      "usd": 10,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371265",
+    "category": "auto",
+    "title": "Retail Magnetic Phone Car Charger",
+    "amazonPrice": {
+      "aed": 39.9,
+      "usd": 11,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371266",
+    "category": "auto",
+    "title": "Retail Foldable Car Sunshade",
+    "amazonPrice": {
+      "aed": 55.9,
+      "usd": 15,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371267",
+    "category": "auto",
+    "title": "Retail Portable Tire Inflator",
+    "amazonPrice": {
+      "aed": 49.9,
+      "usd": 14,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371268",
+    "category": "auto",
+    "title": "Retail Car Trunk Organizer",
+    "amazonPrice": {
+      "aed": 39.9,
+      "usd": 11,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371269",
+    "category": "auto",
+    "title": "Retail LED Ambient Light Kit",
+    "amazonPrice": {
+      "aed": 39.9,
+      "usd": 11,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371270",
+    "category": "auto",
+    "title": "Retail Leather Steering Wheel Cover",
+    "amazonPrice": {
+      "aed": 9.99,
+      "usd": 3,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371271",
+    "category": "auto",
+    "title": "Pro Car Smart Display Kit",
+    "amazonPrice": {
+      "aed": 21,
+      "usd": 6,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371272",
+    "category": "auto",
+    "title": "Pro Car Cooling Seat Pad",
+    "amazonPrice": {
+      "aed": 32.98,
+      "usd": 9,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371273",
+    "category": "auto",
+    "title": "Pro Premium Car Vacuum Set",
+    "amazonPrice": {
+      "aed": 77.99,
+      "usd": 21,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371274",
+    "category": "auto",
+    "title": "Pro 4K Dash Camera",
+    "amazonPrice": {
+      "aed": 67.99,
+      "usd": 19,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371275",
+    "category": "auto",
+    "title": "Pro Magnetic Phone Car Charger",
+    "amazonPrice": {
+      "aed": 133.99,
+      "usd": 36,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371276",
+    "category": "auto",
+    "title": "Pro Foldable Car Sunshade",
+    "amazonPrice": {
+      "aed": 13.99,
+      "usd": 4,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371277",
+    "category": "auto",
+    "title": "Pro Portable Tire Inflator",
+    "amazonPrice": {
+      "aed": 14.25,
+      "usd": 4,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371278",
+    "category": "auto",
+    "title": "Pro Car Trunk Organizer",
+    "amazonPrice": {
+      "aed": 8.8,
+      "usd": 2,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371279",
+    "category": "auto",
+    "title": "Pro LED Ambient Light Kit",
+    "amazonPrice": {
+      "aed": 39.99,
+      "usd": 11,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371280",
+    "category": "auto",
+    "title": "Pro Leather Steering Wheel Cover",
+    "amazonPrice": {
+      "aed": 10.99,
+      "usd": 3,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371281",
+    "category": "auto",
+    "title": "Compact Car Smart Display Kit",
+    "amazonPrice": {
+      "aed": 8.3,
+      "usd": 2,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371282",
+    "category": "auto",
+    "title": "Compact Car Cooling Seat Pad",
+    "amazonPrice": {
+      "aed": 29.52,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371283",
+    "category": "auto",
+    "title": "Compact Premium Car Vacuum Set",
+    "amazonPrice": {
+      "aed": 20.9,
+      "usd": 6,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371284",
+    "category": "auto",
+    "title": "Compact 4K Dash Camera",
+    "amazonPrice": {
+      "aed": 7.2,
+      "usd": 2,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371285",
+    "category": "auto",
+    "title": "Compact Magnetic Phone Car Charger",
+    "amazonPrice": {
+      "aed": 66,
+      "usd": 18,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371286",
+    "category": "auto",
+    "title": "Compact Foldable Car Sunshade",
+    "amazonPrice": {
+      "aed": 15.29,
+      "usd": 4,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371287",
+    "category": "auto",
+    "title": "Compact Portable Tire Inflator",
+    "amazonPrice": {
+      "aed": 37,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371288",
+    "category": "auto",
+    "title": "Compact Car Trunk Organizer",
+    "amazonPrice": {
+      "aed": 39.5,
+      "usd": 11,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371289",
+    "category": "auto",
+    "title": "Compact LED Ambient Light Kit",
+    "amazonPrice": {
+      "aed": 10.28,
+      "usd": 3,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371290",
+    "category": "auto",
+    "title": "Compact Leather Steering Wheel Cover",
+    "amazonPrice": {
+      "aed": 19,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371291",
+    "category": "auto",
+    "title": "Premium Car Smart Display Kit",
+    "amazonPrice": {
+      "aed": 35.99,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371292",
+    "category": "auto",
+    "title": "Premium Car Cooling Seat Pad",
+    "amazonPrice": {
+      "aed": 31,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371293",
+    "category": "auto",
+    "title": "Premium Premium Car Vacuum Set",
+    "amazonPrice": {
+      "aed": 10,
+      "usd": 3,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371294",
+    "category": "auto",
+    "title": "Premium 4K Dash Camera",
+    "amazonPrice": {
+      "aed": 7.51,
+      "usd": 2,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371295",
+    "category": "auto",
+    "title": "Premium Magnetic Phone Car Charger",
+    "amazonPrice": {
+      "aed": 9.9,
+      "usd": 3,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371296",
+    "category": "auto",
+    "title": "Premium Foldable Car Sunshade",
+    "amazonPrice": {
+      "aed": 20,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371297",
+    "category": "auto",
+    "title": "Premium Portable Tire Inflator",
+    "amazonPrice": {
+      "aed": 49.28,
+      "usd": 13,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371298",
+    "category": "auto",
+    "title": "Premium Car Trunk Organizer",
+    "amazonPrice": {
+      "aed": 9.88,
+      "usd": 3,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371299",
+    "category": "auto",
+    "title": "Premium LED Ambient Light Kit",
+    "amazonPrice": {
+      "aed": 16.9,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371300",
+    "category": "auto",
+    "title": "Premium Leather Steering Wheel Cover",
+    "amazonPrice": {
+      "aed": 7.18,
+      "usd": 2,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371301",
+    "category": "auto",
+    "title": "Travel Car Smart Display Kit",
+    "amazonPrice": {
+      "aed": 19.89,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371302",
+    "category": "auto",
+    "title": "Travel Car Cooling Seat Pad",
+    "amazonPrice": {
+      "aed": 11.99,
+      "usd": 3,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371303",
+    "category": "auto",
+    "title": "Travel Premium Car Vacuum Set",
+    "amazonPrice": {
+      "aed": 89.99,
+      "usd": 25,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371304",
+    "category": "auto",
+    "title": "Travel 4K Dash Camera",
+    "amazonPrice": {
+      "aed": 18.54,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371305",
+    "category": "auto",
+    "title": "Travel Magnetic Phone Car Charger",
+    "amazonPrice": {
+      "aed": 20,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371306",
+    "category": "auto",
+    "title": "Travel Foldable Car Sunshade",
+    "amazonPrice": {
+      "aed": 10.11,
+      "usd": 3,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371307",
+    "category": "auto",
+    "title": "Travel Portable Tire Inflator",
+    "amazonPrice": {
+      "aed": 12.2,
+      "usd": 3,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371308",
+    "category": "auto",
+    "title": "Travel Car Trunk Organizer",
+    "amazonPrice": {
+      "aed": 36.5,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371309",
+    "category": "auto",
+    "title": "Travel LED Ambient Light Kit",
+    "amazonPrice": {
+      "aed": 23,
+      "usd": 6,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371310",
+    "category": "auto",
+    "title": "Travel Leather Steering Wheel Cover",
+    "amazonPrice": {
+      "aed": 18.49,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371311",
+    "category": "baby",
+    "title": "Retail Smart Baby Care Monitor",
+    "amazonPrice": {
+      "aed": 345,
+      "usd": 94,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$31",
+      "B": "$24",
+      "A": "$19"
+    }
+  },
+  {
+    "id": "ORDER-371312",
+    "category": "baby",
+    "title": "Retail Baby Travel Organizer",
+    "amazonPrice": {
+      "aed": 1048.95,
+      "usd": 286,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$95",
+      "B": "$72",
+      "A": "$57"
+    }
+  },
+  {
+    "id": "ORDER-371313",
+    "category": "baby",
+    "title": "Retail Bottle Warmer Travel Kit",
+    "amazonPrice": {
+      "aed": 1048.95,
+      "usd": 286,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$95",
+      "B": "$72",
+      "A": "$57"
+    }
+  },
+  {
+    "id": "ORDER-371314",
+    "category": "baby",
+    "title": "Retail Diaper Backpack",
+    "amazonPrice": {
+      "aed": 1048.95,
+      "usd": 286,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$95",
+      "B": "$72",
+      "A": "$57"
+    }
+  },
+  {
+    "id": "ORDER-371315",
+    "category": "baby",
+    "title": "Retail Baby Stroller Fan",
+    "amazonPrice": {
+      "aed": 999,
+      "usd": 272,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$91",
+      "B": "$68",
+      "A": "$54"
+    }
+  },
+  {
+    "id": "ORDER-371316",
+    "category": "baby",
+    "title": "Retail Baby Feeding Bottle Set",
+    "amazonPrice": {
+      "aed": 212.31,
+      "usd": 58,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$19",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371317",
+    "category": "baby",
+    "title": "Retail Portable Changing Mat",
+    "amazonPrice": {
+      "aed": 899,
+      "usd": 245,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$82",
+      "B": "$61",
+      "A": "$49"
+    }
+  },
+  {
+    "id": "ORDER-371318",
+    "category": "baby",
+    "title": "Retail Baby Safety Gate",
+    "amazonPrice": {
+      "aed": 499,
+      "usd": 136,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371319",
+    "category": "baby",
+    "title": "Retail Nursery Night Light",
+    "amazonPrice": {
+      "aed": 339.99,
+      "usd": 93,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$31",
+      "B": "$23",
+      "A": "$19"
+    }
+  },
+  {
+    "id": "ORDER-371320",
+    "category": "baby",
+    "title": "Retail Baby Grooming Kit",
+    "amazonPrice": {
+      "aed": 220,
+      "usd": 60,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$20",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371321",
+    "category": "baby",
+    "title": "Pro Smart Baby Care Monitor",
+    "amazonPrice": {
+      "aed": 1264.69,
+      "usd": 344,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$115",
+      "B": "$86",
+      "A": "$69"
+    }
+  },
+  {
+    "id": "ORDER-371322",
+    "category": "baby",
+    "title": "Pro Baby Travel Organizer",
+    "amazonPrice": {
+      "aed": 1609,
+      "usd": 438,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$146",
+      "B": "$110",
+      "A": "$88"
+    }
+  },
+  {
+    "id": "ORDER-371323",
+    "category": "baby",
+    "title": "Pro Bottle Warmer Travel Kit",
+    "amazonPrice": {
+      "aed": 675.3,
+      "usd": 184,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$61",
+      "B": "$46",
+      "A": "$37"
+    }
+  },
+  {
+    "id": "ORDER-371324",
+    "category": "baby",
+    "title": "Pro Diaper Backpack",
+    "amazonPrice": {
+      "aed": 148.99,
+      "usd": 41,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371325",
+    "category": "baby",
+    "title": "Pro Baby Stroller Fan",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 136,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371326",
+    "category": "baby",
+    "title": "Pro Baby Feeding Bottle Set",
+    "amazonPrice": {
+      "aed": 212.31,
+      "usd": 58,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$19",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371327",
+    "category": "baby",
+    "title": "Pro Portable Changing Mat",
+    "amazonPrice": {
+      "aed": 329,
+      "usd": 90,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$30",
+      "B": "$23",
+      "A": "$18"
+    }
+  },
+  {
+    "id": "ORDER-371328",
+    "category": "baby",
+    "title": "Pro Baby Safety Gate",
+    "amazonPrice": {
+      "aed": 349,
+      "usd": 95,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$32",
+      "B": "$24",
+      "A": "$19"
+    }
+  },
+  {
+    "id": "ORDER-371329",
+    "category": "baby",
+    "title": "Pro Nursery Night Light",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 136,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371330",
+    "category": "baby",
+    "title": "Pro Baby Grooming Kit",
+    "amazonPrice": {
+      "aed": 776.29,
+      "usd": 211,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$70",
+      "B": "$53",
+      "A": "$42"
+    }
+  },
+  {
+    "id": "ORDER-371331",
+    "category": "baby",
+    "title": "Compact Smart Baby Care Monitor",
+    "amazonPrice": {
+      "aed": 135.99,
+      "usd": 37,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371332",
+    "category": "baby",
+    "title": "Compact Baby Travel Organizer",
+    "amazonPrice": {
+      "aed": 842.86,
+      "usd": 230,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$77",
+      "B": "$58",
+      "A": "$46"
+    }
+  },
+  {
+    "id": "ORDER-371333",
+    "category": "baby",
+    "title": "Compact Bottle Warmer Travel Kit",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371334",
+    "category": "baby",
+    "title": "Compact Diaper Backpack",
+    "amazonPrice": {
+      "aed": 143,
+      "usd": 39,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$13",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371335",
+    "category": "baby",
+    "title": "Compact Baby Stroller Fan",
+    "amazonPrice": {
+      "aed": 383.9,
+      "usd": 105,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$35",
+      "B": "$26",
+      "A": "$21"
+    }
+  },
+  {
+    "id": "ORDER-371336",
+    "category": "baby",
+    "title": "Compact Baby Feeding Bottle Set",
+    "amazonPrice": {
+      "aed": 219.3,
+      "usd": 60,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$20",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371337",
+    "category": "baby",
+    "title": "Compact Portable Changing Mat",
+    "amazonPrice": {
+      "aed": 529,
+      "usd": 144,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$48",
+      "B": "$36",
+      "A": "$29"
+    }
+  },
+  {
+    "id": "ORDER-371338",
+    "category": "baby",
+    "title": "Compact Baby Safety Gate",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371339",
+    "category": "baby",
+    "title": "Compact Nursery Night Light",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371340",
+    "category": "baby",
+    "title": "Compact Baby Grooming Kit",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371341",
+    "category": "baby",
+    "title": "Premium Smart Baby Care Monitor",
+    "amazonPrice": {
+      "aed": 199,
+      "usd": 54,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$18",
+      "B": "$14",
+      "A": "$11"
+    }
+  },
+  {
+    "id": "ORDER-371342",
+    "category": "baby",
+    "title": "Premium Baby Travel Organizer",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371343",
+    "category": "baby",
+    "title": "Premium Bottle Warmer Travel Kit",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371344",
+    "category": "baby",
+    "title": "Premium Diaper Backpack",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371345",
+    "category": "baby",
+    "title": "Premium Baby Stroller Fan",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371346",
+    "category": "baby",
+    "title": "Premium Baby Feeding Bottle Set",
+    "amazonPrice": {
+      "aed": 133.03,
+      "usd": 36,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371347",
+    "category": "baby",
+    "title": "Premium Portable Changing Mat",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371348",
+    "category": "baby",
+    "title": "Premium Baby Safety Gate",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371349",
+    "category": "baby",
+    "title": "Premium Nursery Night Light",
+    "amazonPrice": {
+      "aed": 249,
+      "usd": 68,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371350",
+    "category": "baby",
+    "title": "Premium Baby Grooming Kit",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371351",
+    "category": "baby",
+    "title": "Travel Smart Baby Care Monitor",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371352",
+    "category": "baby",
+    "title": "Travel Baby Travel Organizer",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371353",
+    "category": "baby",
+    "title": "Travel Bottle Warmer Travel Kit",
+    "amazonPrice": {
+      "aed": 338,
+      "usd": 92,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$31",
+      "B": "$23",
+      "A": "$18"
+    }
+  },
+  {
+    "id": "ORDER-371354",
+    "category": "baby",
+    "title": "Travel Diaper Backpack",
+    "amazonPrice": {
+      "aed": 512.82,
+      "usd": 140,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$47",
+      "B": "$35",
+      "A": "$28"
+    }
+  },
+  {
+    "id": "ORDER-371355",
+    "category": "baby",
+    "title": "Travel Baby Stroller Fan",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371356",
+    "category": "baby",
+    "title": "Travel Baby Feeding Bottle Set",
+    "amazonPrice": {
+      "aed": 498.98,
+      "usd": 135.87,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371357",
+    "category": "baby",
+    "title": "Travel Portable Changing Mat",
+    "amazonPrice": {
+      "aed": 558,
+      "usd": 152,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$51",
+      "B": "$38",
+      "A": "$30"
+    }
+  },
+  {
+    "id": "ORDER-371358",
+    "category": "baby",
+    "title": "Travel Baby Safety Gate",
+    "amazonPrice": {
+      "aed": 152.99,
+      "usd": 42,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$11",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371359",
+    "category": "baby",
+    "title": "Travel Nursery Night Light",
+    "amazonPrice": {
+      "aed": 539.13,
+      "usd": 147,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$49",
+      "B": "$37",
+      "A": "$29"
+    }
+  },
+  {
+    "id": "ORDER-371360",
+    "category": "baby",
+    "title": "Travel Baby Grooming Kit",
+    "amazonPrice": {
+      "aed": 811.31,
+      "usd": 221,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$74",
+      "B": "$55",
+      "A": "$44"
+    }
+  },
+  {
+    "id": "ORDER-371361",
+    "category": "health",
+    "title": "Retail Portable Wellness Massager",
+    "amazonPrice": {
+      "aed": 129.99,
+      "usd": 35.4,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371362",
+    "category": "health",
+    "title": "Retail Posture Support Belt",
+    "amazonPrice": {
+      "aed": 129.98,
+      "usd": 35,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371363",
+    "category": "health",
+    "title": "Retail Smart Fitness Scale",
+    "amazonPrice": {
+      "aed": 129.99,
+      "usd": 35.4,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371364",
+    "category": "health",
+    "title": "Retail Massage Gun Set",
+    "amazonPrice": {
+      "aed": 159.99,
+      "usd": 44,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371365",
+    "category": "health",
+    "title": "Retail Neck Heating Massager",
+    "amazonPrice": {
+      "aed": 30.51,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371366",
+    "category": "health",
+    "title": "Retail Digital Blood Pressure Monitor",
+    "amazonPrice": {
+      "aed": 139.9,
+      "usd": 38,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$13",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371367",
+    "category": "health",
+    "title": "Retail Walking Pad Compact Treadmill",
+    "amazonPrice": {
+      "aed": 129.99,
+      "usd": 35.4,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371368",
+    "category": "health",
+    "title": "Retail Resistance Band Training Kit",
+    "amazonPrice": {
+      "aed": 339,
+      "usd": 92,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$31",
+      "B": "$23",
+      "A": "$18"
+    }
+  },
+  {
+    "id": "ORDER-371369",
+    "category": "health",
+    "title": "Retail Air Quality Monitor",
+    "amazonPrice": {
+      "aed": 339.97,
+      "usd": 93,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$31",
+      "B": "$23",
+      "A": "$19"
+    }
+  },
+  {
+    "id": "ORDER-371370",
+    "category": "health",
+    "title": "Retail Ergonomic Office Cushion",
+    "amazonPrice": {
+      "aed": 129.99,
+      "usd": 35,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371371",
+    "category": "health",
+    "title": "Pro Portable Wellness Massager",
+    "amazonPrice": {
+      "aed": 289.99,
+      "usd": 79,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$26",
+      "B": "$20",
+      "A": "$16"
+    }
+  },
+  {
+    "id": "ORDER-371372",
+    "category": "health",
+    "title": "Pro Posture Support Belt",
+    "amazonPrice": {
+      "aed": 89.99,
+      "usd": 25,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371373",
+    "category": "health",
+    "title": "Pro Smart Fitness Scale",
+    "amazonPrice": {
+      "aed": 199.98,
+      "usd": 54,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$18",
+      "B": "$14",
+      "A": "$11"
+    }
+  },
+  {
+    "id": "ORDER-371374",
+    "category": "health",
+    "title": "Pro Massage Gun Set",
+    "amazonPrice": {
+      "aed": 109.95,
+      "usd": 30,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$10",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371375",
+    "category": "health",
+    "title": "Pro Neck Heating Massager",
+    "amazonPrice": {
+      "aed": 1487.07,
+      "usd": 405,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$135",
+      "B": "$101",
+      "A": "$81"
+    }
+  },
+  {
+    "id": "ORDER-371376",
+    "category": "health",
+    "title": "Pro Digital Blood Pressure Monitor",
+    "amazonPrice": {
+      "aed": 79.98,
+      "usd": 22,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$6",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371377",
+    "category": "health",
+    "title": "Pro Walking Pad Compact Treadmill",
+    "amazonPrice": {
+      "aed": 45,
+      "usd": 12,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371378",
+    "category": "health",
+    "title": "Pro Resistance Band Training Kit",
+    "amazonPrice": {
+      "aed": 30.51,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371379",
+    "category": "health",
+    "title": "Pro Air Quality Monitor",
+    "amazonPrice": {
+      "aed": 89.99,
+      "usd": 25,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371380",
+    "category": "health",
+    "title": "Pro Ergonomic Office Cushion",
+    "amazonPrice": {
+      "aed": 281.98,
+      "usd": 77,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$26",
+      "B": "$19",
+      "A": "$15"
+    }
+  },
+  {
+    "id": "ORDER-371381",
+    "category": "health",
+    "title": "Compact Portable Wellness Massager",
+    "amazonPrice": {
+      "aed": 248,
+      "usd": 68,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371382",
+    "category": "health",
+    "title": "Compact Posture Support Belt",
+    "amazonPrice": {
+      "aed": 145.9,
+      "usd": 40,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$13",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371383",
+    "category": "health",
+    "title": "Compact Smart Fitness Scale",
+    "amazonPrice": {
+      "aed": 45,
+      "usd": 12,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371384",
+    "category": "health",
+    "title": "Compact Massage Gun Set",
+    "amazonPrice": {
+      "aed": 239.97,
+      "usd": 65,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$22",
+      "B": "$16",
+      "A": "$13"
+    }
+  },
+  {
+    "id": "ORDER-371385",
+    "category": "health",
+    "title": "Compact Neck Heating Massager",
+    "amazonPrice": {
+      "aed": 31.8,
+      "usd": 9,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371386",
+    "category": "health",
+    "title": "Compact Digital Blood Pressure Monitor",
+    "amazonPrice": {
+      "aed": 279,
+      "usd": 76,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$25",
+      "B": "$19",
+      "A": "$15"
+    }
+  },
+  {
+    "id": "ORDER-371387",
+    "category": "health",
+    "title": "Compact Walking Pad Compact Treadmill",
+    "amazonPrice": {
+      "aed": 199.99,
+      "usd": 54,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$18",
+      "B": "$14",
+      "A": "$11"
+    }
+  },
+  {
+    "id": "ORDER-371388",
+    "category": "health",
+    "title": "Compact Resistance Band Training Kit",
+    "amazonPrice": {
+      "aed": 129.99,
+      "usd": 35.4,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371389",
+    "category": "health",
+    "title": "Compact Air Quality Monitor",
+    "amazonPrice": {
+      "aed": 159,
+      "usd": 43,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371390",
+    "category": "health",
+    "title": "Compact Ergonomic Office Cushion",
+    "amazonPrice": {
+      "aed": 80,
+      "usd": 22,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$6",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371391",
+    "category": "health",
+    "title": "Premium Portable Wellness Massager",
+    "amazonPrice": {
+      "aed": 159.99,
+      "usd": 44,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371392",
+    "category": "health",
+    "title": "Premium Posture Support Belt",
+    "amazonPrice": {
+      "aed": 95,
+      "usd": 26,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371393",
+    "category": "health",
+    "title": "Premium Smart Fitness Scale",
+    "amazonPrice": {
+      "aed": 369,
+      "usd": 100,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$33",
+      "B": "$25",
+      "A": "$20"
+    }
+  },
+  {
+    "id": "ORDER-371394",
+    "category": "health",
+    "title": "Premium Massage Gun Set",
+    "amazonPrice": {
+      "aed": 66.99,
+      "usd": 18,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371395",
+    "category": "health",
+    "title": "Premium Neck Heating Massager",
+    "amazonPrice": {
+      "aed": 98.1,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371396",
+    "category": "health",
+    "title": "Premium Digital Blood Pressure Monitor",
+    "amazonPrice": {
+      "aed": 75.99,
+      "usd": 21,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371397",
+    "category": "health",
+    "title": "Premium Walking Pad Compact Treadmill",
+    "amazonPrice": {
+      "aed": 149,
+      "usd": 41,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371398",
+    "category": "health",
+    "title": "Premium Resistance Band Training Kit",
+    "amazonPrice": {
+      "aed": 129.99,
+      "usd": 35.4,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371399",
+    "category": "health",
+    "title": "Premium Air Quality Monitor",
+    "amazonPrice": {
+      "aed": 129.99,
+      "usd": 35.4,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371400",
+    "category": "health",
+    "title": "Premium Ergonomic Office Cushion",
+    "amazonPrice": {
+      "aed": 44.99,
+      "usd": 12,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371401",
+    "category": "health",
+    "title": "Travel Portable Wellness Massager",
+    "amazonPrice": {
+      "aed": 698.99,
+      "usd": 190,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$63",
+      "B": "$48",
+      "A": "$38"
+    }
+  },
+  {
+    "id": "ORDER-371402",
+    "category": "health",
+    "title": "Travel Posture Support Belt",
+    "amazonPrice": {
+      "aed": 29.99,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371403",
+    "category": "health",
+    "title": "Travel Smart Fitness Scale",
+    "amazonPrice": {
+      "aed": 2849,
+      "usd": 776,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$259",
+      "B": "$194",
+      "A": "$155"
+    }
+  },
+  {
+    "id": "ORDER-371404",
+    "category": "health",
+    "title": "Travel Massage Gun Set",
+    "amazonPrice": {
+      "aed": 30.5,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371405",
+    "category": "health",
+    "title": "Travel Neck Heating Massager",
+    "amazonPrice": {
+      "aed": 299.99,
+      "usd": 82,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$27",
+      "B": "$21",
+      "A": "$16"
+    }
+  },
+  {
+    "id": "ORDER-371406",
+    "category": "health",
+    "title": "Travel Digital Blood Pressure Monitor",
+    "amazonPrice": {
+      "aed": 129.99,
+      "usd": 35.4,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371407",
+    "category": "health",
+    "title": "Travel Walking Pad Compact Treadmill",
+    "amazonPrice": {
+      "aed": 49,
+      "usd": 13,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371408",
+    "category": "health",
+    "title": "Travel Resistance Band Training Kit",
+    "amazonPrice": {
+      "aed": 229,
+      "usd": 62,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$21",
+      "B": "$16",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371409",
+    "category": "health",
+    "title": "Travel Air Quality Monitor",
+    "amazonPrice": {
+      "aed": 24.9,
+      "usd": 7,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371410",
+    "category": "health",
+    "title": "Travel Ergonomic Office Cushion",
+    "amazonPrice": {
+      "aed": 100,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371411",
+    "category": "sports",
+    "title": "Retail Outdoor Cooling Gear",
+    "amazonPrice": {
+      "aed": 14799,
+      "usd": 4030,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1343",
+      "B": "$1008",
+      "A": "$806"
+    }
+  },
+  {
+    "id": "ORDER-371412",
+    "category": "sports",
+    "title": "Retail Foldable Camping Chair",
+    "amazonPrice": {
+      "aed": 94.5,
+      "usd": 25.73,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371413",
+    "category": "sports",
+    "title": "Retail Hydration Fitness Pack",
+    "amazonPrice": {
+      "aed": 12999,
+      "usd": 3540,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1180",
+      "B": "$885",
+      "A": "$708"
+    }
+  },
+  {
+    "id": "ORDER-371414",
+    "category": "sports",
+    "title": "Retail Padel Racket Starter Set",
+    "amazonPrice": {
+      "aed": 24.9,
+      "usd": 7,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371415",
+    "category": "sports",
+    "title": "Retail Yoga Mat Fitness Kit",
+    "amazonPrice": {
+      "aed": 26.74,
+      "usd": 7,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371416",
+    "category": "sports",
+    "title": "Retail Adjustable Dumbbell Set",
+    "amazonPrice": {
+      "aed": 34.95,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371417",
+    "category": "sports",
+    "title": "Retail Camping Lantern Power Bank",
+    "amazonPrice": {
+      "aed": 40,
+      "usd": 11,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371418",
+    "category": "sports",
+    "title": "Retail Cooling Sports Towel Pack",
+    "amazonPrice": {
+      "aed": 25,
+      "usd": 7,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371419",
+    "category": "sports",
+    "title": "Retail Insulated Water Bottle Set",
+    "amazonPrice": {
+      "aed": 94.5,
+      "usd": 25.73,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371420",
+    "category": "sports",
+    "title": "Retail Portable Beach Shade",
+    "amazonPrice": {
+      "aed": 99.99,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371421",
+    "category": "sports",
+    "title": "Pro Outdoor Cooling Gear",
+    "amazonPrice": {
+      "aed": 36.1,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371422",
+    "category": "sports",
+    "title": "Pro Foldable Camping Chair",
+    "amazonPrice": {
+      "aed": 1680.02,
+      "usd": 457,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$152",
+      "B": "$114",
+      "A": "$91"
+    }
+  },
+  {
+    "id": "ORDER-371423",
+    "category": "sports",
+    "title": "Pro Hydration Fitness Pack",
+    "amazonPrice": {
+      "aed": 40.31,
+      "usd": 11,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371424",
+    "category": "sports",
+    "title": "Pro Padel Racket Starter Set",
+    "amazonPrice": {
+      "aed": 74.99,
+      "usd": 20,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371425",
+    "category": "sports",
+    "title": "Pro Yoga Mat Fitness Kit",
+    "amazonPrice": {
+      "aed": 1599,
+      "usd": 435,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$145",
+      "B": "$109",
+      "A": "$87"
+    }
+  },
+  {
+    "id": "ORDER-371426",
+    "category": "sports",
+    "title": "Pro Adjustable Dumbbell Set",
+    "amazonPrice": {
+      "aed": 799,
+      "usd": 218,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$73",
+      "B": "$55",
+      "A": "$44"
+    }
+  },
+  {
+    "id": "ORDER-371427",
+    "category": "sports",
+    "title": "Pro Camping Lantern Power Bank",
+    "amazonPrice": {
+      "aed": 94.5,
+      "usd": 25.73,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371428",
+    "category": "sports",
+    "title": "Pro Cooling Sports Towel Pack",
+    "amazonPrice": {
+      "aed": 99,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371429",
+    "category": "sports",
+    "title": "Pro Insulated Water Bottle Set",
+    "amazonPrice": {
+      "aed": 90,
+      "usd": 25,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371430",
+    "category": "sports",
+    "title": "Pro Portable Beach Shade",
+    "amazonPrice": {
+      "aed": 55,
+      "usd": 15,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371431",
+    "category": "sports",
+    "title": "Compact Outdoor Cooling Gear",
+    "amazonPrice": {
+      "aed": 14.89,
+      "usd": 4,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371432",
+    "category": "sports",
+    "title": "Compact Foldable Camping Chair",
+    "amazonPrice": {
+      "aed": 159.99,
+      "usd": 44,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371433",
+    "category": "sports",
+    "title": "Compact Hydration Fitness Pack",
+    "amazonPrice": {
+      "aed": 24,
+      "usd": 7,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371434",
+    "category": "sports",
+    "title": "Compact Padel Racket Starter Set",
+    "amazonPrice": {
+      "aed": 46.65,
+      "usd": 13,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371435",
+    "category": "sports",
+    "title": "Compact Yoga Mat Fitness Kit",
+    "amazonPrice": {
+      "aed": 259,
+      "usd": 71,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$24",
+      "B": "$18",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371436",
+    "category": "sports",
+    "title": "Compact Adjustable Dumbbell Set",
+    "amazonPrice": {
+      "aed": 69,
+      "usd": 19,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371437",
+    "category": "sports",
+    "title": "Compact Camping Lantern Power Bank",
+    "amazonPrice": {
+      "aed": 119.99,
+      "usd": 33,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371438",
+    "category": "sports",
+    "title": "Compact Cooling Sports Towel Pack",
+    "amazonPrice": {
+      "aed": 2438.42,
+      "usd": 664,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$221",
+      "B": "$166",
+      "A": "$133"
+    }
+  },
+  {
+    "id": "ORDER-371439",
+    "category": "sports",
+    "title": "Compact Insulated Water Bottle Set",
+    "amazonPrice": {
+      "aed": 132,
+      "usd": 36,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371440",
+    "category": "sports",
+    "title": "Compact Portable Beach Shade",
+    "amazonPrice": {
+      "aed": 31,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371441",
+    "category": "sports",
+    "title": "Premium Outdoor Cooling Gear",
+    "amazonPrice": {
+      "aed": 94.5,
+      "usd": 25.73,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371442",
+    "category": "sports",
+    "title": "Premium Foldable Camping Chair",
+    "amazonPrice": {
+      "aed": 134.99,
+      "usd": 37,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371443",
+    "category": "sports",
+    "title": "Premium Hydration Fitness Pack",
+    "amazonPrice": {
+      "aed": 23,
+      "usd": 6,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371444",
+    "category": "sports",
+    "title": "Premium Padel Racket Starter Set",
+    "amazonPrice": {
+      "aed": 9.9,
+      "usd": 3,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371445",
+    "category": "sports",
+    "title": "Premium Yoga Mat Fitness Kit",
+    "amazonPrice": {
+      "aed": 12,
+      "usd": 3,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371446",
+    "category": "sports",
+    "title": "Premium Adjustable Dumbbell Set",
+    "amazonPrice": {
+      "aed": 69,
+      "usd": 19,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371447",
+    "category": "sports",
+    "title": "Premium Camping Lantern Power Bank",
+    "amazonPrice": {
+      "aed": 78,
+      "usd": 21,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371448",
+    "category": "sports",
+    "title": "Premium Cooling Sports Towel Pack",
+    "amazonPrice": {
+      "aed": 2460.93,
+      "usd": 670,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$223",
+      "B": "$168",
+      "A": "$134"
+    }
+  },
+  {
+    "id": "ORDER-371449",
+    "category": "sports",
+    "title": "Premium Insulated Water Bottle Set",
+    "amazonPrice": {
+      "aed": 119,
+      "usd": 32,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371450",
+    "category": "sports",
+    "title": "Premium Portable Beach Shade",
+    "amazonPrice": {
+      "aed": 99,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371451",
+    "category": "sports",
+    "title": "Travel Outdoor Cooling Gear",
+    "amazonPrice": {
+      "aed": 20,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371452",
+    "category": "sports",
+    "title": "Travel Foldable Camping Chair",
+    "amazonPrice": {
+      "aed": 94.5,
+      "usd": 25.73,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371453",
+    "category": "sports",
+    "title": "Travel Hydration Fitness Pack",
+    "amazonPrice": {
+      "aed": 34.89,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371454",
+    "category": "sports",
+    "title": "Travel Padel Racket Starter Set",
+    "amazonPrice": {
+      "aed": 94.5,
+      "usd": 25.73,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371455",
+    "category": "sports",
+    "title": "Travel Yoga Mat Fitness Kit",
+    "amazonPrice": {
+      "aed": 215.96,
+      "usd": 59,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$20",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371456",
+    "category": "sports",
+    "title": "Travel Adjustable Dumbbell Set",
+    "amazonPrice": {
+      "aed": 105,
+      "usd": 29,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$10",
+      "B": "$7",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371457",
+    "category": "sports",
+    "title": "Travel Camping Lantern Power Bank",
+    "amazonPrice": {
+      "aed": 98.99,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371458",
+    "category": "sports",
+    "title": "Travel Cooling Sports Towel Pack",
+    "amazonPrice": {
+      "aed": 2438.42,
+      "usd": 664,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$221",
+      "B": "$166",
+      "A": "$133"
+    }
+  },
+  {
+    "id": "ORDER-371459",
+    "category": "sports",
+    "title": "Travel Insulated Water Bottle Set",
+    "amazonPrice": {
+      "aed": 119.99,
+      "usd": 33,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371460",
+    "category": "sports",
+    "title": "Travel Portable Beach Shade",
+    "amazonPrice": {
+      "aed": 299.95,
+      "usd": 82,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$27",
+      "B": "$21",
+      "A": "$16"
+    }
+  },
+  {
+    "id": "ORDER-371461",
+    "category": "creator",
+    "title": "Retail Live Commerce Creator Kit",
+    "amazonPrice": {
+      "aed": 359,
+      "usd": 98,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$33",
+      "B": "$25",
+      "A": "$20"
+    }
+  },
+  {
+    "id": "ORDER-371462",
+    "category": "creator",
+    "title": "Retail Portable Studio Light",
+    "amazonPrice": {
+      "aed": 80.99,
+      "usd": 22,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$6",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371463",
+    "category": "creator",
+    "title": "Retail Wireless Lavalier Mic Set",
+    "amazonPrice": {
+      "aed": 89.04,
+      "usd": 24,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371464",
+    "category": "creator",
+    "title": "Retail Product Photo Light Box",
+    "amazonPrice": {
+      "aed": 55.4,
+      "usd": 15,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371465",
+    "category": "creator",
+    "title": "Retail Phone Tripod With Remote",
+    "amazonPrice": {
+      "aed": 269.99,
+      "usd": 74,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$25",
+      "B": "$19",
+      "A": "$15"
+    }
+  },
+  {
+    "id": "ORDER-371466",
+    "category": "creator",
+    "title": "Retail Desktop Teleprompter Kit",
+    "amazonPrice": {
+      "aed": 80,
+      "usd": 21.78,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371467",
+    "category": "creator",
+    "title": "Retail RGB Background Light Bar",
+    "amazonPrice": {
+      "aed": 89.9,
+      "usd": 24,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371468",
+    "category": "creator",
+    "title": "Retail Mobile Gimbal Stabilizer",
+    "amazonPrice": {
+      "aed": 27.9,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371469",
+    "category": "creator",
+    "title": "Retail USB Podcast Microphone",
+    "amazonPrice": {
+      "aed": 79,
+      "usd": 22,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$6",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371470",
+    "category": "creator",
+    "title": "Retail Green Screen Backdrop Set",
+    "amazonPrice": {
+      "aed": 19,
+      "usd": 5,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371471",
+    "category": "creator",
+    "title": "Pro Live Commerce Creator Kit",
+    "amazonPrice": {
+      "aed": 207.87,
+      "usd": 57,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$19",
+      "B": "$14",
+      "A": "$11"
+    }
+  },
+  {
+    "id": "ORDER-371472",
+    "category": "creator",
+    "title": "Pro Portable Studio Light",
+    "amazonPrice": {
+      "aed": 119.99,
+      "usd": 33,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371473",
+    "category": "creator",
+    "title": "Pro Wireless Lavalier Mic Set",
+    "amazonPrice": {
+      "aed": 28.99,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371474",
+    "category": "creator",
+    "title": "Pro Product Photo Light Box",
+    "amazonPrice": {
+      "aed": 29.99,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371475",
+    "category": "creator",
+    "title": "Pro Phone Tripod With Remote",
+    "amazonPrice": {
+      "aed": 64.5,
+      "usd": 18,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371476",
+    "category": "creator",
+    "title": "Pro Desktop Teleprompter Kit",
+    "amazonPrice": {
+      "aed": 33,
+      "usd": 9,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371477",
+    "category": "creator",
+    "title": "Pro RGB Background Light Bar",
+    "amazonPrice": {
+      "aed": 212.01,
+      "usd": 58,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$19",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371478",
+    "category": "creator",
+    "title": "Pro Mobile Gimbal Stabilizer",
+    "amazonPrice": {
+      "aed": 62,
+      "usd": 17,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$6",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371479",
+    "category": "creator",
+    "title": "Pro USB Podcast Microphone",
+    "amazonPrice": {
+      "aed": 99.99,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371480",
+    "category": "creator",
+    "title": "Pro Green Screen Backdrop Set",
+    "amazonPrice": {
+      "aed": 80,
+      "usd": 22,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$6",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371481",
+    "category": "creator",
+    "title": "Compact Live Commerce Creator Kit",
+    "amazonPrice": {
+      "aed": 54,
+      "usd": 15,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371482",
+    "category": "creator",
+    "title": "Compact Portable Studio Light",
+    "amazonPrice": {
+      "aed": 159,
+      "usd": 43,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371483",
+    "category": "creator",
+    "title": "Compact Wireless Lavalier Mic Set",
+    "amazonPrice": {
+      "aed": 135.9,
+      "usd": 37,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371484",
+    "category": "creator",
+    "title": "Compact Product Photo Light Box",
+    "amazonPrice": {
+      "aed": 58.94,
+      "usd": 16,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371485",
+    "category": "creator",
+    "title": "Compact Phone Tripod With Remote",
+    "amazonPrice": {
+      "aed": 49.6,
+      "usd": 14,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371486",
+    "category": "creator",
+    "title": "Compact Desktop Teleprompter Kit",
+    "amazonPrice": {
+      "aed": 34.65,
+      "usd": 9,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371487",
+    "category": "creator",
+    "title": "Compact RGB Background Light Bar",
+    "amazonPrice": {
+      "aed": 299.99,
+      "usd": 82,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$27",
+      "B": "$21",
+      "A": "$16"
+    }
+  },
+  {
+    "id": "ORDER-371488",
+    "category": "creator",
+    "title": "Compact Mobile Gimbal Stabilizer",
+    "amazonPrice": {
+      "aed": 25,
+      "usd": 7,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$2",
+      "B": "$2",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371489",
+    "category": "creator",
+    "title": "Compact USB Podcast Microphone",
+    "amazonPrice": {
+      "aed": 269,
+      "usd": 73,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$24",
+      "B": "$18",
+      "A": "$15"
+    }
+  },
+  {
+    "id": "ORDER-371490",
+    "category": "creator",
+    "title": "Compact Green Screen Backdrop Set",
+    "amazonPrice": {
+      "aed": 44.9,
+      "usd": 12,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371491",
+    "category": "creator",
+    "title": "Premium Live Commerce Creator Kit",
+    "amazonPrice": {
+      "aed": 122.99,
+      "usd": 33,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371492",
+    "category": "creator",
+    "title": "Premium Portable Studio Light",
+    "amazonPrice": {
+      "aed": 80,
+      "usd": 21.78,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371493",
+    "category": "creator",
+    "title": "Premium Wireless Lavalier Mic Set",
+    "amazonPrice": {
+      "aed": 102.99,
+      "usd": 28,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371494",
+    "category": "creator",
+    "title": "Premium Product Photo Light Box",
+    "amazonPrice": {
+      "aed": 206.1,
+      "usd": 56,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$19",
+      "B": "$14",
+      "A": "$11"
+    }
+  },
+  {
+    "id": "ORDER-371495",
+    "category": "creator",
+    "title": "Premium Phone Tripod With Remote",
+    "amazonPrice": {
+      "aed": 59,
+      "usd": 16,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371496",
+    "category": "creator",
+    "title": "Premium Desktop Teleprompter Kit",
+    "amazonPrice": {
+      "aed": 16.08,
+      "usd": 4,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$1",
+      "B": "$1",
+      "A": "$1"
+    }
+  },
+  {
+    "id": "ORDER-371497",
+    "category": "creator",
+    "title": "Premium RGB Background Light Bar",
+    "amazonPrice": {
+      "aed": 49.99,
+      "usd": 14,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371498",
+    "category": "creator",
+    "title": "Premium Mobile Gimbal Stabilizer",
+    "amazonPrice": {
+      "aed": 47.24,
+      "usd": 13,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371499",
+    "category": "creator",
+    "title": "Premium USB Podcast Microphone",
+    "amazonPrice": {
+      "aed": 34.99,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371500",
+    "category": "creator",
+    "title": "Premium Green Screen Backdrop Set",
+    "amazonPrice": {
+      "aed": 44.4,
+      "usd": 12,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371501",
+    "category": "creator",
+    "title": "Travel Live Commerce Creator Kit",
+    "amazonPrice": {
+      "aed": 239.99,
+      "usd": 65,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$22",
+      "B": "$16",
+      "A": "$13"
+    }
+  },
+  {
+    "id": "ORDER-371502",
+    "category": "creator",
+    "title": "Travel Portable Studio Light",
+    "amazonPrice": {
+      "aed": 39.99,
+      "usd": 11,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371503",
+    "category": "creator",
+    "title": "Travel Wireless Lavalier Mic Set",
+    "amazonPrice": {
+      "aed": 195.99,
+      "usd": 53,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$18",
+      "B": "$13",
+      "A": "$11"
+    }
+  },
+  {
+    "id": "ORDER-371504",
+    "category": "creator",
+    "title": "Travel Product Photo Light Box",
+    "amazonPrice": {
+      "aed": 80,
+      "usd": 21.78,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$7",
+      "B": "$5",
+      "A": "$4"
+    }
+  },
+  {
+    "id": "ORDER-371505",
+    "category": "creator",
+    "title": "Travel Phone Tripod With Remote",
+    "amazonPrice": {
+      "aed": 100,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371506",
+    "category": "creator",
+    "title": "Travel Desktop Teleprompter Kit",
+    "amazonPrice": {
+      "aed": 459,
+      "usd": 125,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$42",
+      "B": "$31",
+      "A": "$25"
+    }
+  },
+  {
+    "id": "ORDER-371507",
+    "category": "creator",
+    "title": "Travel RGB Background Light Bar",
+    "amazonPrice": {
+      "aed": 119,
+      "usd": 32,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371508",
+    "category": "creator",
+    "title": "Travel Mobile Gimbal Stabilizer",
+    "amazonPrice": {
+      "aed": 193.99,
+      "usd": 53,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$18",
+      "B": "$13",
+      "A": "$11"
+    }
+  },
+  {
+    "id": "ORDER-371509",
+    "category": "creator",
+    "title": "Travel USB Podcast Microphone",
+    "amazonPrice": {
+      "aed": 39.99,
+      "usd": 11,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371510",
+    "category": "creator",
+    "title": "Travel Green Screen Backdrop Set",
+    "amazonPrice": {
+      "aed": 120,
+      "usd": 33,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371511",
+    "category": "travel",
+    "title": "Retail Premium Travel Bag Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371512",
+    "category": "travel",
+    "title": "Retail Smart Carry-On Scale",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371513",
+    "category": "travel",
+    "title": "Retail Luxury Packing Cube Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371514",
+    "category": "travel",
+    "title": "Retail Universal Travel Adapter",
+    "amazonPrice": {
+      "aed": 1917.95,
+      "usd": 522,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$174",
+      "B": "$131",
+      "A": "$104"
+    }
+  },
+  {
+    "id": "ORDER-371515",
+    "category": "travel",
+    "title": "Retail Hardshell Luggage Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371516",
+    "category": "travel",
+    "title": "Retail Anti-Theft Backpack",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371517",
+    "category": "travel",
+    "title": "Retail Travel Toiletry Organizer",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371518",
+    "category": "travel",
+    "title": "Retail Memory Foam Neck Pillow",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371519",
+    "category": "travel",
+    "title": "Retail Passport Wallet Set",
+    "amazonPrice": {
+      "aed": 165,
+      "usd": 45,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371520",
+    "category": "travel",
+    "title": "Retail Foldable Weekender Bag",
+    "amazonPrice": {
+      "aed": 165,
+      "usd": 45,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371521",
+    "category": "travel",
+    "title": "Pro Premium Travel Bag Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371522",
+    "category": "travel",
+    "title": "Pro Smart Carry-On Scale",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371523",
+    "category": "travel",
+    "title": "Pro Luxury Packing Cube Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371524",
+    "category": "travel",
+    "title": "Pro Universal Travel Adapter",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371525",
+    "category": "travel",
+    "title": "Pro Hardshell Luggage Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371526",
+    "category": "travel",
+    "title": "Pro Anti-Theft Backpack",
+    "amazonPrice": {
+      "aed": 165,
+      "usd": 45,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371527",
+    "category": "travel",
+    "title": "Pro Travel Toiletry Organizer",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371528",
+    "category": "travel",
+    "title": "Pro Memory Foam Neck Pillow",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371529",
+    "category": "travel",
+    "title": "Pro Passport Wallet Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371530",
+    "category": "travel",
+    "title": "Pro Foldable Weekender Bag",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371531",
+    "category": "travel",
+    "title": "Compact Premium Travel Bag Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371532",
+    "category": "travel",
+    "title": "Compact Smart Carry-On Scale",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371533",
+    "category": "travel",
+    "title": "Compact Luxury Packing Cube Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371534",
+    "category": "travel",
+    "title": "Compact Universal Travel Adapter",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371535",
+    "category": "travel",
+    "title": "Compact Hardshell Luggage Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371536",
+    "category": "travel",
+    "title": "Compact Anti-Theft Backpack",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371537",
+    "category": "travel",
+    "title": "Compact Travel Toiletry Organizer",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371538",
+    "category": "travel",
+    "title": "Compact Memory Foam Neck Pillow",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371539",
+    "category": "travel",
+    "title": "Compact Passport Wallet Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371540",
+    "category": "travel",
+    "title": "Compact Foldable Weekender Bag",
+    "amazonPrice": {
+      "aed": 149,
+      "usd": 41,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371541",
+    "category": "travel",
+    "title": "Premium Premium Travel Bag Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371542",
+    "category": "travel",
+    "title": "Premium Smart Carry-On Scale",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371543",
+    "category": "travel",
+    "title": "Premium Luxury Packing Cube Set",
+    "amazonPrice": {
+      "aed": 164.7,
+      "usd": 45,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371544",
+    "category": "travel",
+    "title": "Premium Universal Travel Adapter",
+    "amazonPrice": {
+      "aed": 799,
+      "usd": 218,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$73",
+      "B": "$55",
+      "A": "$44"
+    }
+  },
+  {
+    "id": "ORDER-371545",
+    "category": "travel",
+    "title": "Premium Hardshell Luggage Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371546",
+    "category": "travel",
+    "title": "Premium Anti-Theft Backpack",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371547",
+    "category": "travel",
+    "title": "Premium Travel Toiletry Organizer",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371548",
+    "category": "travel",
+    "title": "Premium Memory Foam Neck Pillow",
+    "amazonPrice": {
+      "aed": 278,
+      "usd": 76,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$25",
+      "B": "$19",
+      "A": "$15"
+    }
+  },
+  {
+    "id": "ORDER-371549",
+    "category": "travel",
+    "title": "Premium Passport Wallet Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371550",
+    "category": "travel",
+    "title": "Premium Foldable Weekender Bag",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371551",
+    "category": "travel",
+    "title": "Travel Premium Travel Bag Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371552",
+    "category": "travel",
+    "title": "Travel Smart Carry-On Scale",
+    "amazonPrice": {
+      "aed": 329.99,
+      "usd": 90,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$30",
+      "B": "$23",
+      "A": "$18"
+    }
+  },
+  {
+    "id": "ORDER-371553",
+    "category": "travel",
+    "title": "Travel Luxury Packing Cube Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371554",
+    "category": "travel",
+    "title": "Travel Universal Travel Adapter",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371555",
+    "category": "travel",
+    "title": "Travel Hardshell Luggage Set",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371556",
+    "category": "travel",
+    "title": "Travel Anti-Theft Backpack",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371557",
+    "category": "travel",
+    "title": "Travel Travel Toiletry Organizer",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371558",
+    "category": "travel",
+    "title": "Travel Memory Foam Neck Pillow",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371559",
+    "category": "travel",
+    "title": "Travel Passport Wallet Set",
+    "amazonPrice": {
+      "aed": 404.99,
+      "usd": 110,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$37",
+      "B": "$28",
+      "A": "$22"
+    }
+  },
+  {
+    "id": "ORDER-371560",
+    "category": "travel",
+    "title": "Travel Foldable Weekender Bag",
+    "amazonPrice": {
+      "aed": 249.99,
+      "usd": 68.07,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$23",
+      "B": "$17",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371561",
+    "category": "gaming",
+    "title": "Retail Console Accessory Kit",
+    "amazonPrice": {
+      "aed": 299,
+      "usd": 81,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$27",
+      "B": "$20",
+      "A": "$16"
+    }
+  },
+  {
+    "id": "ORDER-371562",
+    "category": "gaming",
+    "title": "Retail RGB Gaming Headset",
+    "amazonPrice": {
+      "aed": 179,
+      "usd": 48.74,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371563",
+    "category": "gaming",
+    "title": "Retail Mechanical Keyboard Set",
+    "amazonPrice": {
+      "aed": 720,
+      "usd": 196,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$65",
+      "B": "$49",
+      "A": "$39"
+    }
+  },
+  {
+    "id": "ORDER-371564",
+    "category": "gaming",
+    "title": "Retail Wireless Gaming Mouse",
+    "amazonPrice": {
+      "aed": 144.49,
+      "usd": 39,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$13",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371565",
+    "category": "gaming",
+    "title": "Retail Mobile Game Controller",
+    "amazonPrice": {
+      "aed": 95,
+      "usd": 26,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371566",
+    "category": "gaming",
+    "title": "Retail LED Gaming Desk Mat",
+    "amazonPrice": {
+      "aed": 119,
+      "usd": 32,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$11",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371567",
+    "category": "gaming",
+    "title": "Retail Streaming Capture Card",
+    "amazonPrice": {
+      "aed": 137.45,
+      "usd": 37,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371568",
+    "category": "gaming",
+    "title": "Retail Gaming Chair Footrest",
+    "amazonPrice": {
+      "aed": 103,
+      "usd": 28,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371569",
+    "category": "gaming",
+    "title": "Retail Portable Mini Projector",
+    "amazonPrice": {
+      "aed": 225,
+      "usd": 61,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$20",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371570",
+    "category": "gaming",
+    "title": "Retail VR Headset Carry Case",
+    "amazonPrice": {
+      "aed": 299,
+      "usd": 81,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$27",
+      "B": "$20",
+      "A": "$16"
+    }
+  },
+  {
+    "id": "ORDER-371571",
+    "category": "gaming",
+    "title": "Pro Console Accessory Kit",
+    "amazonPrice": {
+      "aed": 179,
+      "usd": 48.74,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371572",
+    "category": "gaming",
+    "title": "Pro RGB Gaming Headset",
+    "amazonPrice": {
+      "aed": 393.48,
+      "usd": 107,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$36",
+      "B": "$27",
+      "A": "$21"
+    }
+  },
+  {
+    "id": "ORDER-371573",
+    "category": "gaming",
+    "title": "Pro Mechanical Keyboard Set",
+    "amazonPrice": {
+      "aed": 99.99,
+      "usd": 27,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$9",
+      "B": "$7",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371574",
+    "category": "gaming",
+    "title": "Pro Wireless Gaming Mouse",
+    "amazonPrice": {
+      "aed": 179,
+      "usd": 48.74,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371575",
+    "category": "gaming",
+    "title": "Pro Mobile Game Controller",
+    "amazonPrice": {
+      "aed": 299,
+      "usd": 81,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$27",
+      "B": "$20",
+      "A": "$16"
+    }
+  },
+  {
+    "id": "ORDER-371576",
+    "category": "gaming",
+    "title": "Pro LED Gaming Desk Mat",
+    "amazonPrice": {
+      "aed": 218,
+      "usd": 59,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$20",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371577",
+    "category": "gaming",
+    "title": "Pro Streaming Capture Card",
+    "amazonPrice": {
+      "aed": 155,
+      "usd": 42,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$11",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371578",
+    "category": "gaming",
+    "title": "Pro Gaming Chair Footrest",
+    "amazonPrice": {
+      "aed": 189,
+      "usd": 51,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$17",
+      "B": "$13",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371579",
+    "category": "gaming",
+    "title": "Pro Portable Mini Projector",
+    "amazonPrice": {
+      "aed": 59.98,
+      "usd": 16,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371580",
+    "category": "gaming",
+    "title": "Pro VR Headset Carry Case",
+    "amazonPrice": {
+      "aed": 137.98,
+      "usd": 38,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$13",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371581",
+    "category": "gaming",
+    "title": "Compact Console Accessory Kit",
+    "amazonPrice": {
+      "aed": 60,
+      "usd": 16,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$5",
+      "B": "$4",
+      "A": "$3"
+    }
+  },
+  {
+    "id": "ORDER-371582",
+    "category": "gaming",
+    "title": "Compact RGB Gaming Headset",
+    "amazonPrice": {
+      "aed": 34,
+      "usd": 9,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371583",
+    "category": "gaming",
+    "title": "Compact Mechanical Keyboard Set",
+    "amazonPrice": {
+      "aed": 178,
+      "usd": 48,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371584",
+    "category": "gaming",
+    "title": "Compact Wireless Gaming Mouse",
+    "amazonPrice": {
+      "aed": 186,
+      "usd": 51,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$17",
+      "B": "$13",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371585",
+    "category": "gaming",
+    "title": "Compact Mobile Game Controller",
+    "amazonPrice": {
+      "aed": 224,
+      "usd": 61,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$20",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371586",
+    "category": "gaming",
+    "title": "Compact LED Gaming Desk Mat",
+    "amazonPrice": {
+      "aed": 160,
+      "usd": 44,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$15",
+      "B": "$11",
+      "A": "$9"
+    }
+  },
+  {
+    "id": "ORDER-371587",
+    "category": "gaming",
+    "title": "Compact Streaming Capture Card",
+    "amazonPrice": {
+      "aed": 34,
+      "usd": 9,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371588",
+    "category": "gaming",
+    "title": "Compact Gaming Chair Footrest",
+    "amazonPrice": {
+      "aed": 39.99,
+      "usd": 11,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$4",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371589",
+    "category": "gaming",
+    "title": "Compact Portable Mini Projector",
+    "amazonPrice": {
+      "aed": 134.59,
+      "usd": 37,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371590",
+    "category": "gaming",
+    "title": "Compact VR Headset Carry Case",
+    "amazonPrice": {
+      "aed": 898.98,
+      "usd": 245,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$82",
+      "B": "$61",
+      "A": "$49"
+    }
+  },
+  {
+    "id": "ORDER-371591",
+    "category": "gaming",
+    "title": "Premium Console Accessory Kit",
+    "amazonPrice": {
+      "aed": 139.3,
+      "usd": 38,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$13",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371592",
+    "category": "gaming",
+    "title": "Premium RGB Gaming Headset",
+    "amazonPrice": {
+      "aed": 269,
+      "usd": 73,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$24",
+      "B": "$18",
+      "A": "$15"
+    }
+  },
+  {
+    "id": "ORDER-371593",
+    "category": "gaming",
+    "title": "Premium Mechanical Keyboard Set",
+    "amazonPrice": {
+      "aed": 261,
+      "usd": 71,
+      "source": "detail",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$24",
+      "B": "$18",
+      "A": "$14"
+    }
+  },
+  {
+    "id": "ORDER-371594",
+    "category": "gaming",
+    "title": "Premium Wireless Gaming Mouse",
+    "amazonPrice": {
+      "aed": 109,
+      "usd": 30,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$10",
+      "B": "$8",
+      "A": "$6"
+    }
+  },
+  {
+    "id": "ORDER-371595",
+    "category": "gaming",
+    "title": "Premium Mobile Game Controller",
+    "amazonPrice": {
+      "aed": 149,
+      "usd": 41,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$14",
+      "B": "$10",
+      "A": "$8"
+    }
+  },
+  {
+    "id": "ORDER-371596",
+    "category": "gaming",
+    "title": "Premium LED Gaming Desk Mat",
+    "amazonPrice": {
+      "aed": 218,
+      "usd": 59,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$20",
+      "B": "$15",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371597",
+    "category": "gaming",
+    "title": "Premium Streaming Capture Card",
+    "amazonPrice": {
+      "aed": 399,
+      "usd": 109,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$36",
+      "B": "$27",
+      "A": "$22"
+    }
+  },
+  {
+    "id": "ORDER-371598",
+    "category": "gaming",
+    "title": "Premium Gaming Chair Footrest",
+    "amazonPrice": {
+      "aed": 27.88,
+      "usd": 8,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$2",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371599",
+    "category": "gaming",
+    "title": "Premium Portable Mini Projector",
+    "amazonPrice": {
+      "aed": 38,
+      "usd": 10,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$3",
+      "B": "$3",
+      "A": "$2"
+    }
+  },
+  {
+    "id": "ORDER-371600",
+    "category": "gaming",
+    "title": "Premium VR Headset Carry Case",
+    "amazonPrice": {
+      "aed": 130,
+      "usd": 35,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$12",
+      "B": "$9",
+      "A": "$7"
+    }
+  },
+  {
+    "id": "ORDER-371601",
+    "category": "gaming",
+    "title": "Travel Console Accessory Kit",
+    "amazonPrice": {
+      "aed": 495.96,
+      "usd": 135,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371602",
+    "category": "gaming",
+    "title": "Travel RGB Gaming Headset",
+    "amazonPrice": {
+      "aed": 649,
+      "usd": 177,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$59",
+      "B": "$44",
+      "A": "$35"
+    }
+  },
+  {
+    "id": "ORDER-371603",
+    "category": "gaming",
+    "title": "Travel Mechanical Keyboard Set",
+    "amazonPrice": {
+      "aed": 179.99,
+      "usd": 49,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$10"
+    }
+  },
+  {
+    "id": "ORDER-371604",
+    "category": "gaming",
+    "title": "Travel Wireless Gaming Mouse",
+    "amazonPrice": {
+      "aed": 228,
+      "usd": 62,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$21",
+      "B": "$16",
+      "A": "$12"
+    }
+  },
+  {
+    "id": "ORDER-371605",
+    "category": "gaming",
+    "title": "Travel Mobile Game Controller",
+    "amazonPrice": {
+      "aed": 92.21,
+      "usd": 25,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$8",
+      "B": "$6",
+      "A": "$5"
+    }
+  },
+  {
+    "id": "ORDER-371606",
+    "category": "gaming",
+    "title": "Travel LED Gaming Desk Mat",
+    "amazonPrice": {
+      "aed": 399,
+      "usd": 109,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$36",
+      "B": "$27",
+      "A": "$22"
+    }
+  },
+  {
+    "id": "ORDER-371607",
+    "category": "gaming",
+    "title": "Travel Streaming Capture Card",
+    "amazonPrice": {
+      "aed": 710,
+      "usd": 193,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$64",
+      "B": "$48",
+      "A": "$39"
+    }
+  },
+  {
+    "id": "ORDER-371608",
+    "category": "gaming",
+    "title": "Travel Gaming Chair Footrest",
+    "amazonPrice": {
+      "aed": 526.66,
+      "usd": 143,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$48",
+      "B": "$36",
+      "A": "$29"
+    }
+  },
+  {
+    "id": "ORDER-371609",
+    "category": "gaming",
+    "title": "Travel Portable Mini Projector",
+    "amazonPrice": {
+      "aed": 500,
+      "usd": 136,
+      "source": "search",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$45",
+      "B": "$34",
+      "A": "$27"
+    }
+  },
+  {
+    "id": "ORDER-371610",
+    "category": "gaming",
+    "title": "Travel VR Headset Carry Case",
+    "amazonPrice": {
+      "aed": 179,
+      "usd": 48.74,
+      "source": "category-median",
+      "rate": 3.6725
+    },
+    "prices": {
+      "C": "$16",
+      "B": "$12",
+      "A": "$10"
+    }
+  }
+]

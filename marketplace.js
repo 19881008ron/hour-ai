@@ -100,9 +100,9 @@
         bSupply: "B supply",
         aSupply: "A supply",
         retail: "Retail guide",
-        details: "View details",
+        details: "Reserve for Free",
         noonEnglish: "English Details",
-        noonArabic: "Arabic Details",
+        noonArabic: "التفاصيل العربية",
         noonUnavailable: "Noon detail link pending",
         request: "Request sourcing",
         supplyTitle: "Member supply prices",
@@ -721,6 +721,8 @@
             <div><span>${get("store.bSupply")}</span><strong>${product.prices.B}</strong></div>
             <div><span>${get("store.aSupply")}</span><strong>${product.prices.A}</strong></div>
           </div>
+          ${externalLinkButtons(product)}
+          <a class="button button-primary store-request-button" href="${supportUrl}">${get("store.request")}</a>
           <div class="store-profit-box">
             <strong>${get("store.profitTitle")}</strong>
             <p>${get("store.profitText")}</p>
@@ -731,8 +733,6 @@
               <li>${get("store.flow4")}</li>
             </ol>
           </div>
-          ${externalLinkButtons(product)}
-          <a class="button button-primary store-request-button" href="${supportUrl}">${get("store.request")}</a>
         </aside>
       </div>
     `;
