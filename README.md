@@ -25,3 +25,5 @@ Create a GitHub repository, upload these files, import the repository into Verce
 - Registration, login, profile, payment records, and administrator tools
 - Course pricing and crypto payment guidance
 - Member store with category browsing and member supply prices
+
+Deployment refresh: 2026-09-04 16:53:35 +08:00
