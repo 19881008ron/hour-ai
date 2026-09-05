@@ -104,15 +104,17 @@ async function navigate(ws, url) {
         expression: `(() => {
           const nav = document.querySelector(".site-header .nav-links");
           const navRect = nav.getBoundingClientRect();
-          const navItems = Array.from(nav.querySelectorAll("a")).map((el) => el.getBoundingClientRect());
+          const navItems = Array.from(nav.querySelectorAll("a")).map((el) => el.getBoundingClientRect()).filter((rect) => rect.width > 0 && rect.height > 0);
+          const menuRect = document.querySelector(".mobile-menu-toggle")?.getBoundingClientRect();
           const orders = document.querySelector(".orders-grid");
           const orderItems = Array.from(document.querySelectorAll(".order-card")).slice(0, 3).map((el) => el.getBoundingClientRect());
           return {
             lang: document.documentElement.lang,
             firstNav: document.querySelector(".site-header .nav-links a")?.textContent.trim(),
             navDisplay: getComputedStyle(nav).display,
-            navHeight: navRect.height,
+            navHeight: Math.max(navRect.height, ...navItems.map((rect) => rect.height), menuRect?.height || 0),
             navSingleRow: new Set(navItems.map((rect) => Math.round(rect.top))).size === 1,
+            menuVisible: Boolean(menuRect && menuRect.width > 0 && menuRect.height > 0),
             ordersDisplay: getComputedStyle(orders).display,
             ordersHorizontal: orderItems.length >= 2 && Math.abs(orderItems[0].top - orderItems[1].top) < 3 && orderItems[1].left > orderItems[0].left,
             bodyOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -120,8 +122,8 @@ async function navigate(ws, url) {
         })()`,
       });
       const homeValue = home.result.value;
-      if (homeValue.lang !== "en" || homeValue.firstNav !== "Orders") failures.push({ viewport: viewport.name, page: "home", reason: "default-language", homeValue });
-      if (!homeValue.navSingleRow || homeValue.navHeight > 54) failures.push({ viewport: viewport.name, page: "home", reason: "nav-not-single-row", homeValue });
+      if (homeValue.lang !== "en" || homeValue.firstNav !== "Commission") failures.push({ viewport: viewport.name, page: "home", reason: "default-language", homeValue });
+      if (!homeValue.navSingleRow || !homeValue.menuVisible || homeValue.navHeight > 54) failures.push({ viewport: viewport.name, page: "home", reason: "nav-not-single-row", homeValue });
       if (!homeValue.ordersHorizontal) failures.push({ viewport: viewport.name, page: "home", reason: "orders-not-horizontal", homeValue });
       if (homeValue.bodyOverflow > 2) failures.push({ viewport: viewport.name, page: "home", reason: "horizontal-overflow", homeValue });
 
@@ -134,6 +136,7 @@ async function navigate(ws, url) {
           const grid = document.querySelector(".store-grid");
           const cards = Array.from(document.querySelectorAll(".store-card")).slice(0, 4).map((el) => el.getBoundingClientRect());
           const filters = Array.from(document.querySelectorAll(".store-filter")).map((el) => el.getBoundingClientRect());
+          const menuRect = document.querySelector(".mobile-menu-toggle")?.getBoundingClientRect();
           const productImageButton = document.querySelector(".store-card-image-button");
           productImageButton?.click();
           const detailDialog = document.querySelector(".store-detail-dialog");
@@ -142,6 +145,7 @@ async function navigate(ws, url) {
           return {
             lang: document.documentElement.lang,
             firstNav: document.querySelector(".site-header .nav-links a")?.textContent.trim(),
+            menuVisible: Boolean(menuRect && menuRect.width > 0 && menuRect.height > 0),
             gridColumns: getComputedStyle(grid).gridTemplateColumns,
             twoColumns: cards.length >= 2 && Math.abs(cards[0].top - cards[1].top) < 3 && cards[1].left > cards[0].left,
             secondRow: cards.length >= 4 && Math.abs(cards[2].top - cards[3].top) < 3,
@@ -158,7 +162,7 @@ async function navigate(ws, url) {
         })()`,
       });
       const storeValue = store.result.value;
-      if (storeValue.lang !== "en" || storeValue.firstNav !== "Orders") failures.push({ viewport: viewport.name, page: "store", reason: "default-language", storeValue });
+      if (storeValue.lang !== "en" || storeValue.firstNav !== "Commission" || !storeValue.menuVisible) failures.push({ viewport: viewport.name, page: "store", reason: "default-language", storeValue });
       if (!storeValue.twoColumns || !storeValue.secondRow) failures.push({ viewport: viewport.name, page: "store", reason: "store-not-two-columns", storeValue });
       if (!storeValue.filtersTwoColumns || !storeValue.filtersNotScrollable) failures.push({ viewport: viewport.name, page: "store", reason: "filters-not-expanded-two-columns", storeValue });
       if (!storeValue.detailOpenedByImage || storeValue.visibleThumbCount !== 0 || storeValue.mainImageCount !== 1) failures.push({ viewport: viewport.name, page: "store", reason: "detail-image-entry-or-gallery", storeValue });

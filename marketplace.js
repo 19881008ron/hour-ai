@@ -76,7 +76,7 @@
 
   const i18n = {
     en: {
-      nav: { live: "Live Platform", orders: "Orders", path: "Learning", courses: "Courses", store: "Member Store", support: "Support" },
+      nav: { live: "Live Platform", orders: "Commission", path: "Learning", courses: "Courses", store: "Member Store", support: "Support", menu: "Menu" },
       store: {
         advisor: "Advisor",
         backHome: "Home",
@@ -151,7 +151,7 @@
       }
     },
     zh: {
-      nav: { live: "在线平台", orders: "订单", path: "学习", courses: "课程", store: "会员商城", support: "客服" },
+      nav: { live: "在线平台", orders: "佣金", path: "学习", courses: "课程", store: "会员商城", support: "客服", menu: "菜单" },
       store: {
         advisor: "客服",
         backHome: "首页",
@@ -226,7 +226,7 @@
       }
     },
     ar: {
-      nav: { live: "منصة مباشرة", orders: "الطلبات", path: "التعلم", courses: "الدورات", store: "متجر الأعضاء", support: "الدعم" },
+      nav: { live: "منصة مباشرة", orders: "العمولة", path: "التعلم", courses: "الدورات", store: "متجر الأعضاء", support: "الدعم", menu: "القائمة" },
       store: {
         advisor: "الدعم",
         backHome: "الرئيسية",
@@ -622,6 +622,9 @@
     document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr";
     const select = document.getElementById("storeLanguageSelect");
     if (select) select.value = currentLanguage;
+    document.querySelectorAll(".mobile-language-select").forEach((item) => {
+      item.value = currentLanguage;
+    });
     if (persist) {
       localStorage.setItem(languageKey, currentLanguage);
       localStorage.setItem(languageManualKey, "true");
@@ -757,6 +760,31 @@
     document.body.classList.remove("store-modal-open");
   }
 
+  function closeMobileMenu() {
+    const toggle = document.querySelector(".mobile-menu-toggle");
+    const panel = document.querySelector(".mobile-menu-panel");
+    if (!toggle || !panel) return;
+    panel.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
+  }
+
+  function initMobileMenu() {
+    const toggle = document.querySelector(".mobile-menu-toggle");
+    const panel = document.querySelector(".mobile-menu-panel");
+    if (!toggle || !panel) return;
+    toggle.addEventListener("click", () => {
+      const open = panel.hidden;
+      panel.hidden = !open;
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+    document.addEventListener("click", (event) => {
+      const toggleHit = event.target.closest(".mobile-menu-toggle");
+      const menuHit = event.target.closest(".mobile-menu-panel");
+      if (!toggleHit && !menuHit) closeMobileMenu();
+      if (menuHit && event.target.closest("a, button")) closeMobileMenu();
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", async () => {
     const saved = localStorage.getItem(languageKey);
     const manual = localStorage.getItem(languageManualKey) === "true";
@@ -766,6 +794,14 @@
     renderProducts();
     initBackToTop();
     document.getElementById("storeLanguageSelect")?.addEventListener("change", (event) => setLanguage(event.target.value, true));
+    document.querySelectorAll(".mobile-language-select").forEach((select) => {
+      select.value = currentLanguage;
+      select.addEventListener("change", (event) => {
+        setLanguage(event.target.value, true);
+        closeMobileMenu();
+      });
+    });
+    initMobileMenu();
     document.getElementById("storeDetailClose")?.addEventListener("click", closeDetail);
     document.getElementById("storeDetailOverlay")?.addEventListener("click", (event) => {
       if (event.target.id === "storeDetailOverlay") closeDetail();

@@ -12,7 +12,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/hour-ai-logo.svg" />
     <link rel="shortcut icon" href="assets/hour-ai-logo.svg" />
     <link rel="apple-touch-icon" href="assets/hour-ai-logo.svg" />
-    <link rel="stylesheet" href="styles.css?v=20260905-mobile-screenshot-lock" />
+    <link rel="stylesheet" href="styles.css?v=20260905-mobile-course-store-polish" />
   </head>
   <body class="store-page">
     <a class="skip-link" href="#storeMain">Skip to content</a>
@@ -26,7 +26,7 @@
         </a>
 
         <nav class="nav-links" aria-label="Primary navigation">
-          <a href="index.html#orders" data-store-i18n="nav.orders">Orders</a>
+          <a href="index.html#orders" data-store-i18n="nav.orders">Commission</a>
           <a href="index.html#path" data-store-i18n="nav.path">Learning</a>
           <a href="index.html#courses" data-store-i18n="nav.courses">Courses</a>
           <a href="marketplace.html" aria-current="page" data-store-i18n="nav.store">Member Store</a>
@@ -44,6 +44,24 @@
           </label>
           <a class="button button-quiet header-login" href="index.html?support=1#support" data-store-i18n="store.advisor">Advisor</a>
           <a class="button button-quiet header-register" href="index.html#top" data-store-i18n="store.backHome">Home</a>
+        </div>
+        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="storeMobileMenuPanel">
+          <span data-store-i18n="nav.menu">Menu</span>
+        </button>
+        <div class="mobile-menu-panel" id="storeMobileMenuPanel" hidden>
+          <a href="index.html#path" data-store-i18n="nav.path">Learning</a>
+          <a href="index.html#courses" data-store-i18n="nav.courses">Courses</a>
+          <a href="index.html?support=1#support" data-store-i18n="nav.support">Support</a>
+          <a href="index.html?support=1#support" data-store-i18n="store.advisor">Advisor</a>
+          <a href="index.html#top" data-store-i18n="store.backHome">Home</a>
+          <label>
+            <span class="sr-only">Select language</span>
+            <select class="language-select mobile-language-select" aria-label="Select language">
+              <option value="en">English</option>
+              <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+              <option value="zh">&#31616;&#20307;&#20013;&#25991;</option>
+            </select>
+          </label>
         </div>
       </div>
     </header>
@@ -118,6 +136,6 @@
       </a>
     </div>
 
-    <script src="marketplace.js?v=20260905-mobile-screenshot-lock"></script>
+    <script src="marketplace.js?v=20260905-mobile-course-store-polish"></script>
   </body>
 </html>

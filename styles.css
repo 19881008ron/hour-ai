@@ -13445,3 +13445,643 @@ body .hero-proof-card span {
   }
 }
 
+/* 2026-09-05 mobile course/store polish lock. Desktop remains untouched. */
+@media (max-width: 1024px) {
+  html body .site-header .brand,
+  html body .site-header .header-inner > .brand,
+  html body.store-page .site-header .brand,
+  html body.store-page .site-header .header-inner > .brand {
+    width: auto !important;
+    max-width: none !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    padding: 0 !important;
+    gap: 6px !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  html body .site-header .brand-mark,
+  html body.store-page .site-header .brand-mark {
+    flex: 0 0 28px !important;
+    width: 28px !important;
+    height: 28px !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  html body .site-header .brand-name,
+  html body.store-page .site-header .brand-name {
+    max-width: 88px !important;
+    color: #ffffff !important;
+    font-size: clamp(14px, 3.6vw, 16px) !important;
+    font-weight: 850 !important;
+    line-height: 1 !important;
+    text-shadow: none !important;
+  }
+
+  html body .hero-section .hero-copy h1,
+  html body .section-heading h2,
+  html body .path-intro h2,
+  html body .courses-section .section-heading h2,
+  html body .reviews-section .section-heading h2,
+  html body.store-page .store-section-head h2 {
+    font-size: clamp(24px, 6.2vw, 32px) !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0 !important;
+  }
+
+  html body .hero-section .hero-copy h1 {
+    margin: 0 0 12px !important;
+  }
+
+  html body .hero-section .hero-copy .hero-lede {
+    margin: 0 0 12px !important;
+    line-height: 1.48 !important;
+  }
+
+  html body .hero-actions {
+    margin-top: 10px !important;
+    gap: 8px !important;
+  }
+
+  html body .courses-section {
+    padding-top: 26px !important;
+    padding-bottom: 30px !important;
+  }
+
+  html body .courses-section .section-heading {
+    margin-bottom: 16px !important;
+    gap: 8px !important;
+  }
+
+  html body .pricing-grid {
+    gap: 12px !important;
+  }
+
+  html body .price-card {
+    min-height: 0 !important;
+    padding: 22px 20px 18px !important;
+    gap: 12px !important;
+  }
+
+  html body .price-card .recommended-tag {
+    top: 0 !important;
+    height: 4px !important;
+    font-size: 0 !important;
+  }
+
+  html body .price-rank {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin: 0 !important;
+  }
+
+  html body .price-rank .rank-medal {
+    --rank-size: 56px !important;
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  html body .price-rank-label {
+    font-size: 0 !important;
+    line-height: 1 !important;
+  }
+
+  html body .price-rank-label::after {
+    content: attr(data-mobile-label);
+    display: inline-block;
+    color: #0f172a;
+    font-size: clamp(15px, 4vw, 17px);
+    font-weight: 850;
+    line-height: 1.15;
+    text-transform: none;
+  }
+
+  html body .price-card h3 {
+    display: none !important;
+  }
+
+  html body .price-row {
+    display: flex !important;
+    align-items: flex-end !important;
+    gap: 8px !important;
+    margin: 0 !important;
+  }
+
+  html body .price-row .price {
+    font-size: clamp(34px, 8.8vw, 42px) !important;
+    line-height: 0.95 !important;
+  }
+
+  html body .price-note {
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+  }
+
+  html body .price-card ul {
+    gap: 9px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body .price-card li {
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+  }
+
+  html body .price-actions {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    margin-top: 2px !important;
+  }
+
+  html body .price-actions .button {
+    min-height: 46px !important;
+    padding: 0 8px !important;
+    font-size: 14px !important;
+  }
+
+  html body.support-open .site-header {
+    display: none !important;
+  }
+
+  html body.store-page .store-hero {
+    padding: 16px 12px 12px !important;
+    gap: 10px !important;
+  }
+
+  html body.store-page .store-hero-copy {
+    gap: 8px !important;
+  }
+
+  html body.store-page .store-hero-copy h1 {
+    font-size: clamp(31px, 7.8vw, 40px) !important;
+    line-height: 1.06 !important;
+    margin: 4px 0 4px !important;
+  }
+
+  html body.store-page .store-hero-copy p {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: clamp(14px, 3.55vw, 16px) !important;
+    line-height: 1.42 !important;
+    text-align: left !important;
+  }
+
+  html body.store-page .store-hero-panel {
+    margin-top: 8px !important;
+    padding: 10px 12px !important;
+  }
+
+  html body.store-page .store-process {
+    gap: 8px !important;
+  }
+
+  html body.store-page .store-process-card {
+    min-height: 78px !important;
+    padding: 10px 6px !important;
+  }
+
+  html body.store-page .store-section {
+    padding-top: 14px !important;
+  }
+
+  html body.store-page .store-section-head {
+    gap: 6px !important;
+    margin-bottom: 12px !important;
+  }
+
+  html body.store-page .store-section-head h2 {
+    font-size: clamp(25px, 6.4vw, 34px) !important;
+    line-height: 1.08 !important;
+  }
+
+  html body.store-page .store-section-head p {
+    max-width: none !important;
+    margin: 0 !important;
+    font-size: clamp(13px, 3.35vw, 15px) !important;
+    line-height: 1.42 !important;
+  }
+
+  html body.store-page .store-filter-custom {
+    color: #0f172a !important;
+    background: linear-gradient(145deg, #ecfff4 0%, #ffffff 100%) !important;
+    border-color: #b8efcb !important;
+    opacity: 1 !important;
+  }
+
+  html body.store-page .store-filter-custom .store-filter-icon {
+    color: #0f172a !important;
+    background: #d8ffe7 !important;
+    border-color: #9fe8bd !important;
+    opacity: 1 !important;
+  }
+
+  html body.store-page .store-filter-custom strong {
+    color: #0f172a !important;
+    opacity: 1 !important;
+  }
+
+  html body.store-page .store-empty-state {
+    display: none !important;
+  }
+
+  html body.store-page .store-grid:has(.store-empty-state) {
+    display: block !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 380px) {
+  html body .site-header .brand-name,
+  html body.store-page .site-header .brand-name {
+    max-width: 78px !important;
+    font-size: 13px !important;
+  }
+
+  html body .hero-actions .button {
+    font-size: 13px !important;
+  }
+
+  html body .price-actions .button {
+    font-size: 13px !important;
+  }
+}
+
+.mobile-menu-toggle,
+.mobile-menu-panel {
+  display: none;
+}
+
+/* 2026-09-05 final mobile navigation and spacing consolidation. */
+@media (max-width: 1024px) {
+  html body .site-header,
+  html body.store-page .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 80 !important;
+    overflow: visible !important;
+  }
+
+  html body .site-header .header-inner,
+  html body.store-page .site-header .header-inner {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: minmax(86px, 0.9fr) minmax(82px, 0.78fr) minmax(104px, 1fr) minmax(54px, 0.52fr) !important;
+    grid-template-areas: "brand commission store menu" !important;
+    gap: 4px !important;
+    align-items: center !important;
+    min-height: 54px !important;
+    height: 54px !important;
+    padding: 8px 10px !important;
+    overflow: visible !important;
+  }
+
+  html body .site-header .header-inner > .brand,
+  html body.store-page .site-header .header-inner > .brand {
+    grid-area: brand !important;
+    align-self: center !important;
+    justify-self: start !important;
+  }
+
+  html body .site-header .brand-name,
+  html body.store-page .site-header .brand-name {
+    max-width: 62px !important;
+    font-size: clamp(13px, 3.35vw, 15px) !important;
+  }
+
+  html body .site-header .header-actions,
+  html body.store-page .site-header .header-actions {
+    display: none !important;
+  }
+
+  html body .site-header .header-inner > nav.nav-links,
+  html body.store-page .site-header .header-inner > nav.nav-links {
+    display: contents !important;
+  }
+
+  html body .site-header .header-inner > nav.nav-links a,
+  html body.store-page .site-header .header-inner > nav.nav-links a {
+    display: none !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 6px !important;
+    border-radius: 999px !important;
+    font-size: clamp(10px, 2.55vw, 12px) !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  html body .site-header .header-inner > nav.nav-links a:first-child,
+  html body.store-page .site-header .header-inner > nav.nav-links a:first-child {
+    display: flex !important;
+    grid-area: commission !important;
+  }
+
+  html body .site-header .header-inner > nav.nav-links a[href*="marketplace"],
+  html body.store-page .site-header .header-inner > nav.nav-links a[href*="marketplace"] {
+    display: flex !important;
+    grid-area: store !important;
+    font-size: clamp(9px, 2.35vw, 11px) !important;
+  }
+
+  html body .mobile-menu-toggle,
+  html body.store-page .mobile-menu-toggle {
+    grid-area: menu !important;
+    display: flex !important;
+    width: 100% !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 6px !important;
+    border: 1px solid rgba(148, 163, 184, 0.24) !important;
+    border-radius: 999px !important;
+    background: #111827 !important;
+    color: #ffffff !important;
+    font: inherit !important;
+    font-size: clamp(10px, 2.55vw, 12px) !important;
+    font-weight: 820 !important;
+    line-height: 1 !important;
+  }
+
+  html body .mobile-menu-panel,
+  html body.store-page .mobile-menu-panel {
+    position: absolute !important;
+    top: calc(100% + 6px) !important;
+    right: 10px !important;
+    z-index: 120 !important;
+    width: min(220px, calc(100vw - 20px)) !important;
+    padding: 8px !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+    border: 1px solid rgba(148, 163, 184, 0.22) !important;
+    border-radius: 14px !important;
+    background: rgba(9, 13, 20, 0.98) !important;
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.34) !important;
+  }
+
+  html body .mobile-menu-panel[hidden],
+  html body.store-page .mobile-menu-panel[hidden] {
+    display: none !important;
+  }
+
+  html body .mobile-menu-panel a,
+  html body .mobile-menu-panel button,
+  html body .mobile-menu-panel label,
+  html body.store-page .mobile-menu-panel a,
+  html body.store-page .mobile-menu-panel button,
+  html body.store-page .mobile-menu-panel label {
+    display: flex !important;
+    width: 100% !important;
+    min-height: 38px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 10px !important;
+    border: 1px solid rgba(148, 163, 184, 0.18) !important;
+    border-radius: 10px !important;
+    background: rgba(15, 23, 42, 0.94) !important;
+    color: #ffffff !important;
+    font: inherit !important;
+    font-size: 13px !important;
+    font-weight: 760 !important;
+    text-decoration: none !important;
+  }
+
+  html body .mobile-menu-panel .language-select,
+  html body.store-page .mobile-menu-panel .language-select {
+    width: 100% !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    font-size: 13px !important;
+    text-align: center !important;
+    text-align-last: center !important;
+  }
+
+  html body .hero-section {
+    padding-top: 10px !important;
+  }
+
+  html body .path-section {
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+  }
+
+  html body .path-intro {
+    gap: 8px !important;
+    margin-bottom: 10px !important;
+  }
+
+  html body .path-intro h2,
+  html body .section-heading h2,
+  html body .orders-section .section-heading h2,
+  html body .courses-section .section-heading h2 {
+    font-size: clamp(22px, 5.8vw, 30px) !important;
+    line-height: 1.1 !important;
+  }
+
+  html body .path-intro > p:not(.eyebrow),
+  html body .section-heading > p,
+  html body .section-heading > div + p {
+    margin-top: 2px !important;
+    font-size: clamp(14px, 3.55vw, 16px) !important;
+    line-height: 1.38 !important;
+  }
+
+  html body .path-intro .button {
+    margin-top: 8px !important;
+  }
+
+  html body .profile-layout {
+    margin-top: 10px !important;
+    gap: 8px !important;
+  }
+
+  html body .profile-layout > .profile-card {
+    min-height: 154px !important;
+    padding: 12px 5px 10px !important;
+    gap: 8px !important;
+  }
+
+  html body .profile-layout > .profile-card > .rank-medal,
+  html body .profile-layout > .profile-card > .rank-medal.rank-medal-large {
+    --rank-size: 48px !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+  }
+
+  html body .profile-layout > .profile-card > h3 {
+    min-height: 24px !important;
+    font-size: clamp(10px, 2.6vw, 12px) !important;
+    line-height: 1.12 !important;
+  }
+
+  html body .profile-layout > .profile-card > .commission-highlight {
+    min-height: 38px !important;
+    width: 100% !important;
+    padding: 5px 2px !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(34, 197, 94, 0.42) !important;
+    border-left: 1px solid rgba(34, 197, 94, 0.42) !important;
+    background: rgba(16, 185, 129, 0.11) !important;
+    box-shadow: none !important;
+    justify-items: center !important;
+    align-content: center !important;
+  }
+
+  html body .profile-layout > .profile-card > .commission-highlight::before,
+  html body .profile-layout > .profile-card > .commission-highlight::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  html body .profile-layout > .profile-card > .commission-highlight strong {
+    color: #5fdc8e !important;
+    -webkit-text-fill-color: #5fdc8e !important;
+    background: none !important;
+    text-shadow: none !important;
+    font-size: clamp(10.5px, 2.72vw, 12.5px) !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+
+  html body .orders-section {
+    padding-top: 16px !important;
+    padding-bottom: 18px !important;
+  }
+
+  html body .orders-section .section-heading {
+    margin-bottom: 10px !important;
+    gap: 6px !important;
+  }
+
+  html body .board-toolbar {
+    margin-bottom: 10px !important;
+    padding: 10px 12px !important;
+  }
+
+  html body .orders-grid {
+    gap: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  html body .order-card {
+    gap: 9px !important;
+    padding-bottom: 13px !important;
+  }
+
+  html body .order-card-header {
+    margin: 0 !important;
+    gap: 6px !important;
+  }
+
+  html body .order-card h3 {
+    margin: 0 !important;
+    font-size: clamp(20px, 5.25vw, 26px) !important;
+    line-height: 1.12 !important;
+  }
+
+  html body .order-card > p {
+    margin: 0 !important;
+    font-size: clamp(14px, 3.65vw, 16px) !important;
+    line-height: 1.38 !important;
+  }
+
+  html body .order-meta {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    margin: 4px 0 0 !important;
+    border: 1px solid rgba(94, 234, 212, 0.32) !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .order-meta span {
+    min-width: 0 !important;
+    padding: 8px 5px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  html body .order-meta span + span {
+    border-left: 1px solid rgba(148, 163, 184, 0.24) !important;
+  }
+
+  html body .order-meta strong,
+  html body .order-meta b {
+    text-align: center !important;
+    line-height: 1.05 !important;
+  }
+
+  html body #moreOrdersButton {
+    margin-top: 4px !important;
+  }
+
+  html body .courses-section .section-heading {
+    margin-bottom: 10px !important;
+  }
+
+  html body .courses-section {
+    padding-top: 14px !important;
+    padding-bottom: 20px !important;
+  }
+
+  html body .price-card {
+    padding-top: 18px !important;
+    padding-bottom: 16px !important;
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  html body .site-header .brand-name,
+  html body.store-page .site-header .brand-name {
+    max-width: 54px !important;
+    font-size: 12px !important;
+  }
+
+  html body .site-header .header-inner > nav.nav-links a:first-child,
+  html body.store-page .site-header .header-inner > nav.nav-links a:first-child,
+  html body .mobile-menu-toggle,
+  html body.store-page .mobile-menu-toggle {
+    font-size: 10px !important;
+  }
+
+  html body .site-header .header-inner > nav.nav-links a[href*="marketplace"],
+  html body.store-page .site-header .header-inner > nav.nav-links a[href*="marketplace"] {
+    font-size: 8.8px !important;
+  }
+}
+

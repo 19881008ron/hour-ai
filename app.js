@@ -2,11 +2,12 @@ const translations = {
   en: {
     nav: {
       live: "Live platform",
-      orders: "Orders",
+      orders: "Commission",
       path: "Learning",
       courses: "Courses",
       support: "Support",
-      register: "Sign up"
+      register: "Sign up",
+      menu: "Menu"
     },
     hero: {
       eyebrow: "AI editing training + order access",
@@ -102,11 +103,12 @@ const translations = {
   zh: {
     nav: {
       live: "平台已上线",
-      orders: "订单",
+      orders: "佣金",
       path: "学习路径",
       courses: "课程",
       support: "客服",
-      register: "注册"
+      register: "注册",
+      menu: "菜单"
     },
     hero: {
       eyebrow: "AI 剪辑培训 + 订单申请",
@@ -238,7 +240,7 @@ const translations = {
     legal: "A Hour AI não garante renda, emprego ou volume de pedidos."
   },
   ar: {
-    nav: { orders: "الطلبات", path: "مسار التعلم", courses: "الدورات", support: "الدعم", register: "تسجيل" },
+    nav: { orders: "العمولة", path: "مسار التعلم", courses: "الدورات", support: "الدعم", register: "تسجيل", menu: "القائمة" },
     hero: {
       eyebrow: "تدريب AI + الوصول للطلبات",
       title: "تعلم تحرير AI. أثبت مهارتك. تقدم لمهام حقيقية.",
@@ -274,7 +276,7 @@ Object.assign(translations, {
     }
   },
   zh: {
-    nav: { live: "在线平台", orders: "订单", path: "学习", courses: "课程", support: "客服", register: "注册" },
+    nav: { live: "在线平台", orders: "佣金", path: "学习", courses: "课程", support: "客服", register: "注册", menu: "菜单" },
     hero: {
       eyebrow: "AI 剪辑培训 + 订单申请",
       title: "学习 AI 视频剪辑，完成认证，申请真实订单。",
@@ -561,7 +563,7 @@ const completeTranslations = {
       flowOrders: "Orders",
       flowCommission: "Commission"
     },
-    nav: { live: "Live Platform", orders: "Orders", path: "Learning", courses: "Courses", support: "Support", register: "Sign up" },
+    nav: { live: "Live Platform", orders: "Commission", path: "Learning", courses: "Courses", support: "Support", register: "Sign up", menu: "Menu" },
     hero: {
       eyebrow: "AI editing training + order marketplace access",
       title: "Learn AI video editing. Prove your skills. Apply for real orders.",
@@ -945,7 +947,7 @@ const completeTranslations = {
       flowOrders: "طلبات",
       flowCommission: "عمولة"
     },
-    nav: { live: "منصة مباشرة", orders: "الطلبات", path: "التعلم", courses: "الدورات", support: "الدعم", register: "إنشاء حساب" },
+    nav: { live: "منصة مباشرة", orders: "العمولة", path: "التعلم", courses: "الدورات", support: "الدعم", register: "إنشاء حساب", menu: "القائمة" },
     hero: { eyebrow: "تدريب تحرير AI + وصول للطلبات", title: "تعلم تحرير فيديو AI. أثبت مهارتك. تقدم لطلبات حقيقية.", lede: "اتبع مسارا عمليا لمدة 7 أيام للمبتدئين، ثم اجتز اختبار المهارة وافتح فرص تحرير بمستويات C و B و A.", ctaPrimary: "تحدث مع مستشار", ctaSecondary: "استعرض الطلبات", statDays: "تعلم سريع", statLevels: "عمولة الطلب", statTime: "طلبات سريعة", visualLabel: "تعلم -> اختبار -> تقديم", visualTitle: "مسار واضح من مهارات البداية إلى الوصول المؤهل للطلبات.", carousel: [{ label: "01 / تعلم", title: "ابن سير عمل تحرير عملي من الأساس.", alt: "مبتدئ يتعلم تحرير فيديو AI في مساحة عمل منزلية" }, { label: "02 / اختبار", title: "راجع عملك وفق معيار جودة واضح.", alt: "متعلم يراجع اختبار مهارة تحرير فيديو AI" }, { label: "03 / تقديم", title: "تعاون، سلم، وتقدم إلى مهام أعلى.", alt: "فريق إبداعي عن بعد يراجع مشروع فيديو AI" }] },
     signals: [{ title: "تعلم سير العمل", text: "اتبع دروسا منظمة وتمارين تحرير عملية." }, { title: "اجتز اختبار المهارة", text: "أثبت جودة التسليم قبل الوصول إلى الطلبات." }, { title: "تقدم للمهام", text: "اختر الفرص المناسبة لمستوى تأهيلك." }],
     orders: { eyebrow: "سوق الطلبات", title: "طلبات نشطة تنتظر محرري AI مؤهلين", text: "يمكن لمحرري المستويات C و B و A مراجعة نطاق المهمة والعمولة والوقت المتوقع ومتطلبات التسليم قبل التقديم.", boardStatus: "طلبات عمولة متاحة للمحررين المؤهلين", viewDetails: "عرض تفاصيل المهمة", orderNo: "رقم الطلب" },
@@ -1985,7 +1987,7 @@ function renderPricing() {
       return `
         <article class="price-card price-level-${plan.level.toLowerCase()}${plan.recommended ? " recommended" : ""}" data-level="${plan.level}">
           ${plan.recommended ? `<span class="recommended-tag">${t("courses.recommended")}</span>` : ""}
-          <div class="price-rank">${rankMedalMarkup(plan.level, "medium")}<span>${levelLabel(plan.level)}</span></div>
+          <div class="price-rank">${rankMedalMarkup(plan.level, "medium")}<span class="price-rank-label" data-mobile-label="${plan.name}">${levelLabel(plan.level)}</span></div>
           <h3>${plan.name}</h3>
           <div class="price-row"><span class="price">${plan.price}</span><span class="price-note">${t("courses.oneTime")}</span></div>
           <ul>${plan.items.map((item) => `<li>${item}</li>`).join("")}</ul>
@@ -2718,8 +2720,33 @@ function setupEvents() {
     setLanguage(event.target.value, { persist: true, manual: true });
     applyTranslations();
   });
+  document.querySelectorAll(".mobile-language-select").forEach((select) => {
+    select.addEventListener("change", (event) => {
+      setLanguage(event.target.value, { persist: true, manual: true });
+      applyTranslations();
+      closeMobileMenu();
+    });
+  });
+  const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+  const mobileMenuPanel = document.querySelector(".mobile-menu-panel");
+  const closeMobileMenu = () => {
+    if (!mobileMenuToggle || !mobileMenuPanel) return;
+    mobileMenuPanel.hidden = true;
+    mobileMenuToggle.setAttribute("aria-expanded", "false");
+  };
+  mobileMenuToggle?.addEventListener("click", () => {
+    const open = mobileMenuPanel?.hidden !== false;
+    if (!mobileMenuPanel) return;
+    mobileMenuPanel.hidden = !open;
+    mobileMenuToggle.setAttribute("aria-expanded", String(open));
+  });
 
   document.body.addEventListener("click", (event) => {
+    const mobileMenuToggleHit = event.target.closest(".mobile-menu-toggle");
+    const mobileMenuHit = event.target.closest(".mobile-menu-panel");
+    if (!mobileMenuToggleHit && !mobileMenuHit) closeMobileMenu();
+    if (mobileMenuHit && event.target.closest("a, button")) closeMobileMenu();
+
     const supportButton = event.target.closest("[data-open-support]");
     if (supportButton) {
       event.preventDefault();
@@ -2869,6 +2896,9 @@ function setLanguage(language, { persist = false, manual = false } = {}) {
   currentLanguage = language;
   const select = document.getElementById("languageSelect");
   if (select) select.value = currentLanguage;
+  document.querySelectorAll(".mobile-language-select").forEach((item) => {
+    item.value = currentLanguage;
+  });
   if (persist) localStorage.setItem("hourAiLanguage", currentLanguage);
   if (manual) localStorage.setItem("hourAiLanguageManual", "true");
 }
@@ -2879,7 +2909,7 @@ function initLanguageSystem() {
     ar: "العربية",
     zh: "简体中文"
   };
-  document.querySelectorAll("#languageSelect option").forEach((option) => {
+  document.querySelectorAll("#languageSelect option, .mobile-language-select option").forEach((option) => {
     option.textContent = languageLabels[option.value] || option.textContent;
   });
   const savedLanguage = localStorage.getItem("hourAiLanguage");
