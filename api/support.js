@@ -384,14 +384,16 @@ module.exports = async function handler(req, res) {
     }
 
     if (resource === "messages") {
-      if (!auth && !guestId) return sendJson(res, 401, { error: "Please start a support conversation first." });
       if (req.method === "GET") {
+        if (!auth && !guestId) return sendJson(res, 401, { error: "Please start a support conversation first." });
         const messages = await listMessages(auth, guestId, urlInfo.searchParams.get("conversationId"));
         return sendJson(res, 200, { messages });
       }
       if (req.method === "POST") {
         const body = await readJson(req);
-        const message = await createMessage(auth, guestId, body);
+        const messageGuestId = guestId || cleanGuestId(body.guestId);
+        if (!auth && !messageGuestId) return sendJson(res, 401, { error: "Please start a support conversation first." });
+        const message = await createMessage(auth, messageGuestId, body);
         return sendJson(res, 200, { message });
       }
       return sendJson(res, 405, { error: "Method not allowed." });
