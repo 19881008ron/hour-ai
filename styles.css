@@ -14085,3 +14085,97 @@ body .hero-proof-card span {
   }
 }
 
+/* 2026-09-05 mobile Arabic/spacing acceptance pass. */
+@media (max-width: 1024px) {
+  html body .support-section {
+    padding-top: 24px !important;
+    padding-bottom: 28px !important;
+  }
+
+  html body .support-section h2,
+  html body.store-page .store-section-head h2 {
+    font-size: clamp(22px, 5.8vw, 30px) !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+  }
+
+  html body.store-page .store-hero-copy h1 {
+    font-size: clamp(28px, 7vw, 36px) !important;
+    line-height: 1.06 !important;
+  }
+
+  html body .price-actions {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    grid-auto-flow: column !important;
+  }
+
+  html body .price-actions .button,
+  html body .price-actions .button.full-width {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    grid-column: auto !important;
+    white-space: nowrap !important;
+  }
+
+  html body .hero-proof div::before,
+  html body .hero-proof > div::before {
+    top: 0 !important;
+    right: 50% !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: min(80%, 154px) !important;
+    height: 3px !important;
+    transform: translateX(50%) !important;
+  }
+
+  html body .hero-proof strong,
+  html body .price-row .price,
+  html body .commission-highlight strong,
+  html body .order-meta strong,
+  html body .order-number,
+  html body.store-page .retail-price,
+  html body.store-page .store-card-prices b,
+  html body.store-page .store-detail-prices b {
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
+  }
+
+  html body.store-page .store-empty-state {
+    display: none !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  html body.store-page .store-filter-bar {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    gap: 8px !important;
+    width: 100% !important;
+    overflow: visible !important;
+    white-space: normal !important;
+  }
+
+  html body.store-page .store-filter {
+    display: grid !important;
+    grid-template-columns: 36px minmax(0, 1fr) !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  [dir="rtl"] body.store-page .store-hero-copy p,
+  [dir="rtl"] body.store-page .store-section-head p,
+  [dir="rtl"] body.store-page .store-filter strong {
+    text-align: right !important;
+  }
+
+  [dir="rtl"] body.store-page .store-filter {
+    direction: rtl !important;
+  }
+}
+
