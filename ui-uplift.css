@@ -1,0 +1,894 @@
+/* 2026-09-05 prelaunch UI uplift: shared typography, denser mobile rhythm, calmer desktop scale. */
+:root {
+  --ui-radius: 10px;
+  --ui-radius-sm: 8px;
+  --ui-surface: #ffffff;
+  --ui-surface-soft: #f5f8fb;
+  --ui-border: #d9e2ec;
+  --ui-copy: #111827;
+  --ui-copy-soft: #4b5563;
+  --ui-copy-muted: #6b7788;
+  --ui-dark: #090f17;
+  --ui-dark-2: #101823;
+  --ui-green: #2bd576;
+  --ui-cyan: #00aeca;
+  --ui-shadow-card: 0 14px 34px rgba(15, 23, 42, 0.08);
+  --ui-shadow-card-hover: 0 20px 44px rgba(15, 23, 42, 0.12);
+  --ui-h1-desktop: clamp(48px, 4.6vw, 68px);
+  --ui-h2-desktop: clamp(34px, 3.3vw, 48px);
+  --ui-h3-desktop: clamp(22px, 1.7vw, 28px);
+  --ui-body-desktop: 16px;
+  --ui-subtitle-desktop: clamp(17px, 1.35vw, 20px);
+}
+
+body {
+  color: var(--ui-copy);
+}
+
+.site-header,
+.store-page .site-header {
+  background: rgba(8, 13, 20, 0.92);
+  border-bottom-color: rgba(148, 163, 184, 0.18);
+  box-shadow: 0 12px 30px rgba(2, 6, 12, 0.14);
+}
+
+.header-inner {
+  min-height: 68px;
+}
+
+.brand-mark {
+  box-shadow: none;
+}
+
+.brand-name {
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.nav-links {
+  gap: clamp(16px, 2vw, 28px);
+  font-size: 13px;
+  font-weight: 760;
+}
+
+.nav-links a {
+  padding: 24px 0;
+}
+
+.hero-section {
+  padding-top: clamp(58px, 6vw, 76px);
+  padding-bottom: clamp(46px, 5vw, 64px);
+}
+
+.hero-grid {
+  min-height: 560px;
+  gap: clamp(34px, 5vw, 70px);
+}
+
+.hero-copy h1,
+.store-hero-copy h1 {
+  font-size: var(--ui-h1-desktop);
+  line-height: 1.03;
+  font-weight: 820;
+}
+
+.hero-copy h1 {
+  max-width: 690px;
+  margin-top: 16px;
+}
+
+.hero-lede,
+.store-hero-copy p {
+  color: #b8c2cf;
+  font-size: var(--ui-subtitle-desktop);
+  line-height: 1.58;
+}
+
+.hero-lede {
+  margin-top: 18px;
+}
+
+.system-label,
+.board-status,
+.eyebrow,
+.section-kicker {
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.hero-proof div,
+.signal-item,
+.order-card,
+.review-card,
+.price-card,
+.profile-card,
+.store-card,
+.store-filter,
+.store-hero-panel div {
+  border-radius: var(--ui-radius-sm);
+}
+
+.hero-proof {
+  margin-top: 30px;
+}
+
+.hero-proof div {
+  min-height: 102px;
+  padding: 18px 14px;
+  background: #101720;
+}
+
+.hero-proof strong {
+  font-size: clamp(22px, 1.8vw, 28px);
+}
+
+.hero-proof span {
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+.section {
+  padding-top: clamp(64px, 6vw, 86px);
+  padding-bottom: clamp(64px, 6vw, 86px);
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading h2,
+.path-intro h2,
+.support-copy h2,
+.modal-panel h2,
+.store-section-head h2,
+.store-detail-copy h2,
+.store-detail-pricing-panel h2 {
+  font-size: var(--ui-h2-desktop);
+  line-height: 1.1;
+  font-weight: 820;
+  letter-spacing: 0;
+}
+
+.section-heading > p,
+.section-heading > div + p,
+.path-intro > p:not(.eyebrow),
+.support-copy > p,
+.store-section-head p,
+.store-detail-copy p {
+  color: var(--ui-copy-soft);
+  font-size: var(--ui-body-desktop);
+  line-height: 1.62;
+}
+
+.orders-grid,
+.reviews-grid,
+.pricing-grid,
+.profile-layout {
+  gap: 18px;
+}
+
+.order-card,
+.review-card,
+.price-card,
+.profile-card,
+.store-card {
+  border-color: var(--ui-border);
+  box-shadow: var(--ui-shadow-card);
+}
+
+.order-card:hover,
+.store-card:hover,
+.price-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ui-shadow-card-hover);
+}
+
+.order-card h3,
+.store-card h3 {
+  color: #07111d;
+  font-size: var(--ui-h3-desktop);
+  line-height: 1.16;
+}
+
+.order-card > p,
+.store-card p,
+.price-card li {
+  color: var(--ui-copy-soft);
+  font-size: 15px;
+  line-height: 1.52;
+}
+
+.path-section,
+.support-section {
+  background: var(--ui-dark);
+}
+
+.path-intro h2,
+.support-copy h2 {
+  color: #f8fafc;
+}
+
+.path-intro > p:not(.eyebrow),
+.support-copy > p {
+  color: #b5bfcc;
+}
+
+.profile-card {
+  background: linear-gradient(180deg, #111a24 0%, #0d141d 100%);
+}
+
+.profile-card h3 {
+  color: #f8fafc;
+}
+
+.commission-highlight {
+  border-color: rgba(43, 213, 118, 0.44);
+  background: rgba(43, 213, 118, 0.1);
+}
+
+.commission-highlight strong,
+.store-price-grid-large strong,
+.store-card-prices b,
+.store-detail-prices b {
+  color: #15965a;
+  -webkit-text-fill-color: #15965a;
+  background: none;
+  text-shadow: none;
+}
+
+.price-card {
+  min-height: 398px;
+  padding: 26px;
+  gap: 16px;
+}
+
+.price-card h3 {
+  margin: 10px 0 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.price-row {
+  margin-top: 2px;
+}
+
+.price {
+  color: #12804c;
+  font-size: clamp(36px, 3vw, 44px);
+  letter-spacing: 0;
+}
+
+.price-card ul {
+  gap: 10px;
+  margin: 10px 0 16px;
+}
+
+.review-card {
+  min-height: 260px;
+  padding: 22px;
+}
+
+.review-card blockquote {
+  margin: 18px 0;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.store-page {
+  background:
+    linear-gradient(180deg, #080d14 0%, #0b1119 36%, #eef4f9 36%, #eef4f9 100%);
+}
+
+.store-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.82fr);
+  padding-top: clamp(72px, 7vw, 96px);
+  padding-bottom: clamp(42px, 5vw, 58px);
+}
+
+.store-hero-copy h1 {
+  max-width: 680px;
+  margin: 16px 0 16px;
+  color: #f8fafc;
+}
+
+.store-hero-panel {
+  padding: 14px;
+  background: rgba(14, 21, 31, 0.9);
+}
+
+.store-hero-panel div {
+  min-height: 76px;
+  padding: 14px;
+}
+
+.store-hero-panel strong {
+  font-size: clamp(17px, 1.45vw, 22px);
+}
+
+.store-hero-panel p {
+  display: block;
+  margin: 4px 0 0;
+  color: #9facbb;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.store-section {
+  padding-top: 48px;
+  padding-bottom: 68px;
+  background: linear-gradient(180deg, #f8fbff 0%, #edf4fa 100%);
+  border-radius: var(--ui-radius) var(--ui-radius) 0 0;
+}
+
+.store-section-head {
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.store-section-head h2 {
+  max-width: 720px;
+}
+
+.store-filter-bar {
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.store-filter {
+  min-height: 50px;
+  padding: 0 18px;
+  background: #ffffff;
+  border-color: #d7e2ee;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.store-card {
+  background: #ffffff;
+}
+
+.store-card-media,
+.store-card-image-button {
+  background: #ffffff;
+  border-bottom: 1px solid var(--ui-border);
+}
+
+.store-card-media img {
+  object-fit: contain;
+  padding: 10px;
+  background: #ffffff;
+  transform: none;
+}
+
+.store-card-body {
+  gap: 12px;
+  padding: 16px;
+}
+
+.store-card h3 {
+  min-height: 56px;
+}
+
+.store-card p {
+  min-height: 66px;
+}
+
+.store-price-grid div {
+  padding: 10px 9px;
+}
+
+.store-price-grid strong {
+  font-size: clamp(17px, 1.55vw, 22px);
+}
+
+@media (min-width: 1025px) {
+  .store-page .store-section {
+    width: min(1440px, calc(100% - 56px));
+  }
+
+  .store-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --ui-h1-mobile: clamp(25px, 6vw, 32px);
+    --ui-h2-mobile: clamp(22px, 5.35vw, 28px);
+    --ui-h3-mobile: clamp(18px, 4.5vw, 22px);
+    --ui-body-mobile: clamp(14px, 3.55vw, 16px);
+    --ui-small-mobile: clamp(11px, 2.9vw, 13px);
+    --ui-section-y: 22px;
+    --ui-section-x: 16px;
+  }
+
+  html {
+    scroll-padding-top: 62px;
+  }
+
+  html body .site-header,
+  html body.store-page .site-header {
+    background: rgba(8, 13, 20, 0.96) !important;
+    box-shadow: 0 8px 22px rgba(2, 6, 12, 0.22) !important;
+  }
+
+  html body .site-header .header-inner,
+  html body.store-page .site-header .header-inner {
+    min-height: 52px !important;
+    height: 52px !important;
+    padding: 7px 10px !important;
+  }
+
+  html body .site-header .header-inner > .brand,
+  html body.store-page .site-header .header-inner > .brand {
+    display: flex !important;
+    height: 33px !important;
+    min-height: 33px !important;
+    max-height: 33px !important;
+    align-items: center !important;
+    overflow: hidden !important;
+  }
+
+  html body .site-header .brand-mark,
+  html body.store-page .site-header .brand-mark {
+    flex-basis: 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 7px !important;
+  }
+
+  html body .site-header .brand-name,
+  html body.store-page .site-header .brand-name {
+    color: #f8fafc !important;
+    font-size: clamp(13px, 3.4vw, 15px) !important;
+    font-weight: 860 !important;
+  }
+
+  html body .site-header .brand-status,
+  html body.store-page .site-header .brand-status,
+  html body .site-header .brand [data-i18n="nav.live"],
+  html body.store-page .site-header .brand [data-store-i18n="nav.live"] {
+    display: none !important;
+  }
+
+  html body .site-header .header-inner > nav.nav-links a,
+  html body.store-page .site-header .header-inner > nav.nav-links a,
+  html body .mobile-menu-toggle,
+  html body.store-page .mobile-menu-toggle {
+    height: 33px !important;
+    min-height: 33px !important;
+    border-color: rgba(148, 163, 184, 0.3) !important;
+    background: #111827 !important;
+    color: #f8fafc !important;
+    font-size: clamp(10px, 2.55vw, 12px) !important;
+    font-weight: 820 !important;
+  }
+
+  html body .hero-section,
+  html body .section,
+  html body .orders-section,
+  html body .path-section,
+  html body .courses-section,
+  html body .reviews-section,
+  html body .support-section {
+    padding-right: var(--ui-section-x) !important;
+    padding-left: var(--ui-section-x) !important;
+  }
+
+  html body .hero-section {
+    padding-top: 18px !important;
+    padding-bottom: 20px !important;
+  }
+
+  html body .hero-grid,
+  html body .hero-copy {
+    gap: 12px !important;
+  }
+
+  html body .system-label,
+  html body .board-status,
+  html body .eyebrow,
+  html body .section-kicker {
+    font-size: var(--ui-small-mobile) !important;
+    line-height: 1.2 !important;
+  }
+
+  html body .hero-section .hero-copy h1,
+  html body.store-page .store-hero-copy h1 {
+    font-size: var(--ui-h1-mobile) !important;
+    line-height: 1.12 !important;
+    margin: 8px 0 8px !important;
+    font-weight: 840 !important;
+  }
+
+  html body .section-heading h2,
+  html body .path-intro h2,
+  html body .support-section h2,
+  html body .courses-section .section-heading h2,
+  html body .reviews-section .section-heading h2,
+  html body.store-page .store-section-head h2,
+  html body.store-page .store-detail-pricing-panel h2 {
+    font-size: var(--ui-h2-mobile) !important;
+    line-height: 1.14 !important;
+    font-weight: 840 !important;
+  }
+
+  html body .order-card h3,
+  html body.store-page .store-card h3,
+  html body.store-page .store-detail-copy h3 {
+    font-size: var(--ui-h3-mobile) !important;
+    line-height: 1.15 !important;
+  }
+
+  html body .hero-section .hero-copy .hero-lede,
+  html body .section-heading > p,
+  html body .section-heading > div + p,
+  html body .path-intro > p:not(.eyebrow),
+  html body .support-copy > p,
+  html body .order-card > p,
+  html body .price-card li,
+  html body.store-page .store-hero-copy p,
+  html body.store-page .store-section-head p,
+  html body.store-page .store-card p,
+  html body.store-page .store-detail-copy p {
+    font-size: var(--ui-body-mobile) !important;
+    line-height: 1.46 !important;
+  }
+
+  html body .hero-section .hero-copy .hero-lede {
+    margin-bottom: 10px !important;
+  }
+
+  html body .hero-actions {
+    gap: 8px !important;
+    margin-top: 8px !important;
+  }
+
+  html body .hero-actions .button {
+    min-height: 44px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+  }
+
+  html body .hero-section .hero-copy > .hero-proof,
+  html body .hero-proof,
+  html body .hero-proof[aria-label] {
+    gap: 8px !important;
+    margin-top: 14px !important;
+  }
+
+  html body .hero-section .hero-copy > .hero-proof > div,
+  html body .hero-proof div,
+  html body .hero-proof div:first-child,
+  html body .hero-proof div:nth-child(2),
+  html body .hero-proof div:nth-child(3),
+  html body .hero-proof div:last-child {
+    min-height: 70px !important;
+    padding: 11px 6px !important;
+    border-radius: 8px !important;
+  }
+
+  html body .hero-proof strong,
+  html body .hero-proof-card strong {
+    font-size: clamp(18px, 4.6vw, 22px) !important;
+  }
+
+  html body .hero-proof span,
+  html body .hero-proof-card span {
+    margin-top: 6px !important;
+    font-size: clamp(8px, 2.15vw, 10px) !important;
+    line-height: 1.12 !important;
+  }
+
+  html body .visual-caption {
+    padding: 9px 11px !important;
+  }
+
+  html body .signal-strip,
+  html body .path-section,
+  html body .orders-section,
+  html body .courses-section,
+  html body .reviews-section,
+  html body .support-section {
+    padding-top: var(--ui-section-y) !important;
+    padding-bottom: var(--ui-section-y) !important;
+  }
+
+  html body .section-heading,
+  html body .path-intro,
+  html body .orders-section .section-heading,
+  html body .courses-section .section-heading,
+  html body .reviews-section .section-heading {
+    gap: 7px !important;
+    margin-bottom: 12px !important;
+  }
+
+  html body .board-toolbar {
+    padding: 11px 12px !important;
+    margin-bottom: 10px !important;
+    border-radius: 8px !important;
+  }
+
+  html body .board-legend {
+    gap: 6px !important;
+  }
+
+  html body .orders-grid,
+  html body .pricing-grid,
+  html body .profile-layout,
+  html body .reviews-grid {
+    gap: 8px !important;
+  }
+
+  html body .profile-layout > .profile-card {
+    min-height: 142px !important;
+    padding: 11px 5px 10px !important;
+    background: linear-gradient(180deg, #111923 0%, #0c131c 100%) !important;
+  }
+
+  html body .profile-layout > .profile-card > h3 {
+    min-height: 24px !important;
+    color: #f8fafc !important;
+    font-size: clamp(10px, 2.58vw, 12px) !important;
+  }
+
+  html body .profile-layout > .profile-card > .commission-highlight strong {
+    color: #65e69b !important;
+    -webkit-text-fill-color: #65e69b !important;
+    font-size: clamp(10px, 2.55vw, 12px) !important;
+  }
+
+  html body .price-card {
+    padding: 16px 14px 14px !important;
+    gap: 9px !important;
+    border-radius: 8px !important;
+  }
+
+  html body .price-rank {
+    gap: 12px !important;
+  }
+
+  html body .price-rank .rank-medal {
+    --rank-size: 50px !important;
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  html body .price-rank-label::after {
+    font-size: clamp(14px, 3.65vw, 16px) !important;
+  }
+
+  html body .price-row {
+    align-items: baseline !important;
+    gap: 8px !important;
+  }
+
+  html body .price-row .price {
+    font-size: clamp(28px, 7.4vw, 36px) !important;
+  }
+
+  html body .price-note {
+    font-size: 12px !important;
+  }
+
+  html body .price-card ul {
+    gap: 8px !important;
+  }
+
+  html body .price-actions .button {
+    min-height: 42px !important;
+    border-radius: 8px !important;
+  }
+
+  html body .reviews-grid > .review-card {
+    min-height: 150px !important;
+    padding: 9px 6px !important;
+    border-radius: 8px !important;
+  }
+
+  html body .reviews-grid > .review-card blockquote {
+    font-size: 10px !important;
+    line-height: 1.28 !important;
+    -webkit-line-clamp: 4 !important;
+  }
+
+  html body .site-footer {
+    gap: 16px !important;
+    padding: 26px 16px 30px !important;
+  }
+
+  html body .site-footer .brand {
+    gap: 8px !important;
+  }
+
+  html body.store-page .store-hero {
+    width: 100% !important;
+    padding: 18px 16px 12px !important;
+    gap: 10px !important;
+    color: #0f172a !important;
+    background: linear-gradient(180deg, #f6f9fc 0%, #eef4f9 100%) !important;
+  }
+
+  html body.store-page .store-hero-copy {
+    gap: 6px !important;
+  }
+
+  html body.store-page .store-hero-copy h1 {
+    color: #0f172a !important;
+  }
+
+  html body.store-page .store-hero-copy p {
+    color: #526071 !important;
+  }
+
+  html body.store-page .store-hero-panel {
+    padding: 8px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08) !important;
+  }
+
+  html body.store-page .store-process,
+  html body.store-page .store-hero-panel {
+    gap: 6px !important;
+  }
+
+  html body.store-page .store-hero-panel div,
+  html body.store-page .store-process-card {
+    min-height: 68px !important;
+    padding: 8px 5px !important;
+    border-radius: 8px !important;
+  }
+
+  html body.store-page .store-hero-panel span {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 13px !important;
+  }
+
+  html body.store-page .store-hero-panel strong {
+    font-size: clamp(12px, 3.2vw, 14px) !important;
+    line-height: 1.16 !important;
+  }
+
+  html body.store-page .store-section {
+    width: 100% !important;
+    padding: 18px 16px 28px !important;
+    border-radius: 10px 10px 0 0 !important;
+    background: linear-gradient(180deg, #f8fbff 0%, #ecf3f9 100%) !important;
+  }
+
+  html body.store-page .store-section-head {
+    gap: 7px !important;
+    margin-bottom: 12px !important;
+  }
+
+  html body.store-page .store-filter-bar {
+    gap: 8px !important;
+    margin-bottom: 12px !important;
+  }
+
+  html body.store-page .store-filter {
+    min-height: 48px !important;
+    grid-template-columns: 34px minmax(0, 1fr) !important;
+    gap: 8px !important;
+    padding: 7px 9px !important;
+    border-radius: 10px !important;
+    background: linear-gradient(180deg, #ffffff 0%, #f5f9fd 100%) !important;
+  }
+
+  html body.store-page .store-filter-icon {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 8px !important;
+  }
+
+  html body.store-page .store-filter strong {
+    font-size: clamp(10.5px, 2.75vw, 12.5px) !important;
+    line-height: 1.12 !important;
+  }
+
+  html body.store-page .store-card {
+    border-radius: 9px !important;
+  }
+
+  html body.store-page .store-card-media {
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  html body.store-page .store-card-body {
+    gap: 8px !important;
+    padding: 10px 9px 11px !important;
+  }
+
+  html body.store-page .store-card-topline {
+    gap: 5px !important;
+    font-size: 10px !important;
+    line-height: 1.12 !important;
+  }
+
+  html body.store-page .store-card h3 {
+    min-height: 44px !important;
+    font-size: clamp(15px, 3.9vw, 18px) !important;
+    line-height: 1.1 !important;
+  }
+
+  html body.store-page .store-card p {
+    min-height: 54px !important;
+    font-size: clamp(12px, 3.15vw, 14px) !important;
+    line-height: 1.35 !important;
+  }
+
+  html body.store-page .store-price-grid div {
+    padding: 7px 4px !important;
+  }
+
+  html body.store-page .store-price-grid span {
+    font-size: 8.5px !important;
+  }
+
+  html body.store-page .store-price-grid strong {
+    font-size: clamp(13px, 3.35vw, 16px) !important;
+    color: #0f172a !important;
+  }
+
+  html body.store-page .store-detail-button,
+  html body.store-page .store-request-button {
+    min-height: 40px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+  }
+
+  html body.store-page .store-detail-grid {
+    gap: 10px !important;
+    padding: 44px 12px 16px !important;
+  }
+
+  html body.store-page .store-main-image {
+    border-radius: 10px !important;
+  }
+
+  html body.store-page .store-detail-pricing-panel {
+    padding: 12px !important;
+    gap: 10px !important;
+    border-radius: 10px !important;
+  }
+
+  html body .reveal-ready,
+  html body .reveal-ready.is-visible,
+  html body .order-card.reveal-ready,
+  html body .price-card.reveal-ready,
+  html body .profile-card.reveal-ready,
+  html body .review-card.reveal-ready,
+  html body.store-page .store-card.reveal-ready,
+  html body.store-page .store-filter.reveal-ready {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: box-shadow 160ms ease, border-color 160ms ease, background-color 160ms ease !important;
+  }
+
+  html body #paymentModal .payment-modal-panel {
+    width: min(100%, 430px) !important;
+  }
+
+  html body #paymentModal .modal-panel h2 {
+    font-size: var(--ui-h2-mobile) !important;
+  }
+}
+
+@media (max-width: 380px) {
+  html body .hero-section .hero-copy h1,
+  html body.store-page .store-hero-copy h1 {
+    font-size: 24px !important;
+  }
+
+  html body .section-heading h2,
+  html body .path-intro h2,
+  html body.store-page .store-section-head h2 {
+    font-size: 21px !important;
+  }
+
+  html body.store-page .store-card h3 {
+    font-size: 14px !important;
+  }
+}
+
