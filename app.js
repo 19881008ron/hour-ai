@@ -1234,14 +1234,14 @@ const cryptoPaymentTranslationPatch = {
   en: {
     payment: {
       title: "Pay with cryptocurrency",
-      onrampBadge: "Crypto purchase platforms",
-      onrampTitle: "Need crypto first?",
-      onrampText: "Choose a crypto platform available in your region, create an account, buy crypto with supported card or banking methods, then return here and pay the matching Hour AI receiving address.",
-      onrampStep1: "Open a platform that supports your country or region.",
-      onrampStep2: "Complete identity verification and buy USDT, BTC, or ETH.",
-      onrampStep3: "Return to Hour AI and send payment only through the matching network.",
+      onrampBadge: "Saudi + UAE crypto access",
+      onrampTitle: "Buy crypto through a Gulf-ready platform",
+      onrampText: "For Saudi Arabia and the UAE, start with a platform that supports your country, KYC profile, fiat payment method, and the crypto network you plan to use. Then return here and pay only to the matching Hour AI receiving address.",
+      onrampStep1: "Open a Saudi/UAE-supported platform and confirm current local availability.",
+      onrampStep2: "Complete KYC and buy USDT, BTC, or ETH with a supported card, bank, or local fiat method.",
+      onrampStep3: "Return to Hour AI and send payment only through the matching network and verified receiving address.",
       onrampOpen: "Open",
-      onrampNote: "Availability, payment methods, and verification rules vary by country and platform.",
+      onrampNote: "UAE users should prefer locally regulated providers where available. Saudi users should confirm platform availability and local rules because crypto services are not locally licensed in the same way.",
       cryptoTitle: "Hour AI receiving addresses",
       cryptoText: "Copy the matching address after buying crypto. Always use the exact network shown."
     }
@@ -1264,14 +1264,14 @@ const cryptoPaymentTranslationPatch = {
   ar: {
     payment: {
       title: "الدفع بالعملات الرقمية",
-      onrampBadge: "منصات شراء العملات الرقمية",
-      onrampTitle: "هل تحتاج إلى شراء عملات رقمية؟",
-      onrampText: "اختر منصة عملات رقمية متاحة في منطقتك، أنشئ حسابا، اشتر العملات الرقمية بطرق البطاقة أو الدفع البنكي المدعومة، ثم عد إلى هنا وادفع إلى عنوان Hour AI المطابق.",
-      onrampStep1: "افتح منصة تدعم بلدك أو منطقتك.",
-      onrampStep2: "أكمل التحقق من الهوية واشتر USDT أو BTC أو ETH.",
-      onrampStep3: "عد إلى Hour AI وأرسل الدفع فقط عبر الشبكة المطابقة.",
+      onrampBadge: "السعودية + الإمارات",
+      onrampTitle: "اشتر العملات الرقمية عبر منصة مناسبة للخليج",
+      onrampText: "للسعودية والإمارات، ابدأ بمنصة تدعم بلدك وملف التحقق وطريقة الدفع بالعملة المحلية والشبكة التي ستستخدمها. ثم عد إلى هنا وادفع فقط إلى عنوان Hour AI المطابق.",
+      onrampStep1: "افتح منصة تدعم السعودية أو الإمارات وتأكد من الإتاحة الحالية.",
+      onrampStep2: "أكمل التحقق واشتر USDT أو BTC أو ETH ببطاقة أو بنك أو طريقة دفع محلية مدعومة.",
+      onrampStep3: "عد إلى Hour AI وأرسل فقط عبر الشبكة المطابقة وعنوان الاستلام المؤكد.",
       onrampOpen: "فتح",
-      onrampNote: "تختلف الإتاحة وطرق الدفع وقواعد التحقق حسب البلد والمنصة.",
+      onrampNote: "يفضل مستخدمو الإمارات مزودي الخدمات المحليين المنظمين عند توفرهم. يجب على مستخدمي السعودية التأكد من الإتاحة وقواعدهم المحلية لأن خدمات العملات الرقمية ليست مرخصة محليا بالطريقة نفسها.",
       cryptoTitle: "عناوين استلام Hour AI",
       cryptoText: "انسخ العنوان المطابق بعد شراء العملات الرقمية. استخدم دائما الشبكة المحددة فقط."
     }
@@ -1757,53 +1757,46 @@ const cryptoPaymentOptions = [
 
 const cryptoOnrampPlatforms = [
   {
-    id: "moonpay",
-    name: "MoonPay",
-    url: "https://www.moonpay.com/buy",
-    logo: "MP",
-    regions: "Global card + local banking options"
+    id: "binance-uae",
+    name: "Binance UAE",
+    url: "https://www.binance.com/en-AE",
+    logo: "BN",
+    regions: "UAE VARA-licensed; Saudi/UAE availability depends on KYC and payment method"
   },
   {
-    id: "transak",
-    name: "Transak",
-    url: "https://transak.com/buy-crypto",
-    logo: "TK",
-    regions: "Cards, bank transfer, Apple Pay and local methods"
-  },
-  {
-    id: "ramp",
-    name: "Ramp Network",
-    url: "https://ramp.network/buy/",
-    logo: "RN",
-    regions: "Cards, bank transfer and regional payment methods"
-  },
-  {
-    id: "mercuryo",
-    name: "Mercuryo",
-    url: "https://mercuryo.io/buy-crypto/",
-    logo: "MY",
-    regions: "Card-based crypto purchases"
-  },
-  {
-    id: "coinbase",
-    name: "Coinbase",
-    url: "https://www.coinbase.com/buy",
-    logo: "CB",
-    regions: "US, Europe and supported countries"
-  },
-  {
-    id: "kraken",
-    name: "Kraken",
-    url: "https://www.kraken.com/buy",
-    logo: "KR",
-    regions: "US, Europe and supported countries"
-  },
-  {
-    id: "okx",
-    name: "OKX",
+    id: "okx-middle-east",
+    name: "OKX Middle East",
     url: "https://www.okx.com/buy-crypto",
     logo: "OK",
-    regions: "Middle East, Southeast Asia, Europe and supported regions"
+    regions: "UAE VARA-licensed; supports card and regional fiat options where available"
+  },
+  {
+    id: "bitoasis",
+    name: "BitOasis",
+    url: "https://bitoasis.net/",
+    logo: "BO",
+    regions: "UAE-focused exchange with local regulatory permissions and AED funding options"
+  },
+  {
+    id: "m2",
+    name: "M2",
+    url: "https://m2.com/",
+    logo: "M2",
+    regions: "ADGM/FSRA-regulated UAE platform with virtual asset trading and custody services"
+  },
+  {
+    id: "rain",
+    name: "Rain",
+    url: "https://www.rain.com/",
+    logo: "RN",
+    regions: "Middle East exchange; Saudi and UAE fiat availability depends on current account checks"
+  },
+  {
+    id: "coinmena",
+    name: "CoinMENA",
+    url: "https://www.coinmena.com/",
+    logo: "CM",
+    regions: "GCC-focused exchange; confirm Saudi/UAE onboarding, bank rails and supported assets"
   }
 ];
 
