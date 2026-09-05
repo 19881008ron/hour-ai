@@ -2671,7 +2671,8 @@ function updateCarousel(index, animate = true) {
 function resetCarouselTimer() {
   window.clearInterval(carouselTimer);
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  carouselTimer = window.setInterval(() => updateCarousel(activeCarouselIndex + 1), 5500);
+  const intervalMs = window.matchMedia("(max-width: 1024px)").matches ? 2000 : 5500;
+  carouselTimer = window.setInterval(() => updateCarousel(activeCarouselIndex + 1), intervalMs);
 }
 
 function setupCarousel() {

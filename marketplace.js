@@ -674,10 +674,10 @@
     grid.innerHTML = visible
       .map((product) => `
         <article class="store-card">
-          <div class="store-card-media">
+          <button class="store-card-media store-card-image-button" type="button" data-product="${product.id}" aria-label="${get("store.details")} ${localized(product.title)}">
             <img src="${product.images[0]}" alt="${localized(product.title)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${productImageFallback}';" />
             <span>${product.id}</span>
-          </div>
+          </button>
           <div class="store-card-body">
             <div class="store-card-topline">
               <span>${i18n[currentLanguage].categories[product.category]}</span>
