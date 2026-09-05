@@ -1234,10 +1234,10 @@ const cryptoPaymentTranslationPatch = {
   en: {
     payment: {
       title: "Pay with cryptocurrency",
-      onrampBadge: "Saudi + UAE crypto access",
+      onrampBadge: "Saudi and UAE crypto access",
       onrampTitle: "Buy crypto through a Gulf-ready platform",
       onrampText: "For Saudi Arabia and the UAE, start with a platform that supports your country, KYC profile, fiat payment method, and the crypto network you plan to use. Then return here and pay only to the matching Hour AI receiving address.",
-      onrampStep1: "Open a Saudi/UAE-supported platform and confirm current local availability.",
+      onrampStep1: "Open a platform that currently supports users in Saudi Arabia or the UAE.",
       onrampStep2: "Complete KYC and buy USDT, BTC, or ETH with a supported card, bank, or local fiat method.",
       onrampStep3: "Return to Hour AI and send payment only through the matching network and verified receiving address.",
       onrampOpen: "Open",
@@ -1761,14 +1761,14 @@ const cryptoOnrampPlatforms = [
     name: "Binance UAE",
     url: "https://www.binance.com/en-AE",
     logo: "BN",
-    regions: "UAE VARA-licensed; Saudi/UAE availability depends on KYC and payment method"
+    regions: "VARA-licensed in the UAE; Saudi and UAE availability depends on KYC and payment method"
   },
   {
     id: "okx-middle-east",
     name: "OKX Middle East",
     url: "https://www.okx.com/buy-crypto",
     logo: "OK",
-    regions: "UAE VARA-licensed; supports card and regional fiat options where available"
+    regions: "VARA-licensed in the UAE; supports card and regional fiat options where available"
   },
   {
     id: "bitoasis",
@@ -1782,7 +1782,7 @@ const cryptoOnrampPlatforms = [
     name: "M2",
     url: "https://m2.com/",
     logo: "M2",
-    regions: "ADGM/FSRA-regulated UAE platform with virtual asset trading and custody services"
+    regions: "ADGM/FSRA-regulated platform in the UAE with virtual asset trading and custody services"
   },
   {
     id: "rain",
@@ -1796,7 +1796,7 @@ const cryptoOnrampPlatforms = [
     name: "CoinMENA",
     url: "https://www.coinmena.com/",
     logo: "CM",
-    regions: "GCC-focused exchange; confirm Saudi/UAE onboarding, bank rails and supported assets"
+    regions: "GCC-focused exchange; confirm Saudi and UAE onboarding, bank rails, and supported assets"
   }
 ];
 
