@@ -131,10 +131,12 @@ async function listConversations(auth, guestId, options = {}) {
   if (!agent && auth?.profile) filter = `&user_id=eq.${encodeURIComponent(auth.profile.user_id)}`;
   if (!agent && !auth?.profile) filter = `&guest_id=eq.${encodeURIComponent(guestId)}`;
   const conversations = (await supabaseFetch(
-    `/rest/v1/support_conversations?select=*&order=last_message_at.desc&limit=${limit}${filter}`,
+    `/rest/v1/support_conversations?select=id,user_id,guest_id,guest_name,guest_email,topic,status,priority,assigned_to,last_message_at,customer_unread,agent_unread,created_at,updated_at&order=last_message_at.desc&limit=${limit}${filter}`,
     { method: "GET" }
   )) || [];
-  const profiles = await loadProfiles(conversations.map((item) => item.user_id).concat(conversations.map((item) => item.assigned_to)));
+  const profileIds = conversations.map((item) => item.user_id);
+  if (includeLatest) profileIds.push(...conversations.map((item) => item.assigned_to));
+  const profiles = await loadProfiles(profileIds);
   const latestMessages = includeLatest ? await loadLatestMessages(conversations.map((item) => item.id)) : new Map();
 
   return conversations.map((conversation) => ({
