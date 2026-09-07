@@ -126,6 +126,7 @@ async function loadLatestMessages(conversationIds) {
 async function listConversations(auth, guestId, options = {}) {
   const agent = isSupportAgent(auth?.profile);
   const limit = cleanLimit(options.limit, agent ? 60 : 20, agent ? 100 : 40);
+  const includeLatest = options.latest !== "0";
   let filter = "";
   if (!agent && auth?.profile) filter = `&user_id=eq.${encodeURIComponent(auth.profile.user_id)}`;
   if (!agent && !auth?.profile) filter = `&guest_id=eq.${encodeURIComponent(guestId)}`;
@@ -134,7 +135,7 @@ async function listConversations(auth, guestId, options = {}) {
     { method: "GET" }
   )) || [];
   const profiles = await loadProfiles(conversations.map((item) => item.user_id).concat(conversations.map((item) => item.assigned_to)));
-  const latestMessages = await loadLatestMessages(conversations.map((item) => item.id));
+  const latestMessages = includeLatest ? await loadLatestMessages(conversations.map((item) => item.id)) : new Map();
 
   return conversations.map((conversation) => ({
     ...conversation,
@@ -410,7 +411,10 @@ module.exports = async function handler(req, res) {
     if (resource === "conversations") {
       if (!auth && req.method === "GET" && !guestId) return sendJson(res, 200, { conversations: [] });
       if (req.method === "GET") {
-        const conversations = await listConversations(auth, guestId, { limit: urlInfo.searchParams.get("limit") });
+        const conversations = await listConversations(auth, guestId, {
+          limit: urlInfo.searchParams.get("limit"),
+          latest: urlInfo.searchParams.get("latest")
+        });
         return sendJson(res, 200, { conversations });
       }
       if (req.method === "POST") {

@@ -2487,7 +2487,7 @@ async function loadSupportInbox(options = {}) {
   if (!isSupportAgentProfile()) return;
   if (options?.type) options = {};
   const requestId = ++supportInboxRequestId;
-  const data = await apiRequest("/api/support?resource=conversations&limit=60", { method: "GET", headers: {} });
+  const data = await apiRequest("/api/support?resource=conversations&limit=60&latest=0", { method: "GET", headers: {} });
   if (requestId !== supportInboxRequestId) return;
   renderSupportInbox(data?.conversations || []);
 }
