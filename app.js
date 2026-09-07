@@ -2424,7 +2424,8 @@ async function loadExistingSupportConversation() {
 
 async function loadSupportMessages(targetId = "supportThread", conversationId = activeSupportConversationId) {
   if (!conversationId) return;
-  const data = await apiRequest(`/api/support?resource=messages&conversationId=${encodeURIComponent(conversationId)}&guestId=${encodeURIComponent(getSupportGuestId())}`, {
+  const messageLimit = targetId === "supportAgentThread" ? "&limit=80" : "";
+  const data = await apiRequest(`/api/support?resource=messages&conversationId=${encodeURIComponent(conversationId)}&guestId=${encodeURIComponent(getSupportGuestId())}${messageLimit}`, {
     method: "GET",
     headers: {}
   });
