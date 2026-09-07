@@ -90,6 +90,7 @@ async function checkDesktop() {
     });
     await send(ws, "Runtime.enable");
     await send(ws, "Page.enable");
+    await send(ws, "Page.navigate", { url: `${origin}/index.html?skipWelcome=1` });
     await waitLoaded(ws);
     await sleep(700);
 
@@ -99,8 +100,9 @@ async function checkDesktop() {
       expression: `(async () => {
         const adminEmail = ${JSON.stringify(adminEmail)};
         const adminPassword = ${JSON.stringify(adminPassword)};
+        const origin = ${JSON.stringify(origin)};
         if (adminEmail && adminPassword) {
-          const login = await fetch("/api/login", {
+          const login = await fetch(origin + "/api/login", {
             method: "POST",
             credentials: "same-origin",
             headers: { "content-type": "application/json" },
@@ -110,6 +112,10 @@ async function checkDesktop() {
           if (typeof loadAccount === "function") await loadAccount();
           await new Promise((resolve) => setTimeout(resolve, 1200));
           if (typeof openModal === "function") openModal("profileModal");
+          if (typeof loadSupportInbox === "function") await loadSupportInbox();
+          for (let i = 0; i < 20 && !document.querySelector("#supportInbox .support-inbox-item"); i += 1) {
+            await new Promise((resolve) => setTimeout(resolve, 250));
+          }
           await new Promise((resolve) => setTimeout(resolve, 1200));
           const first = document.querySelector("#supportInbox .support-inbox-item");
           first?.click();
@@ -152,7 +158,7 @@ async function checkDesktop() {
     });
 
     const setupValue = setup.result.value;
-    if (!setupValue.ok) throw new Error(setupValue.error || "Admin workbench setup failed.");
+    if (!setupValue.ok) throw new Error(setupValue.error || `Admin workbench setup failed: ${JSON.stringify(setupValue)}`);
 
     const audit = await send(ws, "Runtime.evaluate", {
       returnByValue: true,
