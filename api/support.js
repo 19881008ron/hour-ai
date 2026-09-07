@@ -31,6 +31,12 @@ function cleanBody(value) {
   return String(value || "").trim().slice(0, 2000);
 }
 
+function cleanLimit(value, fallback = 60, max = 100) {
+  const parsed = Number.parseInt(String(value || ""), 10);
+  if (!Number.isFinite(parsed) || parsed <= 0) return fallback;
+  return Math.min(parsed, max);
+}
+
 function cleanFileName(value, fallbackExt = "png") {
   const name = String(value || `support-image.${fallbackExt}`).replace(/[^\w.\- ]+/g, "_").trim();
   return (name || `support-image.${fallbackExt}`).slice(0, 120);
@@ -105,8 +111,9 @@ async function loadProfiles(userIds) {
 async function loadLatestMessages(conversationIds) {
   const ids = [...new Set(conversationIds.filter(isUuid))];
   if (!ids.length) return new Map();
+  const messageLimit = Math.min(Math.max(ids.length * 3, 30), 240);
   const rows = await supabaseFetch(
-    `/rest/v1/support_messages?conversation_id=in.(${ids.join(",")})&select=id,conversation_id,sender_role,body,created_at&order=created_at.desc`,
+    `/rest/v1/support_messages?conversation_id=in.(${ids.join(",")})&select=id,conversation_id,sender_role,body,created_at&order=created_at.desc&limit=${messageLimit}`,
     { method: "GET" }
   );
   const latest = new Map();
@@ -116,13 +123,14 @@ async function loadLatestMessages(conversationIds) {
   return latest;
 }
 
-async function listConversations(auth, guestId) {
+async function listConversations(auth, guestId, options = {}) {
   const agent = isSupportAgent(auth?.profile);
+  const limit = cleanLimit(options.limit, agent ? 60 : 20, agent ? 100 : 40);
   let filter = "";
   if (!agent && auth?.profile) filter = `&user_id=eq.${encodeURIComponent(auth.profile.user_id)}`;
   if (!agent && !auth?.profile) filter = `&guest_id=eq.${encodeURIComponent(guestId)}`;
   const conversations = (await supabaseFetch(
-    `/rest/v1/support_conversations?select=*&order=last_message_at.desc${filter}`,
+    `/rest/v1/support_conversations?select=*&order=last_message_at.desc&limit=${limit}${filter}`,
     { method: "GET" }
   )) || [];
   const profiles = await loadProfiles(conversations.map((item) => item.user_id).concat(conversations.map((item) => item.assigned_to)));
@@ -402,7 +410,7 @@ module.exports = async function handler(req, res) {
     if (resource === "conversations") {
       if (!auth && req.method === "GET" && !guestId) return sendJson(res, 200, { conversations: [] });
       if (req.method === "GET") {
-        const conversations = await listConversations(auth, guestId);
+        const conversations = await listConversations(auth, guestId, { limit: urlInfo.searchParams.get("limit") });
         return sendJson(res, 200, { conversations });
       }
       if (req.method === "POST") {

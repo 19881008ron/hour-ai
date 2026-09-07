@@ -1811,6 +1811,7 @@ let activeProfile = null;
 let activeSupportConversationId = null;
 let supportPollTimer = null;
 let activeAgentConversationId = null;
+let supportInboxRequestId = 0;
 let showAllOrders = false;
 let revealObserver = null;
 const supportGuestKey = "hourAiSupportGuestId";
@@ -2471,19 +2472,35 @@ function renderSupportInbox(conversations = []) {
   });
 }
 
-async function loadSupportInbox() {
+function markSupportInboxSelection(conversationId, { clearUnread = false } = {}) {
+  document.querySelectorAll("#supportInbox .support-inbox-item").forEach((item) => {
+    const selected = item.dataset.conversationId === conversationId;
+    item.classList.toggle("is-active", selected);
+    if (selected && clearUnread) {
+      const unread = item.querySelector(".support-inbox-top em");
+      if (unread) unread.textContent = "";
+    }
+  });
+}
+
+async function loadSupportInbox(options = {}) {
   if (!isSupportAgentProfile()) return;
-  const data = await apiRequest("/api/support?resource=conversations", { method: "GET", headers: {} });
+  if (options?.type) options = {};
+  const requestId = ++supportInboxRequestId;
+  const data = await apiRequest("/api/support?resource=conversations&limit=60", { method: "GET", headers: {} });
+  if (requestId !== supportInboxRequestId) return;
   renderSupportInbox(data?.conversations || []);
 }
 
 async function openAgentConversation(conversationId) {
+  if (!conversationId) return;
   activeAgentConversationId = conversationId;
+  markSupportInboxSelection(conversationId);
   document.getElementById("supportAgentEmpty").hidden = true;
   document.getElementById("supportAgentThread").hidden = false;
   document.getElementById("supportAgentComposer").hidden = false;
   await loadSupportMessages("supportAgentThread", conversationId);
-  await loadSupportInbox();
+  markSupportInboxSelection(conversationId, { clearUnread: true });
 }
 
 async function loadAccount() {
