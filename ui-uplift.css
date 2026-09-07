@@ -892,3 +892,229 @@ body {
   }
 }
 
+/* 2026-09-07 support launch desk: admin/agent accounts get a real workstation layout. */
+#profileModal.support-agent-mode {
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 16px !important;
+}
+
+#profileModal.support-agent-mode .support-agent-workspace-panel {
+  display: grid !important;
+  grid-template-rows: minmax(0, 1fr) !important;
+  width: min(1560px, calc(100vw - 32px)) !important;
+  max-width: none !important;
+  height: min(920px, calc(100dvh - 32px)) !important;
+  max-height: none !important;
+  padding: 22px !important;
+  overflow: hidden !important;
+  border-radius: 10px !important;
+}
+
+#profileModal.support-agent-mode .support-agent-workspace-panel > .eyebrow,
+#profileModal.support-agent-mode #profileModalTitle {
+  display: none !important;
+}
+
+#profileModal.support-agent-mode #accountDashboard {
+  display: grid !important;
+  grid-template-rows: minmax(0, 1fr) auto !important;
+  gap: 12px !important;
+  min-height: 0 !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+#profileModal.support-agent-mode .saved-profile,
+#profileModal.support-agent-mode .account-details,
+#profileModal.support-agent-mode #adminPanel,
+#profileModal.support-agent-mode #paymentPanel {
+  display: none !important;
+}
+
+#profileModal.support-agent-mode #supportAgentPanel {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 14px !important;
+  overflow: hidden !important;
+  border: 1px solid #d9e4ef !important;
+  border-radius: 10px !important;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef6fb 100%) !important;
+}
+
+#profileModal.support-agent-mode #supportAgentPanel[hidden] {
+  display: none !important;
+}
+
+#profileModal.support-agent-mode #supportAgentPanel .admin-heading {
+  align-items: center !important;
+  gap: 16px !important;
+  margin-bottom: 12px !important;
+}
+
+#profileModal.support-agent-mode #supportAgentPanel .admin-heading h3 {
+  font-size: clamp(24px, 2vw, 32px) !important;
+  line-height: 1.12 !important;
+}
+
+#profileModal.support-agent-mode .support-workspace {
+  flex: 1 1 auto !important;
+  display: grid !important;
+  grid-template-columns: minmax(330px, 0.36fr) minmax(0, 1fr) !important;
+  gap: 16px !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+#profileModal.support-agent-mode .support-inbox {
+  align-content: start !important;
+  gap: 10px !important;
+  height: 100% !important;
+  max-height: none !important;
+  min-height: 0 !important;
+  padding: 12px !important;
+  overflow: auto !important;
+  border-radius: 9px !important;
+  background: #edf4fa !important;
+}
+
+#profileModal.support-agent-mode .support-inbox-item {
+  min-height: 62px !important;
+  gap: 4px !important;
+  padding: 9px 11px !important;
+  border-radius: 8px !important;
+}
+
+#profileModal.support-agent-mode .support-inbox-top strong {
+  font-size: 15px !important;
+}
+
+#profileModal.support-agent-mode .support-inbox-item > span:not(.support-inbox-top),
+#profileModal.support-agent-mode .support-inbox-item small {
+  font-size: 12px !important;
+  line-height: 1.22 !important;
+}
+
+#profileModal.support-agent-mode .support-inbox-item small {
+  display: none !important;
+}
+
+#profileModal.support-agent-mode .support-agent-thread {
+  display: grid !important;
+  grid-template-rows: minmax(0, 1fr) auto !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+#profileModal.support-agent-mode .support-agent-thread .support-thread {
+  height: 100% !important;
+  max-height: none !important;
+  min-height: 420px !important;
+  padding: 22px !important;
+  overflow: auto !important;
+  border: 1px solid #dbe6f0 !important;
+  border-radius: 10px !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(231, 247, 242, 0.92)) !important;
+}
+
+#profileModal.support-agent-mode .support-agent-thread .support-empty {
+  height: 100% !important;
+  min-height: 420px !important;
+  font-size: 18px !important;
+}
+
+#profileModal.support-agent-mode .support-message {
+  width: min(78%, 760px) !important;
+  padding: 16px 18px !important;
+  border-radius: 10px !important;
+}
+
+#profileModal.support-agent-mode .support-message p {
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+}
+
+#profileModal.support-agent-mode .support-agent-composer {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 150px 118px !important;
+  grid-template-rows: auto auto !important;
+  gap: 10px !important;
+  margin-top: 12px !important;
+}
+
+#profileModal.support-agent-mode .support-agent-composer textarea {
+  min-height: 112px !important;
+  padding: 14px !important;
+  font-size: 16px !important;
+  line-height: 1.45 !important;
+  border-radius: 8px !important;
+}
+
+#profileModal.support-agent-mode .support-agent-composer .support-file-button,
+#profileModal.support-agent-mode .support-agent-composer .button {
+  min-height: 112px !important;
+  border-radius: 8px !important;
+  font-size: 15px !important;
+}
+
+#profileModal.support-agent-mode #logoutButton {
+  min-height: 44px !important;
+  margin-top: 0 !important;
+}
+
+body.support-agent-mode .site-floating-actions {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  #profileModal.support-agent-mode {
+    padding: 0 !important;
+  }
+
+  #profileModal.support-agent-mode .support-agent-workspace-panel {
+    width: 100vw !important;
+    height: 100dvh !important;
+    padding: 14px !important;
+    border-radius: 0 !important;
+  }
+
+  #profileModal.support-agent-mode #adminPanel {
+    display: none !important;
+  }
+
+  #profileModal.support-agent-mode .support-workspace {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: minmax(150px, 0.35fr) minmax(0, 1fr) !important;
+  }
+
+  #profileModal.support-agent-mode .support-inbox {
+    min-height: 150px !important;
+  }
+
+  #profileModal.support-agent-mode .support-agent-thread .support-thread,
+  #profileModal.support-agent-mode .support-agent-thread .support-empty {
+    min-height: 260px !important;
+  }
+
+  #profileModal.support-agent-mode .support-agent-composer {
+    grid-template-columns: minmax(0, 1fr) 96px !important;
+  }
+
+  #profileModal.support-agent-mode .support-agent-composer textarea,
+  #profileModal.support-agent-mode #supportAgentFilePreview {
+    grid-column: 1 / -1 !important;
+  }
+
+  #profileModal.support-agent-mode .support-agent-composer .support-file-button {
+    grid-column: 1 !important;
+    grid-row: 3 !important;
+  }
+
+  #profileModal.support-agent-mode .support-agent-composer .button {
+    grid-column: 2 !important;
+    grid-row: 3 !important;
+  }
+}
+

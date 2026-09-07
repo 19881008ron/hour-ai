@@ -1814,6 +1814,7 @@ let activeAgentConversationId = null;
 let showAllOrders = false;
 let revealObserver = null;
 const supportGuestKey = "hourAiSupportGuestId";
+let fallbackSupportGuestId = "";
 
 function deepMerge(target, source) {
   Object.keys(source || {}).forEach((key) => {
@@ -2223,8 +2224,10 @@ function showAccount(profile) {
   if (profile.role === "admin") loadAdminUsers();
 
   const supportAgentPanel = document.getElementById("supportAgentPanel");
-  supportAgentPanel.hidden = !isSupportAgentProfile(profile);
-  if (isSupportAgentProfile(profile)) loadSupportInbox();
+  const supportAgent = isSupportAgentProfile(profile);
+  supportAgentPanel.hidden = !supportAgent;
+  setSupportAgentMode(supportAgent);
+  if (supportAgent) loadSupportInbox();
 }
 
 function showGuestAccount() {
@@ -2236,11 +2239,20 @@ function showGuestAccount() {
   document.getElementById("headerLogin").hidden = false;
   document.getElementById("headerAccount").hidden = true;
   document.getElementById("supportAgentPanel").hidden = true;
+  setSupportAgentMode(false);
   switchAccountTab("register");
 }
 
 function isSupportAgentProfile(profile = activeProfile) {
   return ["admin", "agent"].includes(profile?.role);
+}
+
+function setSupportAgentMode(enabled) {
+  const profileModal = document.getElementById("profileModal");
+  const accountPanel = profileModal?.querySelector(".account-panel");
+  profileModal?.classList.toggle("support-agent-mode", Boolean(enabled));
+  accountPanel?.classList.toggle("support-agent-workspace-panel", Boolean(enabled));
+  document.body.classList.toggle("support-agent-mode", Boolean(enabled));
 }
 
 function supportMessageElement(message) {
@@ -2311,11 +2323,17 @@ async function fileToSupportAttachment(file) {
 }
 
 function getSupportGuestId() {
-  let guestId = localStorage.getItem(supportGuestKey);
+  let guestId = "";
+  try {
+    guestId = localStorage.getItem(supportGuestKey);
+  } catch {}
   if (!/^[0-9a-f-]{36}$/i.test(String(guestId || ""))) {
     const randomUUID = window.crypto?.randomUUID?.bind(window.crypto);
-    guestId = randomUUID ? randomUUID() : `${Date.now()}-${Math.random()}`.replace(/[^0-9a-f-]/gi, "").padEnd(36, "0").slice(0, 36);
-    localStorage.setItem(supportGuestKey, guestId);
+    guestId = fallbackSupportGuestId || (randomUUID ? randomUUID() : `${Date.now()}-${Math.random()}`.replace(/[^0-9a-f-]/gi, "").padEnd(36, "0").slice(0, 36));
+    fallbackSupportGuestId = guestId;
+    try {
+      localStorage.setItem(supportGuestKey, guestId);
+    } catch {}
   }
   return guestId;
 }
