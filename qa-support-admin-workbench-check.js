@@ -194,7 +194,36 @@ async function checkDesktop() {
       })()`
     });
 
+    const notificationAudit = await send(ws, "Runtime.evaluate", {
+      returnByValue: true,
+      expression: `(() => {
+        const result = {
+          hasReset: typeof resetSupportInboxNotifications === "function",
+          hasNotify: typeof notifyOnNewSupportMessages === "function",
+          hasPlay: typeof playSupportNotificationSound === "function",
+          initialPlays: 0,
+          unchangedPlays: 0,
+          increasedPlays: 0
+        };
+        if (!result.hasReset || !result.hasNotify || !result.hasPlay) return result;
+        const originalPlay = playSupportNotificationSound;
+        let plays = 0;
+        playSupportNotificationSound = () => { plays += 1; };
+        resetSupportInboxNotifications();
+        notifyOnNewSupportMessages([{ id: "qa-a", agent_unread: 1 }]);
+        result.initialPlays = plays;
+        notifyOnNewSupportMessages([{ id: "qa-a", agent_unread: 1 }]);
+        result.unchangedPlays = plays;
+        notifyOnNewSupportMessages([{ id: "qa-a", agent_unread: 2 }]);
+        result.increasedPlays = plays;
+        playSupportNotificationSound = originalPlay;
+        resetSupportInboxNotifications();
+        return result;
+      })()`
+    });
+
     const value = audit.result.value;
+    value.notification = notificationAudit.result.value;
     const failures = [];
     if (!value.supportAgentMode) failures.push("admin mode class was not applied");
     if (value.overflow > 2) failures.push(`horizontal overflow ${value.overflow}px`);
@@ -204,6 +233,10 @@ async function checkDesktop() {
     if (value.thread.height < 420) failures.push(`thread too short: ${value.thread.height}px`);
     if (value.composer.height < 110) failures.push(`composer too short: ${value.composer.height}px`);
     if (value.visibleInboxItems < 7) failures.push(`only ${value.visibleInboxItems} inbox items visible`);
+    if (!value.notification.hasReset || !value.notification.hasNotify || !value.notification.hasPlay) failures.push("support notification functions are missing");
+    if (value.notification.initialPlays !== 0) failures.push("support notification played on initial inbox load");
+    if (value.notification.unchangedPlays !== 0) failures.push("support notification played without a new unread message");
+    if (value.notification.increasedPlays !== 1) failures.push("support notification did not play when unread count increased");
     value.screenshot = await capture(ws, "support-admin-workbench-desktop.png");
     console.log(JSON.stringify({ origin, mode: setupValue.mode, failureCount: failures.length, failures, audit: value }, null, 2));
     if (failures.length) process.exit(1);

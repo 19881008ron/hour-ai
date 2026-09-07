@@ -1812,6 +1812,10 @@ let activeSupportConversationId = null;
 let supportPollTimer = null;
 let activeAgentConversationId = null;
 let supportInboxRequestId = 0;
+let supportInboxLoadedOnce = false;
+let supportInboxUnreadCounts = new Map();
+let supportNotificationAudio = null;
+let supportNotificationSoundUnlocked = false;
 let showAllOrders = false;
 let revealObserver = null;
 const supportGuestKey = "hourAiSupportGuestId";
@@ -2254,6 +2258,64 @@ function setSupportAgentMode(enabled) {
   profileModal?.classList.toggle("support-agent-mode", Boolean(enabled));
   accountPanel?.classList.toggle("support-agent-workspace-panel", Boolean(enabled));
   document.body.classList.toggle("support-agent-mode", Boolean(enabled));
+  if (!enabled) resetSupportInboxNotifications();
+}
+
+function resetSupportInboxNotifications() {
+  supportInboxLoadedOnce = false;
+  supportInboxUnreadCounts = new Map();
+}
+
+function getSupportNotificationAudio() {
+  if (supportNotificationAudio) return supportNotificationAudio;
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContext) return null;
+  supportNotificationAudio = new AudioContext();
+  return supportNotificationAudio;
+}
+
+async function unlockSupportNotificationSound() {
+  const audio = getSupportNotificationAudio();
+  if (!audio) return;
+  try {
+    if (audio.state === "suspended") await audio.resume();
+    supportNotificationSoundUnlocked = true;
+  } catch {}
+}
+
+function playSupportNotificationSound() {
+  const audio = getSupportNotificationAudio();
+  if (!audio || !supportNotificationSoundUnlocked) return;
+  try {
+    const now = audio.currentTime;
+    [0, 0.16].forEach((offset, index) => {
+      const oscillator = audio.createOscillator();
+      const gain = audio.createGain();
+      oscillator.type = "sine";
+      oscillator.frequency.setValueAtTime(index ? 1046.5 : 784, now + offset);
+      gain.gain.setValueAtTime(0.0001, now + offset);
+      gain.gain.exponentialRampToValueAtTime(0.13, now + offset + 0.018);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + offset + 0.14);
+      oscillator.connect(gain);
+      gain.connect(audio.destination);
+      oscillator.start(now + offset);
+      oscillator.stop(now + offset + 0.15);
+    });
+  } catch {}
+}
+
+function notifyOnNewSupportMessages(conversations = []) {
+  let hasNewUnread = false;
+  const nextCounts = new Map();
+  conversations.forEach((conversation) => {
+    const unreadCount = Number(conversation.agent_unread || 0);
+    nextCounts.set(conversation.id, unreadCount);
+    const previousCount = supportInboxUnreadCounts.get(conversation.id) || 0;
+    if (supportInboxLoadedOnce && unreadCount > previousCount) hasNewUnread = true;
+  });
+  supportInboxUnreadCounts = nextCounts;
+  if (supportInboxLoadedOnce && hasNewUnread) playSupportNotificationSound();
+  supportInboxLoadedOnce = true;
 }
 
 function supportMessageElement(message) {
@@ -2479,6 +2541,7 @@ function markSupportInboxSelection(conversationId, { clearUnread = false } = {})
     if (selected && clearUnread) {
       const unread = item.querySelector(".support-inbox-top em");
       if (unread) unread.textContent = "";
+      supportInboxUnreadCounts.set(conversationId, 0);
     }
   });
 }
@@ -2489,7 +2552,9 @@ async function loadSupportInbox(options = {}) {
   const requestId = ++supportInboxRequestId;
   const data = await apiRequest("/api/support?resource=conversations&limit=60&latest=0", { method: "GET", headers: {} });
   if (requestId !== supportInboxRequestId) return;
-  renderSupportInbox(data?.conversations || []);
+  const conversations = data?.conversations || [];
+  notifyOnNewSupportMessages(conversations);
+  renderSupportInbox(conversations);
 }
 
 async function openAgentConversation(conversationId) {
@@ -2644,7 +2709,12 @@ function setupProfile() {
   document.getElementById("exportCustomers").addEventListener("click", () => {
     window.location.href = "/api/admin/export";
   });
-  document.getElementById("refreshSupportInbox").addEventListener("click", loadSupportInbox);
+  document.getElementById("refreshSupportInbox").addEventListener("click", (event) => {
+    unlockSupportNotificationSound();
+    loadSupportInbox(event);
+  });
+  document.getElementById("supportAgentPanel").addEventListener("pointerdown", unlockSupportNotificationSound);
+  document.getElementById("supportAgentPanel").addEventListener("keydown", unlockSupportNotificationSound);
   document.getElementById("supportAgentAttachment").addEventListener("change", (event) => {
     const file = event.currentTarget.files?.[0];
     document.getElementById("supportAgentFilePreview").textContent = file ? file.name : "";
