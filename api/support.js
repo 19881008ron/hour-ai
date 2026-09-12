@@ -197,9 +197,22 @@ async function createConversation(auth, body, req, res) {
 async function ensureAutomaticGreeting(conversation) {
   if (!conversation?.id) return;
   const existingMessages = await supabaseFetch(
-    `/rest/v1/support_messages?conversation_id=eq.${encodeURIComponent(conversation.id)}&select=id&limit=1`,
+    `/rest/v1/support_messages?conversation_id=eq.${encodeURIComponent(conversation.id)}&select=id,sender_role,sender_name,body&order=created_at.asc&limit=20`,
     { method: "GET" }
   );
+  const automaticGreeting = existingMessages.find(
+    (message) => message.sender_role === "agent" && message.sender_name === AUTO_GREETING_NAME
+  );
+  if (automaticGreeting) {
+    if (automaticGreeting.body !== AUTO_GREETING_BODY) {
+      await supabaseFetch(`/rest/v1/support_messages?id=eq.${encodeURIComponent(automaticGreeting.id)}`, {
+        method: "PATCH",
+        headers: { Prefer: "return=minimal" },
+        body: JSON.stringify({ body: AUTO_GREETING_BODY })
+      });
+    }
+    return;
+  }
   if (existingMessages.length) return;
   const now = new Date().toISOString();
   await supabaseFetch("/rest/v1/support_messages", {
@@ -274,6 +287,7 @@ async function loadAttachments(messageIds) {
 
 async function listMessages(auth, guestId, conversationId, options = {}) {
   const conversation = await requireConversationAccess(auth, guestId, conversationId);
+  await ensureAutomaticGreeting(conversation);
   const agent = isSupportAgent(auth?.profile);
   const limit = cleanLimit(options.limit, agent ? 50 : 50, 120);
   const compact = options.compact === "1";
