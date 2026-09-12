@@ -1408,7 +1408,7 @@ const commissionLeaders = [
   {
     rank: 1,
     podium: "gold",
-    name: "Mohammed Salman***",
+    name: "Mohammed Salman",
     country: "Saudi Arabia",
     commission: "$13,500",
     medal: "Gold medal",
@@ -1969,6 +1969,7 @@ function renderReviews() {
       const leader = commissionLeaders.find((item) => item.rank === rank);
       return `
         <article class="leaderboard-card leaderboard-${leader.podium}" data-rank="${leader.rank}">
+          <div class="leaderboard-shine" aria-hidden="true"></div>
           <div class="leader-medal" aria-label="${leader.medal}" role="img"><span>${leader.rank}</span></div>
           <div class="leader-avatar leader-avatar-${leader.avatar}" aria-hidden="true">
             <span class="avatar-hair"></span>
@@ -1984,6 +1985,10 @@ function renderReviews() {
           <div class="leader-commission">
             <span>Commission</span>
             <strong>${leader.commission}</strong>
+          </div>
+          <div class="leader-proof">
+            <span>Qualified member</span>
+            <span>Paid task access</span>
           </div>
           <div class="podium-base" aria-hidden="true"><span>${leader.rank}</span></div>
         </article>
