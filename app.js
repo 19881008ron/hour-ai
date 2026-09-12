@@ -1986,10 +1986,6 @@ function renderReviews() {
             <span>Commission</span>
             <strong>${leader.commission}</strong>
           </div>
-          <div class="leader-proof">
-            <span>Qualified member</span>
-            <span>Paid task access</span>
-          </div>
           <div class="podium-base" aria-hidden="true"><span>${leader.rank}</span></div>
         </article>
       `;

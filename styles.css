@@ -14581,3 +14581,137 @@ html body .partner-okx i {
     padding: 3px 4px !important;
   }
 }
+
+/* Compact merged leaderboard + level progression section. */
+html body .commission-leaderboard-section {
+  padding-top: clamp(40px, 4vw, 58px) !important;
+  padding-bottom: clamp(24px, 3vw, 36px) !important;
+  border-bottom: 0 !important;
+}
+
+html body .commission-leaderboard-section + .path-section {
+  margin-top: 0 !important;
+  padding-top: clamp(30px, 3.2vw, 44px) !important;
+  border-top: 0 !important;
+  background:
+    radial-gradient(circle at 24% 0%, rgba(43, 213, 118, 0.12), transparent 24%),
+    linear-gradient(180deg, #071018 0%, #080a0e 100%) !important;
+}
+
+html body .commission-leaderboard-section + .path-section::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: max(20px, calc((100vw - var(--content)) / 2)) !important;
+  left: max(20px, calc((100vw - var(--content)) / 2)) !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, transparent, rgba(43, 213, 118, 0.45), transparent) !important;
+}
+
+html body .commission-podium-grid {
+  margin-top: clamp(24px, 2.8vw, 38px) !important;
+}
+
+html body .leaderboard-card {
+  padding-top: 20px !important;
+}
+
+html body .leaderboard-gold {
+  min-height: 440px !important;
+}
+
+html body .leaderboard-silver {
+  min-height: 382px !important;
+}
+
+html body .leaderboard-bronze {
+  min-height: 382px !important;
+}
+
+html body .leader-avatar {
+  width: clamp(96px, 7.3vw, 124px) !important;
+  margin-top: 22px !important;
+}
+
+html body .leaderboard-gold .leader-avatar {
+  width: clamp(112px, 8.4vw, 142px) !important;
+  margin-top: 34px !important;
+}
+
+html body .leader-copy {
+  margin-top: 16px !important;
+}
+
+html body .leader-copy h3 {
+  font-size: clamp(21px, 1.9vw, 28px) !important;
+}
+
+html body .leader-commission {
+  margin-top: 18px !important;
+  padding: 13px 16px !important;
+}
+
+html body .leader-commission strong {
+  font-size: clamp(32px, 3vw, 46px) !important;
+}
+
+html body .podium-base {
+  min-height: 72px !important;
+  margin-top: 18px !important;
+}
+
+html body .leaderboard-gold .podium-base {
+  min-height: 94px !important;
+}
+
+html body .leader-proof {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  html body .commission-leaderboard-section {
+    padding-top: 34px !important;
+    padding-bottom: 30px !important;
+  }
+
+  html body .commission-leaderboard-section + .path-section {
+    padding-top: 32px !important;
+  }
+
+  html body .leaderboard-gold {
+    grid-template-columns: 74px minmax(0, 1fr) !important;
+    gap: 8px 12px !important;
+    padding: 18px 14px 14px !important;
+  }
+
+  html body .leaderboard-gold .leader-avatar {
+    grid-row: 1 / span 2 !important;
+    align-self: end !important;
+    width: 70px !important;
+    margin-top: 22px !important;
+  }
+
+  html body .leaderboard-gold .leader-copy {
+    align-self: end !important;
+  }
+
+  html body .leaderboard-gold .leader-commission {
+    align-self: start !important;
+  }
+
+  html body .leaderboard-silver,
+  html body .leaderboard-bronze {
+    padding-top: 44px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  html body .leaderboard-gold {
+    grid-template-columns: 70px minmax(0, 1fr) !important;
+  }
+
+  html body .leaderboard-gold .leader-avatar {
+    width: 66px !important;
+    margin-top: 24px !important;
+  }
+}
