@@ -5,6 +5,8 @@ const { authenticatedProfile, config, supabaseFetch } = require("../lib/supabase
 const SUPPORT_ROLES = new Set(["admin", "agent"]);
 const ALLOWED_MIME_TYPES = new Set(["image/png", "image/jpeg", "image/webp", "image/gif"]);
 const MAX_ATTACHMENT_BYTES = 4 * 1024 * 1024;
+const AUTO_GREETING_BODY = "Hello, welcome to Hour AI Support. Our advisor is online now. Please tell us your question, and we will help you choose the right level and commission path.";
+const AUTO_GREETING_NAME = "Hour AI Advisor";
 
 function isSupportAgent(profile) {
   return SUPPORT_ROLES.has(profile?.role);
@@ -170,7 +172,10 @@ async function createConversation(auth, body, req, res) {
     `/rest/v1/support_conversations?${identityFilter}&status=neq.closed&topic=eq.${encodeURIComponent(topic)}&select=*&order=last_message_at.desc&limit=1`,
     { method: "GET" }
   )) || [];
-  if (existing[0]) return existing[0];
+  if (existing[0]) {
+    await ensureAutomaticGreeting(existing[0]);
+    return existing[0];
+  }
 
   const created = (await supabaseFetch("/rest/v1/support_conversations", {
     method: "POST",
@@ -185,7 +190,36 @@ async function createConversation(auth, body, req, res) {
       last_message_at: new Date().toISOString()
     })
   })) || [];
+  if (created[0]) await ensureAutomaticGreeting(created[0]);
   return created[0];
+}
+
+async function ensureAutomaticGreeting(conversation) {
+  if (!conversation?.id) return;
+  const existingMessages = await supabaseFetch(
+    `/rest/v1/support_messages?conversation_id=eq.${encodeURIComponent(conversation.id)}&select=id&limit=1`,
+    { method: "GET" }
+  );
+  if (existingMessages.length) return;
+  const now = new Date().toISOString();
+  await supabaseFetch("/rest/v1/support_messages", {
+    method: "POST",
+    headers: { Prefer: "return=minimal" },
+    body: JSON.stringify({
+      conversation_id: conversation.id,
+      sender_id: null,
+      sender_role: "agent",
+      sender_name: AUTO_GREETING_NAME,
+      body: AUTO_GREETING_BODY
+    })
+  });
+  await supabaseFetch(`/rest/v1/support_conversations?id=eq.${encodeURIComponent(conversation.id)}`, {
+    method: "PATCH",
+    body: JSON.stringify({
+      last_message_at: now,
+      updated_at: now
+    })
+  });
 }
 
 async function requireConversationAccess(auth, guestId, conversationId) {
