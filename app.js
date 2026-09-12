@@ -2831,12 +2831,16 @@ function setupEvents() {
   const closeMobileMenu = () => {
     if (!mobileMenuToggle || !mobileMenuPanel) return;
     mobileMenuPanel.hidden = true;
+    mobileMenuPanel.classList.remove("is-open");
     mobileMenuToggle.setAttribute("aria-expanded", "false");
   };
-  mobileMenuToggle?.addEventListener("click", () => {
+  mobileMenuToggle?.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     const open = mobileMenuPanel?.hidden !== false;
     if (!mobileMenuPanel) return;
     mobileMenuPanel.hidden = !open;
+    mobileMenuPanel.classList.toggle("is-open", open);
     mobileMenuToggle.setAttribute("aria-expanded", String(open));
   });
 

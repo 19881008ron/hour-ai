@@ -12,7 +12,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/hour-ai-logo.svg" />
     <link rel="shortcut icon" href="assets/hour-ai-logo.svg" />
     <link rel="apple-touch-icon" href="assets/hour-ai-logo.svg" />
-    <link rel="stylesheet" href="styles.css?v=20260905-prelaunch-copy" />
+    <link rel="stylesheet" href="styles.css?v=20260912-mobile-menu-fix" />
     <link rel="stylesheet" href="ui-uplift.css?v=20260907-whatsapp-desk" />
   </head>
   <body class="store-page">
@@ -50,11 +50,6 @@
           <span data-store-i18n="nav.menu">Menu</span>
         </button>
         <div class="mobile-menu-panel" id="storeMobileMenuPanel" hidden>
-          <a href="index.html#path" data-store-i18n="nav.path">Learning</a>
-          <a href="index.html#courses" data-store-i18n="nav.courses">Courses</a>
-          <a href="index.html?support=1#support" data-store-i18n="nav.support">Support</a>
-          <a href="index.html?support=1#support" data-store-i18n="store.advisor">Advisor</a>
-          <a href="index.html#top" data-store-i18n="store.backHome">Home</a>
           <label>
             <span class="sr-only">Select language</span>
             <select class="language-select mobile-language-select" aria-label="Select language">
@@ -63,6 +58,11 @@
               <option value="zh">&#31616;&#20307;&#20013;&#25991;</option>
             </select>
           </label>
+          <a href="index.html?login=1#top" data-store-i18n="account.signIn">Sign in</a>
+          <a href="index.html?signup=1#top" data-store-i18n="nav.register">Sign up</a>
+          <a href="index.html#path" data-store-i18n="nav.path">Learning</a>
+          <a href="index.html#courses" data-store-i18n="nav.courses">Courses</a>
+          <a href="index.html?support=1#support" data-store-i18n="nav.support">Support</a>
         </div>
       </div>
     </header>
@@ -137,6 +137,6 @@
       </a>
     </div>
 
-    <script src="marketplace.js?v=20260905-ui-uplift"></script>
+    <script src="marketplace.js?v=20260912-mobile-menu-fix"></script>
   </body>
 </html>

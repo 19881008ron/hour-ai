@@ -13846,6 +13846,14 @@ body .hero-proof-card span {
     display: none !important;
   }
 
+  html body .mobile-menu-panel.is-open,
+  html body.store-page .mobile-menu-panel.is-open {
+    display: grid !important;
+    pointer-events: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
   html body .mobile-menu-panel a,
   html body .mobile-menu-panel button,
   html body .mobile-menu-panel label,

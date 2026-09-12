@@ -76,7 +76,8 @@
 
   const i18n = {
     en: {
-      nav: { live: "Live Platform", orders: "Commission", path: "Learning", courses: "Courses", store: "Member Store", support: "Support", menu: "Menu" },
+      nav: { live: "Live Platform", orders: "Commission", path: "Learning", courses: "Courses", store: "Member Store", support: "Support", menu: "Menu", register: "Sign up" },
+      account: { signIn: "Sign in" },
       store: {
         advisor: "Advisor",
         backHome: "Home",
@@ -151,7 +152,8 @@
       }
     },
     zh: {
-      nav: { live: "在线平台", orders: "佣金", path: "学习", courses: "课程", store: "会员商城", support: "客服", menu: "菜单" },
+      nav: { live: "在线平台", orders: "佣金", path: "学习", courses: "课程", store: "会员商城", support: "客服", menu: "菜单", register: "注册" },
+      account: { signIn: "登录" },
       store: {
         advisor: "客服",
         backHome: "首页",
@@ -226,7 +228,8 @@
       }
     },
     ar: {
-      nav: { live: "منصة مباشرة", orders: "العمولة", path: "التعلم", courses: "الدورات", store: "متجر الأعضاء", support: "الدعم", menu: "القائمة" },
+      nav: { live: "منصة مباشرة", orders: "العمولة", path: "التعلم", courses: "الدورات", store: "متجر الأعضاء", support: "الدعم", menu: "القائمة", register: "إنشاء حساب" },
+      account: { signIn: "تسجيل الدخول" },
       store: {
         advisor: "الدعم",
         backHome: "الرئيسية",
@@ -765,6 +768,7 @@
     const panel = document.querySelector(".mobile-menu-panel");
     if (!toggle || !panel) return;
     panel.hidden = true;
+    panel.classList.remove("is-open");
     toggle.setAttribute("aria-expanded", "false");
   }
 
@@ -772,9 +776,12 @@
     const toggle = document.querySelector(".mobile-menu-toggle");
     const panel = document.querySelector(".mobile-menu-panel");
     if (!toggle || !panel) return;
-    toggle.addEventListener("click", () => {
+    toggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
       const open = panel.hidden;
       panel.hidden = !open;
+      panel.classList.toggle("is-open", open);
       toggle.setAttribute("aria-expanded", String(open));
     });
     document.addEventListener("click", (event) => {
