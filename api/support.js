@@ -241,14 +241,16 @@ async function loadAttachments(messageIds) {
 async function listMessages(auth, guestId, conversationId, options = {}) {
   const conversation = await requireConversationAccess(auth, guestId, conversationId);
   const agent = isSupportAgent(auth?.profile);
-  const limit = cleanLimit(options.limit, agent ? 80 : 80, 200);
+  const limit = cleanLimit(options.limit, agent ? 50 : 50, 120);
+  const compact = options.compact === "1";
+  const select = compact ? "id,conversation_id,sender_id,sender_role,sender_name,body,created_at" : "*";
   const messages = await supabaseFetch(
-    `/rest/v1/support_messages?conversation_id=eq.${encodeURIComponent(conversation.id)}&select=*&order=created_at.desc&limit=${limit}`,
+    `/rest/v1/support_messages?conversation_id=eq.${encodeURIComponent(conversation.id)}&select=${select}&order=created_at.desc&limit=${limit}`,
     { method: "GET" }
   );
   const chronologicalMessages = messages.slice().reverse();
   const attachments = await loadAttachments(chronologicalMessages.map((message) => message.id));
-  await markConversationRead(auth, conversation);
+  if (options.read !== "0") await markConversationRead(auth, conversation);
   return chronologicalMessages.map((message) => ({
     ...message,
     attachments: attachments.get(message.id) || []
@@ -402,7 +404,9 @@ module.exports = async function handler(req, res) {
       if (req.method === "GET") {
         if (!auth && !guestId) return sendJson(res, 401, { error: "Please start a support conversation first." });
         const messages = await listMessages(auth, guestId, urlInfo.searchParams.get("conversationId"), {
-          limit: urlInfo.searchParams.get("limit")
+          limit: urlInfo.searchParams.get("limit"),
+          compact: urlInfo.searchParams.get("compact"),
+          read: urlInfo.searchParams.get("read")
         });
         return sendJson(res, 200, { messages });
       }

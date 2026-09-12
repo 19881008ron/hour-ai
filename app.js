@@ -1814,6 +1814,8 @@ let activeAgentConversationId = null;
 let supportInboxRequestId = 0;
 let supportInboxLoadedOnce = false;
 let supportInboxUnreadCounts = new Map();
+let supportMessageCache = new Map();
+let supportMessageRequestTokens = new Map();
 let supportNotificationAudio = null;
 let supportNotificationSoundUnlocked = false;
 let showAllOrders = false;
@@ -2342,7 +2344,7 @@ function supportMessageElement(message) {
   (message.attachments || []).forEach((attachment) => {
     const link = document.createElement("a");
     link.className = "support-attachment";
-    link.href = `/api/support?resource=attachment&id=${encodeURIComponent(attachment.id)}`;
+    link.href = attachment.previewUrl || `/api/support?resource=attachment&id=${encodeURIComponent(attachment.id)}`;
     link.target = "_blank";
     link.rel = "noreferrer";
     const image = document.createElement("img");
@@ -2372,6 +2374,44 @@ function renderSupportThread(targetId, messages = []) {
   }
   messages.forEach((message) => target.append(supportMessageElement(message)));
   target.scrollTop = target.scrollHeight;
+}
+
+function renderSupportThreadLoading(targetId) {
+  const target = document.getElementById(targetId);
+  if (!target) return;
+  target.replaceChildren();
+  const loading = document.createElement("article");
+  loading.className = "support-message is-theirs support-welcome-message support-loading-message";
+  const sender = document.createElement("span");
+  sender.textContent = t("support.advisorName");
+  const body = document.createElement("p");
+  body.textContent = "Loading conversation...";
+  loading.append(sender, body);
+  target.append(loading);
+}
+
+function cacheSupportMessages(conversationId, messages = []) {
+  if (!conversationId) return;
+  supportMessageCache.set(conversationId, messages);
+}
+
+function appendCachedSupportMessage(conversationId, message) {
+  if (!conversationId || !message) return;
+  const current = supportMessageCache.get(conversationId) || [];
+  supportMessageCache.set(conversationId, [...current, message]);
+}
+
+function replaceCachedSupportMessage(conversationId, temporaryId, message) {
+  if (!conversationId || !temporaryId || !message) return;
+  const current = supportMessageCache.get(conversationId) || [];
+  const next = current.map((item) => item.id === temporaryId ? message : item);
+  supportMessageCache.set(conversationId, next.some((item) => item.id === message.id) ? next : [...current.filter((item) => item.id !== temporaryId), message]);
+}
+
+function removeCachedSupportMessage(conversationId, messageId) {
+  if (!conversationId || !messageId) return;
+  const current = supportMessageCache.get(conversationId) || [];
+  supportMessageCache.set(conversationId, current.filter((item) => item.id !== messageId));
 }
 
 async function fileToSupportAttachment(file) {
@@ -2422,14 +2462,25 @@ async function loadExistingSupportConversation() {
   return null;
 }
 
-async function loadSupportMessages(targetId = "supportThread", conversationId = activeSupportConversationId) {
+async function loadSupportMessages(targetId = "supportThread", conversationId = activeSupportConversationId, options = {}) {
   if (!conversationId) return;
-  const messageLimit = targetId === "supportAgentThread" ? "&limit=80" : "";
+  const cached = supportMessageCache.get(conversationId);
+  if (options.useCache && cached) renderSupportThread(targetId, cached);
+  if (options.showLoading && !cached) renderSupportThreadLoading(targetId);
+
+  const requestToken = `${conversationId}-${Date.now()}-${Math.random()}`;
+  supportMessageRequestTokens.set(targetId, requestToken);
+  const messageLimit = targetId === "supportAgentThread" ? "&limit=50&compact=1" : "&limit=50";
   const data = await apiRequest(`/api/support?resource=messages&conversationId=${encodeURIComponent(conversationId)}&guestId=${encodeURIComponent(getSupportGuestId())}${messageLimit}`, {
     method: "GET",
     headers: {}
   });
-  renderSupportThread(targetId, data?.messages || []);
+  if (supportMessageRequestTokens.get(targetId) !== requestToken) return data?.messages || [];
+  if (targetId === "supportAgentThread" && activeAgentConversationId !== conversationId) return data?.messages || [];
+  const messages = data?.messages || [];
+  cacheSupportMessages(conversationId, messages);
+  renderSupportThread(targetId, messages);
+  return messages;
 }
 
 function startSupportPolling() {
@@ -2463,15 +2514,36 @@ async function sendSupportMessage({ conversationId, textareaId, inputId, threadI
   const targetConversationId = conversationId || activeSupportConversationId;
   const textarea = document.getElementById(textareaId || "supportMessage");
   const input = document.getElementById(inputId || "supportAttachment");
+  const renderTargetId = threadId || "supportThread";
   const body = textarea.value.trim();
   const file = input?.files?.[0] || null;
   if (!body && !file) return;
   const button = textarea.closest(".modal-panel, .support-agent-thread")?.querySelector(".button-primary");
   if (button) button.disabled = true;
+  let optimisticConversationId = "";
+  let optimisticMessageId = "";
   try {
     const conversation = targetConversationId ? { id: targetConversationId } : await ensureSupportConversation();
+    const preview = document.getElementById(renderTargetId === "supportAgentThread" ? "supportAgentFilePreview" : "supportFilePreview");
+    const temporaryMessage = {
+      id: `temp-${Date.now()}-${Math.random().toString(16).slice(2)}`,
+      conversation_id: conversation.id,
+      sender_id: activeProfile?.user_id || null,
+      sender_role: isSupportAgentProfile() ? activeProfile.role : activeProfile ? "customer" : "guest",
+      sender_name: activeProfile?.username || t("support.visitor"),
+      body,
+      created_at: new Date().toISOString(),
+      attachments: file ? [{ previewUrl: URL.createObjectURL(file), file_name: file.name }] : []
+    };
+    optimisticConversationId = conversation.id;
+    optimisticMessageId = temporaryMessage.id;
+    appendCachedSupportMessage(conversation.id, temporaryMessage);
+    renderSupportThread(renderTargetId, supportMessageCache.get(conversation.id) || [temporaryMessage]);
+    textarea.value = "";
+    if (input) input.value = "";
+    if (preview) preview.textContent = "";
     const attachment = await fileToSupportAttachment(file);
-    await apiRequest("/api/support?resource=messages", {
+    const result = await apiRequest("/api/support?resource=messages", {
       method: "POST",
       body: JSON.stringify({
         conversationId: conversation.id,
@@ -2480,14 +2552,19 @@ async function sendSupportMessage({ conversationId, textareaId, inputId, threadI
         attachment
       })
     });
-    textarea.value = "";
-    if (input) input.value = "";
-    const preview = document.getElementById(threadId === "supportAgentThread" ? "supportAgentFilePreview" : "supportFilePreview");
-    if (preview) preview.textContent = "";
-    await loadSupportMessages(threadId || "supportThread", conversation.id);
-    if (afterSend) await afterSend();
+    if (result?.message) {
+      replaceCachedSupportMessage(conversation.id, temporaryMessage.id, result.message);
+      renderSupportThread(renderTargetId, supportMessageCache.get(conversation.id) || [result.message]);
+    } else {
+      await loadSupportMessages(renderTargetId, conversation.id);
+    }
+    if (afterSend) Promise.resolve(afterSend()).catch(() => {});
     showToast(t("support.sent"));
   } catch (error) {
+    if (optimisticConversationId && optimisticMessageId) {
+      removeCachedSupportMessage(optimisticConversationId, optimisticMessageId);
+      renderSupportThread(renderTargetId, supportMessageCache.get(optimisticConversationId) || []);
+    }
     if (!activeProfile && [401, 403, 404].includes(error.status) && targetConversationId) {
       activeSupportConversationId = null;
       await sendSupportMessage({ conversationId: null, textareaId, inputId, threadId, afterSend });
@@ -2556,6 +2633,7 @@ async function loadSupportInbox(options = {}) {
   const conversations = data?.conversations || [];
   notifyOnNewSupportMessages(conversations);
   renderSupportInbox(conversations);
+  prefetchAgentConversations(conversations);
 }
 
 async function openAgentConversation(conversationId) {
@@ -2565,8 +2643,30 @@ async function openAgentConversation(conversationId) {
   document.getElementById("supportAgentEmpty").hidden = true;
   document.getElementById("supportAgentThread").hidden = false;
   document.getElementById("supportAgentComposer").hidden = false;
-  await loadSupportMessages("supportAgentThread", conversationId);
+  const cached = supportMessageCache.get(conversationId);
+  if (cached) renderSupportThread("supportAgentThread", cached);
+  else renderSupportThreadLoading("supportAgentThread");
   markSupportInboxSelection(conversationId, { clearUnread: true });
+  loadSupportMessages("supportAgentThread", conversationId, { useCache: true, showLoading: true }).catch((error) => showToast(error.message));
+}
+
+function prefetchAgentConversations(conversations = []) {
+  if (!isSupportAgentProfile()) return;
+  const targets = conversations
+    .map((conversation) => conversation.id)
+    .filter((id) => id && !supportMessageCache.has(id))
+    .slice(0, 8);
+  if (!targets.length) return;
+  window.setTimeout(() => {
+    targets.forEach((conversationId) => {
+      apiRequest(`/api/support?resource=messages&conversationId=${encodeURIComponent(conversationId)}&guestId=${encodeURIComponent(getSupportGuestId())}&limit=30&compact=1&read=0`, {
+        method: "GET",
+        headers: {}
+      })
+        .then((data) => cacheSupportMessages(conversationId, data?.messages || []))
+        .catch(() => {});
+    });
+  }, 250);
 }
 
 async function loadAccount() {
