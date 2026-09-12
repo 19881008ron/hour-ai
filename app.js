@@ -1404,24 +1404,33 @@ const orders = [
   }
 ];
 
-const reviews = [
+const commissionLeaders = [
   {
-    level: "C",
-    name: "Maya R.",
-    role: "C-Level learner",
-    quote: "The checklist made the first AI editing workflow much easier to understand. I knew what to practice each day."
+    rank: 1,
+    podium: "gold",
+    name: "Mohammed Salman***",
+    country: "Saudi Arabia",
+    commission: "$13,500",
+    medal: "Gold medal",
+    avatar: "male-one"
   },
   {
-    level: "B",
-    name: "Daniel K.",
-    role: "B-Level learner",
-    quote: "The commercial short video lessons helped me improve hooks, pacing, subtitles, and review habits."
+    rank: 2,
+    podium: "silver",
+    name: "Amal Qubaisi",
+    country: "United Arab Emirates",
+    commission: "$10,700",
+    medal: "Silver medal",
+    avatar: "female"
   },
   {
-    level: "A",
-    name: "Aisha M.",
-    role: "A-Level learner",
-    quote: "The advanced path focused on quality control and managing a task from brief to delivery."
+    rank: 3,
+    podium: "bronze",
+    name: "Hassan Jameel",
+    country: "Saudi Arabia",
+    commission: "$9,060",
+    medal: "Bronze medal",
+    avatar: "male-two"
   }
 ];
 
@@ -1742,12 +1751,6 @@ const carouselSlides = [
     return orderImages[order.id] || levelImages[order.level];
   }
 
-const reviewAvatars = {
-  C: "assets/avatar-maya.webp",
-  B: "assets/avatar-daniel.webp",
-  A: "assets/avatar-aisha.webp"
-};
-
 const cryptoPaymentOptions = [
   { id: "usdt-trc", asset: "USDT", network: "TRC20", label: "USDT-TRC", address: "" },
   { id: "usdt-erc", asset: "USDT", network: "ERC20", label: "USDT-ERC", address: "" },
@@ -1875,10 +1878,6 @@ function localizedOrder(order) {
   return { ...order, ...(localizedContent[currentLanguage]?.orders?.[order.id] || {}) };
 }
 
-function localizedReview(review) {
-  return { ...review, ...(localizedContent[currentLanguage]?.reviews?.[review.level] || {}) };
-}
-
 function localizedPlan(plan) {
   return { ...plan, ...(localizedContent[currentLanguage]?.pricing?.[plan.level] || {}) };
 }
@@ -1962,22 +1961,36 @@ function renderOrders() {
 }
 
 function renderReviews() {
-  const grid = document.getElementById("reviewsGrid");
-  grid.innerHTML = reviews
-    .map((baseReview) => {
-      const review = localizedReview(baseReview);
+  const grid = document.getElementById("commissionLeaderboard");
+  if (!grid) return;
+  const podiumOrder = [2, 1, 3];
+  grid.innerHTML = podiumOrder
+    .map((rank) => {
+      const leader = commissionLeaders.find((item) => item.rank === rank);
       return `
-        <article class="review-card review-level-${review.level.toLowerCase()}" data-level="${review.level}">
-          <span class="rank-identity">${rankMedalMarkup(review.level, "small")}<strong>${levelLabel(review.level)}</strong></span>
-          <blockquote>${review.quote}</blockquote>
-          <div class="review-author">
-            <img class="review-avatar" src="${reviewAvatars[review.level]}" alt="" width="400" height="400" loading="lazy" />
-            <div><strong>${review.name}</strong><span>${review.role}</span></div>
+        <article class="leaderboard-card leaderboard-${leader.podium}" data-rank="${leader.rank}">
+          <div class="leader-medal" aria-label="${leader.medal}" role="img"><span>${leader.rank}</span></div>
+          <div class="leader-avatar leader-avatar-${leader.avatar}" aria-hidden="true">
+            <span class="avatar-hair"></span>
+            <span class="avatar-face"></span>
+            <span class="avatar-neck"></span>
+            <span class="avatar-body"></span>
           </div>
+          <div class="leader-copy">
+            <span class="leader-rank">No. ${leader.rank}</span>
+            <h3>${leader.name}</h3>
+            <p>${leader.country}</p>
+          </div>
+          <div class="leader-commission">
+            <span>Commission</span>
+            <strong>${leader.commission}</strong>
+          </div>
+          <div class="podium-base" aria-hidden="true"><span>${leader.rank}</span></div>
         </article>
       `;
     })
     .join("");
+  observeRevealables(grid);
 }
 
 function renderPricing() {
@@ -3047,7 +3060,7 @@ function initLinks() {
 
 function observeRevealables(root = document) {
   if (!revealObserver) return;
-  root.querySelectorAll?.(".section-heading, .path-intro, .signal-item, .order-card, .profile-card, .price-card, .review-card").forEach((node) => {
+  root.querySelectorAll?.(".section-heading, .path-intro, .signal-item, .order-card, .profile-card, .price-card, .review-card, .leaderboard-card, .partner-thanks").forEach((node) => {
     if (node.dataset.revealObserved === "true") return;
     node.dataset.revealObserved = "true";
     node.classList.add("reveal-ready");
