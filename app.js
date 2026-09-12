@@ -2828,13 +2828,16 @@ function setupEvents() {
   });
   const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
   const mobileMenuPanel = document.querySelector(".mobile-menu-panel");
+  let lastMobileMenuTouchAt = 0;
   const closeMobileMenu = () => {
     if (!mobileMenuToggle || !mobileMenuPanel) return;
     mobileMenuPanel.hidden = true;
     mobileMenuPanel.classList.remove("is-open");
     mobileMenuToggle.setAttribute("aria-expanded", "false");
   };
-  mobileMenuToggle?.addEventListener("click", (event) => {
+  const toggleMobileMenu = (event) => {
+    if (event.type === "click" && Date.now() - lastMobileMenuTouchAt < 450) return;
+    if (event.type === "touchend") lastMobileMenuTouchAt = Date.now();
     event.preventDefault();
     event.stopPropagation();
     const open = mobileMenuPanel?.hidden !== false;
@@ -2842,7 +2845,9 @@ function setupEvents() {
     mobileMenuPanel.hidden = !open;
     mobileMenuPanel.classList.toggle("is-open", open);
     mobileMenuToggle.setAttribute("aria-expanded", String(open));
-  });
+  };
+  mobileMenuToggle?.addEventListener("click", toggleMobileMenu);
+  mobileMenuToggle?.addEventListener("touchend", toggleMobileMenu, { passive: false });
 
   document.body.addEventListener("click", (event) => {
     const mobileMenuToggleHit = event.target.closest(".mobile-menu-toggle");

@@ -776,14 +776,19 @@
     const toggle = document.querySelector(".mobile-menu-toggle");
     const panel = document.querySelector(".mobile-menu-panel");
     if (!toggle || !panel) return;
-    toggle.addEventListener("click", (event) => {
+    let lastTouchAt = 0;
+    const toggleMenu = (event) => {
+      if (event.type === "click" && Date.now() - lastTouchAt < 450) return;
+      if (event.type === "touchend") lastTouchAt = Date.now();
       event.preventDefault();
       event.stopPropagation();
       const open = panel.hidden;
       panel.hidden = !open;
       panel.classList.toggle("is-open", open);
       toggle.setAttribute("aria-expanded", String(open));
-    });
+    };
+    toggle.addEventListener("click", toggleMenu);
+    toggle.addEventListener("touchend", toggleMenu, { passive: false });
     document.addEventListener("click", (event) => {
       const toggleHit = event.target.closest(".mobile-menu-toggle");
       const menuHit = event.target.closest(".mobile-menu-panel");
