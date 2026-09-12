@@ -18,52 +18,6 @@
   <body>
     <a class="skip-link" href="#mainContent">Skip to content</a>
 
-    <div class="welcome-overlay" id="welcomeOverlay" aria-live="polite">
-      <span class="welcome-beam welcome-beam-left" aria-hidden="true"></span>
-      <span class="welcome-beam welcome-beam-right" aria-hidden="true"></span>
-      <div class="welcome-grid" aria-hidden="true"></div>
-      <div class="welcome-countdown" aria-label="Welcome animation countdown">
-        <span id="welcomeCountdown">8</span>
-      </div>
-      <button class="welcome-close" id="welcomeClose" type="button" aria-label="Skip welcome animation" data-i18n-aria-label="welcome.skip">&times;</button>
-      <div class="welcome-content">
-        <div class="welcome-sequence" aria-hidden="true">
-          <span data-i18n="welcome.sequenceBoot">BOOT</span>
-          <span data-i18n="welcome.sequenceLearn">LEARN</span>
-          <span data-i18n="welcome.sequenceQualify">QUALIFY</span>
-          <span data-i18n="welcome.sequenceDeliver">DELIVER</span>
-        </div>
-        <div class="welcome-logo-wrap">
-          <img class="welcome-logo" src="assets/hour-ai-logo.svg" alt="Hour AI" width="96" height="96" />
-          <span class="welcome-orbit welcome-orbit-one" aria-hidden="true"></span>
-          <span class="welcome-orbit welcome-orbit-two" aria-hidden="true"></span>
-        </div>
-        <p class="welcome-kicker" data-i18n="welcome.kicker">Hour AI delivery system online</p>
-        <h2 class="welcome-headline" aria-label="The AI learning and continuous-commission delivery system you have never seen before.">
-          <span data-welcome-line="0" data-text="The AI Learning">The AI Learning</span>
-          <span data-welcome-line="1" data-text="and Continuous-Commission">and Continuous-Commission</span>
-          <span data-welcome-line="2" data-text="Delivery System">Delivery System</span>
-          <span data-welcome-line="3" data-text="You Have Never Seen Before.">You Have Never Seen Before.</span>
-        </h2>
-        <p class="welcome-line" data-i18n="welcome.line">Train, qualify, deliver AI work, and join a system built for recurring task commissions.</p>
-        <div class="welcome-chips" aria-hidden="true">
-          <span data-i18n="welcome.chipLearning">AI LEARNING</span>
-          <span data-i18n="welcome.chipOrders">ORDER ACCESS</span>
-          <span data-i18n="welcome.chipCommission">COMMISSION FLOW</span>
-        </div>
-        <div class="welcome-flow" aria-hidden="true">
-          <span><b>01</b> <em data-i18n="welcome.flowTrain">Train</em></span>
-          <i></i>
-          <span><b>02</b> <em data-i18n="welcome.flowTest">Test</em></span>
-          <i></i>
-          <span><b>03</b> <em data-i18n="welcome.flowOrders">Orders</em></span>
-          <i></i>
-          <span><b>04</b> <em data-i18n="welcome.flowCommission">Commission</em></span>
-        </div>
-        <div class="welcome-scan" aria-hidden="true"><span></span></div>
-      </div>
-    </div>
-
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="#top" aria-label="Hour AI home">
@@ -631,6 +585,6 @@
     </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="app.js?v=20260912-support-speed"></script>
+    <script src="app.js?v=20260912-greeting-no-welcome"></script>
   </body>
 </html>

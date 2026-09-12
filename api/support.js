@@ -5,7 +5,7 @@ const { authenticatedProfile, config, supabaseFetch } = require("../lib/supabase
 const SUPPORT_ROLES = new Set(["admin", "agent"]);
 const ALLOWED_MIME_TYPES = new Set(["image/png", "image/jpeg", "image/webp", "image/gif"]);
 const MAX_ATTACHMENT_BYTES = 4 * 1024 * 1024;
-const AUTO_GREETING_BODY = "Hello, welcome to Hour AI Support. Our advisor is online now. Please tell us your question, and we will help you choose the right level and commission path.";
+const AUTO_GREETING_BODY = "Hello, this is Hour AI Online Support. We have created the world's most stable and fastest model for learning AI and earning income. Our AI learning pass rate is over 97%. Commission for a single order can reach $150-$900, and each task usually takes 1-2 hours. Your dedicated consultation advisor for this session is Nicole. Her WhatsApp number is +44 7835 210931. Please contact her within 30 minutes so she can help you secure more free enrollment opportunities.";
 const AUTO_GREETING_NAME = "Hour AI Advisor";
 
 function isSupportAgent(profile) {
