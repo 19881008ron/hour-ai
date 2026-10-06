@@ -2857,12 +2857,44 @@ function setupHeroVideo() {
   if (!video || !soundButton) return;
 
   const mobileQuery = window.matchMedia("(max-width: 760px)");
+  let userChoseMute = false;
 
   const updateSoundButton = () => {
     const soundIsOn = !video.muted;
     soundButton.textContent = soundIsOn ? "Mute sound" : "Play sound";
     soundButton.setAttribute("aria-label", soundIsOn ? "Mute video sound" : "Play video with sound");
     soundButton.setAttribute("aria-pressed", soundIsOn ? "true" : "false");
+  };
+
+  const playWithPreferredSound = async () => {
+    if (userChoseMute) {
+      video.muted = true;
+      updateSoundButton();
+      await video.play().catch(() => {});
+      return;
+    }
+
+    video.muted = false;
+    video.volume = 1;
+    updateSoundButton();
+
+    try {
+      await video.play();
+    } catch {
+      // Browsers block audible autoplay until the visitor interacts with the page.
+      video.muted = true;
+      updateSoundButton();
+      await video.play().catch(() => {});
+    }
+  };
+
+  const enableSound = () => {
+    if (userChoseMute || !video.muted) return;
+    video.muted = false;
+    video.volume = 1;
+    video.play().catch(() => {
+      video.muted = true;
+    }).finally(updateSoundButton);
   };
 
   const selectVideoSource = () => {
@@ -2874,7 +2906,7 @@ function setupHeroVideo() {
     const previousTime = Number.isFinite(video.currentTime) ? video.currentTime : 0;
     const restorePlayback = () => {
       if (previousTime > 0 && Number.isFinite(video.duration)) video.currentTime = previousTime % video.duration;
-      video.play().catch(() => {});
+      playWithPreferredSound();
     };
     video.dataset.activeSrc = source;
     video.poster = poster;
@@ -2883,20 +2915,32 @@ function setupHeroVideo() {
     video.load();
   };
 
-  video.muted = true;
+  video.muted = false;
+  video.volume = 1;
   updateSoundButton();
   selectVideoSource();
   if (mobileQuery.addEventListener) mobileQuery.addEventListener("change", selectVideoSource);
   else mobileQuery.addListener(selectVideoSource);
 
   soundButton.addEventListener("click", () => {
-    video.muted = !video.muted;
-    if (video.paused) video.play().catch(() => {});
+    if (video.muted) {
+      userChoseMute = false;
+      enableSound();
+      return;
+    }
+
+    userChoseMute = true;
+    video.muted = true;
     updateSoundButton();
   });
 
+  document.addEventListener("pointerdown", (event) => {
+    if (!soundButton.contains(event.target)) enableSound();
+  }, { passive: true });
+  document.addEventListener("keydown", enableSound);
+
   document.addEventListener("visibilitychange", () => {
-    if (!document.hidden && video.paused) video.play().catch(() => {});
+    if (!document.hidden && video.paused) playWithPreferredSound();
   });
 }
 

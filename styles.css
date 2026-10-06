@@ -1832,10 +1832,10 @@ body.welcome-open {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(480px, 1.1fr);
+  grid-template-columns: minmax(0, 0.72fr) minmax(560px, 1.28fr);
   align-items: center;
-  gap: clamp(38px, 6vw, 84px);
-  width: min(100%, var(--content));
+  gap: clamp(38px, 4vw, 68px);
+  width: min(100%, 1680px);
   min-height: 620px;
   margin: 0 auto;
 }
@@ -15112,7 +15112,12 @@ html body .leader-proof {
 }
 
 @media (max-width: 760px) {
+  .hero-copy {
+    order: 2;
+  }
+
   .hero-video-shell {
+    order: 1;
     width: min(100%, 520px);
     margin-inline: auto;
     aspect-ratio: 9 / 16;
