@@ -1726,12 +1726,6 @@ Object.keys(translations).forEach((language) => {
   if (!supportedLanguages.includes(language)) delete translations[language];
 });
 
-const carouselSlides = [
-  { src: "assets/carousel-learn.webp" },
-  { src: "assets/carousel-test.webp" },
-  { src: "assets/carousel-apply.webp" }
-];
-
   const levelImages = {
     C: "assets/order-level-c.webp",
     B: "assets/order-level-b.webp",
@@ -1740,11 +1734,11 @@ const carouselSlides = [
 
   const orderImages = {
     c1: "assets/order-level-c.webp",
-    c2: "assets/carousel-apply.webp",
+    c2: "assets/order-level-c.webp",
     b1: "assets/order-level-b.webp",
-    b2: "assets/carousel-test.webp",
+    b2: "assets/order-level-b.webp",
     a1: "assets/order-level-a.webp",
-    a2: "assets/carousel-learn.webp"
+    a2: "assets/order-level-a.webp"
   };
 
   function orderImageSrc(order) {
@@ -1806,8 +1800,6 @@ const cryptoOnrampPlatforms = [
 let currentLanguage = "en";
 let lastFocusedElement = null;
 let toastTimer = null;
-let activeCarouselIndex = 0;
-let carouselTimer = null;
 let captchaToken = null;
 let selectedPaymentPlan = null;
 let activeProfile = null;
@@ -1915,7 +1907,6 @@ function applyTranslations() {
   renderOrders();
   renderReviews();
   renderPricing();
-  updateCarousel(activeCarouselIndex, false);
   initLinks();
   if (activeProfile && !document.getElementById("accountDashboard").hidden) showAccount(activeProfile);
 
@@ -2860,72 +2851,53 @@ function showToast(message) {
   toastTimer = window.setTimeout(() => toast.classList.remove("is-visible"), 3000);
 }
 
-function updateCarousel(index, animate = true) {
-  activeCarouselIndex = (index + carouselSlides.length) % carouselSlides.length;
-  const image = document.getElementById("carouselImage");
-  const slideText = t(`hero.carousel.${activeCarouselIndex}`);
-  const applySlide = () => {
-    image.src = carouselSlides[activeCarouselIndex].src;
-    image.alt = slideText.alt;
-    document.getElementById("carouselLabel").textContent = slideText.label;
-    document.getElementById("carouselTitle").textContent = slideText.title;
-    document.querySelectorAll(".carousel-dot").forEach((dot, dotIndex) => {
-      dot.classList.toggle("is-active", dotIndex === activeCarouselIndex);
-      dot.setAttribute("aria-current", dotIndex === activeCarouselIndex ? "true" : "false");
-    });
-    image.classList.remove("is-changing");
+function setupHeroVideo() {
+  const video = document.getElementById("heroPromoVideo");
+  const soundButton = document.getElementById("heroVideoSound");
+  if (!video || !soundButton) return;
+
+  const mobileQuery = window.matchMedia("(max-width: 760px)");
+
+  const updateSoundButton = () => {
+    const soundIsOn = !video.muted;
+    soundButton.textContent = soundIsOn ? "Mute sound" : "Play sound";
+    soundButton.setAttribute("aria-label", soundIsOn ? "Mute video sound" : "Play video with sound");
+    soundButton.setAttribute("aria-pressed", soundIsOn ? "true" : "false");
   };
-  if (animate) {
-    image.classList.add("is-changing");
-    window.setTimeout(applySlide, 120);
-  } else {
-    applySlide();
-  }
-}
 
-function resetCarouselTimer() {
-  window.clearInterval(carouselTimer);
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const intervalMs = window.matchMedia("(max-width: 1024px)").matches ? 2000 : 5500;
-  carouselTimer = window.setInterval(() => updateCarousel(activeCarouselIndex + 1), intervalMs);
-}
+  const selectVideoSource = () => {
+    const source = mobileQuery.matches ? video.dataset.mobileSrc : video.dataset.desktopSrc;
+    const poster = mobileQuery.matches
+      ? "assets/homepage/hour-ai-promo-mobile-poster.webp"
+      : "assets/homepage/hour-ai-promo-desktop-poster.webp";
+    if (!source || video.dataset.activeSrc === source) return;
+    const previousTime = Number.isFinite(video.currentTime) ? video.currentTime : 0;
+    const restorePlayback = () => {
+      if (previousTime > 0 && Number.isFinite(video.duration)) video.currentTime = previousTime % video.duration;
+      video.play().catch(() => {});
+    };
+    video.dataset.activeSrc = source;
+    video.poster = poster;
+    video.addEventListener("loadedmetadata", restorePlayback, { once: true });
+    video.src = source;
+    video.load();
+  };
 
-function setupCarousel() {
-  carouselSlides.slice(1).forEach((slide) => {
-    const image = new Image();
-    image.src = slide.src;
+  video.muted = true;
+  updateSoundButton();
+  selectVideoSource();
+  if (mobileQuery.addEventListener) mobileQuery.addEventListener("change", selectVideoSource);
+  else mobileQuery.addListener(selectVideoSource);
+
+  soundButton.addEventListener("click", () => {
+    video.muted = !video.muted;
+    if (video.paused) video.play().catch(() => {});
+    updateSoundButton();
   });
 
-  document.getElementById("carouselPrev").textContent = "‹";
-  document.getElementById("carouselNext").textContent = "›";
-
-  const dots = document.getElementById("carouselDots");
-  dots.innerHTML = carouselSlides
-    .map(
-      (_, index) =>
-        `<button class="carousel-dot${index === 0 ? " is-active" : ""}" type="button" data-carousel-index="${index}" aria-label="Show image ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>`
-    )
-    .join("");
-
-  document.getElementById("carouselPrev").addEventListener("click", () => {
-    updateCarousel(activeCarouselIndex - 1);
-    resetCarouselTimer();
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden && video.paused) video.play().catch(() => {});
   });
-  document.getElementById("carouselNext").addEventListener("click", () => {
-    updateCarousel(activeCarouselIndex + 1);
-    resetCarouselTimer();
-  });
-  dots.addEventListener("click", (event) => {
-    const dot = event.target.closest("[data-carousel-index]");
-    if (!dot) return;
-    updateCarousel(Number(dot.dataset.carouselIndex));
-    resetCarouselTimer();
-  });
-
-  const carousel = document.querySelector(".hero-carousel");
-  carousel.addEventListener("mouseenter", () => window.clearInterval(carouselTimer));
-  carousel.addEventListener("mouseleave", resetCarouselTimer);
-  resetCarouselTimer();
 }
 
 function setupEvents() {
@@ -3174,7 +3146,7 @@ initWelcomeAnimation();
 initLanguageSystem();
 setupEvents();
 openSupportFromIncomingLink();
-setupCarousel();
+setupHeroVideo();
 setupProfile();
 initLinks();
 initBackToTop();

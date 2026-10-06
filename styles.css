@@ -2008,10 +2008,62 @@ body.welcome-open {
 }
 
 .hero-visual {
+  position: relative;
   overflow: hidden;
   background: #12171f;
   border: 1px solid #3a424e;
   box-shadow: 0 34px 90px rgba(0, 0, 0, 0.42);
+}
+
+.hero-video-shell {
+  aspect-ratio: 16 / 9;
+  background: #02070c;
+  border-color: rgba(34, 230, 255, 0.42);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.46), 0 0 0 1px rgba(32, 245, 139, 0.08);
+}
+
+.hero-promo-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-video-shell::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(2, 7, 12, 0.04), transparent 64%, rgba(2, 7, 12, 0.26));
+  content: "";
+}
+
+.hero-video-controls {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+}
+
+.hero-video-control {
+  min-height: 40px;
+  padding: 0 16px;
+  color: #fff;
+  background: rgba(3, 10, 15, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 900;
+  backdrop-filter: blur(12px);
+}
+
+.hero-video-control:hover,
+.hero-video-control[aria-pressed="true"] {
+  color: #06110d;
+  background: var(--green);
+  border-color: var(--green);
 }
 
 .visual-toolbar {
@@ -15056,5 +15108,18 @@ html body .leader-proof {
   html body .profile-layout > .profile-card > .level-meter {
     grid-area: meter !important;
     display: grid !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-video-shell {
+    width: min(100%, 520px);
+    margin-inline: auto;
+    aspect-ratio: 9 / 16;
+  }
+
+  .hero-video-control {
+    min-height: 44px;
+    padding: 0 15px;
   }
 }
