@@ -1392,8 +1392,8 @@ const commissionLeaders = [
   {
     rank: 1,
     podium: "gold",
-    name: "Mohammed Salman",
-    country: "Saudi Arabia",
+    name: "Michael Carter",
+    country: "New York, NY",
     commission: "$13,500",
     medal: "Gold medal",
     avatar: "male-one"
@@ -1401,8 +1401,8 @@ const commissionLeaders = [
   {
     rank: 2,
     podium: "silver",
-    name: "Amal Qubaisi",
-    country: "United Arab Emirates",
+    name: "Jessica Williams",
+    country: "Los Angeles, CA",
     commission: "$10,700",
     medal: "Silver medal",
     avatar: "female"
@@ -1410,8 +1410,8 @@ const commissionLeaders = [
   {
     rank: 3,
     podium: "bronze",
-    name: "Hassan Jameel",
-    country: "Saudi Arabia",
+    name: "Daniel Brooks",
+    country: "Chicago, IL",
     commission: "$9,060",
     medal: "Bronze medal",
     avatar: "male-two"
