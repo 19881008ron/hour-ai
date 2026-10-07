@@ -1,0 +1,260 @@
+/* 2026-10-07 US catalog and compact homepage composition refresh. */
+.hero-ai-assistant-band {
+  margin-bottom: 0 !important;
+  border-bottom: 1px solid rgba(43, 213, 118, 0.28) !important;
+  box-shadow: inset 0 -1px 0 rgba(0, 184, 212, 0.16) !important;
+}
+
+.hero-ai-assistant-band + .signal-strip {
+  margin-top: 0 !important;
+}
+
+@media (min-width: 901px) {
+  html body .commission-leaderboard-section {
+    display: grid !important;
+    grid-template-columns: minmax(420px, 0.46fr) minmax(0, 1.54fr) !important;
+    align-items: center !important;
+    gap: clamp(24px, 3vw, 52px) !important;
+    padding-block: 42px !important;
+  }
+
+  html body .leaderboard-heading {
+    display: block !important;
+    width: auto !important;
+    margin: 0 !important;
+  }
+
+  html body .leaderboard-heading h2 {
+    margin: 18px 0 16px !important;
+    font-size: clamp(34px, 3.1vw, 52px) !important;
+    line-height: 1 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  html body .leaderboard-heading > p {
+    max-width: 38ch !important;
+    margin: 0 !important;
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+
+  html body .commission-podium-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  html body .leaderboard-card,
+  html body .leaderboard-gold,
+  html body .leaderboard-silver,
+  html body .leaderboard-bronze {
+    order: initial !important;
+    grid-template-columns: 76px minmax(0, 1fr) !important;
+    grid-template-rows: auto 1fr auto !important;
+    align-content: center !important;
+    align-items: center !important;
+    justify-items: stretch !important;
+    gap: 10px 13px !important;
+    min-height: 238px !important;
+    padding: 20px 15px 16px !important;
+    border-radius: 12px !important;
+  }
+
+  html body .leader-medal {
+    top: 11px !important;
+    left: 11px !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-width: 2px !important;
+  }
+
+  html body .leader-medal span {
+    font-size: 14px !important;
+  }
+
+  html body .leader-avatar,
+  html body .leaderboard-gold .leader-avatar {
+    grid-column: 1 !important;
+    grid-row: 1 / 3 !important;
+    align-self: center !important;
+    width: 76px !important;
+    margin: 8px 0 0 !important;
+    border-width: 4px !important;
+    box-shadow:
+      0 0 0 5px color-mix(in srgb, var(--podium-color) 17%, transparent),
+      0 14px 30px rgba(0, 0, 0, 0.28) !important;
+  }
+
+  html body .leader-copy {
+    grid-column: 2 !important;
+    grid-row: 1 / 3 !important;
+    align-self: center !important;
+    justify-items: start !important;
+    gap: 5px !important;
+    margin: 8px 0 0 !important;
+    text-align: left !important;
+  }
+
+  html body .leader-copy h3 {
+    font-size: clamp(17px, 1.35vw, 23px) !important;
+    line-height: 1.06 !important;
+  }
+
+  html body .leader-copy p,
+  html body .leader-rank {
+    font-size: 10px !important;
+  }
+
+  html body .leader-commission {
+    grid-column: 1 / -1 !important;
+    grid-row: 3 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 2px 0 0 !important;
+    padding: 10px 12px !important;
+    border-radius: 8px !important;
+  }
+
+  html body .leader-commission strong {
+    font-size: clamp(25px, 2.25vw, 36px) !important;
+  }
+
+  html body .podium-base {
+    display: none !important;
+  }
+
+  html body .commission-leaderboard-section + .path-section {
+    display: block !important;
+    padding-block: 36px !important;
+  }
+
+  html body .path-intro {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.3fr) minmax(310px, 0.8fr) auto !important;
+    grid-template-areas:
+      "eyebrow eyebrow eyebrow"
+      "title text action" !important;
+    align-items: end !important;
+    gap: 8px clamp(22px, 2.4vw, 42px) !important;
+    margin: 0 0 20px !important;
+  }
+
+  html body .path-intro .eyebrow {
+    grid-area: eyebrow !important;
+    margin: 0 !important;
+  }
+
+  html body .path-intro h2 {
+    grid-area: title !important;
+    max-width: 760px !important;
+    margin: 0 !important;
+    font-size: clamp(30px, 3vw, 46px) !important;
+    line-height: 1.02 !important;
+  }
+
+  html body .path-intro > p:not(.eyebrow) {
+    grid-area: text !important;
+    align-self: center !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  html body .path-intro .button {
+    grid-area: action !important;
+    align-self: center !important;
+    white-space: nowrap !important;
+  }
+
+  html body .path-section .profile-layout {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-ai-assistant-band {
+    margin: 0 !important;
+  }
+
+  html body .commission-podium-grid {
+    grid-template-columns: 1fr !important;
+    gap: 9px !important;
+  }
+
+  html body .commission-leaderboard-section .podium-base {
+    display: none !important;
+  }
+
+  html body .leaderboard-gold,
+  html body .leaderboard-silver,
+  html body .leaderboard-bronze {
+    grid-column: auto !important;
+    order: initial !important;
+    grid-template-columns: 62px minmax(0, 1fr) minmax(112px, auto) !important;
+    grid-template-rows: auto !important;
+    gap: 10px !important;
+    min-height: 106px !important;
+    padding: 12px 12px 12px 16px !important;
+  }
+
+  html body .leader-avatar,
+  html body .leaderboard-gold .leader-avatar {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 62px !important;
+  }
+
+  html body .leader-copy,
+  html body .leaderboard-gold .leader-copy,
+  html body .leaderboard-silver .leader-copy,
+  html body .leaderboard-bronze .leader-copy {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+
+  html body .leader-commission,
+  html body .leaderboard-gold .leader-commission,
+  html body .leaderboard-silver .leader-commission,
+  html body .leaderboard-bronze .leader-commission {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  html body .leader-commission strong {
+    font-size: clamp(22px, 6vw, 31px) !important;
+  }
+
+  html body .path-intro {
+    margin-bottom: 16px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  html body .leaderboard-gold,
+  html body .leaderboard-silver,
+  html body .leaderboard-bronze {
+    grid-template-columns: 52px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto !important;
+  }
+
+  html body .leader-avatar,
+  html body .leaderboard-gold .leader-avatar {
+    width: 52px !important;
+  }
+
+  html body .leader-commission,
+  html body .leaderboard-gold .leader-commission,
+  html body .leaderboard-silver .leader-commission,
+  html body .leaderboard-bronze .leader-commission {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    padding-block: 8px !important;
+  }
+}

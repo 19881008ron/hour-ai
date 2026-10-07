@@ -3,7 +3,7 @@
   const languageKey = "hourAiLanguage";
   const languageManualKey = "hourAiLanguageManual";
   const supportUrl = "index.html?support=1#support";
-  const productCatalogUrl = "data/member-products.json?v=20260901";
+  const productCatalogUrl = "data/member-products.json?v=20261007-us-market";
 
   const productImageFallback = "assets/carousel-learn.webp";
   const categoryImagePools = {
@@ -102,11 +102,10 @@
         cSupply: "C supply",
         bSupply: "B supply",
         aSupply: "A supply",
-        retail: "Retail guide",
+        retail: "Amazon reference",
         details: "Reserve for Free",
-        noonEnglish: "English details",
-        noonArabic: "Arabic details",
-        noonUnavailable: "Noon detail link pending",
+        amazonDetails: "View on Amazon",
+        amazonUnavailable: "Amazon detail link pending",
         request: "Request sourcing",
         supplyTitle: "Member supply prices",
         gallery: "Product gallery",
@@ -122,7 +121,7 @@
       categories: {
         all: "All Categories",
         mobile: "Mobile Accessories",
-        fashion: "Fashion & Modest Wear",
+        fashion: "Fashion & Apparel",
         jewelry: "Jewelry & Watches",
         home: "Home & Kitchen",
         furniture: "Furniture & Decor",
@@ -179,11 +178,10 @@
         cSupply: "C级供货价",
         bSupply: "B级供货价",
         aSupply: "A级供货价",
-        retail: "建议零售价",
+        retail: "亚马逊参考价",
         details: "查看详情",
-        noonEnglish: "英文介绍",
-        noonArabic: "阿拉伯语介绍",
-        noonUnavailable: "Noon 详情链接待补充",
+        amazonDetails: "在亚马逊查看",
+        amazonUnavailable: "亚马逊详情链接待补充",
         request: "申请找货",
         supplyTitle: "会员供货价格",
         gallery: "商品图片",
@@ -199,7 +197,7 @@
       categories: {
         all: "全部分类",
         mobile: "手机配件",
-        fashion: "服装与端庄服饰",
+        fashion: "服装与日常穿搭",
         jewelry: "珠宝与手表",
         home: "家居与厨房",
         furniture: "家具与装饰",
@@ -256,11 +254,10 @@
         cSupply: "توريد C",
         bSupply: "توريد B",
         aSupply: "توريد A",
-        retail: "سعر البيع",
+        retail: "سعر أمازون المرجعي",
         details: "عرض التفاصيل",
-        noonEnglish: "تفاصيل باللغة الإنجليزية",
-        noonArabic: "تفاصيل باللغة العربية",
-        noonUnavailable: "رابط تفاصيل نون قيد الإضافة",
+        amazonDetails: "عرض على أمازون",
+        amazonUnavailable: "رابط تفاصيل أمازون قيد الإضافة",
         request: "طلب توريد",
         supplyTitle: "أسعار توريد الأعضاء",
         gallery: "صور المنتج",
@@ -276,7 +273,7 @@
       categories: {
         all: "كل الفئات",
         mobile: "إكسسوارات الجوال",
-        fashion: "أزياء وملابس محتشمة",
+        fashion: "الأزياء والملابس اليومية",
         jewelry: "مجوهرات وساعات",
         home: "المنزل والمطبخ",
         furniture: "أثاث وديكور",
@@ -324,16 +321,16 @@
       ["Bluetooth Tracking Tag Pack", "Travel and daily-use locator tags for bags, keys, and wallets.", "$29-$59", 18]
     ],
     fashion: [
-      ["Premium Modest Wear Set", "Lightweight coordinated outfit for Gulf daily wear and gifting.", "$69-$129", 44],
-      ["Breathable Abaya Collection", "Warm-climate abaya line designed for daily wear and social commerce.", "$79-$139", 49],
-      ["Men's Business Thobe Pack", "Clean formal thobe set for office, travel, and gifting.", "$65-$119", 41],
-      ["Luxury Hijab Bundle", "Soft-fabric hijab set for modest fashion resale.", "$25-$59", 16],
-      ["Kaftan Lounge Set", "Comfort-focused modest lounge set for home and Ramadan-season demand.", "$49-$99", 32],
-      ["Modest Activewear Set", "Covered activewear outfit for fitness, travel, and casual use.", "$55-$109", 35],
-      ["Family Eid Outfit Pack", "Coordinated family clothing bundle for seasonal gift campaigns.", "$89-$179", 59],
-      ["Men's Sandal Retail Set", "Arabic sandal selection for daily wear and travel retail.", "$39-$89", 25],
-      ["Women's Tote & Scarf Set", "Fashion accessory bundle suitable for gift and boutique resale.", "$45-$95", 29],
-      ["Premium Prayer Wear Set", "Comfortable prayer wear bundle for women and gifting occasions.", "$35-$79", 23]
+      ["Unisex Classic Clogs", "Comfortable casual footwear for everyday errands and travel.", "$40-$60", 50],
+      ["Men's Pocket T-Shirt", "A versatile cotton-blend T-shirt for work, weekends, and layering.", "$15-$25", 20],
+      ["Classic Clubmaster Sunglasses", "A recognizable eyewear style for daily wear and gifting.", "$170-$210", 191],
+      ["Women's Fit-and-Flare Midi Dress", "An easy everyday dress for work, dinner, and special occasions.", "$35-$50", 43],
+      ["Men's Stretch Golf Pants", "Comfortable performance pants for golf, travel, and business casual wear.", "$30-$45", 35],
+      ["Women's Packable Puffer Jacket", "A lightweight outer layer for commuting, travel, and cool weather.", "$35-$55", 45],
+      ["Unisex Crossbody Belt Bag", "A compact hands-free bag for errands, travel, and outdoor activities.", "$20-$30", 25],
+      ["Women's Training Shoes", "Supportive athletic footwear for walking, gym sessions, and daily use.", "$80-$110", 95],
+      ["Men's Stretch Cargo Pants", "Practical everyday pants with flexible fabric and utility pockets.", "$30-$45", 35],
+      ["Men's Cotton Stretch Boxer Briefs", "A comfortable multipack for everyday wardrobe replenishment.", "$30-$45", 39]
     ],
     jewelry: [
       ["Smart Luxury Watch", "Lifestyle watch product for gift, fashion, and social commerce sales.", "$79-$149", 51],
@@ -341,7 +338,7 @@
       ["Luxury Watch Display Box", "Retail display product for watches, jewelry, and gift packaging.", "$59-$109", 38],
       ["Men's Steel Bracelet Set", "Daily accessory bundle for men's fashion and gift retail.", "$29-$69", 19],
       ["Pearl Necklace Gift Box", "Elegant gift item for social commerce and boutique resale.", "$45-$95", 29],
-      ["Arabic Initial Pendant Set", "Personalized-style pendant set with strong gifting appeal.", "$35-$79", 23],
+      ["Leather Passcase Wallet", "A practical leather wallet selected for everyday use and gifting.", "$35-$55", 48],
       ["Women's Fashion Watch Pack", "Affordable watch bundle for gift and fashion resale.", "$39-$89", 25],
       ["Travel Jewelry Organizer", "Compact organizer for watches, rings, and earrings.", "$25-$55", 16],
       ["Luxury Cufflink Set", "Men's formal accessory for business and event gifting.", "$35-$75", 23],
@@ -349,7 +346,7 @@
     ],
     home: [
       ["Compact Air Fryer", "High-demand kitchen appliance for family cooking and apartment living.", "$89-$169", 59],
-      ["Arabic Coffee Gift Kit", "Hospitality gift set for homes, offices, and seasonal campaigns.", "$69-$129", 45],
+      ["Insulated Travel Tumbler", "A reusable drink container for commuting, work, and everyday hydration.", "$35-$55", 45],
       ["Electric Kettle Set", "Daily-use kitchen item with broad household demand.", "$29-$69", 19],
       ["Capsule Coffee Machine", "Compact coffee appliance for home and office buyers.", "$99-$199", 68],
       ["Kitchen Storage Organizer", "Practical cabinet and pantry organizer for family kitchens.", "$25-$59", 16],
@@ -377,7 +374,7 @@
       ["Premium Car Vacuum Set", "Portable cleaning bundle for car lifestyle and family buyers.", "$39-$79", 25],
       ["4K Dash Camera", "Driver safety and evidence camera for daily traffic and road trips.", "$59-$129", 39],
       ["Magnetic Phone Car Charger", "Wireless charging mount for navigation and commuting.", "$35-$75", 23],
-      ["Foldable Car Sunshade", "Heat-control accessory for Gulf parking and summer demand.", "$18-$39", 11],
+      ["Foldable Car Sunshade", "Heat-control accessory for outdoor parking and summer driving.", "$18-$39", 11],
       ["Portable Tire Inflator", "Emergency car tool for travel, family cars, and desert trips.", "$45-$89", 29],
       ["Car Trunk Organizer", "Storage organizer for families, road trips, and daily errands.", "$29-$69", 19],
       ["LED Ambient Light Kit", "Interior car styling product for youth and lifestyle buyers.", "$25-$59", 16],
@@ -521,8 +518,7 @@
     const links = rawLinks.marketplace || rawLinks.amazon || rawLinks.noon || rawLinks || {};
     const fallback = fallbackLinks.marketplace || fallbackLinks.amazon || fallbackLinks.noon || fallbackLinks || {};
     return {
-      en: String(links.en || links.english || fallback.en || fallback.english || "").trim(),
-      ar: String(links.ar || links.arabic || fallback.ar || fallback.arabic || "").trim()
+      en: String(links.en || links.english || fallback.en || fallback.english || "").trim()
     };
   }
 
@@ -541,8 +537,8 @@
       desc: localizedBundle(raw?.desc, fallbackDesc),
       specs: {
         en: Array.isArray(raw?.specs?.en) ? raw.specs.en : fallbackSpecs.en,
-        ar: Array.isArray(raw?.specs?.ar) ? raw.specs.ar : fallbackSpecs.ar,
-        zh: Array.isArray(raw?.specs?.zh) ? raw.specs.zh : fallbackSpecs.zh
+        ar: Array.isArray(raw?.specs?.ar) ? raw.specs.ar : (raw?.specs?.en || fallbackSpecs.en),
+        zh: Array.isArray(raw?.specs?.zh) ? raw.specs.zh : (raw?.specs?.en || fallbackSpecs.en)
       },
       retail: raw?.retail || fallback?.retail || "$49-$99",
       prices: {
@@ -583,13 +579,12 @@
 
   function externalLinkButtons(product) {
     const links = normalizeMarketplaceLinks(product.marketplace || product.amazon || product.noon || product.links);
-    if (!links.en && !links.ar) {
-      return `<p class="store-link-pending">${get("store.noonUnavailable")}</p>`;
+    if (!links.en) {
+      return `<p class="store-link-pending">${get("store.amazonUnavailable")}</p>`;
     }
     return `
       <div class="store-external-links" aria-label="External product details">
-        ${links.en ? `<a class="button store-noon-link store-noon-link-en" href="${links.en}" target="_blank" rel="noopener noreferrer">${get("store.noonEnglish")}</a>` : ""}
-        ${links.ar ? `<a class="button store-noon-link store-noon-link-ar" href="${links.ar}" target="_blank" rel="noopener noreferrer">${get("store.noonArabic")}</a>` : ""}
+        <a class="button store-noon-link store-noon-link-en" href="${links.en}" target="_blank" rel="noopener noreferrer">${get("store.amazonDetails")}</a>
       </div>
     `;
   }

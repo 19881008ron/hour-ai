@@ -1983,7 +1983,7 @@ function setupAssistantReadingEffect() {
 function renderReviews() {
   const grid = document.getElementById("commissionLeaderboard");
   if (!grid) return;
-  const podiumOrder = [2, 1, 3];
+  const podiumOrder = [1, 2, 3];
   grid.innerHTML = podiumOrder
     .map((rank) => {
       const leader = commissionLeaders.find((item) => item.rank === rank);
