@@ -93,6 +93,7 @@
         catalogEyebrow: "Choose a category",
         catalogTitle: "Browse member-only resale categories",
         catalogText: "Select a category to view products, compare member supply prices, and open product details with images and sourcing information.",
+        categoryLabel: "Product category",
         emptyTitle: "Choose a category",
         emptyText: "Select any category above to view member-only products.",
         all: "All",
@@ -169,6 +170,7 @@
         catalogEyebrow: "选择商品分类",
         catalogTitle: "浏览会员专供转售分类",
         catalogText: "选择分类即可查看商品、对比会员供货价，并打开详情页查看图片和供货信息。",
+        categoryLabel: "商品分类",
         emptyTitle: "选择分类",
         emptyText: "点击上方任意分类，查看会员专供商品。",
         all: "全部",
@@ -245,6 +247,7 @@
         catalogEyebrow: "اختر فئة",
         catalogTitle: "تصفح فئات إعادة البيع الخاصة بالأعضاء",
         catalogText: "اختر فئة لعرض المنتجات، وقارن أسعار توريد الأعضاء، وافتح تفاصيل المنتج لمشاهدة الصور ومعلومات التوريد.",
+        categoryLabel: "فئة المنتج",
         emptyTitle: "اختر فئة",
         emptyText: "اختر أي فئة أعلاه لعرض منتجات الأعضاء.",
         all: "الكل",
@@ -641,6 +644,7 @@
 
   function renderCategories() {
     const bar = document.getElementById("storeFilterBar");
+    const select = document.getElementById("storeCategorySelect");
     if (!bar) return;
     bar.innerHTML = categoryOrder
       .map((category) => {
@@ -650,6 +654,25 @@
         return `<button class="store-filter${activeCategory === category ? " is-active" : ""}" type="button" data-category="${category}"><span class="store-filter-icon">${categoryIcon(category)}</span><strong>${i18n[currentLanguage].categories[category]}</strong></button>`;
       })
       .join("");
+    if (select) {
+      select.innerHTML = categoryOrder
+        .map((category) => {
+          const label = category === "custom" ? get("store.custom") : i18n[currentLanguage].categories[category];
+          return `<option value="${category}"${activeCategory === category ? " selected" : ""}>${label}</option>`;
+        })
+        .join("");
+      if (!activeCategory) select.selectedIndex = 0;
+      select.onchange = () => {
+        if (select.value === "custom") {
+          window.location.href = supportUrl;
+          return;
+        }
+        activeCategory = select.value;
+        renderCategories();
+        renderProducts();
+        document.getElementById("storeGrid")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+    }
     bar.querySelectorAll("button").forEach((button) => {
       button.addEventListener("click", () => {
         activeCategory = button.dataset.category;

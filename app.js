@@ -1783,8 +1783,9 @@ let supportMessageRequestTokens = new Map();
 let supportNotificationAudio = null;
 let supportNotificationSoundUnlocked = false;
 let orderRotationIndex = 0;
-let orderClaimTimer = null;
+let orderClaimTimers = [];
 let orderSwapTimer = null;
+let assistantReadingTimer = null;
 let revealObserver = null;
 const supportGuestKey = "hourAiSupportGuestId";
 let fallbackSupportGuestId = "";
@@ -1918,21 +1919,23 @@ function renderOrders() {
   observeRevealables(grid);
 }
 
-function showOrderClaimedState() {
-  document.querySelectorAll("#ordersGrid .order-card").forEach((card) => card.classList.add("is-claimed"));
+function showOrderClaimedState(cardIndex) {
+  const card = document.querySelectorAll("#ordersGrid .order-card")[cardIndex];
+  card?.classList.add("is-claimed");
 }
 
 function scheduleOrderRotation() {
-  window.clearTimeout(orderClaimTimer);
+  orderClaimTimers.forEach((timer) => window.clearTimeout(timer));
+  orderClaimTimers = [];
   window.clearTimeout(orderSwapTimer);
-  orderClaimTimer = window.setTimeout(() => {
-    showOrderClaimedState();
-    orderSwapTimer = window.setTimeout(() => {
-      orderRotationIndex = (orderRotationIndex + 1) % 10;
-      renderOrders();
-      scheduleOrderRotation();
-    }, 3000);
-  }, 7000);
+  orderClaimTimers = [0, 1, 2].map((cardIndex) =>
+    window.setTimeout(() => showOrderClaimedState(cardIndex), 7000 + cardIndex * 1000)
+  );
+  orderSwapTimer = window.setTimeout(() => {
+    orderRotationIndex = (orderRotationIndex + 1) % 10;
+    renderOrders();
+    scheduleOrderRotation();
+  }, 10000);
 }
 
 function preloadOrderImages() {
@@ -1945,6 +1948,36 @@ function preloadOrderImages() {
 function startOrderRotation() {
   preloadOrderImages();
   scheduleOrderRotation();
+}
+
+function setupAssistantReadingEffect() {
+  const copy = document.querySelector("[data-reading-copy]");
+  if (!copy || copy.dataset.readingReady === "true") return;
+
+  const sourceText = copy.textContent.trim();
+  const words = sourceText.split(/\s+/);
+  copy.textContent = "";
+  copy.setAttribute("aria-label", sourceText);
+  words.forEach((word, index) => {
+    const span = document.createElement("span");
+    span.className = "assistant-reading-word";
+    span.setAttribute("aria-hidden", "true");
+    span.textContent = `${word}${index === words.length - 1 ? "" : " "}`;
+    copy.appendChild(span);
+  });
+  copy.dataset.readingReady = "true";
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const wordNodes = [...copy.querySelectorAll(".assistant-reading-word")];
+  let activeIndex = 0;
+  const advanceReadingCursor = () => {
+    wordNodes.forEach((word) => word.classList.remove("is-reading"));
+    wordNodes[activeIndex]?.classList.add("is-reading");
+    activeIndex = (activeIndex + 1) % wordNodes.length;
+  };
+  advanceReadingCursor();
+  window.clearInterval(assistantReadingTimer);
+  assistantReadingTimer = window.setInterval(advanceReadingCursor, 190);
 }
 
 function renderReviews() {
@@ -2056,6 +2089,11 @@ function openPayment(level) {
   document.getElementById("paymentCoursePrice").textContent = selectedPaymentPlan.price;
   renderCryptoPlatformList();
   renderCryptoPaymentList();
+  const compactPayment = window.matchMedia("(max-width: 760px)").matches;
+  const onrampDisclosure = document.querySelector("#paymentModal .payment-onramp-disclosure");
+  const cryptoDisclosure = document.querySelector("#paymentModal .payment-crypto-disclosure");
+  if (onrampDisclosure) onrampDisclosure.open = !compactPayment;
+  if (cryptoDisclosure) cryptoDisclosure.open = true;
   openModal("paymentModal");
 }
 
@@ -3031,6 +3069,14 @@ function setupEvents() {
       closeModal("supportModal");
     });
   });
+  document.querySelectorAll("[data-return-home]").forEach((item) => {
+    item.addEventListener("click", () => {
+      window.clearInterval(supportPollTimer);
+      closeModal("supportModal");
+      window.history.replaceState(null, "", `${window.location.pathname}#top`);
+      document.getElementById("top")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
   document.querySelectorAll("[data-close-payment]").forEach((item) => {
     item.addEventListener("click", () => closeModal("paymentModal"));
   });
@@ -3186,4 +3232,5 @@ initBackToTop();
 applyTranslations();
 initMotionSystem();
 applyRegionalLanguagePreference();
+setupAssistantReadingEffect();
 startOrderRotation();

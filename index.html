@@ -12,8 +12,9 @@
     <link rel="icon" type="image/svg+xml" href="assets/hour-ai-logo.svg" />
     <link rel="shortcut icon" href="assets/hour-ai-logo.svg" />
     <link rel="apple-touch-icon" href="assets/hour-ai-logo.svg" />
-    <link rel="stylesheet" href="styles.css?v=20261006-order-rotation" />
+    <link rel="stylesheet" href="styles.css?v=20261007-density-final" />
     <link rel="stylesheet" href="ui-uplift.css?v=20260912-support-speed" />
+    <link rel="stylesheet" href="density-final.css?v=20261007-density-final" />
   </head>
   <body>
     <a class="skip-link" href="#mainContent">Skip to content</a>
@@ -142,8 +143,8 @@
         <div class="hero-ai-assistant-copy">
           <span class="hero-ai-assistant-kicker">Your next advantage</span>
           <h2 id="heroAiAssistantTitle">The AI era will not wait.</h2>
-          <p>
-            Hour AI has created the most complete AI-powered automated earning model to date. If you missed stocks 20 years ago and Bitcoin 10 years ago, do not miss today's AI. After you click, you will have a dedicated assistant that works automatically 24 hours a day, never complains, and follows every instruction.
+          <p class="assistant-reading-copy" data-reading-copy>
+            Hour AI has created the most complete AI-powered automated earning model to date. If you missed stocks 20 years ago and Bitcoin 10 years ago, do not miss today's AI.
           </p>
         </div>
         <a
@@ -153,7 +154,7 @@
           data-support-open-topic="Create my dedicated AI assistant"
         >
           <span>Create Your Dedicated AI Assistant</span>
-          <span class="hero-ai-assistant-arrow" aria-hidden="true">&#8594;</span>
+          <span class="hero-ai-assistant-arrow" aria-hidden="true">&#10140;</span>
         </a>
       </aside>
 
@@ -198,15 +199,13 @@
             <span><i class="rank-medal rank-b rank-medal-tiny" aria-hidden="true"><img class="rank-medal-img" src="assets/rank-b-premium.webp" alt="" aria-hidden="true" decoding="async" loading="lazy"><b class="rank-letter">B</b></i>B-Level</span>
             <span><i class="rank-medal rank-a rank-medal-tiny" aria-hidden="true"><img class="rank-medal-img" src="assets/rank-a-premium.webp" alt="" aria-hidden="true" decoding="async" loading="lazy"><b class="rank-letter">A</b></i>A-Level</span>
           </div>
-        </div>
-        <div class="orders-grid" id="ordersGrid"></div>
-        <p class="order-rotation-note">Illustrative order feed. Actual availability varies.</p>
-        <div class="orders-more-row">
           <button class="button button-more-orders" id="moreOrdersButton" type="button" data-open-support data-support-open-topic="Show me more available orders">
             <span class="more-orders-icon" aria-hidden="true">&#8599;</span>
             <span data-i18n="orders.more">More orders</span>
           </button>
         </div>
+        <div class="orders-grid" id="ordersGrid"></div>
+        <p class="order-rotation-note">Illustrative order feed. Actual availability varies.</p>
       </section>
 
       <section class="section commission-leaderboard-section" id="commissionLeaderboardSection">
@@ -542,7 +541,10 @@
               <small><span class="status-dot" aria-hidden="true"></span><span data-i18n="support.modalIntro">Online now</span></small>
             </span>
           </div>
-          <button class="icon-button support-chat-close" type="button" data-close-support aria-label="Close" data-i18n-aria-label="ui.close">&times;</button>
+          <button class="support-home-button" type="button" data-return-home aria-label="Back to home">
+            <span aria-hidden="true">&#8592;</span>
+            <span>Back to home</span>
+          </button>
         </header>
         <div class="support-chat-box">
           <div class="support-thread" id="supportThread" aria-live="polite"></div>
@@ -584,7 +586,9 @@
         </div>
 
         <div class="payment-method-grid">
-          <article class="payment-method-card onramp-card">
+          <details class="payment-method-disclosure payment-onramp-disclosure" open>
+            <summary><span data-i18n="payment.onrampTitle">Need crypto first?</span><b aria-hidden="true">+</b></summary>
+            <article class="payment-method-card onramp-card">
             <div class="payment-method-top">
               <div class="payment-logo onramp-logo" aria-hidden="true">Buy crypto</div>
               <span class="fee-pill" data-i18n="payment.onrampBadge">Crypto purchase platforms</span>
@@ -598,9 +602,12 @@
               <li data-i18n="payment.onrampStep2">Complete identity verification and buy USDT, BTC, or ETH.</li>
               <li data-i18n="payment.onrampStep3">Return to Hour AI and send payment only through the matching network.</li>
             </ul>
-          </article>
+            </article>
+          </details>
 
-          <article class="payment-method-card crypto-card">
+          <details class="payment-method-disclosure payment-crypto-disclosure" open>
+            <summary><span data-i18n="payment.cryptoTitle">Cryptocurrency</span><b aria-hidden="true">+</b></summary>
+            <article class="payment-method-card crypto-card">
             <div class="payment-method-top">
               <div class="payment-logo crypto-logo" aria-hidden="true">Crypto</div>
               <span class="fee-pill fee-free" data-i18n="payment.cryptoFee">0 processing fee</span>
@@ -608,7 +615,8 @@
             <h3 data-i18n="payment.cryptoTitle">Cryptocurrency</h3>
             <p data-i18n="payment.cryptoText">Copy the matching address after buying crypto. Always use the exact network shown.</p>
             <div class="crypto-list" id="cryptoPaymentList"></div>
-          </article>
+            </article>
+          </details>
         </div>
 
         <p class="payment-disclaimer">
@@ -618,6 +626,6 @@
     </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="app.js?v=20261006-order-rotation"></script>
+    <script src="app.js?v=20261007-density-final-2"></script>
   </body>
 </html>
