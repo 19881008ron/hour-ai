@@ -3,7 +3,7 @@
   const languageKey = "hourAiLanguage";
   const languageManualKey = "hourAiLanguageManual";
   const supportUrl = "index.html?support=1#support";
-  const productCatalogUrl = "data/member-products.json?v=20261007-us-market";
+  const productCatalogUrl = "data/member-products.json?v=20261007-assistant-v6";
 
   const productImageFallback = "assets/carousel-learn.webp";
   const categoryImagePools = {
@@ -102,10 +102,12 @@
         cSupply: "C supply",
         bSupply: "B supply",
         aSupply: "A supply",
-        retail: "Amazon reference",
+        retail: "Market reference",
         details: "Reserve for Free",
-        amazonDetails: "View on Amazon",
-        amazonUnavailable: "Amazon detail link pending",
+        productInformation: "Product Information",
+        productId: "Product ID",
+        marketReference: "Market reference",
+        backHourAi: "BACK Hour AI",
         request: "Request sourcing",
         supplyTitle: "Member supply prices",
         gallery: "Product gallery",
@@ -178,10 +180,12 @@
         cSupply: "C级供货价",
         bSupply: "B级供货价",
         aSupply: "A级供货价",
-        retail: "亚马逊参考价",
+        retail: "市场参考价",
         details: "查看详情",
-        amazonDetails: "在亚马逊查看",
-        amazonUnavailable: "亚马逊详情链接待补充",
+        productInformation: "商品信息",
+        productId: "商品编号",
+        marketReference: "市场参考价",
+        backHourAi: "返回 Hour AI",
         request: "申请找货",
         supplyTitle: "会员供货价格",
         gallery: "商品图片",
@@ -254,10 +258,12 @@
         cSupply: "توريد C",
         bSupply: "توريد B",
         aSupply: "توريد A",
-        retail: "سعر أمازون المرجعي",
+        retail: "السعر المرجعي في السوق",
         details: "عرض التفاصيل",
-        amazonDetails: "عرض على أمازون",
-        amazonUnavailable: "رابط تفاصيل أمازون قيد الإضافة",
+        productInformation: "معلومات المنتج",
+        productId: "معرف المنتج",
+        marketReference: "السعر المرجعي في السوق",
+        backHourAi: "العودة إلى Hour AI",
         request: "طلب توريد",
         supplyTitle: "أسعار توريد الأعضاء",
         gallery: "صور المنتج",
@@ -514,14 +520,6 @@
     return cleanImages.length ? cleanImages : fallbackImages;
   }
 
-  function normalizeMarketplaceLinks(rawLinks = {}, fallbackLinks = {}) {
-    const links = rawLinks.marketplace || rawLinks.amazon || rawLinks.noon || rawLinks || {};
-    const fallback = fallbackLinks.marketplace || fallbackLinks.amazon || fallbackLinks.noon || fallbackLinks || {};
-    return {
-      en: String(links.en || links.english || fallback.en || fallback.english || "").trim()
-    };
-  }
-
   function normalizeExternalProduct(raw, index, generatedProduct) {
     const fallback = generatedProduct || products[index] || products[0];
     const category = categoryKeys.includes(raw?.category) ? raw.category : fallback.category;
@@ -545,8 +543,7 @@
         C: prices.C || fallback?.prices?.C || "$30",
         B: prices.B || fallback?.prices?.B || "$24",
         A: prices.A || fallback?.prices?.A || "$18"
-      },
-      marketplace: normalizeMarketplaceLinks(raw?.marketplace || raw?.amazon || raw?.noon || raw?.links, fallback?.marketplace || fallback?.amazon || fallback?.noon || fallback?.links)
+      }
     };
   }
 
@@ -575,18 +572,6 @@
 
   function localized(value) {
     return value[currentLanguage] || value.en || "";
-  }
-
-  function externalLinkButtons(product) {
-    const links = normalizeMarketplaceLinks(product.marketplace || product.amazon || product.noon || product.links);
-    if (!links.en) {
-      return `<p class="store-link-pending">${get("store.amazonUnavailable")}</p>`;
-    }
-    return `
-      <div class="store-external-links" aria-label="External product details">
-        <a class="button store-noon-link store-noon-link-en" href="${links.en}" target="_blank" rel="noopener noreferrer">${get("store.amazonDetails")}</a>
-      </div>
-    `;
   }
 
   function categoryIcon(category) {
@@ -794,14 +779,21 @@
           <p class="section-kicker">${product.id} / ${i18n[currentLanguage].categories[product.category]}</p>
           <h2 id="storeDetailTitle">${localized(product.title)}</h2>
           <p>${localized(product.desc)}</p>
-          <div class="store-spec-list">${localized(product.specs).map((spec) => `<span>${spec}</span>`).join("")}</div>
           <h3>${get("store.supplyTitle")}</h3>
           <div class="store-price-grid store-price-grid-large">
-            <div><span>${get("store.cSupply")}</span><strong>${product.prices.C}</strong></div>
-            <div><span>${get("store.bSupply")}</span><strong>${product.prices.B}</strong></div>
-            <div><span>${get("store.aSupply")}</span><strong>${product.prices.A}</strong></div>
+            <div class="store-price-tier store-price-tier-c"><span>${get("store.cSupply")}</span><strong>${product.prices.C}</strong></div>
+            <div class="store-price-tier store-price-tier-b"><span>${get("store.bSupply")}</span><strong>${product.prices.B}</strong></div>
+            <div class="store-price-tier store-price-tier-a"><span>${get("store.aSupply")}</span><strong>${product.prices.A}</strong></div>
           </div>
-          ${externalLinkButtons(product)}
+          <div class="store-information-actions">
+            <button class="button store-product-info-button" type="button" data-product-information aria-expanded="false">${get("store.productInformation")}</button>
+            <button class="button store-back-hour-ai" type="button" data-back-hour-ai>${get("store.backHourAi")}</button>
+          </div>
+          <div class="store-local-product-info" data-product-information-panel hidden>
+            <div><span>${get("store.productId")}</span><strong>${product.id}</strong></div>
+            <div><span>${get("store.categoryLabel")}</span><strong>${i18n[currentLanguage].categories[product.category]}</strong></div>
+            <div><span>${get("store.marketReference")}</span><strong>${product.retail}</strong></div>
+          </div>
           <a class="button button-primary store-request-button" href="${supportUrl}">${get("store.request")}</a>
           <div class="store-profit-box">
             <strong>${get("store.profitTitle")}</strong>
@@ -822,6 +814,14 @@
         if (mainImage) mainImage.src = button.dataset.detailImage;
       });
     });
+    const informationButton = body.querySelector("[data-product-information]");
+    const informationPanel = body.querySelector("[data-product-information-panel]");
+    informationButton?.addEventListener("click", () => {
+      const expanded = informationButton.getAttribute("aria-expanded") === "true";
+      informationButton.setAttribute("aria-expanded", String(!expanded));
+      if (informationPanel) informationPanel.hidden = expanded;
+    });
+    body.querySelector("[data-back-hour-ai]")?.addEventListener("click", closeDetail);
     overlay.hidden = false;
     document.body.classList.add("store-modal-open");
   }

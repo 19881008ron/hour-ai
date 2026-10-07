@@ -2,11 +2,11 @@
   "updatedAt": "2026-10-07",
   "market": "United States",
   "audience": "Adults ages 30-50, women and men",
-  "source": "Curated from Amazon.com U.S. shopping demand and category bestseller signals. Reference prices are rounded catalog snapshots and may change on Amazon.",
+  "source": "Curated for current U.S. shopping demand among adults ages 30-50. Reference prices are rounded catalog snapshots and may change.",
   "pricingPolicy": {
-    "C": "Rounded Amazon reference price / 3",
-    "B": "Rounded Amazon reference price / 4",
-    "A": "Rounded Amazon reference price / 5"
+    "C": "Rounded market reference price / 3",
+    "B": "Rounded market reference price / 4",
+    "A": "Rounded market reference price / 5"
   },
   "products": [
     {
@@ -23,28 +23,18 @@
       "desc": {
         "en": "A practical everyday tech accessory selected for high-intent U.S. mobile shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$40",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 40,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 40,
       "prices": {
         "C": "$13",
         "B": "$10",
         "A": "$8"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0C5975H8M"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -61,28 +51,18 @@
       "desc": {
         "en": "A practical everyday tech accessory selected for high-intent U.S. mobile shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$45",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 45,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 45,
       "prices": {
         "C": "$15",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B09DRMV91Y"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -99,28 +79,18 @@
       "desc": {
         "en": "A practical everyday tech accessory selected for high-intent U.S. mobile shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$60",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 60,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 60,
       "prices": {
         "C": "$20",
         "B": "$15",
         "A": "$12"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0D8KH4LNB"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -137,28 +107,18 @@
       "desc": {
         "en": "A practical everyday tech accessory selected for high-intent U.S. mobile shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$18",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 18,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 18,
       "prices": {
         "C": "$6",
         "B": "$5",
         "A": "$4"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0DNQVVVJT"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -175,28 +135,18 @@
       "desc": {
         "en": "A practical everyday tech accessory selected for high-intent U.S. mobile shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$30",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 30,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 30,
       "prices": {
         "C": "$10",
         "B": "$8",
         "A": "$6"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0DM1RGZHD"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -213,28 +163,18 @@
       "desc": {
         "en": "A practical everyday tech accessory selected for high-intent U.S. mobile shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$70",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 70,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 70,
       "prices": {
         "C": "$23",
         "B": "$18",
         "A": "$14"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0F8FB3ZB6"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -251,28 +191,18 @@
       "desc": {
         "en": "A practical everyday tech accessory selected for high-intent U.S. mobile shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$25",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 25,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 25,
       "prices": {
         "C": "$8",
         "B": "$6",
         "A": "$5"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0F48HV99S"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -289,28 +219,18 @@
       "desc": {
         "en": "A practical everyday tech accessory selected for high-intent U.S. mobile shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$45",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 45,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 45,
       "prices": {
         "C": "$15",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0DGGKSV1X"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -327,28 +247,18 @@
       "desc": {
         "en": "A practical everyday tech accessory selected for high-intent U.S. mobile shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$50",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 50,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 50,
       "prices": {
         "C": "$17",
         "B": "$13",
         "A": "$10"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0DSZKKJTK"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -365,28 +275,18 @@
       "desc": {
         "en": "A practical everyday tech accessory selected for high-intent U.S. mobile shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$29",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 29,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 29,
       "prices": {
         "C": "$10",
         "B": "$7",
         "A": "$6"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0F37QGJHP"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -403,66 +303,46 @@
       "desc": {
         "en": "A versatile U.S. wardrobe item selected for broad everyday demand among adult shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$50",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 50,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 50,
       "prices": {
         "C": "$17",
         "B": "$13",
         "A": "$10"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0014C0LUC"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
       "id": "US-FASHION-002",
       "category": "fashion",
-      "productType": "Amazon Essentials Men's Pocket T-Shirt",
+      "productType": "Men's Everyday Pocket T-Shirt",
       "asin": "B0CD86ZVRS",
       "images": [
         "https://m.media-amazon.com/images/I/71a1XwGxVqL._AC_SL1500_.jpg"
       ],
       "title": {
-        "en": "Amazon Essentials Men's Pocket T-Shirt"
+        "en": "Men's Everyday Pocket T-Shirt"
       },
       "desc": {
         "en": "A versatile U.S. wardrobe item selected for broad everyday demand among adult shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$20",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 20,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 20,
       "prices": {
         "C": "$7",
         "B": "$5",
         "A": "$4"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CD86ZVRS"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -479,142 +359,102 @@
       "desc": {
         "en": "A versatile U.S. wardrobe item selected for broad everyday demand among adult shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$191",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 191,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 191,
       "prices": {
         "C": "$64",
         "B": "$48",
         "A": "$38"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B001GNBJQO"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
       "id": "US-FASHION-004",
       "category": "fashion",
-      "productType": "Amazon Essentials Women's Fit-and-Flare Midi Dress",
+      "productType": "Women's Fit-and-Flare Midi Dress",
       "asin": "B0CHVQNDBS",
       "images": [
         "https://m.media-amazon.com/images/I/61eKet1hbML._AC_SL1500_.jpg"
       ],
       "title": {
-        "en": "Amazon Essentials Women's Fit-and-Flare Midi Dress"
+        "en": "Women's Fit-and-Flare Midi Dress"
       },
       "desc": {
         "en": "A versatile U.S. wardrobe item selected for broad everyday demand among adult shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$43",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 43,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 43,
       "prices": {
         "C": "$14",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CHVQNDBS"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
       "id": "US-FASHION-005",
       "category": "fashion",
-      "productType": "Amazon Essentials Men's Stretch Golf Pants",
+      "productType": "Men's Stretch Golf Pants",
       "asin": "B096YL22VY",
       "images": [
         "https://m.media-amazon.com/images/I/81OiWtrGajL._AC_SL1500_.jpg"
       ],
       "title": {
-        "en": "Amazon Essentials Men's Stretch Golf Pants"
+        "en": "Men's Stretch Golf Pants"
       },
       "desc": {
         "en": "A versatile U.S. wardrobe item selected for broad everyday demand among adult shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$35",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 35,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 35,
       "prices": {
         "C": "$12",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B096YL22VY"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
       "id": "US-FASHION-006",
       "category": "fashion",
-      "productType": "Amazon Essentials Women's Packable Puffer Jacket",
+      "productType": "Women's Packable Puffer Jacket",
       "asin": "B07C8VJP3L",
       "images": [
         "https://m.media-amazon.com/images/I/71COVlkiXGL._AC_SL1500_.jpg"
       ],
       "title": {
-        "en": "Amazon Essentials Women's Packable Puffer Jacket"
+        "en": "Women's Packable Puffer Jacket"
       },
       "desc": {
         "en": "A versatile U.S. wardrobe item selected for broad everyday demand among adult shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$45",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 45,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 45,
       "prices": {
         "C": "$15",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B07C8VJP3L"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -631,28 +471,18 @@
       "desc": {
         "en": "A versatile U.S. wardrobe item selected for broad everyday demand among adult shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$25",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 25,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 25,
       "prices": {
         "C": "$8",
         "B": "$6",
         "A": "$5"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CJCS7PG5"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -669,66 +499,46 @@
       "desc": {
         "en": "A versatile U.S. wardrobe item selected for broad everyday demand among adult shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$95",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 95,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 95,
       "prices": {
         "C": "$32",
         "B": "$24",
         "A": "$19"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B01HIJHFVC"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
       "id": "US-FASHION-009",
       "category": "fashion",
-      "productType": "Amazon Essentials Men's Stretch Cargo Pants",
+      "productType": "Men's Stretch Cargo Pants",
       "asin": "B07F2B48TY",
       "images": [
         "https://m.media-amazon.com/images/I/71ZKBS7up7L._AC_SL1500_.jpg"
       ],
       "title": {
-        "en": "Amazon Essentials Men's Stretch Cargo Pants"
+        "en": "Men's Stretch Cargo Pants"
       },
       "desc": {
         "en": "A versatile U.S. wardrobe item selected for broad everyday demand among adult shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$35",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 35,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 35,
       "prices": {
         "C": "$12",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B07F2B48TY"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -745,28 +555,18 @@
       "desc": {
         "en": "A versatile U.S. wardrobe item selected for broad everyday demand among adult shoppers."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$39",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 39,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 39,
       "prices": {
         "C": "$13",
         "B": "$10",
         "A": "$8"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B08N5Y8TP5"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -783,28 +583,18 @@
       "desc": {
         "en": "A giftable personal accessory selected for practical everyday use and year-round demand."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$120",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 120,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 120,
       "prices": {
         "C": "$40",
         "B": "$30",
         "A": "$24"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B07BS3LCP1"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -821,28 +611,18 @@
       "desc": {
         "en": "A giftable personal accessory selected for practical everyday use and year-round demand."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$50",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 50,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 50,
       "prices": {
         "C": "$17",
         "B": "$13",
         "A": "$10"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B015ZXPZUG"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -859,28 +639,18 @@
       "desc": {
         "en": "A giftable personal accessory selected for practical everyday use and year-round demand."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$64",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 64,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 64,
       "prices": {
         "C": "$21",
         "B": "$16",
         "A": "$13"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B01MFG732O"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -897,28 +667,18 @@
       "desc": {
         "en": "A giftable personal accessory selected for practical everyday use and year-round demand."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$59",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 59,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 59,
       "prices": {
         "C": "$20",
         "B": "$15",
         "A": "$12"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B00A2ERBSS"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -935,28 +695,18 @@
       "desc": {
         "en": "A giftable personal accessory selected for practical everyday use and year-round demand."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$45",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 45,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 45,
       "prices": {
         "C": "$15",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B079C94BMZ"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -973,28 +723,18 @@
       "desc": {
         "en": "A giftable personal accessory selected for practical everyday use and year-round demand."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$48",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 48,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 48,
       "prices": {
         "C": "$16",
         "B": "$12",
         "A": "$10"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B019MNBMS4"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1011,28 +751,18 @@
       "desc": {
         "en": "A giftable personal accessory selected for practical everyday use and year-round demand."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$85",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 85,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 85,
       "prices": {
         "C": "$28",
         "B": "$21",
         "A": "$17"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0BS3TFFJY"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1049,28 +779,18 @@
       "desc": {
         "en": "A giftable personal accessory selected for practical everyday use and year-round demand."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$34",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 34,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 34,
       "prices": {
         "C": "$11",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B000J39T2S"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1087,28 +807,18 @@
       "desc": {
         "en": "A giftable personal accessory selected for practical everyday use and year-round demand."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$49",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 49,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 49,
       "prices": {
         "C": "$16",
         "B": "$12",
         "A": "$10"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CCSC9GP3"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1125,28 +835,18 @@
       "desc": {
         "en": "A giftable personal accessory selected for practical everyday use and year-round demand."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$35",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 35,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 35,
       "prices": {
         "C": "$12",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B08WGB2RFN"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1163,28 +863,18 @@
       "desc": {
         "en": "A useful home and kitchen item selected for routine U.S. household purchasing."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$80",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 80,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 80,
       "prices": {
         "C": "$27",
         "B": "$20",
         "A": "$16"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CY226XY8"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1201,28 +891,18 @@
       "desc": {
         "en": "A useful home and kitchen item selected for routine U.S. household purchasing."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$45",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 45,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 45,
       "prices": {
         "C": "$15",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CNY612G6"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1239,28 +919,18 @@
       "desc": {
         "en": "A useful home and kitchen item selected for routine U.S. household purchasing."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$50",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 50,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 50,
       "prices": {
         "C": "$17",
         "B": "$13",
         "A": "$10"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0D2HC9VL7"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1277,28 +947,18 @@
       "desc": {
         "en": "A useful home and kitchen item selected for routine U.S. household purchasing."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$90",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 90,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 90,
       "prices": {
         "C": "$30",
         "B": "$23",
         "A": "$18"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0D2FDK1PS"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1315,28 +975,18 @@
       "desc": {
         "en": "A useful home and kitchen item selected for routine U.S. household purchasing."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$35",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 35,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 35,
       "prices": {
         "C": "$12",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0FR3X6C6K"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1353,28 +1003,18 @@
       "desc": {
         "en": "A useful home and kitchen item selected for routine U.S. household purchasing."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$20",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 20,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 20,
       "prices": {
         "C": "$7",
         "B": "$5",
         "A": "$4"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0FR4C7BKK"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1391,28 +1031,18 @@
       "desc": {
         "en": "A useful home and kitchen item selected for routine U.S. household purchasing."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$70",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 70,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 70,
       "prices": {
         "C": "$23",
         "B": "$18",
         "A": "$14"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0FQTF3657"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1429,28 +1059,18 @@
       "desc": {
         "en": "A useful home and kitchen item selected for routine U.S. household purchasing."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$120",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 120,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 120,
       "prices": {
         "C": "$40",
         "B": "$30",
         "A": "$24"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B09N6RL7HQ"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1467,28 +1087,18 @@
       "desc": {
         "en": "A useful home and kitchen item selected for routine U.S. household purchasing."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$35",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 35,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 35,
       "prices": {
         "C": "$12",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0BFW6SQ1L"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1505,28 +1115,18 @@
       "desc": {
         "en": "A useful home and kitchen item selected for routine U.S. household purchasing."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$140",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 140,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 140,
       "prices": {
         "C": "$47",
         "B": "$35",
         "A": "$28"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B09DTPL1SJ"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1543,28 +1143,18 @@
       "desc": {
         "en": "A space-saving home upgrade suited to apartments, offices, and everyday living."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$80",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 80,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 80,
       "prices": {
         "C": "$27",
         "B": "$20",
         "A": "$16"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0F5GTD4HN"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1581,28 +1171,18 @@
       "desc": {
         "en": "A space-saving home upgrade suited to apartments, offices, and everyday living."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$90",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 90,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 90,
       "prices": {
         "C": "$30",
         "B": "$23",
         "A": "$18"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CDLXVVVZ"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1619,28 +1199,18 @@
       "desc": {
         "en": "A space-saving home upgrade suited to apartments, offices, and everyday living."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$70",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 70,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 70,
       "prices": {
         "C": "$23",
         "B": "$18",
         "A": "$14"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0H73K1RWY"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1657,28 +1227,18 @@
       "desc": {
         "en": "A space-saving home upgrade suited to apartments, offices, and everyday living."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$45",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 45,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 45,
       "prices": {
         "C": "$15",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0B27WGC8Q"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1695,28 +1255,18 @@
       "desc": {
         "en": "A space-saving home upgrade suited to apartments, offices, and everyday living."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$30",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 30,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 30,
       "prices": {
         "C": "$10",
         "B": "$8",
         "A": "$6"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CQCSDJH8"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1733,28 +1283,18 @@
       "desc": {
         "en": "A space-saving home upgrade suited to apartments, offices, and everyday living."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$45",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 45,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 45,
       "prices": {
         "C": "$15",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0F4KXBC9T"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1771,28 +1311,18 @@
       "desc": {
         "en": "A space-saving home upgrade suited to apartments, offices, and everyday living."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$130",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 130,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 130,
       "prices": {
         "C": "$43",
         "B": "$33",
         "A": "$26"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0BPDM6KRH"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1809,28 +1339,18 @@
       "desc": {
         "en": "A space-saving home upgrade suited to apartments, offices, and everyday living."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$75",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 75,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 75,
       "prices": {
         "C": "$25",
         "B": "$19",
         "A": "$15"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CHFHG86B"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1847,28 +1367,18 @@
       "desc": {
         "en": "A space-saving home upgrade suited to apartments, offices, and everyday living."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$35",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 35,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 35,
       "prices": {
         "C": "$12",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0BPNP9FBW"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1885,28 +1395,18 @@
       "desc": {
         "en": "A space-saving home upgrade suited to apartments, offices, and everyday living."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$28",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 28,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 28,
       "prices": {
         "C": "$9",
         "B": "$7",
         "A": "$6"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0BCKLM33P"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1923,28 +1423,18 @@
       "desc": {
         "en": "A useful vehicle accessory selected for commuting, road trips, and everyday car care."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$100",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 100,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 100,
       "prices": {
         "C": "$33",
         "B": "$25",
         "A": "$20"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CXDQWYQP"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1961,28 +1451,18 @@
       "desc": {
         "en": "A useful vehicle accessory selected for commuting, road trips, and everyday car care."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$70",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 70,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 70,
       "prices": {
         "C": "$23",
         "B": "$18",
         "A": "$14"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CMT1ZNRV"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -1999,28 +1479,18 @@
       "desc": {
         "en": "A useful vehicle accessory selected for commuting, road trips, and everyday car care."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$60",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 60,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 60,
       "prices": {
         "C": "$20",
         "B": "$15",
         "A": "$12"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B003IS3HV0"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2037,28 +1507,18 @@
       "desc": {
         "en": "A useful vehicle accessory selected for commuting, road trips, and everyday car care."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$140",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 140,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 140,
       "prices": {
         "C": "$47",
         "B": "$35",
         "A": "$28"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B00U7HEUEI"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2075,28 +1535,18 @@
       "desc": {
         "en": "A useful vehicle accessory selected for commuting, road trips, and everyday car care."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$30",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 30,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 30,
       "prices": {
         "C": "$10",
         "B": "$8",
         "A": "$6"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B003L2ZVRG"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2113,28 +1563,18 @@
       "desc": {
         "en": "A useful vehicle accessory selected for commuting, road trips, and everyday car care."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$26",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 26,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 26,
       "prices": {
         "C": "$9",
         "B": "$7",
         "A": "$5"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CX8YW6J3"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2151,28 +1591,18 @@
       "desc": {
         "en": "A useful vehicle accessory selected for commuting, road trips, and everyday car care."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$75",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 75,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 75,
       "prices": {
         "C": "$25",
         "B": "$19",
         "A": "$15"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B07TZG6XPG"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2189,28 +1619,18 @@
       "desc": {
         "en": "A useful vehicle accessory selected for commuting, road trips, and everyday car care."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$35",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 35,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 35,
       "prices": {
         "C": "$12",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B07Z5KV97J"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2227,28 +1647,18 @@
       "desc": {
         "en": "A useful vehicle accessory selected for commuting, road trips, and everyday car care."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$28",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 28,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 28,
       "prices": {
         "C": "$9",
         "B": "$7",
         "A": "$6"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0H1RMTJMS"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2265,28 +1675,18 @@
       "desc": {
         "en": "A useful vehicle accessory selected for commuting, road trips, and everyday car care."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$25",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 25,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 25,
       "prices": {
         "C": "$8",
         "B": "$6",
         "A": "$5"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B09NCVS7V4"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2303,28 +1703,18 @@
       "desc": {
         "en": "A practical parent-and-baby essential selected for safety, organization, and daily routines."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$130",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 130,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 130,
       "prices": {
         "C": "$43",
         "B": "$33",
         "A": "$26"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0DRM2X13Y"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2341,28 +1731,18 @@
       "desc": {
         "en": "A practical parent-and-baby essential selected for safety, organization, and daily routines."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$35",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 35,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 35,
       "prices": {
         "C": "$12",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B08VPVLF95"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2379,28 +1759,18 @@
       "desc": {
         "en": "A practical parent-and-baby essential selected for safety, organization, and daily routines."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$60",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 60,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 60,
       "prices": {
         "C": "$20",
         "B": "$15",
         "A": "$12"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B08ZPQ4BRN"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2417,28 +1787,18 @@
       "desc": {
         "en": "A practical parent-and-baby essential selected for safety, organization, and daily routines."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$50",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 50,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 50,
       "prices": {
         "C": "$17",
         "B": "$13",
         "A": "$10"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0GL8D964T"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2455,28 +1815,18 @@
       "desc": {
         "en": "A practical parent-and-baby essential selected for safety, organization, and daily routines."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$30",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 30,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 30,
       "prices": {
         "C": "$10",
         "B": "$8",
         "A": "$6"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0GJCCNN2L"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2493,28 +1843,18 @@
       "desc": {
         "en": "A practical parent-and-baby essential selected for safety, organization, and daily routines."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$28",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 28,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 28,
       "prices": {
         "C": "$9",
         "B": "$7",
         "A": "$6"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0G4CCD3KS"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2531,28 +1871,18 @@
       "desc": {
         "en": "A practical parent-and-baby essential selected for safety, organization, and daily routines."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$32",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 32,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 32,
       "prices": {
         "C": "$11",
         "B": "$8",
         "A": "$6"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0H4TY24KM"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2569,28 +1899,18 @@
       "desc": {
         "en": "A practical parent-and-baby essential selected for safety, organization, and daily routines."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$75",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 75,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 75,
       "prices": {
         "C": "$25",
         "B": "$19",
         "A": "$15"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B09WR3K2SZ"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2607,28 +1927,18 @@
       "desc": {
         "en": "A practical parent-and-baby essential selected for safety, organization, and daily routines."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$30",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 30,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 30,
       "prices": {
         "C": "$10",
         "B": "$8",
         "A": "$6"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0GJCSPFYS"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2645,28 +1955,18 @@
       "desc": {
         "en": "A practical parent-and-baby essential selected for safety, organization, and daily routines."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$25",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 25,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 25,
       "prices": {
         "C": "$8",
         "B": "$6",
         "A": "$5"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0FC6TWQNK"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2683,28 +1983,18 @@
       "desc": {
         "en": "An everyday wellness product selected for home fitness, recovery, and personal comfort."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$60",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 60,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 60,
       "prices": {
         "C": "$20",
         "B": "$15",
         "A": "$12"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B086XCB1QP"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2721,28 +2011,18 @@
       "desc": {
         "en": "An everyday wellness product selected for home fitness, recovery, and personal comfort."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$30",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 30,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 30,
       "prices": {
         "C": "$10",
         "B": "$8",
         "A": "$6"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0H6FR76BM"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2759,28 +2039,18 @@
       "desc": {
         "en": "An everyday wellness product selected for home fitness, recovery, and personal comfort."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$45",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 45,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 45,
       "prices": {
         "C": "$15",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B08M8YSFC7"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2797,28 +2067,18 @@
       "desc": {
         "en": "An everyday wellness product selected for home fitness, recovery, and personal comfort."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$80",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 80,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 80,
       "prices": {
         "C": "$27",
         "B": "$20",
         "A": "$16"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0F9P31ZKF"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2835,28 +2095,18 @@
       "desc": {
         "en": "An everyday wellness product selected for home fitness, recovery, and personal comfort."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$50",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 50,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 50,
       "prices": {
         "C": "$17",
         "B": "$13",
         "A": "$10"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0DDYWM7PV"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2873,28 +2123,18 @@
       "desc": {
         "en": "An everyday wellness product selected for home fitness, recovery, and personal comfort."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$55",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 55,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 55,
       "prices": {
         "C": "$18",
         "B": "$14",
         "A": "$11"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0F6YMQF2M"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2911,28 +2151,18 @@
       "desc": {
         "en": "An everyday wellness product selected for home fitness, recovery, and personal comfort."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$240",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 240,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 240,
       "prices": {
         "C": "$80",
         "B": "$60",
         "A": "$48"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0GK1815KQ"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2949,28 +2179,18 @@
       "desc": {
         "en": "An everyday wellness product selected for home fitness, recovery, and personal comfort."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$25",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 25,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 25,
       "prices": {
         "C": "$8",
         "B": "$6",
         "A": "$5"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0FJ878B8B"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -2987,28 +2207,18 @@
       "desc": {
         "en": "An everyday wellness product selected for home fitness, recovery, and personal comfort."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$90",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 90,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 90,
       "prices": {
         "C": "$30",
         "B": "$23",
         "A": "$18"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0D7YLHZM3"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3025,28 +2235,18 @@
       "desc": {
         "en": "An everyday wellness product selected for home fitness, recovery, and personal comfort."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$45",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 45,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 45,
       "prices": {
         "C": "$15",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0D16W8531"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3063,28 +2263,18 @@
       "desc": {
         "en": "A versatile fitness or outdoor product selected for active U.S. lifestyles."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$40",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 40,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 40,
       "prices": {
         "C": "$13",
         "B": "$10",
         "A": "$8"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CDDYXM6X"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3101,28 +2291,18 @@
       "desc": {
         "en": "A versatile fitness or outdoor product selected for active U.S. lifestyles."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$65",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 65,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 65,
       "prices": {
         "C": "$22",
         "B": "$16",
         "A": "$13"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B09JG96CB7"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3139,28 +2319,18 @@
       "desc": {
         "en": "A versatile fitness or outdoor product selected for active U.S. lifestyles."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$45",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 45,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 45,
       "prices": {
         "C": "$15",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B07L9WLKZQ"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3177,28 +2347,18 @@
       "desc": {
         "en": "A versatile fitness or outdoor product selected for active U.S. lifestyles."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$55",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 55,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 55,
       "prices": {
         "C": "$18",
         "B": "$14",
         "A": "$11"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B07F25L7QK"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3215,28 +2375,18 @@
       "desc": {
         "en": "A versatile fitness or outdoor product selected for active U.S. lifestyles."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$35",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 35,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 35,
       "prices": {
         "C": "$12",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0D49XB8BR"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3253,28 +2403,18 @@
       "desc": {
         "en": "A versatile fitness or outdoor product selected for active U.S. lifestyles."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$160",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 160,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 160,
       "prices": {
         "C": "$53",
         "B": "$40",
         "A": "$32"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0C34ZWCXH"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3291,28 +2431,18 @@
       "desc": {
         "en": "A versatile fitness or outdoor product selected for active U.S. lifestyles."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$40",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 40,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 40,
       "prices": {
         "C": "$13",
         "B": "$10",
         "A": "$8"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0C3JJQ9TN"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3329,28 +2459,18 @@
       "desc": {
         "en": "A versatile fitness or outdoor product selected for active U.S. lifestyles."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$22",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 22,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 22,
       "prices": {
         "C": "$7",
         "B": "$6",
         "A": "$4"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CK28J3X2"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3367,28 +2487,18 @@
       "desc": {
         "en": "A versatile fitness or outdoor product selected for active U.S. lifestyles."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$35",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 35,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 35,
       "prices": {
         "C": "$12",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0D4LBQZ36"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3405,28 +2515,18 @@
       "desc": {
         "en": "A versatile fitness or outdoor product selected for active U.S. lifestyles."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$90",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 90,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 90,
       "prices": {
         "C": "$30",
         "B": "$23",
         "A": "$18"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0BX5Y5HLN"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3443,28 +2543,18 @@
       "desc": {
         "en": "A creator tool selected for short-form video, live commerce, podcasts, and product content."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$95",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 95,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 95,
       "prices": {
         "C": "$32",
         "B": "$24",
         "A": "$19"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CS36S6DY"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3481,28 +2571,18 @@
       "desc": {
         "en": "A creator tool selected for short-form video, live commerce, podcasts, and product content."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$70",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 70,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 70,
       "prices": {
         "C": "$23",
         "B": "$18",
         "A": "$14"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0BY2NYNSC"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3519,28 +2599,18 @@
       "desc": {
         "en": "A creator tool selected for short-form video, live commerce, podcasts, and product content."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$50",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 50,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 50,
       "prices": {
         "C": "$17",
         "B": "$13",
         "A": "$10"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B08BCH841V"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3557,28 +2627,18 @@
       "desc": {
         "en": "A creator tool selected for short-form video, live commerce, podcasts, and product content."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$45",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 45,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 45,
       "prices": {
         "C": "$15",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B082WCSVJ9"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3595,28 +2655,18 @@
       "desc": {
         "en": "A creator tool selected for short-form video, live commerce, podcasts, and product content."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$30",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 30,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 30,
       "prices": {
         "C": "$10",
         "B": "$8",
         "A": "$6"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CRYXTZH8"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3633,28 +2683,18 @@
       "desc": {
         "en": "A creator tool selected for short-form video, live commerce, podcasts, and product content."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$85",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 85,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 85,
       "prices": {
         "C": "$28",
         "B": "$21",
         "A": "$17"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B08YJPJLFV"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3671,28 +2711,18 @@
       "desc": {
         "en": "A creator tool selected for short-form video, live commerce, podcasts, and product content."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$70",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 70,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 70,
       "prices": {
         "C": "$23",
         "B": "$18",
         "A": "$14"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B08B3X7NXC"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3709,28 +2739,18 @@
       "desc": {
         "en": "A creator tool selected for short-form video, live commerce, podcasts, and product content."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$100",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 100,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 100,
       "prices": {
         "C": "$33",
         "B": "$25",
         "A": "$20"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0DCSHSSFF"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3747,28 +2767,18 @@
       "desc": {
         "en": "A creator tool selected for short-form video, live commerce, podcasts, and product content."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$75",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 75,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 75,
       "prices": {
         "C": "$25",
         "B": "$19",
         "A": "$15"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CQW9XDNV"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3785,28 +2795,18 @@
       "desc": {
         "en": "A creator tool selected for short-form video, live commerce, podcasts, and product content."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$55",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 55,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 55,
       "prices": {
         "C": "$18",
         "B": "$14",
         "A": "$11"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B08JPCSDMP"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3823,28 +2823,18 @@
       "desc": {
         "en": "A practical travel essential selected for U.S. flights, road trips, and weekend travel."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$60",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 60,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 60,
       "prices": {
         "C": "$20",
         "B": "$15",
         "A": "$12"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0DX2LYL1P"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3861,28 +2851,18 @@
       "desc": {
         "en": "A practical travel essential selected for U.S. flights, road trips, and weekend travel."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$18",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 18,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 18,
       "prices": {
         "C": "$6",
         "B": "$5",
         "A": "$4"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B09ST951LG"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3899,28 +2879,18 @@
       "desc": {
         "en": "A practical travel essential selected for U.S. flights, road trips, and weekend travel."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$35",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 35,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 35,
       "prices": {
         "C": "$12",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0F8HB2M9S"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3937,28 +2907,18 @@
       "desc": {
         "en": "A practical travel essential selected for U.S. flights, road trips, and weekend travel."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$40",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 40,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 40,
       "prices": {
         "C": "$13",
         "B": "$10",
         "A": "$8"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0F4QHCX17"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -3975,28 +2935,18 @@
       "desc": {
         "en": "A practical travel essential selected for U.S. flights, road trips, and weekend travel."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$110",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 110,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 110,
       "prices": {
         "C": "$37",
         "B": "$28",
         "A": "$22"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CPDLVF8K"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4013,28 +2963,18 @@
       "desc": {
         "en": "A practical travel essential selected for U.S. flights, road trips, and weekend travel."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$65",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 65,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 65,
       "prices": {
         "C": "$22",
         "B": "$16",
         "A": "$13"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B08BFJVMVC"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4051,28 +2991,18 @@
       "desc": {
         "en": "A practical travel essential selected for U.S. flights, road trips, and weekend travel."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$28",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 28,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 28,
       "prices": {
         "C": "$9",
         "B": "$7",
         "A": "$6"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0B6172YWC"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4089,28 +3019,18 @@
       "desc": {
         "en": "A practical travel essential selected for U.S. flights, road trips, and weekend travel."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$35",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 35,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 35,
       "prices": {
         "C": "$12",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B09WDH3139"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4127,28 +3047,18 @@
       "desc": {
         "en": "A practical travel essential selected for U.S. flights, road trips, and weekend travel."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$25",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 25,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 25,
       "prices": {
         "C": "$8",
         "B": "$6",
         "A": "$5"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0B42F11GW"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4165,28 +3075,18 @@
       "desc": {
         "en": "A practical travel essential selected for U.S. flights, road trips, and weekend travel."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$45",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 45,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 45,
       "prices": {
         "C": "$15",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0CXPZ9JQH"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4203,28 +3103,18 @@
       "desc": {
         "en": "A gaming accessory selected for popular console, PC, mobile, and streaming setups."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$55",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 55,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 55,
       "prices": {
         "C": "$18",
         "B": "$14",
         "A": "$11"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B07W7KT2B3"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4241,28 +3131,18 @@
       "desc": {
         "en": "A gaming accessory selected for popular console, PC, mobile, and streaming setups."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$80",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 80,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 80,
       "prices": {
         "C": "$27",
         "B": "$20",
         "A": "$16"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0F6NZWPTC"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4279,28 +3159,18 @@
       "desc": {
         "en": "A gaming accessory selected for popular console, PC, mobile, and streaming setups."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$90",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 90,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 90,
       "prices": {
         "C": "$30",
         "B": "$23",
         "A": "$18"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B08FX7T8Z4"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4317,28 +3187,18 @@
       "desc": {
         "en": "A gaming accessory selected for popular console, PC, mobile, and streaming setups."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$55",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 55,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 55,
       "prices": {
         "C": "$18",
         "B": "$14",
         "A": "$11"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B083X24VG9"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4355,28 +3215,18 @@
       "desc": {
         "en": "A gaming accessory selected for popular console, PC, mobile, and streaming setups."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$50",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 50,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 50,
       "prices": {
         "C": "$17",
         "B": "$13",
         "A": "$10"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0F93SY4BH"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4393,28 +3243,18 @@
       "desc": {
         "en": "A gaming accessory selected for popular console, PC, mobile, and streaming setups."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$35",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 35,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 35,
       "prices": {
         "C": "$12",
         "B": "$9",
         "A": "$7"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0B7X8392G"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4431,28 +3271,18 @@
       "desc": {
         "en": "A gaming accessory selected for popular console, PC, mobile, and streaming setups."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$85",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 85,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 85,
       "prices": {
         "C": "$28",
         "B": "$21",
         "A": "$17"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B07W5JHF96"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4469,28 +3299,18 @@
       "desc": {
         "en": "A gaming accessory selected for popular console, PC, mobile, and streaming setups."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$45",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 45,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 45,
       "prices": {
         "C": "$15",
         "B": "$11",
         "A": "$9"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0FN3KKJS9"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4507,28 +3327,18 @@
       "desc": {
         "en": "A gaming accessory selected for popular console, PC, mobile, and streaming setups."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$120",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 120,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 120,
       "prices": {
         "C": "$40",
         "B": "$30",
         "A": "$24"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B07X8VD1XF"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     },
     {
@@ -4545,28 +3355,18 @@
       "desc": {
         "en": "A gaming accessory selected for popular console, PC, mobile, and streaming setups."
       },
-      "specs": {
-        "en": [
-          "Selected for U.S. shoppers ages 30-50",
-          "English product information",
-          "Amazon.com reference listing"
-        ]
-      },
       "retail": "$40",
-      "retailLabel": "Amazon reference price",
-      "amazonReferencePrice": 40,
+      "retailLabel": "Market reference price",
+      "marketReferencePrice": 40,
       "prices": {
         "C": "$13",
         "B": "$10",
         "A": "$8"
       },
       "pricingFormula": {
-        "C": "Amazon reference price / 3",
-        "B": "Amazon reference price / 4",
-        "A": "Amazon reference price / 5"
-      },
-      "marketplace": {
-        "en": "https://www.amazon.com/dp/B0BCFKG49M"
+        "C": "Market reference price / 3",
+        "B": "Market reference price / 4",
+        "A": "Market reference price / 5"
       }
     }
   ]

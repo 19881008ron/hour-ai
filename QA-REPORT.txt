@@ -1,0 +1,39 @@
+Hour AI merged update QA report
+Date: 2026-10-07
+
+Completed changes
+- Replaced C/B/A-Level AI Editor with C/B/A-Level AI Assistant.
+- Course titles use two deliberate lines: level name, then AI Assistant.
+- Enlarged course and level icons and rebuilt mobile level-card typography.
+- Fixed mobile leaderboard avatar/rank overlap and commission-panel spacing.
+- Preserved the compact desktop layout and removed horizontal overflow.
+- Changed the hero title to the approved English translation and retained the green breathing treatment on Hour AI.
+- Removed customer-facing Amazon wording and every external marketplace link.
+- Removed the three generic product-detail chips.
+- Rebuilt member-price panels with larger labels and prices.
+- Added in-page Product Information and two visible BACK Hour AI controls.
+- Regenerated 120 English-only U.S. products: 12 categories, 10 unique product types per category.
+- Confirmed C/B/A supply prices follow rounded market reference price / 3, / 4, / 5.
+
+Automated checks passed
+- app.js syntax
+- marketplace.js syntax
+- catalog generator syntax
+- catalog validator syntax
+- 120 product count and category distribution
+- no duplicate product type inside a category
+- English-only customer-facing catalog content
+- no external marketplace link in catalog data
+- pricing formula for all 120 products
+- git diff whitespace check
+
+Visual checks passed
+- Desktop: 1440 x 1000
+- Mobile: 390 x 844
+- No horizontal overflow
+- No leaderboard avatar/rank overlap
+- Course icons: 94 px desktop / 64 px mobile
+- Level icons: 82 px mobile
+- Product detail shows no visible Amazon text or external link
+- Product Information expands inside Hour AI
+- BACK Hour AI closes the detail view

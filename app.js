@@ -11,7 +11,7 @@ const translations = {
     },
     hero: {
       eyebrow: "AI editing training + order access",
-      title: "Learn AI video editing. Build proof. Apply for real tasks.",
+      title: "Hour AI has created an unprecedented, fully automated, risk-free AI profit model.",
       lede: "A practical 7-day learning path for beginners, followed by skill testing and access to C, B, and A level editing opportunities.",
       ctaPrimary: "Talk to an advisor",
       ctaSecondary: "Explore orders",
@@ -56,11 +56,11 @@ const translations = {
       eyebrow: "Level progression",
       title: "A visible path from first workflow to advanced delivery.",
       text: "Each level builds on the previous one with clearer standards, stronger reviews, and access to more advanced task categories.",
-      cTitle: "C-Level AI Editor",
+      cTitle: "C-Level AI Assistant",
       cText: "Beginner workflow, template editing, captions, and delivery checklists.",
-      bTitle: "B-Level AI Editor",
+      bTitle: "B-Level AI Assistant",
       bText: "Commercial short videos, better pacing, revisions, and stronger quality standards.",
-      aTitle: "A-Level AI Editor",
+      aTitle: "A-Level AI Assistant",
       aText: "Advanced projects, team review, project management, and agent eligibility.",
       commissionLabel: "Per-order commission",
       open: "Open my account"
@@ -566,7 +566,7 @@ const completeTranslations = {
     nav: { live: "Live Platform", orders: "Commission", path: "Learning", courses: "Courses", support: "Support", register: "Sign up", menu: "Menu" },
     hero: {
       eyebrow: "AI editing training + order marketplace access",
-      title: "Learn AI video editing. Prove your skills. Apply for real orders.",
+      title: "Hour AI has created an unprecedented, fully automated, risk-free AI profit model.",
       lede: "Follow a practical 7-day beginner path, complete the skill assessment, and unlock C-, B-, or A-Level editing opportunities.",
       ctaPrimary: "Talk to an advisor",
       ctaSecondary: "Explore orders",
@@ -642,11 +642,11 @@ const completeTranslations = {
       eyebrow: "Level progression",
       title: "A visible path from first workflow to advanced delivery.",
       text: "Each level builds on the previous one with clearer standards, stronger quality review, and access to more advanced order categories.",
-      cTitle: "C-Level AI Editor",
+      cTitle: "C-Level AI Assistant",
       cText: "Beginner workflow, template editing, captions, and delivery checklists.",
-      bTitle: "B-Level AI Editor",
+      bTitle: "B-Level AI Assistant",
       bText: "Commercial short videos, stronger pacing, revision discipline, and higher delivery standards.",
-      aTitle: "A-Level AI Editor",
+      aTitle: "A-Level AI Assistant",
       aText: "Advanced projects, team review, project management, and agent eligibility.",
       commissionLabel: "Per-order commission",
       open: "Open my account"
@@ -1421,7 +1421,7 @@ const commissionLeaders = [
 const pricing = [
   {
     level: "C",
-    name: "C-Level AI Editor",
+    name: "C-Level AI Assistant",
     price: PROGRAM_CONFIG.C.price,
     items: [
       "7-day beginner workflow",
@@ -1432,7 +1432,7 @@ const pricing = [
   },
   {
     level: "B",
-    name: "B-Level AI Editor",
+    name: "B-Level AI Assistant",
     price: PROGRAM_CONFIG.B.price,
     items: [
       "Video AI creation workflow",
@@ -1443,7 +1443,7 @@ const pricing = [
   },
   {
     level: "A",
-    name: "A-Level AI Editor",
+    name: "A-Level AI Assistant",
     price: PROGRAM_CONFIG.A.price,
     items: [
       "Film AI production workflow",
@@ -1853,6 +1853,7 @@ function applyTranslations() {
     const value = t(node.dataset.i18n);
     if (typeof value === "string") node.textContent = value;
   });
+  styleHeroBrandTitle();
   document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
     const value = t(node.dataset.i18nPlaceholder);
     if (typeof value === "string") node.setAttribute("placeholder", value);
@@ -1882,6 +1883,18 @@ function applyTranslations() {
   initLinks();
   if (activeProfile && !document.getElementById("accountDashboard").hidden) showAccount(activeProfile);
 
+}
+
+function styleHeroBrandTitle() {
+  const title = document.querySelector('.hero-copy h1[data-i18n="hero.title"]');
+  if (!title || currentLanguage !== "en") return;
+  const value = t("hero.title");
+  const brand = "Hour AI";
+  if (!value.startsWith(brand)) return;
+  const brandNode = document.createElement("span");
+  brandNode.className = "hero-title-brand";
+  brandNode.textContent = brand;
+  title.replaceChildren(brandNode, document.createTextNode(value.slice(brand.length)));
 }
 
 function renderOrders() {
@@ -2022,8 +2035,8 @@ function renderPricing() {
       return `
         <article class="price-card price-level-${plan.level.toLowerCase()}${plan.recommended ? " recommended" : ""}" data-level="${plan.level}">
           ${plan.recommended ? `<span class="recommended-tag">${t("courses.recommended")}</span>` : ""}
-          <div class="price-rank">${rankMedalMarkup(plan.level, "medium")}<span class="price-rank-label" data-mobile-label="${plan.name}">${levelLabel(plan.level)}</span></div>
-          <h3>${plan.name}</h3>
+          <div class="price-rank">${rankMedalMarkup(plan.level, "medium")}<span class="price-rank-label">${levelLabel(plan.level)}</span></div>
+          <h3 class="price-plan-title"><span>${levelLabel(plan.level)}</span><span>AI Assistant</span></h3>
           <div class="price-row"><span class="price">${plan.price}</span><span class="price-note">${t("courses.oneTime")}</span></div>
           <ul>${plan.items.map((item) => `<li>${item}</li>`).join("")}</ul>
           <div class="price-actions">
