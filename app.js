@@ -1347,62 +1347,46 @@ const PROGRAM_CONFIG = Object.freeze({
   A: Object.freeze({ tuition: 9500, price: "$9,500", commission: "$850-$900", stars: 4 })
 });
 
-const orders = [
-  {
-    id: "c1",
-    level: "C",
-    title: "Image AI creation",
-    content: "Create a polished AI image set from a simple brief, including subject direction, style matching, and export-ready visuals.",
-    pay: PROGRAM_CONFIG.C.commission,
-    time: "1-2 hours",
-    requirements: "Generate 3-5 image options, refine the selected visual, keep the style consistent, and deliver high-resolution files."
-  },
-  {
-    id: "c2",
-    level: "C",
-    title: "Static AI editing",
-    content: "Edit static AI creative assets for a product, profile, or social post using clean composition and simple copy placement.",
-    pay: PROGRAM_CONFIG.C.commission,
-    time: "1-2 hours",
-    requirements: "Adjust layout, crop and polish visuals, add required text elements, and submit both source and final image files."
-  },
-  {
-    id: "b1",
-    level: "B",
-    title: "Video AI creation",
-    content: "Produce a short AI-assisted video from a script, visual direction, voiceover, captions, and branded pacing.",
-    pay: PROGRAM_CONFIG.B.commission,
-    time: "1-2 hours",
-    requirements: "Build a strong opening, align scenes with the script, add captions, and deliver the final video plus editable project file."
-  },
-  {
-    id: "b2",
-    level: "B",
-    title: "Advertising AI editing",
-    content: "Edit an AI-assisted ad using a product angle, customer pain point, visual proof, captions, and a clear call to action.",
-    pay: PROGRAM_CONFIG.B.commission,
-    time: "1-2 hours",
-    requirements: "Improve the hook, tighten pacing, match the brand tone, add motion captions, and prepare a conversion-focused final cut."
-  },
-  {
-    id: "a1",
-    level: "A",
-    title: "Film AI production",
-    content: "Create a cinematic AI video with scene planning, visual continuity, narration rhythm, advanced pacing, and final delivery notes.",
-    pay: PROGRAM_CONFIG.A.commission,
-    time: "1-2 hours",
-    requirements: "Plan the sequence, manage visual assets, refine transitions, balance audio, and deliver the final video with project files."
-  },
-  {
-    id: "a2",
-    level: "A",
-    title: "Team AI management",
-    content: "Review AI editing work from a small team, improve the final delivery, and prepare clear production feedback.",
-    pay: PROGRAM_CONFIG.A.commission,
-    time: "1-2 hours",
-    requirements: "Check quality standards, provide timestamped feedback, assign revision priorities, and prepare the approved delivery version."
-  }
-];
+const orderGroups = {
+  C: [
+    { id: "c01", code: "371101", level: "C", title: "AI Product Image Set", content: "Create a polished product image series for a reusable bottle using a supplied brief and reference photos.", pay: "$104", time: "1-2 hours", requirements: "Deliver five consistent high-resolution images plus editable source files.", image: "assets/orders/order-c01.webp" },
+    { id: "c02", code: "371108", level: "C", title: "Social Carousel Design", content: "Build a five-slide visual carousel for an artisan coffee brand with a clear, consistent layout.", pay: "$109", time: "1-2 hours", requirements: "Prepare five square slides, two cover options, and final web-ready exports.", image: "assets/orders/order-c02.webp" },
+    { id: "c03", code: "371116", level: "C", title: "E-Commerce Cutout Pack", content: "Remove backgrounds and prepare clean catalog images for a new collection of running shoes.", pay: "$113", time: "1-2 hours", requirements: "Complete ten precise cutouts with natural shadows and consistent canvas spacing.", image: "assets/orders/order-c03.webp" },
+    { id: "c04", code: "371123", level: "C", title: "Executive Portrait Retouching", content: "Retouch a professional headshot collection while keeping skin texture and color natural.", pay: "$118", time: "1-2 hours", requirements: "Refine eight portraits, balance color, remove distractions, and export print-ready files.", image: "assets/orders/order-c04.webp" },
+    { id: "c05", code: "371137", level: "C", title: "Restaurant Menu Visuals", content: "Turn supplied food photography into a coherent set of premium menu and social visuals.", pay: "$123", time: "1-2 hours", requirements: "Color-match twelve dishes and deliver menu, story, and feed-ready crops.", image: "assets/orders/order-c05.webp" },
+    { id: "c06", code: "371142", level: "C", title: "Travel Campaign Artwork", content: "Create a cinematic desert destination artwork set from licensed landscape photography.", pay: "$128", time: "1-2 hours", requirements: "Produce one hero visual, three supporting crops, and a layered source file.", image: "assets/orders/order-c06.webp" },
+    { id: "c07", code: "371159", level: "C", title: "Property Listing Enhancement", content: "Enhance modern apartment photographs with balanced lighting, accurate color, and clean perspective.", pay: "$133", time: "1-2 hours", requirements: "Correct twelve room images without altering permanent property features.", image: "assets/orders/order-c07.webp" },
+    { id: "c08", code: "371164", level: "C", title: "Skincare Packaging Mockups", content: "Place a supplied skincare label onto realistic bottle and carton presentation mockups.", pay: "$139", time: "1-2 hours", requirements: "Deliver four angles with accurate reflections, shadows, and editable smart layers.", image: "assets/orders/order-c08.webp" },
+    { id: "c09", code: "371178", level: "C", title: "Fitness Thumbnail Series", content: "Design an energetic thumbnail system for a ten-part online fitness coaching series.", pay: "$144", time: "1-2 hours", requirements: "Create ten consistent thumbnails with clear hierarchy and mobile-safe composition.", image: "assets/orders/order-c09.webp" },
+    { id: "c10", code: "371185", level: "C", title: "Electronics Catalog Polish", content: "Retouch and color-match a compact electronics catalog for a clean online storefront.", pay: "$149", time: "1-2 hours", requirements: "Polish twelve product images and supply uniform transparent and white-background versions.", image: "assets/orders/order-c10.webp" }
+  ],
+  B: [
+    { id: "b01", code: "482204", level: "B", title: "Vertical Product Reel", content: "Produce a fast 30-second vertical launch reel for premium wireless headphones.", pay: "$352", time: "1-2 hours", requirements: "Combine product footage, beat-matched cuts, motion titles, captions, and final audio mix.", image: "assets/orders/order-b01.webp" },
+    { id: "b02", code: "482219", level: "B", title: "Luxury Property Walkthrough", content: "Edit a cinematic walkthrough that presents a modern apartment with clear spatial flow.", pay: "$357", time: "1-2 hours", requirements: "Stabilize footage, correct color, add room labels, music, and a concise closing CTA.", image: "assets/orders/order-b02.webp" },
+    { id: "b03", code: "482227", level: "B", title: "Restaurant Social Video", content: "Create a high-energy social video featuring signature dishes, preparation, and guest atmosphere.", pay: "$361", time: "1-2 hours", requirements: "Deliver a 35-second master with rhythmic edits, sound design, captions, and two hooks.", image: "assets/orders/order-b03.webp" },
+    { id: "b04", code: "482235", level: "B", title: "Mobile App Launch Film", content: "Turn supplied app screens into a polished motion-led launch video for social media.", pay: "$366", time: "1-2 hours", requirements: "Animate six app moments, add device transitions, captions, and branded end frame.", image: "assets/orders/order-b04.webp" },
+    { id: "b05", code: "482248", level: "B", title: "Destination Travel Reel", content: "Build a vertical travel reel combining city, desert, hotel, and cultural footage.", pay: "$372", time: "1-2 hours", requirements: "Create a strong opening, seamless match cuts, location captions, and immersive audio.", image: "assets/orders/order-b05.webp" },
+    { id: "b06", code: "482256", level: "B", title: "UGC Skincare Ad", content: "Edit presenter footage and product close-ups into a credible UGC-style skincare advertisement.", pay: "$378", time: "1-2 hours", requirements: "Tighten delivery, add proof callouts, dynamic captions, product inserts, and CTA.", image: "assets/orders/order-b06.webp" },
+    { id: "b07", code: "482263", level: "B", title: "Automotive Promo Edit", content: "Cut a dynamic electric-car promotional video using road, cabin, and detail footage.", pay: "$383", time: "1-2 hours", requirements: "Apply speed ramps, cinematic color, controlled sound design, and two aspect ratios.", image: "assets/orders/order-b07.webp" },
+    { id: "b08", code: "482279", level: "B", title: "Online Course Trailer", content: "Assemble instructor footage, screen recordings, and diagrams into a concise course trailer.", pay: "$389", time: "1-2 hours", requirements: "Deliver a 45-second trailer with clean pacing, chapter callouts, captions, and audio mix.", image: "assets/orders/order-b08.webp" },
+    { id: "b09", code: "482286", level: "B", title: "Conference Highlight Film", content: "Create a polished recap from keynote, audience, networking, and venue footage.", pay: "$394", time: "1-2 hours", requirements: "Select key moments, balance multiple cameras, mix sound, and deliver 60- and 30-second cuts.", image: "assets/orders/order-b09.webp" },
+    { id: "b10", code: "482298", level: "B", title: "Appliance Conversion Ad", content: "Build a conversion-focused product demonstration video for a smart home appliance.", pay: "$399", time: "1-2 hours", requirements: "Show the problem, product action, outcome, key benefits, captions, and final CTA.", image: "assets/orders/order-b10.webp" }
+  ],
+  A: [
+    { id: "a01", code: "593301", level: "A", title: "Luxury Hospitality Brand Film", content: "Create a multi-scene brand film connecting hotel spaces, service, city, and guest experiences.", pay: "$851", time: "1-2 hours", requirements: "Shape the narrative, grade mixed footage, design transitions, mix audio, and deliver masters.", image: "assets/orders/order-a01.webp" },
+    { id: "a02", code: "593314", level: "A", title: "Executive Multi-Camera Interview", content: "Edit a premium executive interview from three cameras with supporting business footage.", pay: "$856", time: "1-2 hours", requirements: "Synchronize cameras, refine dialogue, add graphics, sound mix, color grade, and captions.", image: "assets/orders/order-a02.webp" },
+    { id: "a03", code: "593326", level: "A", title: "Cinematic Automotive Campaign", content: "Finish a night-driving automotive campaign with a controlled premium visual language.", pay: "$862", time: "1-2 hours", requirements: "Build the hero cut, advanced color grade, detailed soundscape, VFX cleanup, and exports.", image: "assets/orders/order-a03.webp" },
+    { id: "a04", code: "593339", level: "A", title: "Environmental Mini-Documentary", content: "Craft a concise documentary from interviews, aerial landscapes, and observational field footage.", pay: "$868", time: "1-2 hours", requirements: "Develop story structure, clean dialogue, add maps, captions, grade footage, and mix sound.", image: "assets/orders/order-a04.webp" },
+    { id: "a05", code: "593347", level: "A", title: "Fashion Campaign Film", content: "Create an editorial campaign film from runway, portrait, fabric, and architectural footage.", pay: "$873", time: "1-2 hours", requirements: "Design visual rhythm, match mixed lighting, add elegant transitions, sound design, and masters.", image: "assets/orders/order-a05.webp" },
+    { id: "a06", code: "593358", level: "A", title: "Architectural Launch Visualization", content: "Combine 3D renders, drone footage, and interior sequences into a property launch film.", pay: "$879", time: "1-2 hours", requirements: "Match CGI with footage, refine camera flow, add location graphics, audio, and final grade.", image: "assets/orders/order-a06.webp" },
+    { id: "a07", code: "593366", level: "A", title: "Team Production Quality Review", content: "Lead the final review of three editors' work and prepare one approved master delivery.", pay: "$884", time: "1-2 hours", requirements: "Audit story, pacing, captions, color and sound; resolve notes and document approvals.", image: "assets/orders/order-a07.webp" },
+    { id: "a08", code: "593374", level: "A", title: "Global Campaign Localization", content: "Adapt a master campaign for multiple regions while preserving timing and brand consistency.", pay: "$889", time: "1-2 hours", requirements: "Rebuild captions, replace voice tracks, check layouts, mix audio, and deliver regional masters.", image: "assets/orders/order-a08.webp" },
+    { id: "a09", code: "593387", level: "A", title: "3D Smartwatch Product Film", content: "Produce a premium 3D product film highlighting materials, interface motion, and key functions.", pay: "$895", time: "1-2 hours", requirements: "Refine animation, lighting, compositing, motion graphics, sound design, and final renders.", image: "assets/orders/order-a09.webp" },
+    { id: "a10", code: "593399", level: "A", title: "Founder Brand Documentary", content: "Build a cinematic brand story combining founder, manufacturing, customer, and city footage.", pay: "$899", time: "1-2 hours", requirements: "Create narrative continuity, advanced grade, dialogue mix, subtitles, graphics, and masters.", image: "assets/orders/order-a10.webp" }
+  ]
+};
+
+const orders = Object.values(orderGroups).flat();
 
 const commissionLeaders = [
   {
@@ -1726,24 +1710,9 @@ Object.keys(translations).forEach((language) => {
   if (!supportedLanguages.includes(language)) delete translations[language];
 });
 
-  const levelImages = {
-    C: "assets/order-level-c.webp",
-    B: "assets/order-level-b.webp",
-    A: "assets/order-level-a.webp"
-  };
-
-  const orderImages = {
-    c1: "assets/order-level-c.webp",
-    c2: "assets/order-level-c.webp",
-    b1: "assets/order-level-b.webp",
-    b2: "assets/order-level-b.webp",
-    a1: "assets/order-level-a.webp",
-    a2: "assets/order-level-a.webp"
-  };
-
-  function orderImageSrc(order) {
-    return orderImages[order.id] || levelImages[order.level];
-  }
+function orderImageSrc(order) {
+  return order.image;
+}
 
 const cryptoPaymentOptions = [
   { id: "usdt-trc", asset: "USDT", network: "TRC20", label: "USDT-TRC", address: "" },
@@ -1813,7 +1782,9 @@ let supportMessageCache = new Map();
 let supportMessageRequestTokens = new Map();
 let supportNotificationAudio = null;
 let supportNotificationSoundUnlocked = false;
-let showAllOrders = false;
+let orderRotationIndex = 0;
+let orderClaimTimer = null;
+let orderSwapTimer = null;
 let revealObserver = null;
 const supportGuestKey = "hourAiSupportGuestId";
 let fallbackSupportGuestId = "";
@@ -1914,18 +1885,17 @@ function applyTranslations() {
 
 function renderOrders() {
   const grid = document.getElementById("ordersGrid");
-  const featuredIds = new Set(["c1", "b1", "a1"]);
-  const visibleOrders = showAllOrders ? orders : orders.filter((order) => featuredIds.has(order.id));
+  if (!grid) return;
+  const visibleOrders = ["C", "B", "A"].map((level) => orderGroups[level][orderRotationIndex]);
   grid.innerHTML = visibleOrders
     .map((baseOrder, index) => {
       const order = localizedOrder(baseOrder);
-      const orderIndex = orders.findIndex((item) => item.id === order.id);
       return `
         <article class="order-card order-level-${order.level.toLowerCase()}" data-level="${order.level}" style="--order-index:${index}">
-          <img class="order-image" src="${orderImageSrc(order)}" alt="" width="1000" height="750" loading="lazy" />
+          <img class="order-image" src="${orderImageSrc(order)}" alt="${order.title}" width="1000" height="750" loading="eager" decoding="async" />
           <div class="order-card-header">
             <span class="rank-identity">${rankMedalMarkup(order.level, "small")}<strong>${levelLabel(order.level)}</strong></span>
-            <span class="order-code">${t("orders.orderNo")} ${371011 + orderIndex}</span>
+            <span class="order-code">${t("orders.orderNo")} ${order.code}</span>
           </div>
           <h3>${order.title}</h3>
           <p>${order.content}</p>
@@ -1936,19 +1906,45 @@ function renderOrders() {
           <button class="button button-outline full-width" type="button" data-order-id="${order.id}">
             <span>${t("orders.viewDetails")}</span>
           </button>
+          <div class="order-claimed-overlay" aria-hidden="true">
+            <span class="order-claimed-check">&#10003;</span>
+            <strong>ORDER CLAIMED</strong>
+            <small>Loading the next order</small>
+          </div>
         </article>
       `;
     })
     .join("");
-
-  const button = document.getElementById("moreOrdersButton");
-  if (button) {
-    button.setAttribute("aria-expanded", String(showAllOrders));
-    button.classList.toggle("is-expanded", showAllOrders);
-    const label = button.querySelector("[data-i18n]");
-    if (label) label.textContent = t(showAllOrders ? "orders.fewer" : "orders.more");
-  }
   observeRevealables(grid);
+}
+
+function showOrderClaimedState() {
+  document.querySelectorAll("#ordersGrid .order-card").forEach((card) => card.classList.add("is-claimed"));
+}
+
+function scheduleOrderRotation() {
+  window.clearTimeout(orderClaimTimer);
+  window.clearTimeout(orderSwapTimer);
+  orderClaimTimer = window.setTimeout(() => {
+    showOrderClaimedState();
+    orderSwapTimer = window.setTimeout(() => {
+      orderRotationIndex = (orderRotationIndex + 1) % 10;
+      renderOrders();
+      scheduleOrderRotation();
+    }, 3000);
+  }, 7000);
+}
+
+function preloadOrderImages() {
+  orders.forEach((order) => {
+    const image = new Image();
+    image.src = order.image;
+  });
+}
+
+function startOrderRotation() {
+  preloadOrderImages();
+  scheduleOrderRotation();
 }
 
 function renderReviews() {
@@ -2999,13 +2995,6 @@ function setupEvents() {
     const paymentButton = event.target.closest("[data-payment-level]");
     if (paymentButton) openPayment(paymentButton.dataset.paymentLevel);
 
-    const moreOrdersButton = event.target.closest("#moreOrdersButton");
-    if (moreOrdersButton) {
-      showAllOrders = !showAllOrders;
-      renderOrders();
-      if (!showAllOrders) document.getElementById("orders")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
     const copyButton = event.target.closest("[data-copy-address]");
     if (copyButton) {
       const option = cryptoPaymentOptions.find((item) => item.id === copyButton.dataset.copyAddress);
@@ -3197,3 +3186,4 @@ initBackToTop();
 applyTranslations();
 initMotionSystem();
 applyRegionalLanguagePreference();
+startOrderRotation();

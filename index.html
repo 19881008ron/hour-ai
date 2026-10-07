@@ -12,7 +12,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/hour-ai-logo.svg" />
     <link rel="shortcut icon" href="assets/hour-ai-logo.svg" />
     <link rel="apple-touch-icon" href="assets/hour-ai-logo.svg" />
-    <link rel="stylesheet" href="styles.css?v=20260912-mobile-menu-clean" />
+    <link rel="stylesheet" href="styles.css?v=20261006-order-rotation" />
     <link rel="stylesheet" href="ui-uplift.css?v=20260912-support-speed" />
   </head>
   <body>
@@ -114,26 +114,48 @@
             </div>
           </div>
 
-          <div class="hero-visual hero-video-shell" aria-label="Hour AI automated earning system film">
-            <video
-              class="hero-promo-video"
-              id="heroPromoVideo"
-              autoplay
-              loop
-              playsinline
-              preload="metadata"
-              poster="assets/homepage/hour-ai-promo-desktop-poster.webp"
-              data-desktop-src="assets/homepage/hour-ai-promo-desktop-1920x1080.mp4?v=20261006-referral-cta-live"
-              data-mobile-src="assets/homepage/hour-ai-promo-mobile-1080x1920.mp4?v=20261006-referral-cta-live"
-            ></video>
-            <div class="hero-video-controls">
-              <button class="hero-video-control" id="heroVideoSound" type="button" aria-label="Play video with sound" aria-pressed="false">
-                Play sound
-              </button>
+          <div class="hero-media-column">
+            <div class="hero-visual hero-video-shell" aria-label="Hour AI automated earning system film">
+              <video
+                class="hero-promo-video"
+                id="heroPromoVideo"
+                autoplay
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/homepage/hour-ai-promo-desktop-poster.webp"
+                data-desktop-src="assets/homepage/hour-ai-promo-desktop-1920x1080.mp4?v=20261006-referral-cta-live"
+                data-mobile-src="assets/homepage/hour-ai-promo-mobile-1080x1920.mp4?v=20261006-referral-cta-live"
+              ></video>
+              <div class="hero-video-controls">
+                <button class="hero-video-control" id="heroVideoSound" type="button" aria-label="Play video with sound" aria-pressed="false">
+                  Play sound
+                </button>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
+
+      <aside class="hero-ai-assistant-panel hero-ai-assistant-band" aria-labelledby="heroAiAssistantTitle">
+        <div class="hero-ai-assistant-copy">
+          <span class="hero-ai-assistant-kicker">Your next advantage</span>
+          <h2 id="heroAiAssistantTitle">The AI era will not wait.</h2>
+          <p>
+            Hour AI has created the most complete AI-powered automated earning model to date. If you missed stocks 20 years ago and Bitcoin 10 years ago, do not miss today's AI. After you click, you will have a dedicated assistant that works automatically 24 hours a day, never complains, and follows every instruction.
+          </p>
+        </div>
+        <a
+          class="hero-ai-assistant-cta"
+          href="#support"
+          data-open-support
+          data-support-open-topic="Create my dedicated AI assistant"
+        >
+          <span>Create Your Dedicated AI Assistant</span>
+          <span class="hero-ai-assistant-arrow" aria-hidden="true">&#8594;</span>
+        </a>
+      </aside>
 
       <section class="signal-strip" aria-label="Platform operating model">
         <div class="signal-item">
@@ -178,9 +200,10 @@
           </div>
         </div>
         <div class="orders-grid" id="ordersGrid"></div>
+        <p class="order-rotation-note">Illustrative order feed. Actual availability varies.</p>
         <div class="orders-more-row">
-          <button class="button button-more-orders" id="moreOrdersButton" type="button" aria-expanded="false" aria-controls="ordersGrid">
-            <span class="more-orders-icon" aria-hidden="true">+</span>
+          <button class="button button-more-orders" id="moreOrdersButton" type="button" data-open-support data-support-open-topic="Show me more available orders">
+            <span class="more-orders-icon" aria-hidden="true">&#8599;</span>
             <span data-i18n="orders.more">More orders</span>
           </button>
         </div>
@@ -595,6 +618,6 @@
     </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="app.js?v=20260912-leaderboard-upgrade"></script>
+    <script src="app.js?v=20261006-order-rotation"></script>
   </body>
 </html>

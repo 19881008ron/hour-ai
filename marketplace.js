@@ -669,6 +669,48 @@
     `;
   }
 
+  function canonicalProductKey(product) {
+    return String(product?.title?.en || product?.id || "")
+      .replace(/^(Retail|Pro|Compact|Premium|Travel)\s+/i, "")
+      .replace(/[^a-z0-9]+/gi, " ")
+      .trim()
+      .toLowerCase();
+  }
+
+  function productQualityScore(product) {
+    const title = String(product?.title?.en || "");
+    const variantScore = /^Premium\s/i.test(title) ? 50
+      : /^Pro\s/i.test(title) ? 40
+        : /^Retail\s/i.test(title) ? 30
+          : /^Travel\s/i.test(title) ? 20
+            : 10;
+    const imageScore = Array.isArray(product?.images) ? Math.min(product.images.length, 5) * 4 : 0;
+    const linkScore = product?.marketplace?.en || product?.marketplace?.ar ? 12 : 0;
+    const detailScore = Array.isArray(product?.specs?.en) ? Math.min(product.specs.en.length, 4) * 2 : 0;
+    return variantScore + imageScore + linkScore + detailScore;
+  }
+
+  function bestUniqueProducts(category) {
+    const groups = new Map();
+    products
+      .filter((product) => product.category === category)
+      .forEach((product) => {
+        const key = canonicalProductKey(product);
+        const current = groups.get(key);
+        if (!current || productQualityScore(product) > productQualityScore(current)) groups.set(key, product);
+      });
+    return Array.from(groups.values()).slice(0, 10);
+  }
+
+  function featuredProducts() {
+    if (activeCategory !== "all") return bestUniqueProducts(activeCategory);
+    return categoryOrder
+      .filter((category) => categoryKeys.includes(category))
+      .map((category) => bestUniqueProducts(category)[0])
+      .filter(Boolean)
+      .slice(0, 10);
+  }
+
   function renderProducts() {
     const grid = document.getElementById("storeGrid");
     if (!grid) return;
@@ -676,8 +718,8 @@
       grid.innerHTML = renderEmptyState();
       return;
     }
-    const visible = activeCategory === "all" ? products.slice(0, 50) : products.filter((product) => product.category === activeCategory).slice(0, 50);
-    grid.innerHTML = visible
+    const visible = featuredProducts();
+    const productCards = visible
       .map((product) => `
         <article class="store-card">
           <button class="store-card-media store-card-image-button" type="button" data-product="${product.id}" aria-label="${get("store.details")} ${localized(product.title)}">
@@ -701,6 +743,16 @@
         </article>
       `)
       .join("");
+    grid.innerHTML = `${productCards}
+      <div class="store-more-quotes">
+        <div>
+          <span>MEMBER SOURCING DESK</span>
+          <strong>Need more products for your market?</strong>
+          <p>Open a live conversation and receive additional member supply quotes from our sourcing team.</p>
+        </div>
+        <a class="store-more-quotes-button" href="${supportUrl}">Get More Product Quotes</a>
+      </div>
+    `;
     grid.querySelectorAll("[data-product]").forEach((button) => {
       button.addEventListener("click", () => openDetail(button.dataset.product));
     });
